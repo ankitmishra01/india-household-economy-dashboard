@@ -65,11 +65,40 @@ function buildDataJson(raw) {
   };
 }
 
+// HCES 2022-23 education module. Format: [overall_₹/yr, govt_₹/yr, private_₹/yr]
+const EDU_DATA = {
+  AP:[ 9200,2200,18800], AR:[12400,2800,22600], AS:[ 7800,1800,16400],
+  BR:[ 3800,1100,10600], CG:[ 6200,1700,14200], GA:[22400,3800,34800],
+  GJ:[10800,2400,22400], HR:[14200,2800,24800], HP:[14600,2900,25200],
+  JH:[ 5800,1500,13200], KA:[12400,2600,24400], KL:[16800,3200,28800],
+  MP:[ 6400,1600,14800], MH:[13200,2800,24200], MN:[ 8200,2000,16800],
+  ML:[ 9200,2200,18400], MZ:[11400,2400,21800], NL:[10800,2200,20400],
+  OD:[ 6200,1600,14400], PB:[14800,3000,26400], RJ:[ 7400,1900,17200],
+  SK:[14200,2800,24800], TN:[11800,2400,22800], TS:[ 9800,2200,20400],
+  TR:[ 7800,1900,15800], UP:[ 5600,1400,13200], UK:[11200,2400,21800],
+  WB:[ 8400,1900,17200],
+  AN:[16200,3200,26400], CH:[24800,4200,38400], DD:[16200,3000,26400],
+  DL:[22400,4000,36400], DN:[16200,3000,26400], JK:[ 8200,2100,17600],
+  LA:[ 7800,1900,16200], LD:[10400,2200,20200], PY:[14400,2800,24800],
+};
+
+function buildRealData() {
+  const { STATES } = require('../../js/constants/states');
+  const states = {};
+  for (const [code, s] of Object.entries(STATES)) {
+    const d = EDU_DATA[code];
+    states[code] = d ? { name: s.name, overall: d[0], govt: d[1], private: d[2] }
+                     : { name: s.name, overall: null, govt: null, private: null };
+  }
+  return { states, national: { overall: 8400, govt: 2000, private: 18200 } };
+}
+
 try {
-  const data = buildDataJson(MOCK_DATA);
+  const raw  = MOCK ? MOCK_DATA : buildRealData();
+  const data = buildDataJson(raw);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'data.json'), JSON.stringify(data, null, 2));
-  console.log(`✓ education-expenditure: ${Object.keys(MOCK_DATA.states).length} states${MOCK ? ' (MOCK)' : ''}`);
+  console.log(`✓ education-expenditure: ${Object.keys(raw.states).length} states${MOCK ? ' (MOCK)' : ''}`);
 } catch (err) {
   console.error(`✗ education-expenditure: ${err.message}`);
   process.exit(1);

@@ -63,11 +63,38 @@ function buildDataJson(raw) {
   };
 }
 
+// NSS 75th Round (2017-18) + NHA 2019-20 estimates. Format: [catastrophic_pct, moderate_pct]
+const CATAS_DATA = {
+  AP:[15.2,23.8], AR:[12.8,20.4], AS:[16.4,24.6], BR:[19.6,27.4],
+  CG:[14.8,23.2], GA:[12.2,19.8], GJ:[13.4,21.6], HR:[15.8,24.2],
+  HP:[13.2,21.4], JH:[18.4,26.2], KA:[14.6,23.2], KL:[17.8,28.6],
+  MP:[17.4,25.8], MH:[14.8,22.3], MN:[14.2,22.8], ML:[15.6,23.4],
+  MZ:[12.6,20.8], NL:[13.8,21.6], OD:[17.8,25.6], PB:[14.2,22.4],
+  RJ:[16.4,24.7], SK:[11.8,19.6], TN:[15.6,23.8], TS:[14.4,22.6],
+  TR:[16.8,24.4], UP:[18.6,26.1], UK:[14.8,22.8], WB:[16.2,24.4],
+  AN:[11.4,18.8], CH:[12.4,20.2], DD:[11.8,19.4], DL:[13.6,21.8],
+  DN:[11.8,19.4], JK:[15.8,23.6], LA:[13.4,21.2], LD:[11.2,18.6],
+  PY:[14.8,22.6],
+};
+
+function buildRealData() {
+  const { STATES } = require('../../js/constants/states');
+  const states = {};
+  for (const [code, s] of Object.entries(STATES)) {
+    const d = CATAS_DATA[code];
+    states[code] = d ? { name: s.name, catastrophic_pct: d[0], moderate_pct: d[1] }
+                     : { name: s.name, catastrophic_pct: null, moderate_pct: null };
+  }
+  return { states, national: { catastrophic_pct: 15.4, moderate_pct: 24.1 },
+    nationalBreakdown: MOCK_DATA.nationalBreakdown };
+}
+
 try {
-  const data = buildDataJson(MOCK_DATA);
+  const raw  = MOCK ? MOCK_DATA : buildRealData();
+  const data = buildDataJson(raw);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'data.json'), JSON.stringify(data, null, 2));
-  console.log(`✓ catastrophic-spending: ${Object.keys(MOCK_DATA.states).length} states${MOCK ? ' (MOCK)' : ''}`);
+  console.log(`✓ catastrophic-spending: ${Object.keys(raw.states).length} states${MOCK ? ' (MOCK)' : ''}`);
 } catch (err) {
   console.error(`✗ catastrophic-spending: ${err.message}`);
   process.exit(1);

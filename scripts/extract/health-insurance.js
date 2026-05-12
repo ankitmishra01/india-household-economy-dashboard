@@ -7,6 +7,8 @@ const path = require('path');
 const ROOT    = path.join(__dirname, '..', '..');
 const OUT_DIR = path.join(ROOT, 'data', 'pages', 'health-insurance');
 const MOCK    = process.argv.includes('--mock');
+const LOADER  = require('../fetch/nfhs5-loader');
+const { STATES } = require('../../js/constants/states');
 
 const MOCK_DATA = {
   states: {
@@ -64,11 +66,22 @@ function buildDataJson(raw) {
   };
 }
 
+function buildRealData() {
+  const map = LOADER.stateMap(12);
+  const nat = LOADER.national(12).total;
+  const states = {};
+  for (const [code, s] of Object.entries(STATES))
+    states[code] = { name: s.name, any_coverage: map[code] ?? null, govt_scheme: null, private: null };
+  return { states, national: { any_coverage: nat, govt_scheme: null, private: null } };
+}
+
 try {
-  const data = buildDataJson(MOCK_DATA);
+  const raw  = MOCK ? MOCK_DATA : buildRealData();
+  const data = buildDataJson(raw);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'data.json'), JSON.stringify(data, null, 2));
-  console.log(`✓ health-insurance: ${Object.keys(MOCK_DATA.states).length} states${MOCK ? ' (MOCK)' : ''}`);
+  const n = Object.keys(raw.states).length;
+  console.log(`✓ health-insurance: ${n} states${MOCK ? ' (MOCK)' : ''}`);
 } catch (err) {
   console.error(`✗ health-insurance: ${err.message}`);
   process.exit(1);

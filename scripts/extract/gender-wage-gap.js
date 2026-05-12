@@ -7,6 +7,8 @@ const path = require('path');
 const ROOT    = path.join(__dirname, '..', '..');
 const OUT_DIR = path.join(ROOT, 'data', 'pages', 'gender-wage-gap');
 const MOCK    = process.argv.includes('--mock');
+const PLFS    = require('../fetch/plfs-data');
+const { STATES } = require('../../js/constants/states');
 
 const MOCK_DATA = {
   states: {
@@ -66,11 +68,25 @@ function buildDataJson(raw) {
   };
 }
 
+function buildRealData() {
+  const states = {};
+  for (const [code, s] of Object.entries(STATES)) {
+    const p = PLFS.STATES[code];
+    if (!p) { states[code] = { name: s.name, male_wage: null, female_wage: null, ratio: null }; continue; }
+    const mw = p.wage[0], fw = p.wage[1];
+    states[code] = { name: s.name, male_wage: mw, female_wage: fw,
+      ratio: (mw && fw) ? +((fw / mw).toFixed(3)) : null };
+  }
+  const mw = PLFS.NATIONAL.wage[0], fw = PLFS.NATIONAL.wage[1];
+  return { states, national: { male_wage: mw, female_wage: fw, ratio: +((fw/mw).toFixed(3)) } };
+}
+
 try {
-  const data = buildDataJson(MOCK_DATA);
+  const raw  = MOCK ? MOCK_DATA : buildRealData();
+  const data = buildDataJson(raw);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'data.json'), JSON.stringify(data, null, 2));
-  console.log(`✓ gender-wage-gap: ${Object.keys(MOCK_DATA.states).length} states${MOCK ? ' (MOCK)' : ''}`);
+  console.log(`✓ gender-wage-gap: ${Object.keys(raw.states).length} states${MOCK ? ' (MOCK)' : ''}`);
 } catch (err) {
   console.error(`✗ gender-wage-gap: ${err.message}`);
   process.exit(1);

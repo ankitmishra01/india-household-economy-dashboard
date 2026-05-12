@@ -12,6 +12,8 @@ const path = require('path');
 const ROOT    = path.join(__dirname, '..', '..');
 const OUT_DIR = path.join(ROOT, 'data', 'pages', 'ipv-economic-cost');
 const MOCK    = process.argv.includes('--mock');
+const LOADER  = require('../fetch/nfhs5-loader');
+const { STATES } = require('../../js/constants/states');
 
 const MOCK_DATA = {
   states: {
@@ -65,11 +67,45 @@ function buildDataJson(raw) {
   };
 }
 
+// Approximate female population by state (lakhs, Census 2011 projection to 2021)
+const FEMALE_POP_LAKHS = {
+  AP:330, AR:8, AS:163, BR:527, CG:130, GA:7, GJ:300, HR:134, HP:36, JH:165,
+  KA:308, KL:168, MP:377, MH:582, MN:14, ML:16, MZ:6, NL:10, OD:214, PB:138,
+  RJ:323, SK:3, TN:369, TS:180, TR:19, UP:993, UK:51, WB:461,
+  AN:2, CH:6, DD:1, DL:97, DN:2, JK:63, LA:2, LD:0.5, PY:8,
+};
+// Average daily female wage by state (₹, PLFS 2022-23 approximate)
+const DAILY_WAGE = {
+  AP:420, AR:480, AS:380, BR:290, CG:350, GA:620, GJ:490, HR:540, HP:520, JH:340,
+  KA:510, KL:620, MP:360, MH:580, MN:390, ML:370, MZ:430, NL:410, OD:370, PB:580,
+  RJ:390, SK:510, TN:490, TS:500, TR:380, UP:330, UK:450, WB:400,
+  AN:500, CH:620, DD:450, DL:680, DN:450, JK:450, LA:420, LD:380, PY:490,
+};
+
+function buildRealData() {
+  const ipv = LOADER.stateMap(125);
+  const nat = LOADER.national(125).total;
+  const states = {};
+  for (const [code, s] of Object.entries(STATES)) {
+    const ipv_pct = ipv[code] ?? null;
+    const female_pop = FEMALE_POP_LAKHS[code] ?? null;
+    const wage = DAILY_WAGE[code] ?? null;
+    // Cost model: affected women × 6.1 workdays/yr × daily wage × 10-yr horizon
+    const cost_crore = (ipv_pct != null && female_pop != null && wage != null)
+      ? Math.round((ipv_pct / 100) * female_pop * 1e5 * 6.1 * wage * 10 / 1e7)
+      : null;
+    states[code] = { name: s.name, ipv_pct, cost_crore, female_wage: wage, female_pop_lakhs: female_pop };
+  }
+  return { states, national: { ipv_pct: nat } };
+}
+
 try {
-  const data = buildDataJson(MOCK_DATA);
+  const raw  = MOCK ? MOCK_DATA : buildRealData();
+  const data = buildDataJson(raw);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'data.json'), JSON.stringify(data, null, 2));
-  console.log(`✓ ipv-economic-cost: ${Object.keys(MOCK_DATA.states).length} states${MOCK ? ' (MOCK)' : ''}`);
+  const n = Object.keys(raw.states).length;
+  console.log(`✓ ipv-economic-cost: ${n} states${MOCK ? ' (MOCK)' : ''}`);
 } catch (err) {
   console.error(`✗ ipv-economic-cost: ${err.message}`);
   process.exit(1);

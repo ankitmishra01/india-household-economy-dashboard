@@ -8,6 +8,8 @@ const path = require('path');
 const ROOT    = path.join(__dirname, '..', '..');
 const OUT_DIR = path.join(ROOT, 'data', 'pages', 'food-insecurity');
 const MOCK    = process.argv.includes('--mock');
+const LOADER  = require('../fetch/nfhs5-loader');
+const { STATES } = require('../../js/constants/states');
 
 const MOCK_DATA = {
   states: {
@@ -91,11 +93,23 @@ function buildDataJson(raw) {
   };
 }
 
+function buildRealData() {
+  const s81 = LOADER.stateMap(81), s82 = LOADER.stateMap(82), s84 = LOADER.stateMap(84);
+  const n81 = LOADER.national(81).total, n82 = LOADER.national(82).total, n84 = LOADER.national(84).total;
+  const states = {};
+  for (const [code, s] of Object.entries(STATES))
+    states[code] = { name: s.name, stunted: s81[code] ?? null, wasted: s82[code] ?? null, underweight: s84[code] ?? null };
+  return { states, nationalStunted: n81, nationalWasted: n82, nationalUnderweight: n84,
+    nationalFoodInsecurity: MOCK_DATA.nationalFoodInsecurity };
+}
+
 try {
-  const data = buildDataJson(MOCK_DATA);
+  const raw  = MOCK ? MOCK_DATA : buildRealData();
+  const data = buildDataJson(raw);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'data.json'), JSON.stringify(data, null, 2));
-  console.log(`✓ food-insecurity: ${Object.keys(MOCK_DATA.states).length} states${MOCK ? ' (MOCK)' : ''}`);
+  const n = Object.keys(raw.states).length;
+  console.log(`✓ food-insecurity: ${n} states${MOCK ? ' (MOCK)' : ''}`);
 } catch (err) {
   console.error(`✗ food-insecurity: ${err.message}`);
   process.exit(1);

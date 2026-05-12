@@ -7,6 +7,8 @@ const path = require('path');
 const ROOT    = path.join(__dirname, '..', '..');
 const OUT_DIR = path.join(ROOT, 'data', 'pages', 'female-assets');
 const MOCK    = process.argv.includes('--mock');
+const LOADER  = require('../fetch/nfhs5-loader');
+const { STATES } = require('../../js/constants/states');
 
 const MOCK_DATA = {
   states: {
@@ -72,11 +74,26 @@ function buildDataJson(raw) {
   };
 }
 
+function buildRealData() {
+  // ind 121: women owning house and/or land (alone or jointly) — used as "house" proxy
+  // ind 122: women with bank account
+  const s121 = LOADER.stateMap(121), s122 = LOADER.stateMap(122);
+  const n121 = LOADER.national(121).total, n122 = LOADER.national(122).total;
+  const states = {};
+  for (const [code, s] of Object.entries(STATES))
+    states[code] = { name: s.name, land: null, land_joint: null,
+      house: s121[code] ?? null, bank_account: s122[code] ?? null };
+  return { states, national: { land: null, land_joint: null, house: n121, bank_account: n122 },
+    landComposition: MOCK_DATA.landComposition };
+}
+
 try {
-  const data = buildDataJson(MOCK_DATA);
+  const raw  = MOCK ? MOCK_DATA : buildRealData();
+  const data = buildDataJson(raw);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'data.json'), JSON.stringify(data, null, 2));
-  console.log(`✓ female-assets: ${Object.keys(MOCK_DATA.states).length} states${MOCK ? ' (MOCK)' : ''}`);
+  const n = Object.keys(raw.states).length;
+  console.log(`✓ female-assets: ${n} states${MOCK ? ' (MOCK)' : ''}`);
 } catch (err) {
   console.error(`✗ female-assets: ${err.message}`);
   process.exit(1);

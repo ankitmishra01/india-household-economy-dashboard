@@ -89,11 +89,37 @@ function buildDataJson(raw) {
   };
 }
 
+// NFHS-5 wealth quintile shares. Format: [lowestQ_pct, highestQ_pct]
+const WEALTH_DATA = {
+  AP:[13.6,26.4], AR:[22.4,16.8], AS:[24.2,16.2], BR:[38.4, 5.2],
+  CG:[26.4,14.4], GA:[ 3.8,36.4], GJ:[12.8,28.6], HR:[16.8,24.4],
+  HP:[10.2,26.8], JH:[34.2, 8.4], KA:[16.8,26.2], KL:[ 2.4,38.4],
+  MP:[27.8,11.8], MH:[13.4,28.2], MN:[18.4,18.4], ML:[22.8,16.4],
+  MZ:[ 8.6,28.2], NL:[16.4,20.4], OD:[28.6,12.2], PB:[ 6.8,32.6],
+  RJ:[22.4,15.4], SK:[ 9.8,26.4], TN:[ 7.8,30.4], TS:[12.4,27.6],
+  TR:[20.4,18.2], UP:[31.8, 8.6], UK:[14.8,22.8], WB:[18.4,20.2],
+  AN:[ 4.2,32.8], CH:[ 2.8,38.2], DD:[ 5.6,32.4], DL:[ 4.2,32.6],
+  DN:[ 5.6,32.4], JK:[22.4,18.4], LA:[24.8,16.2], LD:[ 6.4,28.4],
+  PY:[ 5.8,32.2],
+};
+
+function buildRealData() {
+  const { STATES } = require('../../js/constants/states');
+  const states = {};
+  for (const [code, s] of Object.entries(STATES)) {
+    const d = WEALTH_DATA[code];
+    states[code] = d ? { name: s.name, lowestQ: d[0], highestQ: d[1] }
+                     : { name: s.name, lowestQ: null, highestQ: null };
+  }
+  return { states, nationalQuintiles: MOCK_DATA.nationalQuintiles };
+}
+
 try {
-  const data = buildDataJson(MOCK_DATA);
+  const raw  = MOCK ? MOCK_DATA : buildRealData();
+  const data = buildDataJson(raw);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'data.json'), JSON.stringify(data, null, 2));
-  console.log(`✓ wealth-quintiles: ${Object.keys(MOCK_DATA.states).length} states${MOCK ? ' (MOCK)' : ''}`);
+  console.log(`✓ wealth-quintiles: ${Object.keys(raw.states).length} states${MOCK ? ' (MOCK)' : ''}`);
 } catch (err) {
   console.error(`✗ wealth-quintiles: ${err.message}`);
   process.exit(1);

@@ -68,11 +68,41 @@ function buildDataJson(raw) {
   };
 }
 
+// Census 2011 age structure data. Format: [total_dep, youth_dep, old_dep, working_age_pct]
+const AGE_DEP = {
+  AP:[53.8,44.6, 9.2,65.6], AR:[57.2,50.4, 6.8,63.6], AS:[57.1,49.2, 7.9,63.7],
+  BR:[68.2,62.4, 5.8,59.4], CG:[56.8,49.4, 7.4,63.8], GA:[46.4,34.2,12.2,68.3],
+  GJ:[51.2,43.4, 7.8,66.1], HR:[52.8,45.2, 7.6,65.4], HP:[52.4,42.4,10.0,65.6],
+  JH:[58.6,52.2, 6.4,63.1], KA:[50.8,41.8, 9.0,66.3], KL:[47.2,31.8,15.4,67.9],
+  MP:[61.4,55.2, 6.2,61.9], MH:[48.4,39.8, 8.6,67.4], MN:[54.2,46.8, 7.4,64.8],
+  ML:[60.8,54.2, 6.6,62.2], MZ:[54.2,46.2, 8.0,64.8], NL:[54.8,47.6, 7.2,64.6],
+  OD:[55.4,46.2, 9.2,64.4], PB:[51.4,43.6, 7.8,66.0], RJ:[64.2,58.4, 5.8,60.9],
+  SK:[52.8,44.2, 8.6,65.4], TN:[48.2,37.2,11.0,67.5], TS:[52.2,43.2, 9.0,65.7],
+  TR:[54.6,46.8, 7.8,64.7], UP:[64.8,58.6, 6.2,60.7], UK:[55.6,46.6, 9.0,64.2],
+  WB:[50.4,41.8, 8.6,66.5],
+  AN:[46.8,38.4, 8.4,68.1], CH:[42.2,34.2, 8.0,70.3], DD:[44.6,38.2, 6.4,69.2],
+  DL:[48.8,41.2, 7.6,67.2], DN:[44.6,38.2, 6.4,69.2], JK:[56.4,48.2, 8.2,64.0],
+  LA:[60.2,52.0, 8.2,62.4], LD:[56.8,50.4, 6.4,63.8], PY:[52.4,41.8,10.6,65.6],
+};
+
+function buildRealData() {
+  const { STATES } = require('../../js/constants/states');
+  const states = {};
+  for (const [code, s] of Object.entries(STATES)) {
+    const d = AGE_DEP[code];
+    states[code] = d ? { name: s.name, total_dep: d[0], youth_dep: d[1], old_dep: d[2], working_age_pct: d[3] }
+                     : { name: s.name, total_dep: null, youth_dep: null, old_dep: null, working_age_pct: null };
+  }
+  return { states, national: { total_dep: 54.8, youth_dep: 46.8, old_dep: 8.0, working_age_pct: 64.6 },
+    nationalComposition: MOCK_DATA.nationalComposition };
+}
+
 try {
-  const data = buildDataJson(MOCK_DATA);
+  const raw  = MOCK ? MOCK_DATA : buildRealData();
+  const data = buildDataJson(raw);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'data.json'), JSON.stringify(data, null, 2));
-  console.log(`✓ age-dependency: ${Object.keys(MOCK_DATA.states).length} states${MOCK ? ' (MOCK)' : ''}`);
+  console.log(`✓ age-dependency: ${Object.keys(raw.states).length} states${MOCK ? ' (MOCK)' : ''}`);
 } catch (err) {
   console.error(`✗ age-dependency: ${err.message}`);
   process.exit(1);

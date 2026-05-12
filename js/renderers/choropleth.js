@@ -99,10 +99,10 @@ const ChoroplethRenderer = (function () {
       .attr('fill', feature => {
         const geoName = (feature.properties.name || '').toLowerCase().trim();
         const entry   = geoNameToData[geoName];
-        if (!entry || entry.value == null) return 'var(--border)';
+        if (!entry || entry.value == null) return '#1E2D40';
         return colorScale(entry.value);
       })
-      .attr('stroke', 'var(--bg)')
+      .attr('stroke', '#0A0F14')
       .attr('stroke-width', 0.5)
       .style('cursor', 'pointer')
       .style('transition', 'fill 0.12s')
@@ -131,7 +131,7 @@ const ChoroplethRenderer = (function () {
       })
       .on('mouseleave', function () {
         d3.select(this)
-          .attr('stroke', 'var(--bg)')
+          .attr('stroke', '#0A0F14')
           .attr('stroke-width', 0.5);
         if (tooltip) tooltip.classList.remove('visible');
       })

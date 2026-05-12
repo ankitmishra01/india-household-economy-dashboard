@@ -7,6 +7,8 @@ const path = require('path');
 const ROOT    = path.join(__dirname, '..', '..');
 const OUT_DIR = path.join(ROOT, 'data', 'pages', 'banking-access');
 const MOCK    = process.argv.includes('--mock');
+const LOADER  = require('../fetch/nfhs5-loader');
+const { STATES } = require('../../js/constants/states');
 
 const MOCK_DATA = {
   states: {
@@ -70,11 +72,23 @@ function buildDataJson(raw) {
   };
 }
 
+function buildRealData() {
+  const w = LOADER.stateMap(122);
+  const nat = LOADER.national(122).total;
+  const states = {};
+  for (const [code, s] of Object.entries(STATES))
+    states[code] = { name: s.name, any_account: w[code] ?? null,
+      women_account: w[code] ?? null, men_account: null, pmjdy_per1000: null };
+  return { states, national: { any_account: nat, women_account: nat, men_account: null } };
+}
+
 try {
-  const data = buildDataJson(MOCK_DATA);
+  const raw  = MOCK ? MOCK_DATA : buildRealData();
+  const data = buildDataJson(raw);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'data.json'), JSON.stringify(data, null, 2));
-  console.log(`✓ banking-access: ${Object.keys(MOCK_DATA.states).length} states${MOCK ? ' (MOCK)' : ''}`);
+  const n = Object.keys(raw.states).length;
+  console.log(`✓ banking-access: ${n} states${MOCK ? ' (MOCK)' : ''}`);
 } catch (err) {
   console.error(`✗ banking-access: ${err.message}`);
   process.exit(1);

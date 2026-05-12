@@ -8,6 +8,8 @@ const path = require('path');
 const ROOT    = path.join(__dirname, '..', '..');
 const OUT_DIR = path.join(ROOT, 'data', 'pages', 'lfpr');
 const MOCK    = process.argv.includes('--mock');
+const PLFS    = require('../fetch/plfs-data');
+const { STATES } = require('../../js/constants/states');
 
 const MOCK_DATA = {
   states: {
@@ -81,11 +83,23 @@ function buildDataJson(raw) {
   };
 }
 
+function buildRealData() {
+  const states = {};
+  for (const [code, s] of Object.entries(STATES)) {
+    const p = PLFS.STATES[code];
+    if (!p) { states[code] = { name: s.name, male: null, female: null, overall: null }; continue; }
+    states[code] = { name: s.name, male: p.lfpr[0], female: p.lfpr[1], overall: p.lfpr[2] };
+  }
+  const n = PLFS.NATIONAL;
+  return { states, national: { male: n.lfpr[0], female: n.lfpr[1], overall: n.lfpr[2] } };
+}
+
 try {
-  const data = buildDataJson(MOCK_DATA);
+  const raw  = MOCK ? MOCK_DATA : buildRealData();
+  const data = buildDataJson(raw);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'data.json'), JSON.stringify(data, null, 2));
-  console.log(`✓ lfpr: ${Object.keys(MOCK_DATA.states).length} states${MOCK ? ' (MOCK)' : ''}`);
+  console.log(`✓ lfpr: ${Object.keys(raw.states).length} states${MOCK ? ' (MOCK)' : ''}`);
 } catch (err) {
   console.error(`✗ lfpr: ${err.message}`);
   process.exit(1);

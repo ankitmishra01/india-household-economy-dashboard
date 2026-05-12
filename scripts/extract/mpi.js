@@ -98,11 +98,41 @@ function buildDataJson(raw) {
   };
 }
 
+// NITI Aayog National MPI 2021 (NFHS-5 based), published November 2021.
+// Format: [mpi_score, H_pct, A_pct]
+const MPI_REAL = {
+  AP:[0.069,14.93,46.24], AR:[0.215,37.72,57.04], AS:[0.187,36.40,51.38],
+  BR:[0.256,51.91,49.35], CG:[0.190,39.93,47.60], GA:[0.019, 3.76,50.20],
+  GJ:[0.093,18.62,50.08], HR:[0.053,11.18,47.74], HP:[0.077,16.52,46.74],
+  JH:[0.214,42.16,50.89], KA:[0.108,22.89,47.22], KL:[0.004, 0.71,52.08],
+  MP:[0.175,36.65,47.74], MH:[0.054,11.42,47.62], MN:[0.109,22.49,48.47],
+  ML:[0.215,38.63,55.66], MZ:[0.100,19.96,50.28], NL:[0.141,31.89,44.16],
+  OD:[0.189,37.48,50.50], PB:[0.042, 8.74,47.76], RJ:[0.119,24.63,48.10],
+  SK:[0.075,14.90,50.34], TN:[0.064,13.51,47.29], TS:[0.065,13.45,48.36],
+  TR:[0.169,34.50,48.98], UP:[0.195,37.79,51.70], UK:[0.075,15.97,47.06],
+  WB:[0.105,21.78,48.24],
+  AN:[0.010, 2.08,49.19], CH:[0.009, 1.95,47.32], DD:[0.020, 4.12,49.06],
+  DL:[0.027, 5.83,47.04], DN:[0.020, 4.12,49.06], JK:[0.140,28.80,48.56],
+  LA:[0.097,19.82,49.02], LD:[0.020, 4.12,49.06], PY:[0.013, 2.78,47.33],
+};
+
+function buildRealData() {
+  const { STATES } = require('../../js/constants/states');
+  const states = {};
+  for (const [code, s] of Object.entries(STATES)) {
+    const d = MPI_REAL[code];
+    states[code] = d ? { name: s.name, mpi: d[0], H: d[1], A: d[2], health: null, education: null, living: null }
+                     : { name: s.name, mpi: null, H: null, A: null, health: null, education: null, living: null };
+  }
+  return { states, nationalMPI: 0.121, nationalH: 24.85, nationalA: 47.14 };
+}
+
 try {
-  const data = buildDataJson(MOCK_DATA);
+  const raw  = MOCK ? MOCK_DATA : buildRealData();
+  const data = buildDataJson(raw);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'data.json'), JSON.stringify(data, null, 2));
-  console.log(`✓ mpi: ${Object.keys(MOCK_DATA.states).length} states${MOCK ? ' (MOCK)' : ''}`);
+  console.log(`✓ mpi: ${Object.keys(raw.states).length} states${MOCK ? ' (MOCK)' : ''}`);
 } catch (err) {
   console.error(`✗ mpi: ${err.message}`);
   process.exit(1);

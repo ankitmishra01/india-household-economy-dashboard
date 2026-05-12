@@ -7,6 +7,8 @@ const path = require('path');
 const ROOT    = path.join(__dirname, '..', '..');
 const OUT_DIR = path.join(ROOT, 'data', 'pages', 'formal-employment');
 const MOCK    = process.argv.includes('--mock');
+const PLFS    = require('../fetch/plfs-data');
+const { STATES } = require('../../js/constants/states');
 
 const MOCK_DATA = {
   states: {
@@ -62,11 +64,25 @@ function buildDataJson(raw) {
   };
 }
 
+function buildRealData() {
+  const states = {};
+  for (const [code, s] of Object.entries(STATES)) {
+    const p = PLFS.STATES[code];
+    if (!p) { states[code] = { name: s.name, formal: null, informal: null }; continue; }
+    const f = p.formal[0];
+    states[code] = { name: s.name, formal: f, informal: f != null ? +(100 - f).toFixed(1) : null };
+  }
+  const nf = PLFS.NATIONAL.formal[0];
+  return { states, national: { formal: nf, informal: +(100 - nf).toFixed(1) },
+    nationalSplit: MOCK_DATA.nationalSplit };
+}
+
 try {
-  const data = buildDataJson(MOCK_DATA);
+  const raw  = MOCK ? MOCK_DATA : buildRealData();
+  const data = buildDataJson(raw);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'data.json'), JSON.stringify(data, null, 2));
-  console.log(`✓ formal-employment: ${Object.keys(MOCK_DATA.states).length} states${MOCK ? ' (MOCK)' : ''}`);
+  console.log(`✓ formal-employment: ${Object.keys(raw.states).length} states${MOCK ? ' (MOCK)' : ''}`);
 } catch (err) {
   console.error(`✗ formal-employment: ${err.message}`);
   process.exit(1);

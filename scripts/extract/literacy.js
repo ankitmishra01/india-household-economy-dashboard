@@ -7,6 +7,8 @@ const path = require('path');
 const ROOT    = path.join(__dirname, '..', '..');
 const OUT_DIR = path.join(ROOT, 'data', 'pages', 'literacy');
 const MOCK    = process.argv.includes('--mock');
+const LOADER  = require('../fetch/nfhs5-loader');
+const { STATES } = require('../../js/constants/states');
 
 const MOCK_DATA = {
   states: {
@@ -71,11 +73,28 @@ function buildDataJson(raw) {
   };
 }
 
+function buildRealData() {
+  const f = LOADER.stateMap(14);
+  const m = LOADER.stateMap(15);
+  const nf = LOADER.national(14).total;
+  const nm = LOADER.national(15).total;
+  const states = {};
+  for (const [code, s] of Object.entries(STATES)) {
+    const fv = f[code] ?? null, mv = m[code] ?? null;
+    states[code] = { name: s.name, female: fv, male: mv,
+      overall: (fv != null && mv != null) ? +((fv + mv) / 2).toFixed(1) : null,
+      gap:     (fv != null && mv != null) ? +(mv - fv).toFixed(1) : null };
+  }
+  return { states, national: { female: nf, male: nm, overall: +((nf + nm) / 2).toFixed(1) } };
+}
+
 try {
-  const data = buildDataJson(MOCK_DATA);
+  const raw  = MOCK ? MOCK_DATA : buildRealData();
+  const data = buildDataJson(raw);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'data.json'), JSON.stringify(data, null, 2));
-  console.log(`✓ literacy: ${Object.keys(MOCK_DATA.states).length} states${MOCK ? ' (MOCK)' : ''}`);
+  const n = Object.keys(raw.states).length;
+  console.log(`✓ literacy: ${n} states${MOCK ? ' (MOCK)' : ''}`);
 } catch (err) {
   console.error(`✗ literacy: ${err.message}`);
   process.exit(1);

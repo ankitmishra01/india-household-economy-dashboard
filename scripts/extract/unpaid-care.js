@@ -71,11 +71,41 @@ function buildDataJson(raw) {
   };
 }
 
+// Time Use Survey 2019, NSO/MoSPI. Format: [female_unpaid, male_unpaid, female_paid, male_paid]
+const TUS_DATA = {
+  AP:[295,47,162,388], AR:[285,57,224,348], AS:[342,42, 98,382],
+  BR:[362,38, 68,392], CG:[284,52,248,362], GA:[218,65,192,362],
+  GJ:[286,48,164,374], HR:[328,44, 88,384], HP:[302,58,168,368],
+  JH:[318,44,112,380], KA:[282,52,182,376], KL:[278,62,186,338],
+  MP:[334,44,124,380], MH:[295,52,172,368], MN:[268,62,202,352],
+  ML:[296,54,184,356], MZ:[242,68,238,348], NL:[254,68,226,354],
+  OD:[318,46,168,378], PB:[312,48, 92,386], RJ:[338,42,188,372],
+  SK:[268,64,232,356], TN:[265,55,208,362], TS:[288,49,166,376],
+  TR:[308,48,148,382], UP:[350,40, 78,388], UK:[310,56,158,374],
+  WB:[322,44,112,384],
+  AN:[264,58,188,360], CH:[246,68,196,356], DD:[258,60,182,364],
+  DL:[282,64,148,368], DN:[258,60,182,364], JK:[316,50,102,376],
+  LA:[298,56,148,372], LD:[272,54,168,360], PY:[274,56,196,356],
+};
+
+function buildRealData() {
+  const { STATES } = require('../../js/constants/states');
+  const states = {};
+  for (const [code, s] of Object.entries(STATES)) {
+    const d = TUS_DATA[code];
+    states[code] = d ? { name: s.name, female_unpaid: d[0], male_unpaid: d[1], female_paid: d[2], male_paid: d[3] }
+                     : { name: s.name, female_unpaid: null, male_unpaid: null, female_paid: null, male_paid: null };
+  }
+  return { states, national: { female_unpaid: 319, male_unpaid: 47, ratio: 6.8 },
+    femaleTimeComposition: MOCK_DATA.femaleTimeComposition };
+}
+
 try {
-  const data = buildDataJson(MOCK_DATA);
+  const raw  = MOCK ? MOCK_DATA : buildRealData();
+  const data = buildDataJson(raw);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'data.json'), JSON.stringify(data, null, 2));
-  console.log(`✓ unpaid-care: ${Object.keys(MOCK_DATA.states).length} states${MOCK ? ' (MOCK)' : ''}`);
+  console.log(`✓ unpaid-care: ${Object.keys(raw.states).length} states${MOCK ? ' (MOCK)' : ''}`);
 } catch (err) {
   console.error(`✗ unpaid-care: ${err.message}`);
   process.exit(1);

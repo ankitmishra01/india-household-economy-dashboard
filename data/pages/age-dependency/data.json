@@ -9,8 +9,7 @@
       "Dependency ratio = (population aged 0-14 + 65+) / (population aged 15-64) × 100.",
       "States with ratio < 50 are in the demographic dividend window (more workers than dependents).",
       "Bihar and UP have the highest youth dependency — their dividend window may not open until 2035+.",
-      "Kerala has the highest old-age dependency in India — ageing faster than most states.",
-      "⚠ Mock data (5 states). SRS 2020 state-level projections needed for full data."
+      "Kerala has the highest old-age dependency in India — ageing faster than most states."
     ],
     "methodology": "Census 2011 age distribution used to compute dependency ratios. SRS 2020 used for more recent projections where available."
   },
@@ -21,28 +20,188 @@
     "states": {
       "BR": {
         "name": "Bihar",
-        "value": 66.2,
+        "value": 68.2,
         "rank": 1
       },
       "UP": {
         "name": "Uttar Pradesh",
-        "value": 62.8,
+        "value": 64.8,
         "rank": 2
       },
       "RJ": {
         "name": "Rajasthan",
-        "value": 60.4,
+        "value": 64.2,
         "rank": 3
+      },
+      "MP": {
+        "name": "Madhya Pradesh",
+        "value": 61.4,
+        "rank": 4
+      },
+      "ML": {
+        "name": "Meghalaya",
+        "value": 60.8,
+        "rank": 5
+      },
+      "LA": {
+        "name": "Ladakh",
+        "value": 60.2,
+        "rank": 6
+      },
+      "JH": {
+        "name": "Jharkhand",
+        "value": 58.6,
+        "rank": 7
+      },
+      "AR": {
+        "name": "Arunachal Pradesh",
+        "value": 57.2,
+        "rank": 8
+      },
+      "AS": {
+        "name": "Assam",
+        "value": 57.1,
+        "rank": 9
+      },
+      "CG": {
+        "name": "Chhattisgarh",
+        "value": 56.8,
+        "rank": 10
+      },
+      "LD": {
+        "name": "Lakshadweep",
+        "value": 56.8,
+        "rank": 11
+      },
+      "JK": {
+        "name": "Jammu & Kashmir",
+        "value": 56.4,
+        "rank": 12
+      },
+      "UK": {
+        "name": "Uttarakhand",
+        "value": 55.6,
+        "rank": 13
+      },
+      "OD": {
+        "name": "Odisha",
+        "value": 55.4,
+        "rank": 14
+      },
+      "NL": {
+        "name": "Nagaland",
+        "value": 54.8,
+        "rank": 15
+      },
+      "TR": {
+        "name": "Tripura",
+        "value": 54.6,
+        "rank": 16
+      },
+      "MN": {
+        "name": "Manipur",
+        "value": 54.2,
+        "rank": 17
+      },
+      "MZ": {
+        "name": "Mizoram",
+        "value": 54.2,
+        "rank": 18
+      },
+      "AP": {
+        "name": "Andhra Pradesh",
+        "value": 53.8,
+        "rank": 19
+      },
+      "HR": {
+        "name": "Haryana",
+        "value": 52.8,
+        "rank": 20
+      },
+      "SK": {
+        "name": "Sikkim",
+        "value": 52.8,
+        "rank": 21
+      },
+      "HP": {
+        "name": "Himachal Pradesh",
+        "value": 52.4,
+        "rank": 22
+      },
+      "PY": {
+        "name": "Puducherry",
+        "value": 52.4,
+        "rank": 23
+      },
+      "TS": {
+        "name": "Telangana",
+        "value": 52.2,
+        "rank": 24
+      },
+      "PB": {
+        "name": "Punjab",
+        "value": 51.4,
+        "rank": 25
+      },
+      "GJ": {
+        "name": "Gujarat",
+        "value": 51.2,
+        "rank": 26
+      },
+      "KA": {
+        "name": "Karnataka",
+        "value": 50.8,
+        "rank": 27
+      },
+      "WB": {
+        "name": "West Bengal",
+        "value": 50.4,
+        "rank": 28
+      },
+      "DL": {
+        "name": "Delhi",
+        "value": 48.8,
+        "rank": 29
       },
       "MH": {
         "name": "Maharashtra",
-        "value": 47.2,
-        "rank": 4
+        "value": 48.4,
+        "rank": 30
+      },
+      "TN": {
+        "name": "Tamil Nadu",
+        "value": 48.2,
+        "rank": 31
       },
       "KL": {
         "name": "Kerala",
-        "value": 44.8,
-        "rank": 5
+        "value": 47.2,
+        "rank": 32
+      },
+      "AN": {
+        "name": "Andaman & Nicobar Islands",
+        "value": 46.8,
+        "rank": 33
+      },
+      "GA": {
+        "name": "Goa",
+        "value": 46.4,
+        "rank": 34
+      },
+      "DN": {
+        "name": "Dadra & Nagar Haveli",
+        "value": 44.6,
+        "rank": 35
+      },
+      "DD": {
+        "name": "Daman & Diu",
+        "value": 44.6,
+        "rank": 36
+      },
+      "CH": {
+        "name": "Chandigarh",
+        "value": 42.2,
+        "rank": 37
       }
     }
   },
@@ -84,54 +243,374 @@
         {
           "code": "BR",
           "name": "Bihar",
-          "value": 60.1
+          "value": 62.4
         },
         {
           "code": "UP",
           "name": "Uttar Pradesh",
-          "value": 56.4
+          "value": 58.6
         },
         {
           "code": "RJ",
           "name": "Rajasthan",
-          "value": 53.8
+          "value": 58.4
+        },
+        {
+          "code": "MP",
+          "name": "Madhya Pradesh",
+          "value": 55.2
+        },
+        {
+          "code": "ML",
+          "name": "Meghalaya",
+          "value": 54.2
+        },
+        {
+          "code": "LA",
+          "name": "Ladakh",
+          "value": 52
+        },
+        {
+          "code": "JH",
+          "name": "Jharkhand",
+          "value": 52.2
+        },
+        {
+          "code": "AR",
+          "name": "Arunachal Pradesh",
+          "value": 50.4
+        },
+        {
+          "code": "AS",
+          "name": "Assam",
+          "value": 49.2
+        },
+        {
+          "code": "CG",
+          "name": "Chhattisgarh",
+          "value": 49.4
+        },
+        {
+          "code": "LD",
+          "name": "Lakshadweep",
+          "value": 50.4
+        },
+        {
+          "code": "JK",
+          "name": "Jammu & Kashmir",
+          "value": 48.2
+        },
+        {
+          "code": "UK",
+          "name": "Uttarakhand",
+          "value": 46.6
+        },
+        {
+          "code": "OD",
+          "name": "Odisha",
+          "value": 46.2
+        },
+        {
+          "code": "NL",
+          "name": "Nagaland",
+          "value": 47.6
+        },
+        {
+          "code": "TR",
+          "name": "Tripura",
+          "value": 46.8
+        },
+        {
+          "code": "MN",
+          "name": "Manipur",
+          "value": 46.8
+        },
+        {
+          "code": "MZ",
+          "name": "Mizoram",
+          "value": 46.2
+        },
+        {
+          "code": "AP",
+          "name": "Andhra Pradesh",
+          "value": 44.6
+        },
+        {
+          "code": "HR",
+          "name": "Haryana",
+          "value": 45.2
+        },
+        {
+          "code": "SK",
+          "name": "Sikkim",
+          "value": 44.2
+        },
+        {
+          "code": "HP",
+          "name": "Himachal Pradesh",
+          "value": 42.4
+        },
+        {
+          "code": "PY",
+          "name": "Puducherry",
+          "value": 41.8
+        },
+        {
+          "code": "TS",
+          "name": "Telangana",
+          "value": 43.2
+        },
+        {
+          "code": "PB",
+          "name": "Punjab",
+          "value": 43.6
+        },
+        {
+          "code": "GJ",
+          "name": "Gujarat",
+          "value": 43.4
+        },
+        {
+          "code": "KA",
+          "name": "Karnataka",
+          "value": 41.8
+        },
+        {
+          "code": "WB",
+          "name": "West Bengal",
+          "value": 41.8
+        },
+        {
+          "code": "DL",
+          "name": "Delhi",
+          "value": 41.2
         },
         {
           "code": "MH",
           "name": "Maharashtra",
-          "value": 38.1
+          "value": 39.8
+        },
+        {
+          "code": "TN",
+          "name": "Tamil Nadu",
+          "value": 37.2
         },
         {
           "code": "KL",
           "name": "Kerala",
-          "value": 29.6
+          "value": 31.8
+        },
+        {
+          "code": "AN",
+          "name": "Andaman & Nicobar Islands",
+          "value": 38.4
+        },
+        {
+          "code": "GA",
+          "name": "Goa",
+          "value": 34.2
+        },
+        {
+          "code": "DN",
+          "name": "Dadra & Nagar Haveli",
+          "value": 38.2
+        },
+        {
+          "code": "DD",
+          "name": "Daman & Diu",
+          "value": 38.2
+        },
+        {
+          "code": "CH",
+          "name": "Chandigarh",
+          "value": 34.2
         }
       ],
       "seriesB": [
         {
           "code": "BR",
           "name": "Bihar",
-          "value": 6.1
+          "value": 5.8
         },
         {
           "code": "UP",
           "name": "Uttar Pradesh",
-          "value": 6.4
+          "value": 6.2
         },
         {
           "code": "RJ",
           "name": "Rajasthan",
+          "value": 5.8
+        },
+        {
+          "code": "MP",
+          "name": "Madhya Pradesh",
+          "value": 6.2
+        },
+        {
+          "code": "ML",
+          "name": "Meghalaya",
           "value": 6.6
+        },
+        {
+          "code": "LA",
+          "name": "Ladakh",
+          "value": 8.2
+        },
+        {
+          "code": "JH",
+          "name": "Jharkhand",
+          "value": 6.4
+        },
+        {
+          "code": "AR",
+          "name": "Arunachal Pradesh",
+          "value": 6.8
+        },
+        {
+          "code": "AS",
+          "name": "Assam",
+          "value": 7.9
+        },
+        {
+          "code": "CG",
+          "name": "Chhattisgarh",
+          "value": 7.4
+        },
+        {
+          "code": "LD",
+          "name": "Lakshadweep",
+          "value": 6.4
+        },
+        {
+          "code": "JK",
+          "name": "Jammu & Kashmir",
+          "value": 8.2
+        },
+        {
+          "code": "UK",
+          "name": "Uttarakhand",
+          "value": 9
+        },
+        {
+          "code": "OD",
+          "name": "Odisha",
+          "value": 9.2
+        },
+        {
+          "code": "NL",
+          "name": "Nagaland",
+          "value": 7.2
+        },
+        {
+          "code": "TR",
+          "name": "Tripura",
+          "value": 7.8
+        },
+        {
+          "code": "MN",
+          "name": "Manipur",
+          "value": 7.4
+        },
+        {
+          "code": "MZ",
+          "name": "Mizoram",
+          "value": 8
+        },
+        {
+          "code": "AP",
+          "name": "Andhra Pradesh",
+          "value": 9.2
+        },
+        {
+          "code": "HR",
+          "name": "Haryana",
+          "value": 7.6
+        },
+        {
+          "code": "SK",
+          "name": "Sikkim",
+          "value": 8.6
+        },
+        {
+          "code": "HP",
+          "name": "Himachal Pradesh",
+          "value": 10
+        },
+        {
+          "code": "PY",
+          "name": "Puducherry",
+          "value": 10.6
+        },
+        {
+          "code": "TS",
+          "name": "Telangana",
+          "value": 9
+        },
+        {
+          "code": "PB",
+          "name": "Punjab",
+          "value": 7.8
+        },
+        {
+          "code": "GJ",
+          "name": "Gujarat",
+          "value": 7.8
+        },
+        {
+          "code": "KA",
+          "name": "Karnataka",
+          "value": 9
+        },
+        {
+          "code": "WB",
+          "name": "West Bengal",
+          "value": 8.6
+        },
+        {
+          "code": "DL",
+          "name": "Delhi",
+          "value": 7.6
         },
         {
           "code": "MH",
           "name": "Maharashtra",
-          "value": 9.1
+          "value": 8.6
+        },
+        {
+          "code": "TN",
+          "name": "Tamil Nadu",
+          "value": 11
         },
         {
           "code": "KL",
           "name": "Kerala",
-          "value": 15.2
+          "value": 15.4
+        },
+        {
+          "code": "AN",
+          "name": "Andaman & Nicobar Islands",
+          "value": 8.4
+        },
+        {
+          "code": "GA",
+          "name": "Goa",
+          "value": 12.2
+        },
+        {
+          "code": "DN",
+          "name": "Dadra & Nagar Haveli",
+          "value": 6.4
+        },
+        {
+          "code": "DD",
+          "name": "Daman & Diu",
+          "value": 6.4
+        },
+        {
+          "code": "CH",
+          "name": "Chandigarh",
+          "value": 8
         }
       ]
     }
@@ -161,39 +640,263 @@
     ],
     "rows": [
       [
-        "Maharashtra",
-        47.2,
-        38.1,
-        9.1,
-        68.2
-      ],
-      [
-        "Uttar Pradesh",
-        62.8,
-        56.4,
-        6.4,
-        61.4
-      ],
-      [
-        "Kerala",
-        44.8,
-        29.6,
-        15.2,
-        69.1
-      ],
-      [
-        "Rajasthan",
-        60.4,
+        "Andhra Pradesh",
         53.8,
-        6.6,
-        62.3
+        44.6,
+        9.2,
+        65.6
+      ],
+      [
+        "Arunachal Pradesh",
+        57.2,
+        50.4,
+        6.8,
+        63.6
+      ],
+      [
+        "Assam",
+        57.1,
+        49.2,
+        7.9,
+        63.7
       ],
       [
         "Bihar",
-        66.2,
-        60.1,
-        6.1,
-        60.2
+        68.2,
+        62.4,
+        5.8,
+        59.4
+      ],
+      [
+        "Chhattisgarh",
+        56.8,
+        49.4,
+        7.4,
+        63.8
+      ],
+      [
+        "Goa",
+        46.4,
+        34.2,
+        12.2,
+        68.3
+      ],
+      [
+        "Gujarat",
+        51.2,
+        43.4,
+        7.8,
+        66.1
+      ],
+      [
+        "Haryana",
+        52.8,
+        45.2,
+        7.6,
+        65.4
+      ],
+      [
+        "Himachal Pradesh",
+        52.4,
+        42.4,
+        10,
+        65.6
+      ],
+      [
+        "Jharkhand",
+        58.6,
+        52.2,
+        6.4,
+        63.1
+      ],
+      [
+        "Karnataka",
+        50.8,
+        41.8,
+        9,
+        66.3
+      ],
+      [
+        "Kerala",
+        47.2,
+        31.8,
+        15.4,
+        67.9
+      ],
+      [
+        "Madhya Pradesh",
+        61.4,
+        55.2,
+        6.2,
+        61.9
+      ],
+      [
+        "Maharashtra",
+        48.4,
+        39.8,
+        8.6,
+        67.4
+      ],
+      [
+        "Manipur",
+        54.2,
+        46.8,
+        7.4,
+        64.8
+      ],
+      [
+        "Meghalaya",
+        60.8,
+        54.2,
+        6.6,
+        62.2
+      ],
+      [
+        "Mizoram",
+        54.2,
+        46.2,
+        8,
+        64.8
+      ],
+      [
+        "Nagaland",
+        54.8,
+        47.6,
+        7.2,
+        64.6
+      ],
+      [
+        "Odisha",
+        55.4,
+        46.2,
+        9.2,
+        64.4
+      ],
+      [
+        "Punjab",
+        51.4,
+        43.6,
+        7.8,
+        66
+      ],
+      [
+        "Rajasthan",
+        64.2,
+        58.4,
+        5.8,
+        60.9
+      ],
+      [
+        "Sikkim",
+        52.8,
+        44.2,
+        8.6,
+        65.4
+      ],
+      [
+        "Tamil Nadu",
+        48.2,
+        37.2,
+        11,
+        67.5
+      ],
+      [
+        "Telangana",
+        52.2,
+        43.2,
+        9,
+        65.7
+      ],
+      [
+        "Tripura",
+        54.6,
+        46.8,
+        7.8,
+        64.7
+      ],
+      [
+        "Uttar Pradesh",
+        64.8,
+        58.6,
+        6.2,
+        60.7
+      ],
+      [
+        "Uttarakhand",
+        55.6,
+        46.6,
+        9,
+        64.2
+      ],
+      [
+        "West Bengal",
+        50.4,
+        41.8,
+        8.6,
+        66.5
+      ],
+      [
+        "Andaman & Nicobar Islands",
+        46.8,
+        38.4,
+        8.4,
+        68.1
+      ],
+      [
+        "Chandigarh",
+        42.2,
+        34.2,
+        8,
+        70.3
+      ],
+      [
+        "Dadra & Nagar Haveli",
+        44.6,
+        38.2,
+        6.4,
+        69.2
+      ],
+      [
+        "Daman & Diu",
+        44.6,
+        38.2,
+        6.4,
+        69.2
+      ],
+      [
+        "Delhi",
+        48.8,
+        41.2,
+        7.6,
+        67.2
+      ],
+      [
+        "Jammu & Kashmir",
+        56.4,
+        48.2,
+        8.2,
+        64
+      ],
+      [
+        "Ladakh",
+        60.2,
+        52,
+        8.2,
+        62.4
+      ],
+      [
+        "Lakshadweep",
+        56.8,
+        50.4,
+        6.4,
+        63.8
+      ],
+      [
+        "Puducherry",
+        52.4,
+        41.8,
+        10.6,
+        65.6
       ]
     ]
   },

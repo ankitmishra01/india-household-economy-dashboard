@@ -7,6 +7,8 @@ const path = require('path');
 const ROOT    = path.join(__dirname, '..', '..');
 const OUT_DIR = path.join(ROOT, 'data', 'pages', 'neet-youth');
 const MOCK    = process.argv.includes('--mock');
+const PLFS    = require('../fetch/plfs-data');
+const { STATES } = require('../../js/constants/states');
 
 const MOCK_DATA = {
   states: {
@@ -68,11 +70,24 @@ function buildDataJson(raw) {
   };
 }
 
+function buildRealData() {
+  const states = {};
+  for (const [code, s] of Object.entries(STATES)) {
+    const p = PLFS.STATES[code];
+    if (!p) { states[code] = { name: s.name, neet_overall: null, neet_male: null, neet_female: null }; continue; }
+    states[code] = { name: s.name, neet_overall: p.neet[2], neet_male: p.neet[0], neet_female: p.neet[1] };
+  }
+  const n = PLFS.NATIONAL;
+  return { states, national: { overall: n.neet[2], male: n.neet[0], female: n.neet[1] },
+    nationalComposition: MOCK_DATA.nationalComposition };
+}
+
 try {
-  const data = buildDataJson(MOCK_DATA);
+  const raw  = MOCK ? MOCK_DATA : buildRealData();
+  const data = buildDataJson(raw);
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.writeFileSync(path.join(OUT_DIR, 'data.json'), JSON.stringify(data, null, 2));
-  console.log(`✓ neet-youth: ${Object.keys(MOCK_DATA.states).length} states${MOCK ? ' (MOCK)' : ''}`);
+  console.log(`✓ neet-youth: ${Object.keys(raw.states).length} states${MOCK ? ' (MOCK)' : ''}`);
 } catch (err) {
   console.error(`✗ neet-youth: ${err.message}`);
   process.exit(1);
