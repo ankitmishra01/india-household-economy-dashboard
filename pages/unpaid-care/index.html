@@ -3,56 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unpaid Care &amp; Domestic Work — India Household Economy Dashboard</title>
+  <title>Unpaid Care & Domestic Work — India Household Economy Dashboard</title>
   <meta name="description" content="Daily time spent on unpaid work by gender and state">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/css/main.css">
 </head>
 <body data-page="unpaid-care" data-theme="labor">
 
   <header class="site-header" id="site-header">
-    <a href="/" class="logo">&#127988;&#65039; India Economy</a>
-    <nav class="site-nav" id="site-nav" aria-label="Main navigation"></nav>
-    <div class="header-right">
-      <a href="/about.html">About</a>
-      <a href="https://github.com/india-household-economy-dashboard" target="_blank" rel="noopener">GitHub</a>
-    </div>
+    <!-- Rebuilt by nav.js -->
   </header>
 
-  <div class="page-hero">
-    <div class="hero-text">
-      <h1 id="page-title">Unpaid Care &amp; Domestic Work</h1>
+  <!-- ── Indicator hero ── -->
+  <section class="indicator-hero">
+    <div class="ih-inner">
+      <div class="breadcrumb">
+        <a href="/">← All themes</a>
+        <span style="opacity:0.4">·</span>
+        <span>Labour & Work</span>
+      </div>
+      <h1 id="page-title">Unpaid Care & Domestic Work</h1>
       <p class="subtitle" id="page-subtitle">Daily time spent on unpaid work by gender and state</p>
+      <div class="ih-meta">
+        <div class="item">
+          <div class="lbl">Source</div>
+          <div class="val" id="source-badge">Loading…</div>
+        </div>
+        <div class="item">
+          <div class="lbl">National avg</div>
+          <div class="val" id="panel-avg-display">—</div>
+        </div>
+        <div class="item">
+          <div class="lbl">Coverage</div>
+          <div class="val">37 states &amp; UTs</div>
+        </div>
+      </div>
     </div>
-    <span class="source-badge" id="source-badge">Loading…</span>
-  </div>
+  </section>
 
-  <!-- Content warning (only shown when data has contentWarning set) -->
+  <!-- Content warning -->
   <div class="content-warning hidden" id="content-warning" role="alert">
     <span class="cw-icon" aria-hidden="true">&#9888;</span>
     <span class="cw-text" id="cw-text"></span>
     <button class="cw-dismiss" id="cw-dismiss" aria-label="Dismiss warning">Dismiss</button>
   </div>
 
-  <!-- Tab controls (only shown on tabbed pages) -->
-  <div class="tab-controls hidden" id="tab-controls" role="tablist"></div>
+  <!-- ── Tab controls ── -->
+  <div class="tabs hidden" id="tab-controls" role="tablist"></div>
 
-  <!-- Map + Data Panel -->
-  <div class="map-layout">
-    <div class="map-panel">
+  <!-- ── Two-column body: tilemap + panel ── -->
+  <div class="indicator-body">
+
+    <!-- Tile-grid map card -->
+    <div class="map-card">
+      <div class="map-card-head">
+        <div>
+          <div class="title">India, <em>by state</em></div>
+          <div class="sub">Daily time spent on unpaid work by gender and state</div>
+        </div>
+        <div class="legend">
+          <span>low</span>
+          <div class="legend-bar"></div>
+          <span>high</span>
+        </div>
+      </div>
       <div id="map-container">
-        <div class="skeleton skeleton-map" id="map-skeleton"></div>
+        <div class="skeleton skeleton-map" id="map-skeleton" style="min-height:580px"></div>
       </div>
       <div class="map-controls">
-        <button class="map-btn hidden" id="back-btn" aria-label="Back to India view">&#8592; Back to India</button>
+        <button class="map-btn hidden" id="back-btn" aria-label="Back to India view">&#8592; Back</button>
       </div>
-      <div class="map-tooltip" id="map-tooltip" role="tooltip">
+      <!-- Choropleth tooltip (used by choropleth fallback) -->
+      <div class="map-tooltip" id="map-tooltip" role="tooltip" style="display:none">
         <div class="tt-state" id="tt-state"></div>
         <div class="tt-value" id="tt-value"></div>
         <div class="tt-rank" id="tt-rank"></div>
       </div>
-      <div class="map-legend" id="map-legend">
+      <div class="map-legend hidden" id="map-legend">
         <div class="legend-title" id="legend-title"></div>
-        <div class="legend-bar"></div>
+        <div class="legend-bar-choropleth"></div>
         <div class="legend-labels">
           <span id="legend-min"></span>
           <span id="legend-mid"></span>
@@ -61,27 +91,33 @@
       </div>
     </div>
 
-    <div class="data-panel" id="data-panel">
-      <div class="data-panel-header">
-        <h3 id="panel-indicator-label">States ranked by indicator</h3>
+    <!-- State ranking panel -->
+    <aside class="panel" id="data-panel">
+      <div class="panel-head">
+        <div class="eyebrow">Ranked by indicator</div>
+        <h4 id="panel-indicator-label">States &amp; UTs</h4>
       </div>
-      <div class="panel-avg-row">
-        <span class="label">National Average</span>
-        <span class="value" id="panel-avg-value">—</span>
+      <div class="panel-avg">
+        <span class="lbl">India · national avg</span>
+        <span class="val" id="panel-avg-value">—</span>
       </div>
-      <div class="panel-state-list" id="panel-state-list">
-        <!-- Populated by page.js -->
-      </div>
-    </div>
+      <div class="panel-list panel-state-list" id="panel-state-list"></div>
+    </aside>
+
   </div>
 
-  <!-- Charts -->
+  <!-- ── Insight callouts ── -->
+  <div id="insights-section">
+    <div id="insights-container"></div>
+  </div>
+
+  <!-- ── Chart section ── -->
   <div id="charts-container"></div>
 
-  <!-- Data Table -->
+  <!-- ── Data table ── -->
   <div class="table-section" id="table-section">
     <div class="section-header">
-      <h2>Data Table</h2>
+      <h2>Full data table</h2>
     </div>
     <div class="table-toolbar">
       <input type="search" class="table-search" id="table-search" placeholder="Search states…" aria-label="Search states">
@@ -95,36 +131,36 @@
     </div>
   </div>
 
-  <!-- AI Insights -->
-  <div class="insights-section" id="insights-section">
-    <h2>Data Insights</h2>
-    <div id="insights-container">
-      <p class="no-insights">Insights not yet generated for this page.</p>
-    </div>
-  </div>
-
-  <!-- Notes & Methodology -->
+  <!-- ── Notes ── -->
   <div class="notes-section" id="notes-section">
-    <h3>Notes & Methodology</h3>
+    <h3>Notes &amp; methodology</h3>
     <ul id="notes-list"></ul>
   </div>
 
   <footer class="site-footer">
-    <div class="footer-col">
-      <h4>Source</h4>
-      <p id="footer-source"></p>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="display">India's household economy, written in <em style="color:var(--saffron);font-style:italic">numbers</em>.</div>
+        <p id="footer-methodology"></p>
+      </div>
+      <div class="foot-col">
+        <h5>Source</h5>
+        <p id="footer-source"></p>
+        <p id="footer-survey-period"></p>
+      </div>
+      <div class="foot-col">
+        <h5>Project</h5>
+        <a href="/about.html">About this dashboard</a>
+        <a href="https://github.com/india-household-economy-dashboard" target="_blank" rel="noopener">GitHub (MIT)</a>
+      </div>
+      <div class="foot-col">
+        <h5>Data</h5>
+        <a href="https://mospi.gov.in" target="_blank" rel="noopener">NSO / MoSPI</a>
+        <a href="https://rchiips.org/nfhs" target="_blank" rel="noopener">IIPS / NFHS-5</a>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Methodology</h4>
-      <p id="footer-methodology"></p>
-    </div>
-    <div class="footer-col">
-      <h4>Project</h4>
-      <a href="/about.html">About this dashboard</a><br>
-      <a href="https://github.com/india-household-economy-dashboard" target="_blank" rel="noopener">GitHub (MIT)</a>
-    </div>
-    <div class="footer-bottom">
-      <span id="footer-survey-period"></span>
+    <div class="foot-bottom">
+      <span id="footer-survey-period-bottom"></span>
       <span>Built with Claude Code · GeoJSON: DataMeet · MIT License</span>
     </div>
   </footer>
@@ -133,6 +169,7 @@
   <script src="/js/constants/states.js"></script>
   <script src="/js/utils/format.js"></script>
   <script src="/js/utils/stats.js"></script>
+  <script src="/js/renderers/tilemap.js"></script>
   <script src="/js/renderers/choropleth.js"></script>
   <script src="/js/renderers/lollipop.js"></script>
   <script src="/js/renderers/waffle.js"></script>
@@ -140,5 +177,17 @@
   <script src="/js/table-renderer.js"></script>
   <script src="/js/nav.js"></script>
   <script src="/js/page.js"></script>
+  <script>
+    // Mirror national avg to ih-meta once page.js sets it
+    document.addEventListener('DOMContentLoaded', function () {
+      var observer = new MutationObserver(function () {
+        var v  = document.getElementById('panel-avg-value')?.textContent;
+        var el = document.getElementById('panel-avg-display');
+        if (el && v && v !== '—') { el.textContent = v; observer.disconnect(); }
+      });
+      var target = document.getElementById('panel-avg-value');
+      if (target) observer.observe(target, { childList: true, characterData: true, subtree: true });
+    });
+  </script>
 </body>
 </html>

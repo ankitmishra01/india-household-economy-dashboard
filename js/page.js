@@ -92,25 +92,42 @@
     if (panelAvg)  panelAvg.textContent  = FMT.auto(mapData.nationalAverage, mapData.unit);
 
     // Ranked list in data panel
-    if (panelList) renderStatePanel(panelList, mapData);
+    if (panelList) {
+      panelList.innerHTML = '';
+      renderStatePanel(panelList, mapData);
+    }
 
-    ChoroplethRenderer.loadGeo().then(() => {
-      ChoroplethRenderer.render({
+    // Use tile cartogram when TilemapRenderer is available
+    if (typeof TilemapRenderer !== 'undefined') {
+      container.innerHTML = '';
+      TilemapRenderer.render({
         container,
         stateData: mapData.states || {},
         unit: mapData.unit,
         indicator: mapData.indicator,
-        onStateClick: (code, name) => {
-          highlightPanelState(code);
-        },
+        avg: mapData.nationalAverage,
+        onStateClick: (code) => { highlightPanelState(code); },
       });
-    }).catch(err => {
-      container.innerHTML = `<div style="padding:24px;color:var(--text-muted)">Map unavailable: ${err.message}</div>`;
-    });
+    } else {
+      // Fallback: choropleth
+      ChoroplethRenderer.loadGeo().then(() => {
+        ChoroplethRenderer.render({
+          container,
+          stateData: mapData.states || {},
+          unit: mapData.unit,
+          indicator: mapData.indicator,
+          onStateClick: (code) => { highlightPanelState(code); },
+        });
+      }).catch(err => {
+        container.innerHTML = `<div style="padding:24px;color:var(--ink-3)">Map unavailable: ${err.message}</div>`;
+      });
+    }
   }
 
   function renderStatePanel(container, mapData) {
     const states = mapData.states || {};
+    const avg = mapData.nationalAverage;
+
     // Sort by value descending (nulls last)
     const sorted = Object.entries(states)
       .sort(([, a], [, b]) => {
@@ -119,18 +136,36 @@
         return b.value - a.value;
       });
 
-    sorted.forEach(([code, state]) => {
+    const maxVal = sorted.find(([, s]) => s.value != null)?.[1].value || 1;
+
+    sorted.forEach(([code, state], idx) => {
+      const noData = state.value == null;
+      const pct    = noData ? 0 : Math.min(100, (state.value / maxVal) * 100);
+      const above  = !noData && avg != null && state.value >= avg;
+      const barColor = above ? 'var(--sage)' : 'var(--vermillion)';
+
       const row = document.createElement('div');
-      row.className = 'panel-state-row' + (state.value == null ? ' no-data' : '');
+      row.className = 'panel-state-row' + (noData ? ' no-data' : '');
       row.dataset.code = code;
+
+      const rankStr = state.rank != null ? String(state.rank).padStart(2, '0') : '—';
+
       row.innerHTML = `
-        <span class="panel-rank">${state.rank != null ? '#' + state.rank : '—'}</span>
-        <span class="panel-state-name">${escHtml(state.name)}</span>
+        <span class="panel-rank">${rankStr}</span>
+        <div>
+          <div class="panel-state-name">${escHtml(state.name)}</div>
+          ${!noData ? `<div class="minibar"><span style="width:${pct}%;background:${barColor}"></span></div>` : ''}
+        </div>
         <span class="panel-value">${FMT.auto(state.value, mapData.unit)}</span>
       `;
-      row.addEventListener('mouseenter', () => highlightPanelState(code));
+
+      row.addEventListener('mouseenter', () => {
+        highlightPanelState(code);
+        if (typeof TilemapRenderer !== 'undefined') TilemapRenderer.highlight(code);
+      });
       row.addEventListener('mouseleave', () => {
         document.querySelectorAll('.panel-state-row').forEach(r => r.classList.remove('highlighted'));
+        if (typeof TilemapRenderer !== 'undefined') TilemapRenderer.clearHighlight();
       });
       container.appendChild(row);
     });
@@ -154,22 +189,22 @@
       section.className = 'chart-section';
       section.id = `chart-${block.id}`;
 
+      const card = document.createElement('div');
+      card.className = 'chart-card';
+
       const header = document.createElement('div');
-      header.className = 'section-header';
-      header.innerHTML = `<h2>${escHtml(block.title || '')}</h2>`;
-      if (block.subtitle) {
-        const sub = document.createElement('p');
-        sub.textContent = block.subtitle;
-        header.appendChild(sub);
-      }
+      header.className = 'chart-head';
+      const titleSplit = (block.title || '').replace(/(\S+)\s*$/, '<em>$1</em>');
+      header.innerHTML = `<div><h3>${titleSplit}</h3>${block.subtitle ? `<div style="font-size:12.5px;color:var(--ink-3);margin-top:4px">${escHtml(block.subtitle)}</div>` : ''}</div>`;
       if (block.modelled) {
-        header.innerHTML += `<div style="margin-top:6px;"><span class="modelled-badge">Modelled estimate</span></div>`;
+        header.querySelector('div').insertAdjacentHTML('beforeend', '<div style="margin-top:6px;"><span class="modelled-badge">Modelled estimate</span></div>');
       }
-      section.appendChild(header);
+      card.appendChild(header);
 
       const chartEl = document.createElement('div');
       chartEl.className = 'chart-render-area';
-      section.appendChild(chartEl);
+      card.appendChild(chartEl);
+      section.appendChild(card);
 
       container.appendChild(section);
 
@@ -216,10 +251,11 @@
     tabBar.classList.remove('hidden');
     tabBar.innerHTML = '';
 
+    const DEVA_NUMS = ['०१','०२','०३','०४','०५'];
     tabs.forEach((tab, i) => {
       const btn = document.createElement('button');
       btn.className = 'tab-btn' + (i === 0 ? ' active' : '');
-      btn.textContent = tab.label;
+      btn.innerHTML = `${escHtml(tab.label)}<span class="num" style="font-family:var(--font-deva)">${DEVA_NUMS[i] || ''}</span>`;
       btn.setAttribute('role', 'tab');
       btn.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
       btn.addEventListener('click', () => {
@@ -314,10 +350,10 @@
   function showError(msg) {
     const container = document.getElementById('map-container');
     if (container) {
-      container.innerHTML = `<div style="padding:32px;color:var(--text-muted);text-align:center;">
-        <p style="margin-bottom:8px;color:var(--chart-bad);">⚠ Data not available</p>
-        <p style="font-size:0.82rem;">${escHtml(msg)}</p>
-        <p style="font-size:0.78rem;margin-top:8px;">Run <code>node scripts/extract/${slug}.js --mock</code> to generate mock data.</p>
+      container.innerHTML = `<div style="padding:32px;color:var(--ink-3);text-align:center;">
+        <p style="margin-bottom:8px;color:var(--vermillion);">⚠ Data not available</p>
+        <p style="font-size:13px;">${escHtml(msg)}</p>
+        <p style="font-size:12px;margin-top:8px;">Run <code>node scripts/extract/${slug}.js --mock</code> to generate mock data.</p>
       </div>`;
     }
   }

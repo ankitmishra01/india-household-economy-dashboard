@@ -3,126 +3,247 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>India Household Economy Dashboard</title>
-  <meta name="description" content="An open, interactive dashboard making India's household economic data explorable — for journalists, policymakers, and researchers.">
+  <title>India Household Economy — Made Explorable</title>
+  <meta name="description" content="Open, interactive maps and charts on wealth, work, health, learning and financial inclusion across all 37 Indian states and union territories.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/css/main.css">
 </head>
 <body data-page="home">
 
   <header class="site-header" id="site-header">
-    <a href="/" class="logo">&#127988;&#65039; India Economy</a>
-    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-      <!-- Injected by nav.js -->
-    </nav>
-    <div class="header-right">
-      <a href="/about.html">About</a>
-      <a href="https://github.com/india-household-economy-dashboard" target="_blank" rel="noopener">GitHub</a>
-    </div>
+    <!-- Rebuilt by nav.js -->
   </header>
 
   <main>
-    <!-- Dark hero band -->
-    <section class="home-hero">
-      <div class="home-hero-inner">
-        <h1>India's Household Economy, Made Explorable</h1>
-        <p>Government survey data on wealth, labor, health, education, and financial inclusion — all 37 states and UTs, open to everyone.</p>
-        <div class="hero-cta">
-          <a href="/pages/household-consumption/" class="btn btn-primary">Explore the Data</a>
-          <a href="/about.html" class="btn btn-outline">How It Works</a>
+
+    <!-- ── Hero ── -->
+    <section class="hero">
+      <div class="editorial-caption">
+        A reading of HCES, PLFS, NFHS-5<br>and Census micro-data —<br>re-imagined for the global newsroom.
+      </div>
+      <div class="hero-grid container">
+        <div>
+          <div class="section-marker">
+            <span class="deva" style="font-family:var(--font-deva)">२०२६</span>
+            <span class="eyebrow">Edition · January 2026</span>
+          </div>
+          <h1>
+            India's household economy,<br>
+            made <span class="accent">explorable</span><span class="underline">.</span>
+          </h1>
+          <p class="lede">
+            Open, interactive maps and charts on wealth, work, health, learning
+            and financial inclusion. Government survey data on every state and
+            union territory — built for journalists, policymakers and curious citizens
+            everywhere.
+          </p>
+          <div class="cta-row">
+            <a href="/pages/household-consumption/" class="btn-primary">Open the data ↗</a>
+            <a href="/about.html" class="btn-ghost">How it was built</a>
+          </div>
         </div>
-        <div class="hero-stats">
-          <div class="hero-stat-card">
-            <div class="hsc-label">Coverage</div>
-            <div class="hsc-value">37</div>
-            <div class="hsc-sub">States &amp; UTs</div>
+        <div class="hero-side">
+          <div class="row">
+            <span class="lbl">States &amp; UTs covered</span>
+            <span class="val">37</span>
           </div>
-          <div class="hero-stat-card">
-            <div class="hsc-label">Indicators</div>
-            <div class="hsc-value">22</div>
-            <div class="hsc-sub">Across 5 themes</div>
+          <div class="row">
+            <span class="lbl">Indicators</span>
+            <span class="val">22</span>
           </div>
-          <div class="hero-stat-card">
-            <div class="hsc-label">Avg Monthly MPCE</div>
-            <div class="hsc-value">₹4,501</div>
-            <div class="hsc-sub">HCES 2022–23</div>
+          <div class="row">
+            <span class="lbl">Data partners</span>
+            <span class="val">8</span>
           </div>
-          <div class="hero-stat-card">
-            <div class="hsc-label">Female LFPR</div>
-            <div class="hsc-value">37%</div>
-            <div class="hsc-sub">PLFS 2022–23</div>
-          </div>
-          <div class="hero-stat-card">
-            <div class="hsc-label">MPI Poor</div>
-            <div class="hsc-value">24.8%</div>
-            <div class="hsc-sub">NITI Aayog 2021</div>
+          <div class="row">
+            <span class="lbl">Years of survey data</span>
+            <span class="val">14<sup>yrs</sup></span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Light content area -->
-    <div class="home-content">
-      <section aria-label="Themes" id="theme-grid-section">
-        <p class="home-section-heading">Explore by Theme</p>
-        <div class="theme-grid" id="theme-grid"></div>
-      </section>
-
-      <section style="margin-top: 8px;">
-        <p class="home-section-heading">Data Sources</p>
-        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden;">
-          <table class="data-table" style="font-size: 0.78rem; margin: 0;">
-            <thead>
-              <tr>
-                <th>Survey</th>
-                <th>Publisher</th>
-                <th>Year</th>
-                <th>Themes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Household Consumption Expenditure Survey (HCES)</td><td>NSO / MoSPI</td><td class="num">2022–23</td><td>Wealth, Human Capital</td></tr>
-              <tr><td>Periodic Labour Force Survey (PLFS)</td><td>NSO / MoSPI</td><td class="num">2022–23</td><td>Labor</td></tr>
-              <tr><td>Time Use Survey</td><td>NSO / MoSPI</td><td class="num">2019</td><td>Labor</td></tr>
-              <tr><td>National Family Health Survey (NFHS-5)</td><td>IIPS / MoHFW</td><td class="num">2019–21</td><td>Wealth, Health, Human Capital, Financial</td></tr>
-              <tr><td>National MPI India</td><td>NITI Aayog / UNDP</td><td class="num">2021</td><td>Wealth</td></tr>
-              <tr><td>National Sample Survey (NSS) 75th Round</td><td>NSO / MoSPI</td><td class="num">2017–18</td><td>Health</td></tr>
-              <tr><td>RBI Financial Inclusion Index + PMJDY</td><td>RBI / Ministry of Finance</td><td class="num">2023</td><td>Financial</td></tr>
-              <tr><td>Census of India</td><td>Registrar General of India</td><td class="num">2011</td><td>Wealth, Human Capital</td></tr>
-            </tbody>
-          </table>
+    <!-- ── KPI strip ── -->
+    <div class="kpi-strip">
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="num">₹4,501<span class="small">/mo</span></div>
+          <div class="lbl">Avg MPCE</div>
+          <div class="sub">Household consumption · HCES '22</div>
         </div>
-      </section>
+        <div class="kpi">
+          <div class="num">37<span class="small">%</span></div>
+          <div class="lbl">Female LFPR</div>
+          <div class="sub">PLFS '22 · ages 15+</div>
+        </div>
+        <div class="kpi">
+          <div class="num">24.8<span class="small">%</span></div>
+          <div class="lbl">MPI poor</div>
+          <div class="sub">NITI Aayog · 2021</div>
+        </div>
+        <div class="kpi">
+          <div class="num">78<span class="small">%</span></div>
+          <div class="lbl">Bank account</div>
+          <div class="sub">Adults · NFHS-5 '19–21</div>
+        </div>
+        <div class="kpi">
+          <div class="num">35<span class="small">.5%</span></div>
+          <div class="lbl">Child stunting</div>
+          <div class="sub">Under-5 · NFHS-5 '19–21</div>
+        </div>
+      </div>
     </div>
+
+    <!-- ── Section: Explore by theme ── -->
+    <section class="section" aria-label="Themes">
+      <div class="section-head">
+        <div class="left">
+          <div class="section-marker">
+            <span class="deva" style="font-family:var(--font-deva)">०१</span>
+            <span class="eyebrow">Section 01 · Explore</span>
+          </div>
+          <h2>Browse by <em>theme</em></h2>
+        </div>
+        <div class="right">
+          Twenty-two indicators are grouped into five themes that map onto how
+          policymakers — and households themselves — actually experience
+          India's economy.
+        </div>
+      </div>
+      <div class="themes" id="theme-grid"></div>
+    </section>
+
+    <!-- ── Section: Data sources ── -->
+    <section class="section" style="padding-top:0" aria-label="Data sources">
+      <div class="section-head">
+        <div class="left">
+          <div class="section-marker">
+            <span class="deva" style="font-family:var(--font-deva)">०२</span>
+            <span class="eyebrow">Section 02 · Provenance</span>
+          </div>
+          <h2>Data <em>sources</em></h2>
+        </div>
+        <div class="right">
+          Every figure on this dashboard is traceable to a published government
+          survey. We don't model what we can measure.
+        </div>
+      </div>
+      <div class="sources-card">
+        <table class="sources">
+          <thead>
+            <tr>
+              <th>Survey</th>
+              <th>Publisher</th>
+              <th>Year</th>
+              <th>Themes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="color:var(--ink)">Household Consumption Expenditure Survey (HCES)</td>
+              <td>NSO / MoSPI</td>
+              <td class="year">2022–23</td>
+              <td class="themes"><span>Wealth</span><span>Human Capital</span></td>
+            </tr>
+            <tr>
+              <td style="color:var(--ink)">Periodic Labour Force Survey (PLFS)</td>
+              <td>NSO / MoSPI</td>
+              <td class="year">2022–23</td>
+              <td class="themes"><span>Labour</span></td>
+            </tr>
+            <tr>
+              <td style="color:var(--ink)">Time Use Survey</td>
+              <td>NSO / MoSPI</td>
+              <td class="year">2019</td>
+              <td class="themes"><span>Labour</span></td>
+            </tr>
+            <tr>
+              <td style="color:var(--ink)">National Family Health Survey (NFHS-5)</td>
+              <td>IIPS / MoHFW</td>
+              <td class="year">2019–21</td>
+              <td class="themes"><span>Wealth</span><span>Health</span><span>Finance</span></td>
+            </tr>
+            <tr>
+              <td style="color:var(--ink)">National MPI India</td>
+              <td>NITI Aayog / UNDP</td>
+              <td class="year">2021</td>
+              <td class="themes"><span>Wealth</span></td>
+            </tr>
+            <tr>
+              <td style="color:var(--ink)">National Sample Survey 75th Round</td>
+              <td>NSO / MoSPI</td>
+              <td class="year">2017–18</td>
+              <td class="themes"><span>Health</span></td>
+            </tr>
+            <tr>
+              <td style="color:var(--ink)">RBI Financial Inclusion Index + PMJDY</td>
+              <td>RBI / Ministry of Finance</td>
+              <td class="year">2023</td>
+              <td class="themes"><span>Finance</span></td>
+            </tr>
+            <tr>
+              <td style="color:var(--ink)">Census of India</td>
+              <td>Registrar General of India</td>
+              <td class="year">2011</td>
+              <td class="themes"><span>Wealth</span><span>Human Capital</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
-    <div class="footer-col">
-      <h4>India Household Economy Dashboard</h4>
-      <p>An open-source project making India's household economic data accessible and explorable.</p>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="display">India's household economy, written in <em style="color:var(--saffron);font-style:italic">numbers</em>.</div>
+        <p>An open, MIT-licensed project re-rendering government micro-data into a single, browsable atlas.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Data</h5>
+        <a href="https://mospi.gov.in" target="_blank" rel="noopener">NSO / MoSPI</a>
+        <a href="https://rchiips.org/nfhs" target="_blank" rel="noopener">IIPS / NFHS-5</a>
+        <a href="https://rbi.org.in" target="_blank" rel="noopener">Reserve Bank of India</a>
+        <a href="https://hdr.undp.org" target="_blank" rel="noopener">UNDP / OPHI</a>
+      </div>
+      <div class="foot-col">
+        <h5>Project</h5>
+        <a href="/about.html">About this project</a>
+        <a href="https://github.com/india-household-economy-dashboard" target="_blank" rel="noopener">GitHub (MIT License)</a>
+        <a href="https://github.com/india-household-economy-dashboard/issues" target="_blank" rel="noopener">Report an issue</a>
+      </div>
+      <div class="foot-col">
+        <h5>Updates</h5>
+        <p style="color:var(--ink-2)">Quarterly newsletter — new indicators &amp; deep dives.</p>
+        <a href="#" style="color:var(--saffron);margin-top:8px;display:block">Subscribe ↗</a>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Data</h4>
-      <a href="https://mospi.gov.in" target="_blank" rel="noopener">NSO / MoSPI</a><br>
-      <a href="https://rchiips.org/nfhs" target="_blank" rel="noopener">IIPS / NFHS</a><br>
-      <a href="https://rbi.org.in" target="_blank" rel="noopener">Reserve Bank of India</a><br>
-      <a href="https://hdr.undp.org" target="_blank" rel="noopener">UNDP / OPHI</a>
-    </div>
-    <div class="footer-col">
-      <h4>Project</h4>
-      <a href="/about.html">About this project</a><br>
-      <a href="https://github.com/india-household-economy-dashboard" target="_blank" rel="noopener">GitHub (MIT License)</a><br>
-      <a href="https://github.com/india-household-economy-dashboard/issues" target="_blank" rel="noopener">Report an issue</a>
-    </div>
-    <div class="footer-bottom">
-      <span>Data: NSO/MoSPI · IIPS/MoHFW · RBI · UNDP/OPHI · Census of India</span>
-      <span>Built with Claude Code · GeoJSON: DataMeet · Open source: MIT</span>
+    <div class="foot-bottom">
+      <span>Data · NSO/MoSPI · IIPS/MoHFW · RBI · UNDP/OPHI · Census of India</span>
+      <span>Built with Claude Code · GeoJSON: DataMeet · MIT License</span>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
   <script src="/js/nav.js"></script>
   <script>
     // Populate theme grid from manifest
+    const THEME_META = {
+      wealth:   { deva:'१', italic:'Living',    label:'Wealth & Living',       size:'wide' },
+      labor:    { deva:'२', italic:'Work',      label:'Labour & Work',         size:'tall' },
+      health:   { deva:'३', italic:'Economics', label:'Health Economics',      size:'std'  },
+      hcapital: { deva:'४', italic:'Capital',   label:'Human Capital',         size:'std'  },
+      finance:  { deva:'५', italic:'Inclusion', label:'Financial Inclusion',   size:'std'  },
+    };
+    const THEME_BLURB = {
+      wealth:   'Consumption, poverty, food security, housing and basic utilities across 37 states and union territories.',
+      labor:    'Who is working, who is not, who earns what, and who carries the invisible hours.',
+      health:   'Out-of-pocket spend, catastrophic costs, and the slow rise of insurance.',
+      hcapital: 'Education, literacy, internet access, and the demographic dividend.',
+      finance:  'Banking access, mobile money, female asset ownership, and the economics of IPV.',
+    };
+
     fetch('/data/pages-manifest.json')
       .then(r => r.json())
       .then(manifest => {
@@ -130,29 +251,48 @@
         const pageMap = {};
         manifest.pages.forEach(p => { pageMap[p.slug] = p; });
 
-        const themeDescriptions = {
-          wealth: 'Consumption, poverty, food security, housing, and living standards across Indian states.',
-          labor: 'Employment, wages, informality, gender gaps, and unpaid work.',
-          health: 'Out-of-pocket spending, catastrophic health costs, and insurance coverage.',
-          hcapital: 'Education expenditure, literacy, internet access, and demographic dividend.',
-          finance: 'Banking access, digital payments, female asset ownership, and IPV economics.'
-        };
-
         manifest.themes.forEach((theme, i) => {
-          const card = document.createElement('div');
-          card.className = 'theme-card';
+          const meta = THEME_META[theme.id] || {};
+          const blurb = THEME_BLURB[theme.id] || '';
           const pages = theme.slugs.map(s => pageMap[s]).filter(Boolean);
+          const size  = meta.size || 'std';
+          const italic = meta.italic || '';
+          const label  = meta.label || theme.label;
+          const beforeItalic = label.replace(italic, '').trim();
+
+          const card = document.createElement('article');
+          card.className = `theme-card ${size}`;
+          card.setAttribute('role', 'article');
+
           card.innerHTML = `
-            <div class="theme-num">Theme ${i + 1}</div>
-            <h3>${theme.label}</h3>
-            <p>${themeDescriptions[theme.id] || ''}</p>
-            <div class="page-links">
-              ${pages.map(p => `<a href="/pages/${p.slug}/">${p.title}</a>`).join('')}
+            <div class="tnum">
+              <span class="deva" style="font-family:var(--font-deva)">${meta.deva || ''}</span>
+              <span class="latin">Theme · 0${i + 1}</span>
             </div>
+            <h3>${escHtml(beforeItalic)}<em>${escHtml(italic)}</em></h3>
+            <p>${escHtml(blurb)}</p>
+            <div class="indicator-chips">
+              ${pages.map(p => `<span class="ind-chip">${escHtml(p.title)}</span>`).join('')}
+            </div>
+            <svg class="corner" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <circle cx="18" cy="18" r="14" stroke="currentColor" stroke-opacity="0.15"/>
+              <path d="M14 18h8m0 0l-3-3m3 3l-3 3" stroke="currentColor" stroke-opacity="0.4" stroke-linecap="round"/>
+            </svg>
           `;
+
+          /* Click first page of theme */
+          if (pages.length) {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', () => { window.location.href = `/pages/${pages[0].slug}/`; });
+          }
+
           grid.appendChild(card);
         });
       });
+
+    function escHtml(s) {
+      return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
   </script>
 </body>
 </html>
