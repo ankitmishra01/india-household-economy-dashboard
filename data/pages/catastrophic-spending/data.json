@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "title": "Catastrophic Health Spending",
+    "subtitle": "% of households experiencing catastrophic health expenditure (OOP > 10% of total spend)",
+    "source": "NSS 75th Round (Health Survey) 2017–18, NSO/MoSPI",
+    "sourceUrl": "https://mospi.gov.in/national-sample-survey",
+    "surveyPeriod": "July 2017 – June 2018",
+    "notes": [
+      "WHO definition of catastrophic health spending: OOP health payments > 10% of total household consumption.",
+      "Catastrophic spending can push households into poverty or deepen existing poverty.",
+      "Inpatient hospitalisation is the primary driver of catastrophic health spending.",
+      "⚠ Mock data (5 states)."
+    ],
+    "methodology": "NSS 75th Round collects data on health care expenditure at household level. Catastrophic threshold applied as per WHO methodology (10% of total household consumption expenditure)."
+  },
+  "mapData": {
+    "indicator": "% households with catastrophic health spending",
+    "unit": "%",
+    "nationalAverage": 15.4,
+    "states": {
+      "BR": {
+        "name": "Bihar",
+        "value": 19.8,
+        "rank": 1
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 18.6,
+        "rank": 2
+      },
+      "KL": {
+        "name": "Kerala",
+        "value": 17.2,
+        "rank": 3
+      },
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 16.4,
+        "rank": 4
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 14.8,
+        "rank": 5
+      }
+    }
+  },
+  "chartBlocks": [
+    {
+      "id": "waffle-catastrophic",
+      "title": "National Health Spending Burden Distribution",
+      "type": "waffle",
+      "unit": "%",
+      "segments": [
+        {
+          "label": "No catastrophic spending (OOP < 10% of total expenditure)",
+          "value": 61,
+          "color": "var(--chart-good)"
+        },
+        {
+          "label": "Moderate health burden (10–25%)",
+          "value": 24,
+          "color": "var(--w7)"
+        },
+        {
+          "label": "Catastrophic health spending (OOP > 25%)",
+          "value": 15,
+          "color": "var(--chart-bad)"
+        }
+      ]
+    },
+    {
+      "id": "lollipop-catastrophic",
+      "title": "% Households with Catastrophic Health Spending by State",
+      "type": "lollipop",
+      "unit": "%",
+      "average": 15.4,
+      "higherIsBetter": false,
+      "data": [
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 19.8
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 18.6
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 17.2
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 16.4
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 14.8
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "Rank",
+        "type": "number"
+      },
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "Catastrophic Spending (%)",
+        "type": "number"
+      },
+      {
+        "label": "Moderate Burden (%)",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        1,
+        "Bihar",
+        19.8,
+        27.2
+      ],
+      [
+        2,
+        "Uttar Pradesh",
+        18.6,
+        26.1
+      ],
+      [
+        3,
+        "Kerala",
+        17.2,
+        28.4
+      ],
+      [
+        4,
+        "Rajasthan",
+        16.4,
+        24.7
+      ],
+      [
+        5,
+        "Maharashtra",
+        14.8,
+        22.3
+      ]
+    ]
+  },
+  "insights": []
+}

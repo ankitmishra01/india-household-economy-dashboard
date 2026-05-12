@@ -1,0 +1,375 @@
+{
+  "meta": {
+    "title": "Out-of-Pocket Healthcare Expenditure",
+    "subtitle": "OOP health spending as % of total health spending by state",
+    "source": "NSS 75th Round (Health Survey) 2017–18, NSO/MoSPI — Tables on health expenditure",
+    "sourceUrl": "https://mospi.gov.in/national-sample-survey",
+    "surveyPeriod": "July 2017 – June 2018",
+    "notes": [
+      "OOP expenditure = direct payments by households at point of service (excluding insurance reimbursements).",
+      "International benchmark: WHO recommends OOP < 20% of total health spending to prevent financial hardship.",
+      "India's OOP rate is among the highest in the world for a lower-middle-income country.",
+      "Data vintage: NSS 75th Round (2017-18). More recent NHA estimates show slight improvement.",
+      "⚠ Mock data (5 states)."
+    ],
+    "methodology": "NSS 75th Round surveyed morbidity and health care. OOP computed as household health payments net of reimbursements from insurance/government schemes."
+  },
+  "mapData": {
+    "indicator": "OOP health spend (% of total health spending)",
+    "unit": "%",
+    "nationalAverage": 64.2,
+    "states": {
+      "BR": {
+        "name": "Bihar",
+        "value": 74.6,
+        "rank": 1
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 72.8,
+        "rank": 2
+      },
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 69.1,
+        "rank": 3
+      },
+      "KL": {
+        "name": "Kerala",
+        "value": 68.3,
+        "rank": 4
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 61.4,
+        "rank": 5
+      }
+    }
+  },
+  "tabs": [
+    {
+      "label": "Overall",
+      "mapData": {
+        "indicator": "OOP % (overall)",
+        "unit": "%",
+        "nationalAverage": 64.2,
+        "states": {
+          "BR": {
+            "name": "Bihar",
+            "value": 74.6,
+            "rank": 1
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 72.8,
+            "rank": 2
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 69.1,
+            "rank": 3
+          },
+          "KL": {
+            "name": "Kerala",
+            "value": 68.3,
+            "rank": 4
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 61.4,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-oop",
+          "title": "OOP as % of Total Health Spending by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 64.2,
+          "higherIsBetter": false,
+          "data": [
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 74.6
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 72.8
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 69.1
+            },
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 68.3
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 61.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Rural",
+      "mapData": {
+        "indicator": "Rural OOP %",
+        "unit": "%",
+        "nationalAverage": 66.8,
+        "states": {
+          "BR": {
+            "name": "Bihar",
+            "value": 76.2,
+            "rank": 1
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 74.6,
+            "rank": 2
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 71.3,
+            "rank": 3
+          },
+          "KL": {
+            "name": "Kerala",
+            "value": 69.8,
+            "rank": 4
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 67.2,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-oop-rural",
+          "title": "Rural OOP % by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 66.8,
+          "higherIsBetter": false,
+          "data": [
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 76.2
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 74.6
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 71.3
+            },
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 69.8
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 67.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Urban",
+      "mapData": {
+        "indicator": "Urban OOP %",
+        "unit": "%",
+        "nationalAverage": 61.4,
+        "states": {
+          "BR": {
+            "name": "Bihar",
+            "value": 71.1,
+            "rank": 1
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 69.3,
+            "rank": 2
+          },
+          "KL": {
+            "name": "Kerala",
+            "value": 66.4,
+            "rank": 3
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 65.4,
+            "rank": 4
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 56.1,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-oop-urban",
+          "title": "Urban OOP % by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 61.4,
+          "higherIsBetter": false,
+          "data": [
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 71.1
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 69.3
+            },
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 66.4
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 65.4
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 56.1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chartBlocks": [
+    {
+      "id": "lollipop-oop",
+      "title": "OOP as % of Total Health Spending",
+      "type": "lollipop",
+      "unit": "%",
+      "average": 64.2,
+      "higherIsBetter": false,
+      "data": [
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 74.6
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 72.8
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 68.3
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 69.1
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 61.4
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "Rank",
+        "type": "number"
+      },
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "OOP % (Overall)",
+        "type": "number"
+      },
+      {
+        "label": "OOP % (Rural)",
+        "type": "number"
+      },
+      {
+        "label": "OOP % (Urban)",
+        "type": "number"
+      },
+      {
+        "label": "OOP per Episode (₹)",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        1,
+        "Bihar",
+        74.6,
+        76.2,
+        71.1,
+        2900
+      ],
+      [
+        2,
+        "Uttar Pradesh",
+        72.8,
+        74.6,
+        69.3,
+        3200
+      ],
+      [
+        4,
+        "Kerala",
+        68.3,
+        69.8,
+        66.4,
+        6100
+      ],
+      [
+        3,
+        "Rajasthan",
+        69.1,
+        71.3,
+        65.4,
+        3600
+      ],
+      [
+        5,
+        "Maharashtra",
+        61.4,
+        67.2,
+        56.1,
+        4800
+      ]
+    ]
+  },
+  "insights": []
+}

@@ -1,0 +1,25 @@
+{
+  "name": "india-household-economy-dashboard",
+  "version": "1.0.0",
+  "description": "An open, interactive dashboard making India's household economic data explorable — for journalists, policymakers, and researchers.",
+  "scripts": {
+    "extract:all": "node scripts/extract/run-all.js",
+    "extract:mock": "node scripts/extract/run-all.js --mock",
+    "insights:all": "node scripts/insights/run-all.js",
+    "generate:pages": "node scripts/build/generate-pages.js",
+    "build": "node scripts/build/generate-pages.js",
+    "dev": "npx serve . -p 3000"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "dotenv": "^16.6.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "serve": "^14.2.6"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}

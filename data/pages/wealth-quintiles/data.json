@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "title": "Household Wealth Quintiles",
+    "subtitle": "Share of households in each wealth quintile by state",
+    "source": "NFHS-5 2019–21, IIPS/MoHFW — State Factsheets, Wealth Index",
+    "sourceUrl": "https://rchiips.org/nfhs/nfhs5.shtml",
+    "surveyPeriod": "2019–2021",
+    "notes": [
+      "NFHS wealth index is based on household assets and access to utilities, not income.",
+      "Quintile boundaries are nationally defined, not state-specific.",
+      "Each quintile represents 20% of households nationally by construction.",
+      "⚠ Mock data (5 states). Run without --mock after downloading NFHS-5 state factsheets."
+    ],
+    "methodology": "NFHS-5 wealth index is constructed using Principal Component Analysis on household assets (TV, phone, fridge, vehicle, land) and dwelling characteristics (floor, wall, roof material, drinking water, sanitation)."
+  },
+  "mapData": {
+    "indicator": "% households in lowest wealth quintile",
+    "unit": "%",
+    "nationalAverage": 20,
+    "states": {
+      "BR": {
+        "name": "Bihar",
+        "value": 38.4,
+        "rank": 1
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 31.8,
+        "rank": 2
+      },
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 28.3,
+        "rank": 3
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 12.4,
+        "rank": 4
+      },
+      "KL": {
+        "name": "Kerala",
+        "value": 6.1,
+        "rank": 5
+      }
+    }
+  },
+  "chartBlocks": [
+    {
+      "id": "waffle-national",
+      "title": "National Wealth Quintile Distribution",
+      "subtitle": "Each cell represents 1% of households",
+      "type": "waffle",
+      "unit": "%",
+      "segments": [
+        {
+          "label": "Lowest",
+          "value": 20,
+          "color": "var(--chart-bad)"
+        },
+        {
+          "label": "Second",
+          "value": 20,
+          "color": "var(--map-2)"
+        },
+        {
+          "label": "Middle",
+          "value": 20,
+          "color": "var(--map-3)"
+        },
+        {
+          "label": "Fourth",
+          "value": 20,
+          "color": "var(--map-4)"
+        },
+        {
+          "label": "Highest",
+          "value": 20,
+          "color": "var(--chart-good)"
+        }
+      ]
+    },
+    {
+      "id": "lollipop-lowest",
+      "title": "% of Households in Lowest Wealth Quintile by State",
+      "subtitle": "Higher = more households concentrated in the bottom 20%",
+      "type": "lollipop",
+      "unit": "%",
+      "average": 20,
+      "higherIsBetter": false,
+      "data": [
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 38.4
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 31.8
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 28.3
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 12.4
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 6.1
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "Rank",
+        "type": "number"
+      },
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "Lowest Quintile (%)",
+        "type": "number"
+      },
+      {
+        "label": "Highest Quintile (%)",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        1,
+        "Maharashtra",
+        12.4,
+        28.1
+      ],
+      [
+        2,
+        "Uttar Pradesh",
+        31.8,
+        9.2
+      ],
+      [
+        3,
+        "Kerala",
+        6.1,
+        35.6
+      ],
+      [
+        4,
+        "Rajasthan",
+        28.3,
+        10.7
+      ],
+      [
+        5,
+        "Bihar",
+        38.4,
+        5.8
+      ]
+    ]
+  },
+  "insights": []
+}

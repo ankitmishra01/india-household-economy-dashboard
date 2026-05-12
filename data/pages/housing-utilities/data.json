@@ -1,0 +1,502 @@
+{
+  "meta": {
+    "title": "Housing & Basic Utilities",
+    "subtitle": "Homeownership, electricity, drinking water, and sanitation access by state",
+    "source": "Census 2011 Housing Tables, Registrar General of India; NFHS-5 2019–21, IIPS/MoHFW",
+    "sourceUrl": "https://censusindia.gov.in; https://rchiips.org/nfhs/nfhs5.shtml",
+    "surveyPeriod": "Census: 2011; NFHS-5: 2019–2021",
+    "notes": [
+      "Homeownership data is from Census 2011 and may not reflect post-2011 changes.",
+      "Electricity, water, and sanitation figures are from NFHS-5 (2019-21) and are more recent.",
+      "Improved drinking water includes piped, borehole, protected dug well, rainwater, and packaged water.",
+      "Improved sanitation includes flush toilets and pit latrines with slabs.",
+      "⚠ Mock data (5 states)."
+    ],
+    "methodology": "NFHS-5 uses USAID DHS methodology. Census homeownership asks the household respondent whether they own or rent the dwelling."
+  },
+  "mapData": {
+    "indicator": "% households with electricity",
+    "unit": "%",
+    "nationalAverage": 88.6,
+    "states": {
+      "KL": {
+        "name": "Kerala",
+        "value": 99.4,
+        "rank": 1
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 89.3,
+        "rank": 2
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 85.9,
+        "rank": 3
+      },
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 83.7,
+        "rank": 4
+      },
+      "BR": {
+        "name": "Bihar",
+        "value": 73.2,
+        "rank": 5
+      }
+    }
+  },
+  "tabs": [
+    {
+      "label": "% households with electricity",
+      "mapData": {
+        "indicator": "% households with electricity",
+        "unit": "%",
+        "nationalAverage": 88.6,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 99.4,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 89.3,
+            "rank": 2
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 85.9,
+            "rank": 3
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 83.7,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 73.2,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-electricity",
+          "title": "% households with electricity by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 88.6,
+          "higherIsBetter": true,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 99.4
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 89.3
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 85.9
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 83.7
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 73.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "% households with improved drinking water",
+      "mapData": {
+        "indicator": "% households with improved drinking water",
+        "unit": "%",
+        "nationalAverage": 58.6,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 88.9,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 67.1,
+            "rank": 2
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 59.4,
+            "rank": 3
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 45.2,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 38.7,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-water",
+          "title": "% households with improved drinking water by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 58.6,
+          "higherIsBetter": true,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 88.9
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 67.1
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 59.4
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 45.2
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 38.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "% households with improved sanitation",
+      "mapData": {
+        "indicator": "% households with improved sanitation",
+        "unit": "%",
+        "nationalAverage": 63.4,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 98.6,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 71.4,
+            "rank": 2
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 56.2,
+            "rank": 3
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 48.7,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 36.1,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-sanitation",
+          "title": "% households with improved sanitation by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 63.4,
+          "higherIsBetter": true,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 98.6
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 71.4
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 56.2
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 48.7
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 36.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "% households that own their home",
+      "mapData": {
+        "indicator": "% households that own their home",
+        "unit": "%",
+        "nationalAverage": 86.6,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 95.5,
+            "rank": 1
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 93.8,
+            "rank": 2
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 92.1,
+            "rank": 3
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 91.4,
+            "rank": 4
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 78.2,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-ownership",
+          "title": "% households that own their home by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 86.6,
+          "higherIsBetter": true,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 95.5
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 93.8
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 92.1
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 91.4
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 78.2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chartBlocks": [
+    {
+      "id": "lollipop-electricity",
+      "title": "% households with electricity by State",
+      "type": "lollipop",
+      "unit": "%",
+      "average": 88.6,
+      "higherIsBetter": true,
+      "data": [
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 99.4
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 89.3
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 85.9
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 83.7
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 73.2
+        }
+      ]
+    },
+    {
+      "id": "grouped-electricity",
+      "title": "Electricity Access: Urban vs Rural Gap by State",
+      "type": "grouped-lollipop",
+      "unit": "%",
+      "labelA": "Rural",
+      "labelB": "Urban",
+      "colorA": "var(--chart-stem)",
+      "colorB": "var(--accent-saffron)",
+      "seriesA": [
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 72.1
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 81.3
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 99.1
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 79.2
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 68.4
+        }
+      ],
+      "seriesB": [
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 98.2
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 97.8
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 99.8
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 96.3
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 97.1
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "Owns Home (%)",
+        "type": "number"
+      },
+      {
+        "label": "Electricity (%)",
+        "type": "number"
+      },
+      {
+        "label": "Clean Water (%)",
+        "type": "number"
+      },
+      {
+        "label": "Sanitation (%)",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        "Maharashtra",
+        78.2,
+        89.3,
+        67.1,
+        71.4
+      ],
+      [
+        "Uttar Pradesh",
+        92.1,
+        85.9,
+        45.2,
+        48.7
+      ],
+      [
+        "Kerala",
+        95.5,
+        99.4,
+        88.9,
+        98.6
+      ],
+      [
+        "Rajasthan",
+        91.4,
+        83.7,
+        59.4,
+        56.2
+      ],
+      [
+        "Bihar",
+        93.8,
+        73.2,
+        38.7,
+        36.1
+      ]
+    ]
+  },
+  "insights": []
+}

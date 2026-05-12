@@ -1,0 +1,389 @@
+{
+  "meta": {
+    "title": "Labor Force Participation Rate",
+    "subtitle": "Overall, male, and female LFPR by state (UPSS basis), 2022–23",
+    "source": "PLFS 2022–23, NSO/MoSPI — Annual Report, Statement 5/6",
+    "sourceUrl": "https://mospi.gov.in/plfs-report",
+    "surveyPeriod": "July 2022 – June 2023",
+    "notes": [
+      "LFPR measured on Usual Principal + Subsidiary Status (UPSS) basis — considered the most comprehensive measure.",
+      "UPSS includes seasonal and occasional workers who may not be active in any given week.",
+      "Female LFPR in India is among the lowest in South Asia, with significant state variation.",
+      "⚠ Mock data (5 states)."
+    ],
+    "methodology": "PLFS covers households in both rural and urban areas. LFPR = (Workers + Unemployed seeking work) / Population aged 15+."
+  },
+  "mapData": {
+    "RJ": {
+      "name": "Rajasthan",
+      "value": 52.3,
+      "rank": 1
+    },
+    "KL": {
+      "name": "Kerala",
+      "value": 34.7,
+      "rank": 2
+    },
+    "MH": {
+      "name": "Maharashtra",
+      "value": 30.4,
+      "rank": 3
+    },
+    "UP": {
+      "name": "Uttar Pradesh",
+      "value": 18.6,
+      "rank": 4
+    },
+    "BR": {
+      "name": "Bihar",
+      "value": 9.4,
+      "rank": 5
+    }
+  },
+  "tabs": [
+    {
+      "label": "Female LFPR",
+      "mapData": {
+        "indicator": "Female LFPR (%)",
+        "unit": "%",
+        "nationalAverage": 37,
+        "states": {
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 52.3,
+            "rank": 1
+          },
+          "KL": {
+            "name": "Kerala",
+            "value": 34.7,
+            "rank": 2
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 30.4,
+            "rank": 3
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 18.6,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 9.4,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-female",
+          "title": "Female LFPR by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 37,
+          "higherIsBetter": true,
+          "data": [
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 52.3
+            },
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 34.7
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 30.4
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 18.6
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 9.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Male LFPR",
+      "mapData": {
+        "indicator": "Male LFPR (%)",
+        "unit": "%",
+        "nationalAverage": 76.8,
+        "states": {
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 79.6,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 75.1,
+            "rank": 2
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 73.2,
+            "rank": 3
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 70.1,
+            "rank": 4
+          },
+          "KL": {
+            "name": "Kerala",
+            "value": 69.8,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-male",
+          "title": "Male LFPR by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 76.8,
+          "higherIsBetter": true,
+          "data": [
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 79.6
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 75.1
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 73.2
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 70.1
+            },
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 69.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Overall LFPR",
+      "mapData": {
+        "indicator": "Overall LFPR (%)",
+        "unit": "%",
+        "nationalAverage": 57.9,
+        "states": {
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 66.2,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 53.2,
+            "rank": 2
+          },
+          "KL": {
+            "name": "Kerala",
+            "value": 52.1,
+            "rank": 3
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 46.5,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 41.2,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-overall",
+          "title": "Overall LFPR by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 57.9,
+          "higherIsBetter": true,
+          "data": [
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 66.2
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 53.2
+            },
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 52.1
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 46.5
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 41.2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chartBlocks": [
+    {
+      "id": "grouped-lfpr",
+      "title": "Male vs Female LFPR by State (sorted by gender gap)",
+      "type": "grouped-lollipop",
+      "unit": "%",
+      "labelA": "Male",
+      "labelB": "Female",
+      "colorA": "var(--w2)",
+      "colorB": "var(--accent-saffron)",
+      "seriesA": [
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 79.6
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 69.8
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 75.1
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 73.2
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 70.1
+        }
+      ],
+      "seriesB": [
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 52.3
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 34.7
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 30.4
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 18.6
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 9.4
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "Female LFPR (%)",
+        "type": "number"
+      },
+      {
+        "label": "Male LFPR (%)",
+        "type": "number"
+      },
+      {
+        "label": "Overall LFPR (%)",
+        "type": "number"
+      },
+      {
+        "label": "Gender Gap (pp)",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        "Maharashtra",
+        30.4,
+        75.1,
+        53.2,
+        "44.7"
+      ],
+      [
+        "Uttar Pradesh",
+        18.6,
+        73.2,
+        46.5,
+        "54.6"
+      ],
+      [
+        "Kerala",
+        34.7,
+        69.8,
+        52.1,
+        "35.1"
+      ],
+      [
+        "Rajasthan",
+        52.3,
+        79.6,
+        66.2,
+        "27.3"
+      ],
+      [
+        "Bihar",
+        9.4,
+        70.1,
+        41.2,
+        "60.7"
+      ]
+    ]
+  },
+  "insights": []
+}

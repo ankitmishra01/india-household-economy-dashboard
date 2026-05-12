@@ -1,0 +1,383 @@
+{
+  "meta": {
+    "title": "Unemployment Rate",
+    "subtitle": "Usual status unemployment rate by state, 2022–23",
+    "source": "PLFS 2022–23, NSO/MoSPI — Annual Report",
+    "sourceUrl": "https://mospi.gov.in/plfs-report",
+    "surveyPeriod": "July 2022 – June 2023",
+    "notes": [
+      "Unemployment Rate (UR) measured on Usual Principal + Subsidiary Status (UPSS) basis.",
+      "UPSS UR = those unemployed but seeking/available for work / total labour force.",
+      "Kerala shows higher UR due to high labour force participation and job-seeking educated workforce — not necessarily worse welfare outcomes.",
+      "⚠ Mock data (5 states)."
+    ],
+    "methodology": "PLFS UPSS includes all persons who worked for major time (principal) or for subsidiary time during reference year. Unemployment = available and seeking work."
+  },
+  "mapData": {
+    "indicator": "Unemployment Rate (UPSS) %",
+    "unit": "%",
+    "nationalAverage": 4.1,
+    "states": {
+      "KL": {
+        "name": "Kerala",
+        "value": 7.1,
+        "rank": 1
+      },
+      "BR": {
+        "name": "Bihar",
+        "value": 5.6,
+        "rank": 2
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 4.7,
+        "rank": 3
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 3.4,
+        "rank": 4
+      },
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 2.8,
+        "rank": 5
+      }
+    }
+  },
+  "tabs": [
+    {
+      "label": "Overall",
+      "mapData": {
+        "indicator": "Overall UR (%)",
+        "unit": "%",
+        "nationalAverage": 4.1,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 7.1,
+            "rank": 1
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 5.6,
+            "rank": 2
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 4.7,
+            "rank": 3
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 3.4,
+            "rank": 4
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 2.8,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-ur-overall",
+          "title": "Overall Unemployment Rate by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 4.1,
+          "higherIsBetter": false,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 7.1
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 5.6
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 4.7
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 3.4
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 2.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Rural",
+      "mapData": {
+        "indicator": "Rural UR (%)",
+        "unit": "%",
+        "nationalAverage": 3.3,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 5.9,
+            "rank": 1
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 4.9,
+            "rank": 2
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 3.8,
+            "rank": 3
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 2.1,
+            "rank": 4
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 2.1,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-ur-rural",
+          "title": "Rural Unemployment Rate by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 3.3,
+          "higherIsBetter": false,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 5.9
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 4.9
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 3.8
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 2.1
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 2.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Urban",
+      "mapData": {
+        "indicator": "Urban UR (%)",
+        "unit": "%",
+        "nationalAverage": 5.6,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 8.6,
+            "rank": 1
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 7.8,
+            "rank": 2
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 6.2,
+            "rank": 3
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 4.8,
+            "rank": 4
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 4.2,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-ur-urban",
+          "title": "Urban Unemployment Rate by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 5.6,
+          "higherIsBetter": false,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 8.6
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 7.8
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 6.2
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 4.8
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 4.2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chartBlocks": [
+    {
+      "id": "lollipop-ur-overall",
+      "title": "Unemployment Rate by State",
+      "type": "lollipop",
+      "unit": "%",
+      "average": 4.1,
+      "higherIsBetter": false,
+      "data": [
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 7.1
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 5.6
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 4.7
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 3.4
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 2.8
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "Rank",
+        "type": "number"
+      },
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "Overall UR (%)",
+        "type": "number"
+      },
+      {
+        "label": "Rural UR (%)",
+        "type": "number"
+      },
+      {
+        "label": "Urban UR (%)",
+        "type": "number"
+      },
+      {
+        "label": "Male UR (%)",
+        "type": "number"
+      },
+      {
+        "label": "Female UR (%)",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        1,
+        "Kerala",
+        7.1,
+        5.9,
+        8.6,
+        5.8,
+        10.2
+      ],
+      [
+        2,
+        "Bihar",
+        5.6,
+        4.9,
+        7.8,
+        5.3,
+        7.2
+      ],
+      [
+        3,
+        "Uttar Pradesh",
+        4.7,
+        3.8,
+        6.2,
+        4.4,
+        5.8
+      ],
+      [
+        4,
+        "Maharashtra",
+        3.4,
+        2.1,
+        4.8,
+        3.2,
+        4.1
+      ],
+      [
+        5,
+        "Rajasthan",
+        2.8,
+        2.1,
+        4.2,
+        2.5,
+        3.9
+      ]
+    ]
+  },
+  "insights": []
+}

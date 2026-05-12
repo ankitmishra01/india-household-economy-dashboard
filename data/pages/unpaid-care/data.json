@@ -1,0 +1,211 @@
+{
+  "meta": {
+    "title": "Unpaid Care & Domestic Work",
+    "subtitle": "Average daily minutes spent on unpaid domestic and care work by gender and state",
+    "source": "Time Use Survey 2019, NSO/MoSPI — Table 3: Average time spent by state and activity",
+    "sourceUrl": "https://mospi.gov.in/time-use-survey",
+    "surveyPeriod": "January–December 2019",
+    "notes": [
+      "Data vintage: 2019. This is India's most recent national Time Use Survey.",
+      "Unpaid domestic work includes cooking, cleaning, childcare, eldercare, fetching water and firewood.",
+      "Women spend on average 6.8× more time on unpaid care work than men nationally.",
+      "Unpaid care work is economically invisible — not counted in GDP despite substantial economic value.",
+      "⚠ Mock data (5 states)."
+    ],
+    "methodology": "NSO Time Use Survey 2019 collected time-use diaries from 4.47 lakh persons in 1.38 lakh households across all states/UTs. Activities classified per ICATUS 2016."
+  },
+  "mapData": {
+    "indicator": "Female unpaid work (minutes/day)",
+    "unit": "min",
+    "nationalAverage": 319,
+    "states": {
+      "BR": {
+        "name": "Bihar",
+        "value": 358,
+        "rank": 1
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 342,
+        "rank": 2
+      },
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 312,
+        "rank": 3
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 298,
+        "rank": 4
+      },
+      "KL": {
+        "name": "Kerala",
+        "value": 278,
+        "rank": 5
+      }
+    }
+  },
+  "chartBlocks": [
+    {
+      "id": "grouped-unpaid",
+      "title": "Male vs Female Daily Unpaid Work (minutes) by State",
+      "type": "grouped-lollipop",
+      "unit": "min",
+      "labelA": "Male",
+      "labelB": "Female",
+      "colorA": "var(--w2)",
+      "colorB": "var(--accent-saffron)",
+      "seriesA": [
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 38
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 43
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 49
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 52
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 68
+        }
+      ],
+      "seriesB": [
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 358
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 342
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 312
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 298
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 278
+        }
+      ]
+    },
+    {
+      "id": "waffle-female-time",
+      "title": "How Women's Daily Time Is Spent (National Average)",
+      "subtitle": "Each cell ≈ 14.4 minutes",
+      "type": "waffle",
+      "unit": "min",
+      "segments": [
+        {
+          "label": "Paid work",
+          "value": 125,
+          "color": "var(--chart-good)"
+        },
+        {
+          "label": "Unpaid domestic work",
+          "value": 319,
+          "color": "var(--chart-bad)"
+        },
+        {
+          "label": "Personal care/sleep",
+          "value": 630,
+          "color": "var(--map-2)"
+        },
+        {
+          "label": "Leisure/social",
+          "value": 230,
+          "color": "var(--w5)"
+        },
+        {
+          "label": "Other",
+          "value": 136,
+          "color": "var(--text-muted)"
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "Rank",
+        "type": "number"
+      },
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "Female Unpaid (min/day)",
+        "type": "number"
+      },
+      {
+        "label": "Male Unpaid (min/day)",
+        "type": "number"
+      },
+      {
+        "label": "Ratio (F/M)",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        1,
+        "Bihar",
+        358,
+        38,
+        "9.4"
+      ],
+      [
+        2,
+        "Uttar Pradesh",
+        342,
+        43,
+        "8.0"
+      ],
+      [
+        3,
+        "Rajasthan",
+        312,
+        49,
+        "6.4"
+      ],
+      [
+        4,
+        "Maharashtra",
+        298,
+        52,
+        "5.7"
+      ],
+      [
+        5,
+        "Kerala",
+        278,
+        68,
+        "4.1"
+      ]
+    ]
+  },
+  "insights": []
+}

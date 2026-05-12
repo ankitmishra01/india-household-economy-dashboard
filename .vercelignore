@@ -1,0 +1,5 @@
+/data/source/
+/node_modules/
+*.xlsx
+*.csv
+*.pdf

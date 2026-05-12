@@ -1,0 +1,370 @@
+{
+  "meta": {
+    "title": "Household Expenditure on Education",
+    "subtitle": "Annual household education expenditure per child by state, 2022–23",
+    "source": "HCES 2022–23, NSO/MoSPI — Education Expenditure Module",
+    "sourceUrl": "https://mospi.gov.in/household-consumption-expenditure-survey-2022-23",
+    "surveyPeriod": "August 2022 – July 2023",
+    "notes": [
+      "Expenditure per child includes fees, books, uniforms, transport, and private tuition.",
+      "Private school expenditure is typically 8-10× government school expenditure nationally.",
+      "Rising private education costs drive household debt in lower-income quintiles.",
+      "⚠ Mock data (5 states)."
+    ],
+    "methodology": "HCES 2022-23 education module captures annual household spending on education for each school/college-going child member."
+  },
+  "mapData": {
+    "indicator": "Education spend per child (₹/year)",
+    "unit": "₹",
+    "nationalAverage": 9200,
+    "states": {
+      "KL": {
+        "name": "Kerala",
+        "value": 18400,
+        "rank": 1
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 11800,
+        "rank": 2
+      },
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 7400,
+        "rank": 3
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 6200,
+        "rank": 4
+      },
+      "BR": {
+        "name": "Bihar",
+        "value": 4800,
+        "rank": 5
+      }
+    }
+  },
+  "tabs": [
+    {
+      "label": "Overall",
+      "mapData": {
+        "indicator": "Overall education spend/child (₹)",
+        "unit": "₹",
+        "nationalAverage": 9200,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 18400,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 11800,
+            "rank": 2
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 7400,
+            "rank": 3
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 6200,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 4800,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-ed-overall",
+          "title": "Annual Education Spend per Child by State",
+          "type": "lollipop",
+          "unit": "₹",
+          "average": 9200,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 18400
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 11800
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 7400
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 6200
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 4800
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Govt Schools",
+      "mapData": {
+        "indicator": "Govt school spend/child (₹)",
+        "unit": "₹",
+        "nationalAverage": 2100,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 3100,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 2400,
+            "rank": 2
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 1900,
+            "rank": 3
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 1600,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 1200,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-ed-govt",
+          "title": "Govt School Spend per Child by State",
+          "type": "lollipop",
+          "unit": "₹",
+          "average": 2100,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 3100
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 2400
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 1900
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 1600
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 1200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Private Schools",
+      "mapData": {
+        "indicator": "Private school spend/child (₹)",
+        "unit": "₹",
+        "nationalAverage": 19400,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 28600,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 22100,
+            "rank": 2
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 17200,
+            "rank": 3
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 14800,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 12600,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-ed-private",
+          "title": "Private School Spend per Child by State",
+          "type": "lollipop",
+          "unit": "₹",
+          "average": 19400,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 28600
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 22100
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 17200
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 14800
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 12600
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chartBlocks": [
+    {
+      "id": "lollipop-ed-overall",
+      "title": "Annual Education Spend per Child by State",
+      "type": "lollipop",
+      "unit": "₹",
+      "average": 9200,
+      "data": [
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 18400
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 11800
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 7400
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 6200
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 4800
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "Rank",
+        "type": "number"
+      },
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "Overall (₹/yr)",
+        "type": "number"
+      },
+      {
+        "label": "Govt School (₹/yr)",
+        "type": "number"
+      },
+      {
+        "label": "Private School (₹/yr)",
+        "type": "number"
+      },
+      {
+        "label": "Private:Govt Ratio",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        1,
+        "Kerala",
+        18400,
+        3100,
+        28600,
+        "9.2"
+      ],
+      [
+        2,
+        "Maharashtra",
+        11800,
+        2400,
+        22100,
+        "9.2"
+      ],
+      [
+        3,
+        "Rajasthan",
+        7400,
+        1900,
+        17200,
+        "9.1"
+      ],
+      [
+        4,
+        "Uttar Pradesh",
+        6200,
+        1600,
+        14800,
+        "9.3"
+      ],
+      [
+        5,
+        "Bihar",
+        4800,
+        1200,
+        12600,
+        "10.5"
+      ]
+    ]
+  },
+  "insights": []
+}

@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "title": "Economic Cost of Intimate Partner Violence",
+    "subtitle": "IPV prevalence and estimated productivity loss by state — NFHS-5 + modelled estimates",
+    "source": "NFHS-5 2019–21, IIPS/MoHFW (IPV prevalence); WHO/ILO methodology applied to PLFS 2022-23 wages (cost estimates)",
+    "sourceUrl": "https://rchiips.org/nfhs/nfhs5.shtml",
+    "surveyPeriod": "2019–2021 (NFHS-5)",
+    "notes": [
+      "⚠ CONTENT NOTE: This page contains data on intimate partner violence.",
+      "IPV prevalence (% women who experienced physical/sexual violence from a partner) is from NFHS-5 — OBSERVED survey data.",
+      "Economic cost figures are MODELLED ESTIMATES using WHO productivity-loss methodology. They are not official statistics.",
+      "Cost model: IPV-affected women × estimated workdays lost (WHO: 6.1 days/year) × state average daily female wage (PLFS) × 10-year horizon.",
+      "NFHS-5 IPV questions asked only to ever-married women aged 15-49 — prevalence is likely underestimated.",
+      "⚠ Mock data (5 states)."
+    ],
+    "methodology": "IPV prevalence from NFHS-5 Table 14.1. Economic cost estimated using WHO workplace violence costing methodology: (affected women × lost workdays × daily wage). This is a productivity-loss estimate only — does not include healthcare costs, legal costs, or intangible harms."
+  },
+  "mapData": {
+    "indicator": "% women who experienced physical/sexual IPV",
+    "unit": "%",
+    "nationalAverage": 29.3,
+    "states": {
+      "BR": {
+        "name": "Bihar",
+        "value": 35.3,
+        "rank": 1
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 31.4,
+        "rank": 2
+      },
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 29.1,
+        "rank": 3
+      },
+      "KL": {
+        "name": "Kerala",
+        "value": 20.8,
+        "rank": 4
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 20.2,
+        "rank": 5
+      }
+    }
+  },
+  "chartBlocks": [
+    {
+      "id": "lollipop-ipv",
+      "title": "IPV Prevalence by State (% of women)",
+      "subtitle": "Source: NFHS-5 (observed survey data)",
+      "type": "lollipop",
+      "unit": "%",
+      "average": 29.3,
+      "higherIsBetter": false,
+      "data": [
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 35.3
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 31.4
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 29.1
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 20.8
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 20.2
+        }
+      ]
+    },
+    {
+      "id": "lollipop-cost",
+      "title": "Estimated Productivity Loss from IPV (₹ Crore)",
+      "subtitle": "⚠ Modelled estimate — not official statistics. See methodology notes.",
+      "type": "lollipop",
+      "unit": "₹",
+      "average": null,
+      "higherIsBetter": false,
+      "modelled": true,
+      "data": [
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 62800
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 48200
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 38400
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 28600
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 14200
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "Rank",
+        "type": "number"
+      },
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "IPV Prevalence (%) [OBSERVED]",
+        "type": "number"
+      },
+      {
+        "label": "Estimated Cost (₹ Crore) [MODELLED]",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        2,
+        "Uttar Pradesh",
+        31.4,
+        62800
+      ],
+      [
+        5,
+        "Maharashtra",
+        20.2,
+        48200
+      ],
+      [
+        1,
+        "Bihar",
+        35.3,
+        38400
+      ],
+      [
+        3,
+        "Rajasthan",
+        29.1,
+        28600
+      ],
+      [
+        4,
+        "Kerala",
+        20.8,
+        14200
+      ]
+    ]
+  },
+  "insights": []
+}

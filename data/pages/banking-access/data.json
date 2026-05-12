@@ -1,0 +1,359 @@
+{
+  "meta": {
+    "title": "Access to Formal Banking",
+    "subtitle": "% of adults with a bank account and PMJDY penetration by state",
+    "source": "NFHS-5 2019–21, IIPS/MoHFW; RBI FI Index; PMJDY Dashboard, Ministry of Finance",
+    "sourceUrl": "https://rchiips.org/nfhs/nfhs5.shtml; https://pmjdy.gov.in",
+    "surveyPeriod": "2019–2021 (NFHS-5); PMJDY data as of March 2023",
+    "notes": [
+      "Account ownership is self-reported in NFHS-5 for household members.",
+      "PMJDY (Pradhan Mantri Jan Dhan Yojana) accounts include zero-balance accounts — some may be dormant.",
+      "High PMJDY per-capita in states like Bihar/UP reflects financial inclusion push, but active use may differ.",
+      "⚠ Mock data (5 states)."
+    ],
+    "methodology": "NFHS-5 asks women aged 15-49 and men aged 15-54 if they have a bank/post office account. PMJDY per-1000 computed using PMJDY dashboard totals and 2011 Census adult population."
+  },
+  "mapData": {
+    "indicator": "% adults with a bank account",
+    "unit": "%",
+    "nationalAverage": 77.6,
+    "states": {
+      "KL": {
+        "name": "Kerala",
+        "value": 91.6,
+        "rank": 1
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 79.2,
+        "rank": 2
+      },
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 71.8,
+        "rank": 3
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 68.4,
+        "rank": 4
+      },
+      "BR": {
+        "name": "Bihar",
+        "value": 62.3,
+        "rank": 5
+      }
+    }
+  },
+  "tabs": [
+    {
+      "label": "Any Account",
+      "mapData": {
+        "indicator": "Any bank account (%)",
+        "unit": "%",
+        "nationalAverage": 77.6,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 91.6,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 79.2,
+            "rank": 2
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 71.8,
+            "rank": 3
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 68.4,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 62.3,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-any-account",
+          "title": "Bank Account Ownership by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 77.6,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 91.6
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 79.2
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 71.8
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 68.4
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 62.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Women vs Men",
+      "mapData": {
+        "indicator": "Women with bank account (%)",
+        "unit": "%",
+        "nationalAverage": 70.5,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 89.3,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 72.4,
+            "rank": 2
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 63.1,
+            "rank": 3
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 59.6,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 52.8,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "grouped-account",
+          "title": "Bank Account Ownership: Women vs Men",
+          "type": "grouped-lollipop",
+          "unit": "%",
+          "labelA": "Men",
+          "labelB": "Women",
+          "colorA": "var(--w2)",
+          "colorB": "var(--accent-saffron)",
+          "seriesA": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 94.8
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 86.8
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 81.4
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 78.2
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 73.6
+            }
+          ],
+          "seriesB": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 89.3
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 72.4
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 63.1
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 59.6
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 52.8
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chartBlocks": [
+    {
+      "id": "grouped-account",
+      "title": "Bank Account Ownership: Women vs Men by State",
+      "type": "grouped-lollipop",
+      "unit": "%",
+      "labelA": "Men",
+      "labelB": "Women",
+      "colorA": "var(--w2)",
+      "colorB": "var(--accent-saffron)",
+      "seriesA": [
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 94.8
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 86.8
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 81.4
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 78.2
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 73.6
+        }
+      ],
+      "seriesB": [
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 89.3
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 72.4
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 63.1
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 59.6
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 52.8
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "Rank",
+        "type": "number"
+      },
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "Any Account (%)",
+        "type": "number"
+      },
+      {
+        "label": "Women's Account (%)",
+        "type": "number"
+      },
+      {
+        "label": "Men's Account (%)",
+        "type": "number"
+      },
+      {
+        "label": "PMJDY per 1000 adults",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        1,
+        "Kerala",
+        91.6,
+        89.3,
+        94.8,
+        287
+      ],
+      [
+        2,
+        "Maharashtra",
+        79.2,
+        72.4,
+        86.8,
+        412
+      ],
+      [
+        3,
+        "Rajasthan",
+        71.8,
+        63.1,
+        81.4,
+        524
+      ],
+      [
+        4,
+        "Uttar Pradesh",
+        68.4,
+        59.6,
+        78.2,
+        638
+      ],
+      [
+        5,
+        "Bihar",
+        62.3,
+        52.8,
+        73.6,
+        712
+      ]
+    ]
+  },
+  "insights": []
+}

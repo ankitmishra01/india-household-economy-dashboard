@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "title": "Age Dependency & Demographic Dividend",
+    "subtitle": "Youth and old-age dependency ratios by state",
+    "source": "Census 2011, Registrar General of India; Sample Registration System (SRS) 2020",
+    "sourceUrl": "https://censusindia.gov.in; https://censusindia.gov.in/2011-Documents/SRS_Reports/",
+    "surveyPeriod": "Census: 2011; SRS: 2020 projections",
+    "notes": [
+      "Dependency ratio = (population aged 0-14 + 65+) / (population aged 15-64) × 100.",
+      "States with ratio < 50 are in the demographic dividend window (more workers than dependents).",
+      "Bihar and UP have the highest youth dependency — their dividend window may not open until 2035+.",
+      "Kerala has the highest old-age dependency in India — ageing faster than most states.",
+      "⚠ Mock data (5 states). SRS 2020 state-level projections needed for full data."
+    ],
+    "methodology": "Census 2011 age distribution used to compute dependency ratios. SRS 2020 used for more recent projections where available."
+  },
+  "mapData": {
+    "indicator": "Total dependency ratio",
+    "unit": "ratio",
+    "nationalAverage": 54.8,
+    "states": {
+      "BR": {
+        "name": "Bihar",
+        "value": 66.2,
+        "rank": 1
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 62.8,
+        "rank": 2
+      },
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 60.4,
+        "rank": 3
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 47.2,
+        "rank": 4
+      },
+      "KL": {
+        "name": "Kerala",
+        "value": 44.8,
+        "rank": 5
+      }
+    }
+  },
+  "chartBlocks": [
+    {
+      "id": "waffle-pop",
+      "title": "National Working-Age Population Share",
+      "subtitle": "Each cell = 1% of population",
+      "type": "waffle",
+      "unit": "%",
+      "segments": [
+        {
+          "label": "Working age (15-64)",
+          "value": 65,
+          "color": "var(--chart-good)"
+        },
+        {
+          "label": "Youth (0-14)",
+          "value": 27,
+          "color": "var(--w2)"
+        },
+        {
+          "label": "Elderly (65+)",
+          "value": 8,
+          "color": "var(--w5)"
+        }
+      ]
+    },
+    {
+      "id": "grouped-dep",
+      "title": "Youth vs Old-Age Dependency by State",
+      "type": "grouped-lollipop",
+      "unit": "ratio",
+      "labelA": "Youth (0-14)",
+      "labelB": "Old-age (65+)",
+      "colorA": "var(--w2)",
+      "colorB": "var(--w5)",
+      "seriesA": [
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 60.1
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 56.4
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 53.8
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 38.1
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 29.6
+        }
+      ],
+      "seriesB": [
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 6.1
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 6.4
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 6.6
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 9.1
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 15.2
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "Total Dependency",
+        "type": "number"
+      },
+      {
+        "label": "Youth Dependency",
+        "type": "number"
+      },
+      {
+        "label": "Old-Age Dependency",
+        "type": "number"
+      },
+      {
+        "label": "Working-Age Pop (%)",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        "Maharashtra",
+        47.2,
+        38.1,
+        9.1,
+        68.2
+      ],
+      [
+        "Uttar Pradesh",
+        62.8,
+        56.4,
+        6.4,
+        61.4
+      ],
+      [
+        "Kerala",
+        44.8,
+        29.6,
+        15.2,
+        69.1
+      ],
+      [
+        "Rajasthan",
+        60.4,
+        53.8,
+        6.6,
+        62.3
+      ],
+      [
+        "Bihar",
+        66.2,
+        60.1,
+        6.1,
+        60.2
+      ]
+    ]
+  },
+  "insights": []
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>India Household Economy Dashboard</title>
+  <meta name="description" content="An open, interactive dashboard making India's household economic data explorable — for journalists, policymakers, and researchers.">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body data-page="home">
+
+  <header class="site-header" id="site-header">
+    <a href="/" class="logo">&#127988;&#65039; India Economy</a>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <!-- Injected by nav.js -->
+    </nav>
+    <div class="header-right">
+      <a href="/about.html">About</a>
+      <a href="https://github.com/india-household-economy-dashboard" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="home-hero">
+      <h1>India's Household Economy, Made Explorable</h1>
+      <p>Government survey data on wealth, labor, health, education, and financial inclusion — state by state, open to everyone.</p>
+      <div class="hero-cta">
+        <a href="/pages/household-consumption/" class="btn btn-primary">Explore the Data</a>
+        <a href="/about.html" class="btn btn-outline">How It Works</a>
+      </div>
+    </section>
+
+    <section aria-label="Themes" id="theme-grid-section">
+      <!-- Populated dynamically from pages-manifest.json -->
+      <div class="theme-grid" id="theme-grid"></div>
+    </section>
+
+    <hr class="divider" style="margin: 0;">
+
+    <section style="padding: 32px 24px; max-width: 900px; margin: 0 auto;">
+      <h2 style="font-family: var(--font-display); font-size: 1rem; margin-bottom: 16px; color: var(--text-secondary);">Data Sources</h2>
+      <table class="data-table" style="font-size: 0.78rem;">
+        <thead>
+          <tr>
+            <th>Survey</th>
+            <th>Publisher</th>
+            <th>Year</th>
+            <th>Themes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Household Consumption Expenditure Survey (HCES)</td><td>NSO / MoSPI</td><td class="num">2022–23</td><td>Wealth, Human Capital</td></tr>
+          <tr><td>Periodic Labour Force Survey (PLFS)</td><td>NSO / MoSPI</td><td class="num">2022–23</td><td>Labor</td></tr>
+          <tr><td>Time Use Survey</td><td>NSO / MoSPI</td><td class="num">2019</td><td>Labor</td></tr>
+          <tr><td>National Family Health Survey (NFHS-5)</td><td>IIPS / MoHFW</td><td class="num">2019–21</td><td>Wealth, Health, Human Capital, Financial</td></tr>
+          <tr><td>Global MPI India</td><td>UNDP / OPHI</td><td class="num">2021</td><td>Wealth</td></tr>
+          <tr><td>National Sample Survey (NSS) 75th Round</td><td>NSO / MoSPI</td><td class="num">2017–18</td><td>Health</td></tr>
+          <tr><td>RBI Financial Inclusion Index</td><td>Reserve Bank of India</td><td class="num">2023</td><td>Financial</td></tr>
+          <tr><td>Census Housing Tables</td><td>Registrar General of India</td><td class="num">2011</td><td>Wealth</td></tr>
+          <tr><td>Sample Registration System (SRS)</td><td>Registrar General of India</td><td class="num">2020</td><td>Human Capital</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-col">
+      <h4>India Household Economy Dashboard</h4>
+      <p>An open-source project making India's household economic data accessible and explorable.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Data</h4>
+      <a href="https://mospi.gov.in" target="_blank" rel="noopener">NSO / MoSPI</a><br>
+      <a href="https://rchiips.org/nfhs" target="_blank" rel="noopener">IIPS / NFHS</a><br>
+      <a href="https://rbi.org.in" target="_blank" rel="noopener">Reserve Bank of India</a><br>
+      <a href="https://hdr.undp.org" target="_blank" rel="noopener">UNDP / OPHI</a>
+    </div>
+    <div class="footer-col">
+      <h4>Project</h4>
+      <a href="/about.html">About this project</a><br>
+      <a href="https://github.com/india-household-economy-dashboard" target="_blank" rel="noopener">GitHub (MIT License)</a><br>
+      <a href="https://github.com/india-household-economy-dashboard/issues" target="_blank" rel="noopener">Report an issue</a>
+    </div>
+    <div class="footer-bottom">
+      <span>Data: NSO/MoSPI · IIPS/MoHFW · RBI · UNDP/OPHI · Census of India</span>
+      <span>Built with Claude Code · GeoJSON: DataMeet · Open source: MIT</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="/js/nav.js"></script>
+  <script>
+    // Populate theme grid from manifest
+    fetch('/data/pages-manifest.json')
+      .then(r => r.json())
+      .then(manifest => {
+        const grid = document.getElementById('theme-grid');
+        const pageMap = {};
+        manifest.pages.forEach(p => { pageMap[p.slug] = p; });
+
+        const themeDescriptions = {
+          wealth: 'Consumption, poverty, food security, housing, and living standards across Indian states.',
+          labor: 'Employment, wages, informality, gender gaps, and unpaid work.',
+          health: 'Out-of-pocket spending, catastrophic health costs, and insurance coverage.',
+          hcapital: 'Education expenditure, literacy, internet access, and demographic dividend.',
+          finance: 'Banking access, digital payments, female asset ownership, and IPV economics.'
+        };
+
+        manifest.themes.forEach((theme, i) => {
+          const card = document.createElement('div');
+          card.className = 'theme-card';
+          const pages = theme.slugs.map(s => pageMap[s]).filter(Boolean);
+          card.innerHTML = `
+            <div class="theme-num">Theme ${i + 1}</div>
+            <h3>${theme.label}</h3>
+            <p>${themeDescriptions[theme.id] || ''}</p>
+            <div class="page-links">
+              ${pages.map(p => `<a href="/pages/${p.slug}/">${p.title}</a>`).join('')}
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      });
+  </script>
+</body>
+</html>

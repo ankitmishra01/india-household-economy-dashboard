@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "title": "Food Insecurity & Child Stunting",
+    "subtitle": "% of children under 5 who are stunted, by state",
+    "source": "NFHS-5 2019–21, IIPS/MoHFW — Child Nutrition Tables; Global Hunger Index 2023",
+    "sourceUrl": "https://rchiips.org/nfhs/nfhs5.shtml",
+    "surveyPeriod": "2019–2021",
+    "notes": [
+      "Stunting (height-for-age < -2 SD) is a proxy for chronic food insecurity and poor nutrition.",
+      "Wasting (weight-for-height < -2 SD) indicates acute malnutrition.",
+      "Global Hunger Index state-level estimates are modelled using NFHS-5 and other survey data.",
+      "⚠ Mock data (5 states)."
+    ],
+    "methodology": "Anthropometric measurements follow WHO Child Growth Standards. Stunting, wasting, and underweight computed for children aged 0–59 months."
+  },
+  "mapData": {
+    "indicator": "% children under 5 who are stunted",
+    "unit": "%",
+    "nationalAverage": 35.5,
+    "states": {
+      "BR": {
+        "name": "Bihar",
+        "value": 42.9,
+        "rank": 1
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 39.7,
+        "rank": 2
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 35.2,
+        "rank": 3
+      },
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 31.8,
+        "rank": 4
+      },
+      "KL": {
+        "name": "Kerala",
+        "value": 23.4,
+        "rank": 5
+      }
+    }
+  },
+  "chartBlocks": [
+    {
+      "id": "waffle-food",
+      "title": "National Food Security Status",
+      "subtitle": "Approximate distribution of households by food security status (NFHS-5)",
+      "type": "waffle",
+      "unit": "%",
+      "segments": [
+        {
+          "label": "Food Secure",
+          "value": 56,
+          "color": "var(--chart-good)"
+        },
+        {
+          "label": "Mild Food Insecurity",
+          "value": 24,
+          "color": "var(--w7)"
+        },
+        {
+          "label": "Moderate Insecurity",
+          "value": 13,
+          "color": "var(--accent-saffron)"
+        },
+        {
+          "label": "Severe Insecurity",
+          "value": 7,
+          "color": "var(--chart-bad)"
+        }
+      ]
+    },
+    {
+      "id": "lollipop-stunted",
+      "title": "% Children Under 5 Who Are Stunted by State",
+      "type": "lollipop",
+      "unit": "%",
+      "average": 35.5,
+      "higherIsBetter": false,
+      "data": [
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 42.9
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 39.7
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 35.2
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 31.8
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 23.4
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "Rank",
+        "type": "number"
+      },
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "Stunted (%)",
+        "type": "number"
+      },
+      {
+        "label": "Wasted (%)",
+        "type": "number"
+      },
+      {
+        "label": "Underweight (%)",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        1,
+        "Bihar",
+        42.9,
+        22.9,
+        44.7
+      ],
+      [
+        2,
+        "Uttar Pradesh",
+        39.7,
+        17.3,
+        39.5
+      ],
+      [
+        3,
+        "Maharashtra",
+        35.2,
+        25.6,
+        36.1
+      ],
+      [
+        4,
+        "Rajasthan",
+        31.8,
+        18.7,
+        33.2
+      ],
+      [
+        5,
+        "Kerala",
+        23.4,
+        15.7,
+        16.1
+      ]
+    ]
+  },
+  "insights": []
+}

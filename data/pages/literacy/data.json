@@ -1,0 +1,392 @@
+{
+  "meta": {
+    "title": "Adult Literacy & Gender Gap",
+    "subtitle": "Literacy rates for adults (15+) by state and gender",
+    "source": "NFHS-5 2019–21, IIPS/MoHFW — Literacy and Education Tables; Census 2011",
+    "sourceUrl": "https://rchiips.org/nfhs/nfhs5.shtml",
+    "surveyPeriod": "2019–2021 (NFHS-5); Census 2011 for trend comparison",
+    "notes": [
+      "Literacy = ability to read and write in any language (self-reported in NFHS-5).",
+      "Kerala is the only state where female literacy exceeds male literacy.",
+      "Rajasthan and Bihar have the largest gender literacy gaps nationally.",
+      "⚠ Mock data (5 states)."
+    ],
+    "methodology": "NFHS-5 literacy measured for household members aged 15 and above. Self-reported ability to read and write."
+  },
+  "mapData": {
+    "indicator": "Female literacy rate (%)",
+    "unit": "%",
+    "nationalAverage": 71.5,
+    "states": {
+      "KL": {
+        "name": "Kerala",
+        "value": 97.9,
+        "rank": 1
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 79.2,
+        "rank": 2
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 59.3,
+        "rank": 3
+      },
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 57.6,
+        "rank": 4
+      },
+      "BR": {
+        "name": "Bihar",
+        "value": 53.3,
+        "rank": 5
+      }
+    }
+  },
+  "tabs": [
+    {
+      "label": "Female Literacy",
+      "mapData": {
+        "indicator": "Female literacy (%)",
+        "unit": "%",
+        "nationalAverage": 71.5,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 97.9,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 79.2,
+            "rank": 2
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 59.3,
+            "rank": 3
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 57.6,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 53.3,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-female-lit",
+          "title": "Female Literacy Rate by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 71.5,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 97.9
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 79.2
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 59.3
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 57.6
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 53.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Male Literacy",
+      "mapData": {
+        "indicator": "Male literacy (%)",
+        "unit": "%",
+        "nationalAverage": 84.7,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 97.4,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 89.6,
+            "rank": 2
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 80.8,
+            "rank": 3
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 79.8,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 73.7,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-male-lit",
+          "title": "Male Literacy Rate by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 84.7,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 97.4
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 89.6
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 80.8
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 79.8
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 73.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Gender Gap",
+      "mapData": {
+        "indicator": "Literacy gender gap (M-F, pp)",
+        "unit": "%",
+        "nationalAverage": 13.200000000000003,
+        "states": {
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 23.2,
+            "rank": 1
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 20.5,
+            "rank": 2
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 20.4,
+            "rank": 3
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 10.4,
+            "rank": 4
+          },
+          "KL": {
+            "name": "Kerala",
+            "value": -0.5,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-lit-gap",
+          "title": "Literacy Gender Gap by State (Male minus Female, pp)",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 13.200000000000003,
+          "higherIsBetter": false,
+          "data": [
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 23.2
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 20.5
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 20.4
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 10.4
+            },
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": -0.5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chartBlocks": [
+    {
+      "id": "grouped-lit",
+      "title": "Male vs Female Literacy by State (sorted by gender gap)",
+      "type": "grouped-lollipop",
+      "unit": "%",
+      "labelA": "Male",
+      "labelB": "Female",
+      "colorA": "var(--w2)",
+      "colorB": "var(--accent-saffron)",
+      "seriesA": [
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 80.8
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 79.8
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 73.7
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 89.6
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 97.4
+        }
+      ],
+      "seriesB": [
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 57.6
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 59.3
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 53.3
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 79.2
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 97.9
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "Female Literacy (%)",
+        "type": "number"
+      },
+      {
+        "label": "Male Literacy (%)",
+        "type": "number"
+      },
+      {
+        "label": "Overall (%)",
+        "type": "number"
+      },
+      {
+        "label": "Gender Gap (pp)",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        "Maharashtra",
+        79.2,
+        89.6,
+        84.5,
+        10.4
+      ],
+      [
+        "Uttar Pradesh",
+        59.3,
+        79.8,
+        69.7,
+        20.5
+      ],
+      [
+        "Kerala",
+        97.9,
+        97.4,
+        97.7,
+        -0.5
+      ],
+      [
+        "Rajasthan",
+        57.6,
+        80.8,
+        69.7,
+        23.2
+      ],
+      [
+        "Bihar",
+        53.3,
+        73.7,
+        63.8,
+        20.4
+      ]
+    ]
+  },
+  "insights": []
+}

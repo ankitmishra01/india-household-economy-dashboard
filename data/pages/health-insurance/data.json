@@ -1,0 +1,365 @@
+{
+  "meta": {
+    "title": "Health Insurance Coverage",
+    "subtitle": "% of population covered by any health insurance scheme by state",
+    "source": "NFHS-5 2019–21, IIPS/MoHFW — Table on Health Insurance / Financing",
+    "sourceUrl": "https://rchiips.org/nfhs/nfhs5.shtml",
+    "surveyPeriod": "2019–2021",
+    "notes": [
+      "Coverage includes government schemes (PMJAY/Ayushman Bharat, RSBY, state schemes) and private insurance.",
+      "Having insurance does not guarantee access to care — claims denial and facility availability affect actual coverage.",
+      "PMJAY (Ayushman Bharat) launched 2018 — NFHS-5 captures early adoption.",
+      "⚠ Mock data (5 states)."
+    ],
+    "methodology": "NFHS-5 asks whether household members are covered by any health insurance/financing scheme. Multiple schemes per person possible — counted as covered if any."
+  },
+  "mapData": {
+    "indicator": "Health insurance coverage (%)",
+    "unit": "%",
+    "nationalAverage": 41,
+    "states": {
+      "KL": {
+        "name": "Kerala",
+        "value": 41.6,
+        "rank": 1
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 28.4,
+        "rank": 2
+      },
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 22.1,
+        "rank": 3
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 18.2,
+        "rank": 4
+      },
+      "BR": {
+        "name": "Bihar",
+        "value": 14.9,
+        "rank": 5
+      }
+    }
+  },
+  "tabs": [
+    {
+      "label": "Any Coverage",
+      "mapData": {
+        "indicator": "Any health insurance (%)",
+        "unit": "%",
+        "nationalAverage": 41,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 41.6,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 28.4,
+            "rank": 2
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 22.1,
+            "rank": 3
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 18.2,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 14.9,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-any",
+          "title": "Any Health Insurance Coverage by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 41,
+          "higherIsBetter": true,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 41.6
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 28.4
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 22.1
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 18.2
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 14.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Government Scheme",
+      "mapData": {
+        "indicator": "Govt scheme coverage (%)",
+        "unit": "%",
+        "nationalAverage": 28.4,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 28.4,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 19.6,
+            "rank": 2
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 18.7,
+            "rank": 3
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 14.8,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 11.2,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-govt",
+          "title": "Government Health Scheme Coverage by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 28.4,
+          "higherIsBetter": true,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 28.4
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 19.6
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 18.7
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 14.8
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 11.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Private Insurance",
+      "mapData": {
+        "indicator": "Private insurance (%)",
+        "unit": "%",
+        "nationalAverage": 18.6,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 18.2,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 12.1,
+            "rank": 2
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 6.4,
+            "rank": 3
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 5.3,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 4.8,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-private",
+          "title": "Private Insurance Coverage by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 18.6,
+          "higherIsBetter": true,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 18.2
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 12.1
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 6.4
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 5.3
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 4.8
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chartBlocks": [
+    {
+      "id": "lollipop-any",
+      "title": "Any Health Insurance Coverage by State",
+      "type": "lollipop",
+      "unit": "%",
+      "average": 41,
+      "higherIsBetter": true,
+      "data": [
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 41.6
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 28.4
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 22.1
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 18.2
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 14.9
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "Rank",
+        "type": "number"
+      },
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "Any Coverage (%)",
+        "type": "number"
+      },
+      {
+        "label": "Govt Scheme (%)",
+        "type": "number"
+      },
+      {
+        "label": "Private Insurance (%)",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        1,
+        "Kerala",
+        41.6,
+        28.4,
+        18.2
+      ],
+      [
+        2,
+        "Maharashtra",
+        28.4,
+        19.6,
+        12.1
+      ],
+      [
+        3,
+        "Rajasthan",
+        22.1,
+        18.7,
+        6.4
+      ],
+      [
+        4,
+        "Uttar Pradesh",
+        18.2,
+        14.8,
+        5.3
+      ],
+      [
+        5,
+        "Bihar",
+        14.9,
+        11.2,
+        4.8
+      ]
+    ]
+  },
+  "insights": []
+}

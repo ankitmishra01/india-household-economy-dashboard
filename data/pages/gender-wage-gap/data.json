@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "title": "Gender Wage Gap",
+    "subtitle": "Female-to-male earnings ratio for regular salaried workers by state",
+    "source": "PLFS 2022–23, NSO/MoSPI — Earnings of Regular Wage/Salaried Employees",
+    "sourceUrl": "https://mospi.gov.in/plfs-report",
+    "surveyPeriod": "July 2022 – June 2023",
+    "notes": [
+      "Wage gap computed for regular wage/salaried employees only — excludes casual and self-employed.",
+      "A ratio of 0.70 means women earn ₹70 for every ₹100 earned by men.",
+      "Occupational segregation (women concentrated in lower-paid sectors) accounts for part of the gap.",
+      "⚠ Mock data (5 states)."
+    ],
+    "methodology": "Mean monthly earnings compared for regular wage/salaried workers aged 15-59. Not adjusted for occupation, sector, or hours worked."
+  },
+  "mapData": {
+    "indicator": "Female-to-male earnings ratio",
+    "unit": "ratio",
+    "nationalAverage": 0.693,
+    "states": {
+      "BR": {
+        "name": "Bihar",
+        "value": 0.621,
+        "rank": 1
+      },
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 0.622,
+        "rank": 2
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 0.676,
+        "rank": 3
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 0.738,
+        "rank": 4
+      },
+      "KL": {
+        "name": "Kerala",
+        "value": 0.787,
+        "rank": 5
+      }
+    }
+  },
+  "tabs": [
+    {
+      "label": "Earnings Ratio",
+      "mapData": {
+        "indicator": "F:M earnings ratio",
+        "unit": "ratio",
+        "nationalAverage": 0.693,
+        "states": {
+          "BR": {
+            "name": "Bihar",
+            "value": 0.621,
+            "rank": 1
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 0.622,
+            "rank": 2
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 0.676,
+            "rank": 3
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 0.738,
+            "rank": 4
+          },
+          "KL": {
+            "name": "Kerala",
+            "value": 0.787,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-ratio",
+          "title": "Female-to-Male Earnings Ratio by State",
+          "subtitle": "Ratio of 1.0 = equal pay",
+          "type": "lollipop",
+          "unit": "ratio",
+          "average": 0.693,
+          "higherIsBetter": true,
+          "data": [
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 0.621
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 0.622
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 0.676
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 0.738
+            },
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 0.787
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "₹ Gap",
+      "mapData": {
+        "indicator": "Absolute wage gap (₹/month)",
+        "unit": "₹",
+        "nationalAverage": 5500,
+        "states": {
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 5600,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 5600,
+            "rank": 2
+          },
+          "KL": {
+            "name": "Kerala",
+            "value": 4700,
+            "rank": 3
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 4600,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 4400,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-gap",
+          "title": "Absolute Monthly Wage Gap (₹) by State",
+          "type": "lollipop",
+          "unit": "₹",
+          "average": 5500,
+          "higherIsBetter": false,
+          "data": [
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 5600
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 5600
+            },
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 4700
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 4600
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 4400
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chartBlocks": [
+    {
+      "id": "lollipop-ratio",
+      "title": "Female-to-Male Earnings Ratio by State",
+      "type": "lollipop",
+      "unit": "ratio",
+      "average": 0.693,
+      "higherIsBetter": true,
+      "data": [
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 0.622
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 0.738
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 0.787
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 0.676
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 0.621
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "Rank (widest gap)",
+        "type": "number"
+      },
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "Male Avg Wage (₹/mo)",
+        "type": "number"
+      },
+      {
+        "label": "Female Avg Wage (₹/mo)",
+        "type": "number"
+      },
+      {
+        "label": "F:M Ratio",
+        "type": "number"
+      },
+      {
+        "label": "Gap (₹/mo)",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        2,
+        "Rajasthan",
+        14800,
+        9200,
+        "0.622",
+        5600
+      ],
+      [
+        4,
+        "Maharashtra",
+        21400,
+        15800,
+        "0.738",
+        5600
+      ],
+      [
+        5,
+        "Kerala",
+        22100,
+        17400,
+        "0.787",
+        4700
+      ],
+      [
+        3,
+        "Uttar Pradesh",
+        14200,
+        9600,
+        "0.676",
+        4600
+      ],
+      [
+        1,
+        "Bihar",
+        11600,
+        7200,
+        "0.621",
+        4400
+      ]
+    ]
+  },
+  "insights": []
+}

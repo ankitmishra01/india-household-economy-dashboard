@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Out-of-Pocket Healthcare Expenditure — India Household Economy Dashboard</title>
+  <meta name="description" content="OOP health spending as % of total household consumption by state">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body data-page="oop-expenditure" data-theme="health">
+
+  <header class="site-header" id="site-header">
+    <a href="/" class="logo">&#127988;&#65039; India Economy</a>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation"></nav>
+    <div class="header-right">
+      <a href="/about.html">About</a>
+      <a href="https://github.com/india-household-economy-dashboard" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="hero-text">
+      <h1 id="page-title">Out-of-Pocket Healthcare Expenditure</h1>
+      <p class="subtitle" id="page-subtitle">OOP health spending as % of total household consumption by state</p>
+    </div>
+    <span class="source-badge" id="source-badge">Loading…</span>
+  </div>
+
+  <!-- Content warning (only shown when data has contentWarning set) -->
+  <div class="content-warning hidden" id="content-warning" role="alert">
+    <span class="cw-icon" aria-hidden="true">&#9888;</span>
+    <span class="cw-text" id="cw-text"></span>
+    <button class="cw-dismiss" id="cw-dismiss" aria-label="Dismiss warning">Dismiss</button>
+  </div>
+
+  <!-- Tab controls (only shown on tabbed pages) -->
+  <div class="tab-controls hidden" id="tab-controls" role="tablist"></div>
+
+  <!-- Map + Data Panel -->
+  <div class="map-layout">
+    <div class="map-panel">
+      <div id="map-container">
+        <div class="skeleton skeleton-map" id="map-skeleton"></div>
+      </div>
+      <div class="map-controls">
+        <button class="map-btn hidden" id="back-btn" aria-label="Back to India view">&#8592; Back to India</button>
+      </div>
+      <div class="map-tooltip" id="map-tooltip" role="tooltip">
+        <div class="tt-state" id="tt-state"></div>
+        <div class="tt-value" id="tt-value"></div>
+        <div class="tt-rank" id="tt-rank"></div>
+      </div>
+      <div class="map-legend" id="map-legend">
+        <div class="legend-title" id="legend-title"></div>
+        <div class="legend-bar"></div>
+        <div class="legend-labels">
+          <span id="legend-min"></span>
+          <span id="legend-mid"></span>
+          <span id="legend-max"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="data-panel" id="data-panel">
+      <div class="data-panel-header">
+        <h3 id="panel-indicator-label">States ranked by indicator</h3>
+      </div>
+      <div class="panel-avg-row">
+        <span class="label">National Average</span>
+        <span class="value" id="panel-avg-value">—</span>
+      </div>
+      <div class="panel-state-list" id="panel-state-list">
+        <!-- Populated by page.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts -->
+  <div id="charts-container"></div>
+
+  <!-- Data Table -->
+  <div class="table-section" id="table-section">
+    <div class="section-header">
+      <h2>Data Table</h2>
+    </div>
+    <div class="table-toolbar">
+      <input type="search" class="table-search" id="table-search" placeholder="Search states…" aria-label="Search states">
+      <button class="csv-export-btn" id="csv-export-btn">&#8595; Download CSV</button>
+    </div>
+    <div class="data-table-wrap">
+      <table class="data-table" id="data-table">
+        <thead id="table-head"></thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- AI Insights -->
+  <div class="insights-section" id="insights-section">
+    <h2>Data Insights</h2>
+    <div id="insights-container">
+      <p class="no-insights">Insights not yet generated for this page.</p>
+    </div>
+  </div>
+
+  <!-- Notes & Methodology -->
+  <div class="notes-section" id="notes-section">
+    <h3>Notes & Methodology</h3>
+    <ul id="notes-list"></ul>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-col">
+      <h4>Source</h4>
+      <p id="footer-source"></p>
+    </div>
+    <div class="footer-col">
+      <h4>Methodology</h4>
+      <p id="footer-methodology"></p>
+    </div>
+    <div class="footer-col">
+      <h4>Project</h4>
+      <a href="/about.html">About this dashboard</a><br>
+      <a href="https://github.com/india-household-economy-dashboard" target="_blank" rel="noopener">GitHub (MIT)</a>
+    </div>
+    <div class="footer-bottom">
+      <span id="footer-survey-period"></span>
+      <span>Built with Claude Code · GeoJSON: DataMeet · MIT License</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="/js/constants/states.js"></script>
+  <script src="/js/utils/format.js"></script>
+  <script src="/js/utils/stats.js"></script>
+  <script src="/js/renderers/choropleth.js"></script>
+  <script src="/js/renderers/lollipop.js"></script>
+  <script src="/js/renderers/waffle.js"></script>
+  <script src="/js/renderers/grouped-lollipop.js"></script>
+  <script src="/js/table-renderer.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/page.js"></script>
+</body>
+</html>

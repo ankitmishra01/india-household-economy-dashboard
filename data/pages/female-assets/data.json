@@ -1,0 +1,388 @@
+{
+  "meta": {
+    "title": "Female Asset Ownership",
+    "subtitle": "Women's ownership of land, housing, and bank accounts by state",
+    "source": "NFHS-5 2019–21, IIPS/MoHFW — Women's Empowerment Tables",
+    "sourceUrl": "https://rchiips.org/nfhs/nfhs5.shtml",
+    "surveyPeriod": "2019–2021",
+    "notes": [
+      "Asset ownership data refers to women aged 15-49.",
+      "\"Alone or jointly\" means the woman has her name on the ownership document.",
+      "Female land ownership is strongly correlated with reduced domestic violence and higher child welfare outcomes.",
+      "⚠ Mock data (5 states)."
+    ],
+    "methodology": "NFHS-5 asks women whether they own land or a house alone or jointly with someone else. Bank account ownership refers to accounts in their own name."
+  },
+  "mapData": {
+    "indicator": "% women who own land (alone or jointly)",
+    "unit": "%",
+    "nationalAverage": 21.7,
+    "states": {
+      "KL": {
+        "name": "Kerala",
+        "value": 34.6,
+        "rank": 1
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 14.8,
+        "rank": 2
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 12.1,
+        "rank": 3
+      },
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 11.8,
+        "rank": 4
+      },
+      "BR": {
+        "name": "Bihar",
+        "value": 9.4,
+        "rank": 5
+      }
+    }
+  },
+  "tabs": [
+    {
+      "label": "Land Ownership",
+      "mapData": {
+        "indicator": "% women owning land (alone)",
+        "unit": "%",
+        "nationalAverage": 14.6,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 34.6,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 14.8,
+            "rank": 2
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 12.1,
+            "rank": 3
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 11.8,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 9.4,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "waffle-land",
+          "title": "National Female Land Ownership Status",
+          "type": "waffle",
+          "unit": "%",
+          "segments": [
+            {
+              "label": "Women own land alone",
+              "value": 15,
+              "color": "var(--accent-saffron)"
+            },
+            {
+              "label": "Women own land jointly",
+              "value": 7,
+              "color": "var(--w7)"
+            },
+            {
+              "label": "Women do not own land",
+              "value": 78,
+              "color": "var(--elevated)"
+            }
+          ]
+        },
+        {
+          "id": "lollipop-land",
+          "title": "% Women Who Own Land (Alone) by State",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 14.6,
+          "higherIsBetter": true,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 34.6
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 14.8
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 12.1
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 11.8
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 9.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "House Ownership",
+      "mapData": {
+        "indicator": "% women owning a house (alone or jointly)",
+        "unit": "%",
+        "nationalAverage": 23.8,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 52.8,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 22.4,
+            "rank": 2
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 18.6,
+            "rank": 3
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 16.4,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 14.2,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-house",
+          "title": "% Women Who Own a House (Alone or Jointly)",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 23.8,
+          "higherIsBetter": true,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 52.8
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 22.4
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 18.6
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 16.4
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 14.2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Bank Account",
+      "mapData": {
+        "indicator": "% women with bank account in name",
+        "unit": "%",
+        "nationalAverage": 70.5,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 89.3,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 72.4,
+            "rank": 2
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 63.1,
+            "rank": 3
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 59.6,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 52.8,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-bank",
+          "title": "% Women with Bank Account in Own Name",
+          "type": "lollipop",
+          "unit": "%",
+          "average": 70.5,
+          "higherIsBetter": true,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 89.3
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 72.4
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 63.1
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 59.6
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 52.8
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chartBlocks": [
+    {
+      "id": "lollipop-land",
+      "title": "% Women Who Own Land (Alone) by State",
+      "type": "lollipop",
+      "unit": "%",
+      "average": 14.6,
+      "higherIsBetter": true,
+      "data": [
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 34.6
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 14.8
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 11.8
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 12.1
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 9.4
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "Own Land Alone (%)",
+        "type": "number"
+      },
+      {
+        "label": "Own Land Jointly (%)",
+        "type": "number"
+      },
+      {
+        "label": "Own House (%)",
+        "type": "number"
+      },
+      {
+        "label": "Bank Account (%)",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        "Maharashtra",
+        14.8,
+        8.2,
+        22.4,
+        72.4
+      ],
+      [
+        "Uttar Pradesh",
+        12.1,
+        4.6,
+        18.6,
+        59.6
+      ],
+      [
+        "Kerala",
+        34.6,
+        18.4,
+        52.8,
+        89.3
+      ],
+      [
+        "Rajasthan",
+        11.8,
+        5.2,
+        16.4,
+        63.1
+      ],
+      [
+        "Bihar",
+        9.4,
+        3.8,
+        14.2,
+        52.8
+      ]
+    ]
+  },
+  "insights": []
+}

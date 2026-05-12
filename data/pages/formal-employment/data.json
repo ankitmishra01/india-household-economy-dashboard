@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "title": "Formal vs. Informal Employment",
+    "subtitle": "Share of workers in formal employment by state, 2022–23",
+    "source": "PLFS 2022–23, NSO/MoSPI — enterprise type and social security modules",
+    "sourceUrl": "https://mospi.gov.in/plfs-report",
+    "surveyPeriod": "July 2022 – June 2023",
+    "notes": [
+      "Formal employment defined as: written job contract AND eligible for social security (EPF/ESI/NPS).",
+      "India has one of the world's highest informality rates among major economies.",
+      "Informality is highest in agriculture, construction, and domestic work.",
+      "⚠ Mock data (5 states)."
+    ],
+    "methodology": "PLFS identifies enterprise type (proprietary, partnership, public sector, etc.) and whether workers receive written job contract and social security benefits."
+  },
+  "mapData": {
+    "indicator": "Formalization Rate (%)",
+    "unit": "%",
+    "nationalAverage": 19.2,
+    "states": {
+      "KL": {
+        "name": "Kerala",
+        "value": 31.8,
+        "rank": 1
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 24.3,
+        "rank": 2
+      },
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 14.7,
+        "rank": 3
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 11.2,
+        "rank": 4
+      },
+      "BR": {
+        "name": "Bihar",
+        "value": 8.4,
+        "rank": 5
+      }
+    }
+  },
+  "chartBlocks": [
+    {
+      "id": "waffle-formality",
+      "title": "National Formal vs Informal Employment Split",
+      "type": "waffle",
+      "unit": "%",
+      "segments": [
+        {
+          "label": "Formal (written contract + social security)",
+          "value": 19,
+          "color": "var(--chart-good)"
+        },
+        {
+          "label": "Informal employment",
+          "value": 81,
+          "color": "var(--chart-bad)"
+        }
+      ]
+    },
+    {
+      "id": "lollipop-formal",
+      "title": "Formalization Rate by State",
+      "type": "lollipop",
+      "unit": "%",
+      "average": 19.2,
+      "higherIsBetter": true,
+      "data": [
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 31.8
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 24.3
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 14.7
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 11.2
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 8.4
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "Rank",
+        "type": "number"
+      },
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "Formal Employment (%)",
+        "type": "number"
+      },
+      {
+        "label": "Informal Employment (%)",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        1,
+        "Kerala",
+        31.8,
+        68.2
+      ],
+      [
+        2,
+        "Maharashtra",
+        24.3,
+        75.7
+      ],
+      [
+        3,
+        "Rajasthan",
+        14.7,
+        85.3
+      ],
+      [
+        4,
+        "Uttar Pradesh",
+        11.2,
+        88.8
+      ],
+      [
+        5,
+        "Bihar",
+        8.4,
+        91.6
+      ]
+    ]
+  },
+  "insights": []
+}

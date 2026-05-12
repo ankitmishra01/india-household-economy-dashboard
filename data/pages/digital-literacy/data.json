@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "title": "Digital Literacy & Internet Access",
+    "subtitle": "% who have ever used the internet by gender and state",
+    "source": "NFHS-5 2019–21, IIPS/MoHFW — Tables on internet use",
+    "sourceUrl": "https://rchiips.org/nfhs/nfhs5.shtml",
+    "surveyPeriod": "2019–2021",
+    "notes": [
+      "Internet use is asked as \"ever used the internet\" — not regular/active use.",
+      "Gender digital divide correlates with female mobile phone ownership and literacy gaps.",
+      "States with >30pp gender internet gap have significant economic implications for female financial inclusion.",
+      "⚠ Mock data (5 states)."
+    ],
+    "methodology": "NFHS-5 asks women aged 15-49 and men aged 15-54 whether they have ever used the internet."
+  },
+  "mapData": {
+    "indicator": "% women who have used the internet",
+    "unit": "%",
+    "nationalAverage": 33.3,
+    "states": {
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 21.4,
+        "rank": 1
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 23.6,
+        "rank": 2
+      },
+      "BR": {
+        "name": "Bihar",
+        "value": 16.8,
+        "rank": 3
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 43.2,
+        "rank": 4
+      },
+      "KL": {
+        "name": "Kerala",
+        "value": 70.8,
+        "rank": 5
+      }
+    }
+  },
+  "chartBlocks": [
+    {
+      "id": "grouped-internet",
+      "title": "Male vs Female Internet Use by State (sorted by gender gap)",
+      "type": "grouped-lollipop",
+      "unit": "%",
+      "labelA": "Male",
+      "labelB": "Female",
+      "colorA": "var(--w2)",
+      "colorB": "var(--accent-saffron)",
+      "seriesA": [
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 55.2
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 56.8
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 48.6
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 68.4
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 82.1
+        }
+      ],
+      "seriesB": [
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 21.4
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 23.6
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 16.8
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 43.2
+        },
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 70.8
+        }
+      ]
+    },
+    {
+      "id": "waffle-internet",
+      "title": "National Internet Use: Men vs Women",
+      "type": "waffle",
+      "unit": "%",
+      "segments": [
+        {
+          "label": "Women who have used internet",
+          "value": 33,
+          "color": "var(--accent-saffron)"
+        },
+        {
+          "label": "Men who have used internet",
+          "value": 58,
+          "color": "var(--w2)"
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "Female Internet Use (%)",
+        "type": "number"
+      },
+      {
+        "label": "Male Internet Use (%)",
+        "type": "number"
+      },
+      {
+        "label": "Gender Gap (pp)",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        "Maharashtra",
+        43.2,
+        68.4,
+        25.2
+      ],
+      [
+        "Uttar Pradesh",
+        23.6,
+        56.8,
+        33.2
+      ],
+      [
+        "Kerala",
+        70.8,
+        82.1,
+        11.3
+      ],
+      [
+        "Rajasthan",
+        21.4,
+        55.2,
+        33.8
+      ],
+      [
+        "Bihar",
+        16.8,
+        48.6,
+        31.8
+      ]
+    ]
+  },
+  "insights": []
+}

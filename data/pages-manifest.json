@@ -1,0 +1,295 @@
+{
+  "themes": [
+    {
+      "id": "wealth",
+      "label": "Wealth & Living",
+      "slugs": ["household-consumption", "wealth-quintiles", "mpi", "food-insecurity", "housing-utilities"]
+    },
+    {
+      "id": "labor",
+      "label": "Labor Force",
+      "slugs": ["lfpr", "unemployment", "neet-youth", "formal-employment", "gender-wage-gap", "unpaid-care"]
+    },
+    {
+      "id": "health",
+      "label": "Health Economics",
+      "slugs": ["oop-expenditure", "catastrophic-spending", "health-insurance"]
+    },
+    {
+      "id": "hcapital",
+      "label": "Human Capital",
+      "slugs": ["education-expenditure", "literacy", "digital-literacy", "age-dependency"]
+    },
+    {
+      "id": "finance",
+      "label": "Financial Inclusion",
+      "slugs": ["banking-access", "mobile-money", "female-assets", "ipv-economic-cost"]
+    }
+  ],
+  "pages": [
+    {
+      "slug": "household-consumption",
+      "title": "Household Consumption Expenditure",
+      "subtitle": "Monthly per capita consumption by state, 2022–23",
+      "theme": "wealth",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["lollipop"],
+      "tabbed": true,
+      "mapIndicator": "Monthly Per Capita Expenditure (₹)",
+      "source": "HCES 2022–23, NSO/MoSPI"
+    },
+    {
+      "slug": "wealth-quintiles",
+      "title": "Household Wealth Quintiles",
+      "subtitle": "Share of households in lowest wealth quintile by state",
+      "theme": "wealth",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["waffle", "lollipop"],
+      "tabbed": false,
+      "mapIndicator": "% households in lowest wealth quintile",
+      "source": "NFHS-5 2019–21, IIPS/MoHFW"
+    },
+    {
+      "slug": "mpi",
+      "title": "Multidimensional Poverty Index",
+      "subtitle": "MPI score, headcount ratio, and intensity of deprivation by state",
+      "theme": "wealth",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["lollipop"],
+      "tabbed": true,
+      "mapIndicator": "MPI Score",
+      "source": "UNDP/OPHI Global MPI 2021; NITI Aayog National MPI 2023"
+    },
+    {
+      "slug": "food-insecurity",
+      "title": "Food Insecurity & Child Stunting",
+      "subtitle": "Household food insecurity and child stunting rates by state",
+      "theme": "wealth",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["lollipop", "waffle"],
+      "tabbed": false,
+      "mapIndicator": "% children under 5 who are stunted",
+      "source": "NFHS-5 2019–21, IIPS/MoHFW; Global Hunger Index 2023"
+    },
+    {
+      "slug": "housing-utilities",
+      "title": "Housing & Basic Utilities",
+      "subtitle": "Homeownership, electricity, drinking water, and sanitation access by state",
+      "theme": "wealth",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["grouped-lollipop"],
+      "tabbed": true,
+      "mapIndicator": "% households with electricity access",
+      "source": "Census 2011; NFHS-5 2019–21, IIPS/MoHFW"
+    },
+    {
+      "slug": "lfpr",
+      "title": "Labor Force Participation Rate",
+      "subtitle": "Overall, male, and female labor force participation by state, 2022–23",
+      "theme": "labor",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["grouped-lollipop"],
+      "tabbed": true,
+      "mapIndicator": "Female LFPR (%)",
+      "source": "PLFS 2022–23, NSO/MoSPI"
+    },
+    {
+      "slug": "unemployment",
+      "title": "Unemployment Rate",
+      "subtitle": "Usual status unemployment rate by state and gender, 2022–23",
+      "theme": "labor",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["lollipop"],
+      "tabbed": true,
+      "mapIndicator": "Unemployment Rate (UPSS) %",
+      "source": "PLFS 2022–23, NSO/MoSPI"
+    },
+    {
+      "slug": "neet-youth",
+      "title": "NEET Youth",
+      "subtitle": "Youth aged 15–24 not in employment, education, or training",
+      "theme": "labor",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["grouped-lollipop", "waffle"],
+      "tabbed": false,
+      "mapIndicator": "NEET Rate (15–24) %",
+      "source": "PLFS 2022–23, NSO/MoSPI"
+    },
+    {
+      "slug": "formal-employment",
+      "title": "Formal vs. Informal Employment",
+      "subtitle": "Share of workers in formal employment by state",
+      "theme": "labor",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["waffle", "lollipop"],
+      "tabbed": false,
+      "mapIndicator": "Formalization Rate (%)",
+      "source": "PLFS 2022–23, NSO/MoSPI"
+    },
+    {
+      "slug": "gender-wage-gap",
+      "title": "Gender Wage Gap",
+      "subtitle": "Female-to-male earnings ratio for regular salaried workers by state",
+      "theme": "labor",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["lollipop"],
+      "tabbed": true,
+      "mapIndicator": "Female-to-male earnings ratio",
+      "source": "PLFS 2022–23, NSO/MoSPI"
+    },
+    {
+      "slug": "unpaid-care",
+      "title": "Unpaid Care & Domestic Work",
+      "subtitle": "Daily time spent on unpaid work by gender and state",
+      "theme": "labor",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["grouped-lollipop", "waffle"],
+      "tabbed": false,
+      "mapIndicator": "Female unpaid work (minutes/day)",
+      "source": "Time Use Survey 2019, NSO/MoSPI"
+    },
+    {
+      "slug": "oop-expenditure",
+      "title": "Out-of-Pocket Healthcare Expenditure",
+      "subtitle": "OOP health spending as % of total household consumption by state",
+      "theme": "health",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["lollipop"],
+      "tabbed": true,
+      "mapIndicator": "OOP health spend (% of consumption)",
+      "source": "NSS 75th Round 2017–18; NFHS-5 2019–21"
+    },
+    {
+      "slug": "catastrophic-spending",
+      "title": "Catastrophic Health Spending",
+      "subtitle": "Households experiencing catastrophic health expenditure (OOP >10% of total spend)",
+      "theme": "health",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["lollipop", "waffle"],
+      "tabbed": false,
+      "mapIndicator": "% households with catastrophic health spending",
+      "source": "NSS 75th Round 2017–18, NSO/MoSPI"
+    },
+    {
+      "slug": "health-insurance",
+      "title": "Health Insurance Coverage",
+      "subtitle": "Share of population covered by any health insurance scheme by state",
+      "theme": "health",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["lollipop"],
+      "tabbed": true,
+      "mapIndicator": "Health insurance coverage (%)",
+      "source": "NFHS-5 2019–21, IIPS/MoHFW"
+    },
+    {
+      "slug": "education-expenditure",
+      "title": "Household Expenditure on Education",
+      "subtitle": "Annual household education spend per child by state",
+      "theme": "hcapital",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["lollipop"],
+      "tabbed": true,
+      "mapIndicator": "Education spend per child (₹/year)",
+      "source": "HCES 2022–23, NSO/MoSPI"
+    },
+    {
+      "slug": "literacy",
+      "title": "Adult Literacy & Gender Gap",
+      "subtitle": "Overall, male, and female literacy rates by state",
+      "theme": "hcapital",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["grouped-lollipop"],
+      "tabbed": true,
+      "mapIndicator": "Female literacy rate (%)",
+      "source": "NFHS-5 2019–21, IIPS/MoHFW; Census 2011"
+    },
+    {
+      "slug": "digital-literacy",
+      "title": "Digital Literacy & Internet Access",
+      "subtitle": "Internet use by gender and state",
+      "theme": "hcapital",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["grouped-lollipop", "waffle"],
+      "tabbed": false,
+      "mapIndicator": "% women who have used the internet",
+      "source": "NFHS-5 2019–21, IIPS/MoHFW"
+    },
+    {
+      "slug": "age-dependency",
+      "title": "Age Dependency & Demographic Dividend",
+      "subtitle": "Youth and old-age dependency ratios by state",
+      "theme": "hcapital",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["grouped-lollipop", "waffle"],
+      "tabbed": false,
+      "mapIndicator": "Total dependency ratio",
+      "source": "Census 2011; Sample Registration System 2020"
+    },
+    {
+      "slug": "banking-access",
+      "title": "Access to Formal Banking",
+      "subtitle": "Bank account ownership and financial inclusion by state",
+      "theme": "finance",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["lollipop"],
+      "tabbed": true,
+      "mapIndicator": "% adults with a bank account",
+      "source": "NFHS-5 2019–21; RBI FI Index; PMJDY Dashboard"
+    },
+    {
+      "slug": "mobile-money",
+      "title": "Mobile Money & Digital Payments",
+      "subtitle": "Female mobile ownership and UPI transaction volume by state",
+      "theme": "finance",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["grouped-lollipop"],
+      "tabbed": false,
+      "mapIndicator": "% women who own a mobile phone",
+      "source": "NFHS-5 2019–21; RBI Payment System Data"
+    },
+    {
+      "slug": "female-assets",
+      "title": "Female Asset Ownership",
+      "subtitle": "Women's ownership of land, housing, and bank accounts by state",
+      "theme": "finance",
+      "template": "map",
+      "contentWarning": null,
+      "chartTypes": ["waffle", "lollipop"],
+      "tabbed": true,
+      "mapIndicator": "% women who own land (alone or jointly)",
+      "source": "NFHS-5 2019–21, IIPS/MoHFW"
+    },
+    {
+      "slug": "ipv-economic-cost",
+      "title": "Economic Cost of Intimate Partner Violence",
+      "subtitle": "IPV prevalence and estimated productivity loss by state",
+      "theme": "finance",
+      "template": "map",
+      "contentWarning": "This page contains data on intimate partner violence. Some figures are modelled estimates, not official statistics — see methodology notes.",
+      "chartTypes": ["lollipop"],
+      "tabbed": false,
+      "mapIndicator": "% women who experienced physical/sexual IPV",
+      "source": "NFHS-5 2019–21, IIPS/MoHFW"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{PAGE_TITLE}} — India Household Economy Dashboard</title>
+  <meta name="description" content="{{PAGE_SUBTITLE}}">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body data-page="{{PAGE_SLUG}}" data-theme="{{PAGE_THEME}}">
+
+  <header class="site-header" id="site-header">
+    <a href="/" class="logo">&#127988;&#65039; India Economy</a>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation"></nav>
+    <div class="header-right">
+      <a href="/about.html">About</a>
+      <a href="https://github.com/india-household-economy-dashboard" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="hero-text">
+      <h1 id="page-title">{{PAGE_TITLE}}</h1>
+      <p class="subtitle" id="page-subtitle">{{PAGE_SUBTITLE}}</p>
+    </div>
+    <span class="source-badge" id="source-badge">Loading…</span>
+  </div>
+
+  <div class="content-warning hidden" id="content-warning" role="alert">
+    <span class="cw-icon" aria-hidden="true">&#9888;</span>
+    <span class="cw-text" id="cw-text"></span>
+    <button class="cw-dismiss" id="cw-dismiss" aria-label="Dismiss warning">Dismiss</button>
+  </div>
+
+  <div class="table-section" id="table-section" style="padding-top: 32px;">
+    <div class="section-header">
+      <h2 id="page-title-table">Data</h2>
+    </div>
+    <div class="table-toolbar">
+      <input type="search" class="table-search" id="table-search" placeholder="Search states…" aria-label="Search states">
+      <button class="csv-export-btn" id="csv-export-btn">&#8595; Download CSV</button>
+    </div>
+    <div class="data-table-wrap">
+      <table class="data-table" id="data-table">
+        <thead id="table-head"></thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="insights-section" id="insights-section">
+    <h2>Data Insights</h2>
+    <div id="insights-container">
+      <p class="no-insights">Insights not yet generated for this page.</p>
+    </div>
+  </div>
+
+  <div class="notes-section" id="notes-section">
+    <h3>Notes & Methodology</h3>
+    <ul id="notes-list"></ul>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-col">
+      <h4>Source</h4>
+      <p id="footer-source"></p>
+    </div>
+    <div class="footer-col">
+      <h4>Methodology</h4>
+      <p id="footer-methodology"></p>
+    </div>
+    <div class="footer-col">
+      <h4>Project</h4>
+      <a href="/about.html">About this dashboard</a><br>
+      <a href="https://github.com/india-household-economy-dashboard" target="_blank" rel="noopener">GitHub (MIT)</a>
+    </div>
+    <div class="footer-bottom">
+      <span id="footer-survey-period"></span>
+      <span>Built with Claude Code · GeoJSON: DataMeet · MIT License</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="/js/constants/states.js"></script>
+  <script src="/js/utils/format.js"></script>
+  <script src="/js/utils/stats.js"></script>
+  <script src="/js/table-renderer.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/page.js"></script>
+</body>
+</html>

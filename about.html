@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — India Household Economy Dashboard</title>
+  <meta name="description" content="About this dashboard: data sources, methodology, AI insights pipeline, and how to use the data.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <style>
+    .about-container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: var(--space-xl) var(--space-md);
+    }
+    .about-container h1 {
+      font-size: 2rem;
+      margin-bottom: var(--space-xs);
+    }
+    .about-container h2 {
+      font-size: 1.1rem;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      color: var(--accent-saffron);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: var(--space-xl);
+      margin-bottom: var(--space-sm);
+    }
+    .about-container p {
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: var(--space-sm);
+    }
+    .about-container p strong {
+      color: var(--text-primary);
+    }
+    .about-container a {
+      color: var(--accent-saffron);
+      text-decoration: none;
+    }
+    .about-container a:hover {
+      text-decoration: underline;
+    }
+    .sources-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: var(--space-sm);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+    }
+    .sources-table th {
+      text-align: left;
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .sources-table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+    .sources-table td:first-child {
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    .sources-table tr:last-child td {
+      border-bottom: none;
+    }
+    .verdict-row {
+      display: flex;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+      margin-top: var(--space-sm);
+    }
+    .verdict-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 3px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+    }
+    .verdict-pill.supported     { background: rgba(40,169,107,0.15); color: var(--accent-green); }
+    .verdict-pill.mostly        { background: rgba(232,137,42,0.15); color: var(--accent-saffron); }
+    .verdict-pill.partly        { background: rgba(74,95,112,0.15);  color: var(--text-secondary); }
+    .verdict-pill.unsupported   { background: rgba(180,60,60,0.15);  color: #e07070; }
+    .callout {
+      background: var(--surface);
+      border-left: 3px solid var(--accent-saffron);
+      padding: var(--space-sm) var(--space-md);
+      margin: var(--space-sm) 0;
+      border-radius: 0 4px 4px 0;
+    }
+    .callout p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body data-theme="about">
+  <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-wordmark">India Household Economy</a>
+    <div class="nav-links" id="nav-links"></div>
+  </nav>
+
+  <div class="about-container">
+    <h1>About This Dashboard</h1>
+    <p>
+      India's household economic data is technically public — buried in thousands of PDF tables,
+      district factsheets, and survey microdata annexures produced by NSO, IIPS, and other agencies.
+      This dashboard makes that data explorable.
+    </p>
+    <p>
+      Each of the 22 indicator pages shows state-level variation through interactive maps,
+      ranked charts, and sortable tables. AI-generated insight blocks surface patterns
+      that would take an analyst hours to find manually.
+    </p>
+
+    <h2>Who This Is For</h2>
+    <p>
+      <strong>Journalists</strong> covering the Indian economy, social welfare, or gender equity —
+      for fact-checking, sourcing context, or finding story leads.
+      <br>
+      <strong>Policy researchers</strong> who need quick state-to-state comparisons without
+      downloading raw survey files.
+      <br>
+      <strong>Students and educators</strong> building literacy in Indian development economics.
+    </p>
+
+    <h2>Data Sources</h2>
+    <table class="sources-table">
+      <thead>
+        <tr>
+          <th>Survey / Dataset</th>
+          <th>Coverage</th>
+          <th>Used For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>HCES 2022–23</td>
+          <td>All states, 2022–23</td>
+          <td>Household consumption, food insecurity, housing utilities</td>
+        </tr>
+        <tr>
+          <td>PLFS 2022–23</td>
+          <td>All states, Annual Round</td>
+          <td>LFPR, unemployment, NEET youth, formal employment, gender wage gap, unpaid care, age dependency</td>
+        </tr>
+        <tr>
+          <td>NFHS-5 (2019–21)</td>
+          <td>All states/UTs</td>
+          <td>MPI component, OOP health expenditure, catastrophic spending, health insurance, digital literacy, female asset ownership, mobile ownership, IPV prevalence</td>
+        </tr>
+        <tr>
+          <td>SECC 2011 / NITI MPI</td>
+          <td>All districts → aggregated</td>
+          <td>Multidimensional Poverty Index</td>
+        </tr>
+        <tr>
+          <td>ASER 2022</td>
+          <td>Rural India, district sample</td>
+          <td>Literacy rates (rural)</td>
+        </tr>
+        <tr>
+          <td>NSS 75th Round (2017–18)</td>
+          <td>All states</td>
+          <td>Education expenditure per student</td>
+        </tr>
+        <tr>
+          <td>RBI Payment Systems</td>
+          <td>State-level, 2022–23</td>
+          <td>UPI transactions per capita</td>
+        </tr>
+        <tr>
+          <td>PMJDY / RBI BASICSTAT</td>
+          <td>District → state, 2022–23</td>
+          <td>Banking access, mobile money</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Data Vintage</h2>
+    <p>
+      Survey data reflects the most recent published round at time of extraction.
+      Indicators from NFHS-5 (2019–21) pre-date indicators from HCES 2022–23 and PLFS 2022–23.
+      Cross-indicator comparisons should account for this gap. Each page footer shows the exact
+      survey period.
+    </p>
+
+    <h2>AI Insights Pipeline</h2>
+    <p>
+      Each page's insight blocks are generated by <strong>Claude (Anthropic)</strong> using
+      the indicator data as the sole context window. The model is instructed to find:
+    </p>
+    <ul style="color: var(--text-secondary); line-height: 1.75; padding-left: 1.5rem;">
+      <li>Top outlier states (&gt;1.5 standard deviations from the mean)</li>
+      <li>Regional clustering patterns (North / South / East / West / Northeast)</li>
+      <li>Gender dimension findings where splits exist</li>
+      <li>Counter-intuitive findings (wealthy state underperforming, or vice versa)</li>
+      <li>Policy-relevant cross-indicator observations</li>
+    </ul>
+    <p>
+      Every numerical claim in a generated block is automatically verified against the
+      source data before publication. Blocks are assigned one of four verdicts:
+    </p>
+    <div class="verdict-row">
+      <span class="verdict-pill supported">supported — exact match</span>
+      <span class="verdict-pill mostly">mostly_supported — within 2%</span>
+      <span class="verdict-pill partly">partly_supported — within 10% — not published</span>
+      <span class="verdict-pill unsupported">unsupported — not published</span>
+    </div>
+    <p style="margin-top: var(--space-sm);">
+      Only <code>supported</code> and <code>mostly_supported</code> blocks appear on pages.
+      Full factcheck reports (including unpublished blocks) are committed alongside each
+      <code>insights.json</code> as <code>factcheck-report.json</code>.
+    </p>
+
+    <div class="callout">
+      <p>
+        AI-generated insights are a starting point, not a final word. Verify claims against
+        the primary source before citing in published work. Source URLs are linked from
+        each page's notes section.
+      </p>
+    </div>
+
+    <h2>Methodology Notes</h2>
+    <p>
+      <strong>Economic Cost of IPV (ipv-economic-cost):</strong> IPV prevalence figures are
+      observed survey data from NFHS-5. The economic cost estimates are modelled using the WHO
+      productivity-loss methodology (affected women × estimated workdays lost × state daily wage).
+      These are estimates, not official statistics. They are clearly labelled <em>MODELLED</em>
+      on the page.
+    </p>
+    <p>
+      <strong>Ladakh / J&K:</strong> Surveys conducted before October 2019 do not distinguish
+      Ladakh as a separate state/UT. For those surveys, Ladakh shows no value on the map.
+    </p>
+    <p>
+      <strong>Missing state data:</strong> Grey states on the map indicate that data was not
+      available or published for that state in the source survey round. This is a data gap,
+      not an error.
+    </p>
+
+    <h2>Open Source</h2>
+    <p>
+      This project is open source under the MIT licence.
+      The extraction scripts, rendering code, and insights pipeline are available on
+      <a href="https://github.com/ankitmishra/india-household-economy-dashboard" target="_blank" rel="noopener">GitHub</a>.
+      PRs and issue reports are welcome.
+    </p>
+    <p>
+      Data files in <code>data/source/</code> are not committed (they are large government
+      survey files). The processed <code>data.json</code> for each page is committed and
+      serves as the reproducible artefact.
+    </p>
+
+    <h2>Contact & Feedback</h2>
+    <p>
+      For data corrections, methodology questions, or editorial feedback, open an issue on
+      GitHub or reach out via the repository discussions tab.
+    </p>
+  </div>
+
+  <footer class="site-footer">
+    <p>Data from NSO/MoSPI, IIPS/MoHFW, RBI, NITI Aayog. AI insights by Anthropic Claude.</p>
+    <p>Open source — <a href="https://github.com/ankitmishra/india-household-economy-dashboard" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+
+  <script src="/js/nav.js"></script>
+</body>
+</html>

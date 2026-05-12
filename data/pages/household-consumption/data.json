@@ -1,0 +1,375 @@
+{
+  "meta": {
+    "title": "Household Consumption Expenditure",
+    "subtitle": "Monthly per capita consumption expenditure (MPCE) by state, 2022–23",
+    "description": "State-wise Monthly Per Capita Consumption Expenditure from the Household Consumption Expenditure Survey 2022–23, published by NSO/MoSPI.",
+    "source": "HCES 2022–23, NSO/MoSPI — Table 3: State-wise MPCE",
+    "sourceUrl": "https://mospi.gov.in/household-consumption-expenditure-survey-2022-23",
+    "surveyPeriod": "August 2022 – July 2023",
+    "notes": [
+      "MPCE is computed as total household consumption expenditure divided by household size.",
+      "Urban-rural split is based on 2011 Census definitions.",
+      "Values are in nominal ₹ and have not been adjusted for regional price differences.",
+      "⚠ This page is using mock data (5 states). Run extract script without --mock after downloading source data."
+    ],
+    "methodology": "HCES 2022-23 used a modified mixed reference period (MMRP) for consumption recall. This is a methodological break from older NSS surveys and values are not directly comparable to pre-2022 data."
+  },
+  "mapData": {
+    "indicator": "Monthly Per Capita Consumption Expenditure (₹)",
+    "unit": "₹",
+    "nationalAverage": 2458,
+    "states": {
+      "KL": {
+        "name": "Kerala",
+        "value": 5379,
+        "rank": 1
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 4022,
+        "rank": 2
+      },
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 2809,
+        "rank": 3
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 2133,
+        "rank": 4
+      },
+      "BR": {
+        "name": "Bihar",
+        "value": 1953,
+        "rank": 5
+      }
+    }
+  },
+  "tabs": [
+    {
+      "label": "Combined",
+      "mapData": {
+        "indicator": "Combined MPCE (₹)",
+        "unit": "₹",
+        "nationalAverage": 2458,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 5379,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 4022,
+            "rank": 2
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 2809,
+            "rank": 3
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 2133,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 1953,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-combined",
+          "title": "Monthly Per Capita Expenditure by State (Combined)",
+          "type": "lollipop",
+          "unit": "₹",
+          "average": 2458,
+          "higherIsBetter": true,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 5379
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 4022
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 2809
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 2133
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 1953
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Rural",
+      "mapData": {
+        "indicator": "Rural MPCE (₹)",
+        "unit": "₹",
+        "nationalAverage": 2008,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 4891,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 2907,
+            "rank": 2
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 2354,
+            "rank": 3
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 1771,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 1622,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-rural",
+          "title": "Rural MPCE by State",
+          "type": "lollipop",
+          "unit": "₹",
+          "average": 2008,
+          "higherIsBetter": true,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 4891
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 2907
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 2354
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 1771
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 1622
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Urban",
+      "mapData": {
+        "indicator": "Urban MPCE (₹)",
+        "unit": "₹",
+        "nationalAverage": 3773,
+        "states": {
+          "KL": {
+            "name": "Kerala",
+            "value": 6010,
+            "rank": 1
+          },
+          "MH": {
+            "name": "Maharashtra",
+            "value": 5495,
+            "rank": 2
+          },
+          "RJ": {
+            "name": "Rajasthan",
+            "value": 4086,
+            "rank": 3
+          },
+          "UP": {
+            "name": "Uttar Pradesh",
+            "value": 3532,
+            "rank": 4
+          },
+          "BR": {
+            "name": "Bihar",
+            "value": 3108,
+            "rank": 5
+          }
+        }
+      },
+      "chartBlocks": [
+        {
+          "id": "lollipop-urban",
+          "title": "Urban MPCE by State",
+          "type": "lollipop",
+          "unit": "₹",
+          "average": 3773,
+          "higherIsBetter": true,
+          "data": [
+            {
+              "code": "KL",
+              "name": "Kerala",
+              "value": 6010
+            },
+            {
+              "code": "MH",
+              "name": "Maharashtra",
+              "value": 5495
+            },
+            {
+              "code": "RJ",
+              "name": "Rajasthan",
+              "value": 4086
+            },
+            {
+              "code": "UP",
+              "name": "Uttar Pradesh",
+              "value": 3532
+            },
+            {
+              "code": "BR",
+              "name": "Bihar",
+              "value": 3108
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "chartBlocks": [
+    {
+      "id": "lollipop-combined",
+      "title": "Monthly Per Capita Expenditure by State (Combined)",
+      "type": "lollipop",
+      "unit": "₹",
+      "average": 2458,
+      "higherIsBetter": true,
+      "data": [
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 5379
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 4022
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 2809
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 2133
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 1953
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "Rank",
+        "type": "number"
+      },
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "Combined MPCE (₹)",
+        "type": "number"
+      },
+      {
+        "label": "Rural MPCE (₹)",
+        "type": "number"
+      },
+      {
+        "label": "Urban MPCE (₹)",
+        "type": "number"
+      },
+      {
+        "label": "Urban-Rural Gap (₹)",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        1,
+        "Kerala",
+        5379,
+        4891,
+        6010,
+        "1119"
+      ],
+      [
+        2,
+        "Maharashtra",
+        4022,
+        2907,
+        5495,
+        "2588"
+      ],
+      [
+        3,
+        "Rajasthan",
+        2809,
+        2354,
+        4086,
+        "1732"
+      ],
+      [
+        4,
+        "Uttar Pradesh",
+        2133,
+        1771,
+        3532,
+        "1761"
+      ],
+      [
+        5,
+        "Bihar",
+        1953,
+        1622,
+        3108,
+        "1486"
+      ]
+    ]
+  },
+  "insights": []
+}

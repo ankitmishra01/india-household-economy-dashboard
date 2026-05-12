@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "title": "Mobile Money & Digital Payments",
+    "subtitle": "Female mobile ownership and UPI transaction volume by state",
+    "source": "NFHS-5 2019–21, IIPS/MoHFW (mobile ownership); RBI Payment System Data (UPI)",
+    "sourceUrl": "https://rchiips.org/nfhs/nfhs5.shtml; https://rbi.org.in/scripts/PaymentSystems.aspx",
+    "surveyPeriod": "NFHS-5: 2019–2021; RBI UPI data: 2022–23",
+    "notes": [
+      "Female mobile phone ownership is a key proxy for digital financial access.",
+      "UPI per capita = annual transactions / state population (using census projections).",
+      "States with high UPI but low female mobile ownership have a digital gender inclusion gap.",
+      "⚠ Mock data (5 states). RBI provides UPI data at state level on request."
+    ],
+    "methodology": "NFHS-5 asks women aged 15-49 whether they personally own a mobile phone. UPI data from RBI payment system statistics aggregated to annual per-capita basis."
+  },
+  "mapData": {
+    "indicator": "% women who own a mobile phone",
+    "unit": "%",
+    "nationalAverage": 54.1,
+    "states": {
+      "KL": {
+        "name": "Kerala",
+        "value": 83.6,
+        "rank": 1
+      },
+      "MH": {
+        "name": "Maharashtra",
+        "value": 64.3,
+        "rank": 2
+      },
+      "UP": {
+        "name": "Uttar Pradesh",
+        "value": 41.2,
+        "rank": 3
+      },
+      "RJ": {
+        "name": "Rajasthan",
+        "value": 38.4,
+        "rank": 4
+      },
+      "BR": {
+        "name": "Bihar",
+        "value": 29.8,
+        "rank": 5
+      }
+    }
+  },
+  "chartBlocks": [
+    {
+      "id": "grouped-mobile",
+      "title": "Mobile Phone Ownership: Male vs Female by State",
+      "type": "grouped-lollipop",
+      "unit": "%",
+      "labelA": "Male",
+      "labelB": "Female",
+      "colorA": "var(--w2)",
+      "colorB": "var(--accent-saffron)",
+      "seriesA": [
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 94.2
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 88.4
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 78.6
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 76.8
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 71.4
+        }
+      ],
+      "seriesB": [
+        {
+          "code": "KL",
+          "name": "Kerala",
+          "value": 83.6
+        },
+        {
+          "code": "MH",
+          "name": "Maharashtra",
+          "value": 64.3
+        },
+        {
+          "code": "UP",
+          "name": "Uttar Pradesh",
+          "value": 41.2
+        },
+        {
+          "code": "RJ",
+          "name": "Rajasthan",
+          "value": 38.4
+        },
+        {
+          "code": "BR",
+          "name": "Bihar",
+          "value": 29.8
+        }
+      ]
+    }
+  ],
+  "tableData": {
+    "columns": [
+      {
+        "label": "State / UT",
+        "type": "string"
+      },
+      {
+        "label": "Female Mobile Ownership (%)",
+        "type": "number"
+      },
+      {
+        "label": "Male Mobile Ownership (%)",
+        "type": "number"
+      },
+      {
+        "label": "Gender Gap (pp)",
+        "type": "number"
+      },
+      {
+        "label": "UPI Transactions per Capita",
+        "type": "number"
+      }
+    ],
+    "rows": [
+      [
+        "Maharashtra",
+        64.3,
+        88.4,
+        "24.1",
+        218
+      ],
+      [
+        "Uttar Pradesh",
+        41.2,
+        78.6,
+        "37.4",
+        126
+      ],
+      [
+        "Kerala",
+        83.6,
+        94.2,
+        "10.6",
+        312
+      ],
+      [
+        "Rajasthan",
+        38.4,
+        76.8,
+        "38.4",
+        108
+      ],
+      [
+        "Bihar",
+        29.8,
+        71.4,
+        "41.6",
+        84
+      ]
+    ]
+  },
+  "insights": []
+}
