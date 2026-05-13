@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "note": "International comparison using World Bank, IMF, and ADB data. Most recent available year shown."
+  },
+  "charts": [
+    {
+      "title": "Labour force participation",
+      "unit": "% of 15+",
+      "source": "World Bank Open Data",
+      "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 58.796,
+          "year": 2025
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 64.551,
+          "year": 2025
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 67.965,
+          "year": 2025
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 55.658,
+          "year": 2025
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 63.448,
+          "year": 2025
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 64.351,
+          "year": 2025
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 48.517,
+          "year": 2025
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 52.335,
+          "year": 2025
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 66.678,
+          "year": 2025
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 61.704,
+          "year": 2025
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 72.778,
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "title": "Unemployment rate",
+      "unit": "%",
+      "source": "World Bank Open Data",
+      "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 3.778,
+          "year": 2025
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 4.615,
+          "year": 2025
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 3.237,
+          "year": 2025
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 4.219,
+          "year": 2025
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 2.451,
+          "year": 2025
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 2.683,
+          "year": 2025
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 4.005,
+          "year": 2025
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 5.42,
+          "year": 2025
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 0.781,
+          "year": 2025
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 4.198,
+          "year": 2025
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 1.523,
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "title": "Real GDP growth",
+      "unit": "%",
+      "source": "IMF World Economic Outlook April 2025",
+      "countries": [
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 6.5,
+          "year": 2025
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 4.6,
+          "year": 2025
+        },
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 4.9,
+          "year": 2025
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 3.2,
+          "year": 2025
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 4.4,
+          "year": 2025
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 5,
+          "year": 2025
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 6.2,
+          "year": 2025
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 2.9,
+          "year": 2025
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 1.8,
+          "year": 2025
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 0.8,
+          "year": 2025
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 1.8,
+          "year": 2025
+        }
+      ]
+    }
+  ]
+}

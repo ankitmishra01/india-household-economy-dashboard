@@ -6,26 +6,30 @@
  *           GroupedLollipopRenderer, TableRenderer, nav.js
  */
 (function () {
-  const slug        = document.body.dataset.page;
-  const DATA_URL    = `/data/pages/${slug}/data.json`;
-  const INSIGHTS_URL = `/data/pages/${slug}/insights.json`;
-  const MANIFEST_URL = '/data/pages-manifest.json';
+  const slug              = document.body.dataset.page;
+  const DATA_URL          = `/data/pages/${slug}/data.json`;
+  const INSIGHTS_URL      = `/data/pages/${slug}/insights.json`;
+  const MANIFEST_URL      = '/data/pages-manifest.json';
+  const GLOBAL_CTX_URL    = `/data/pages/${slug}/global-context.json`;
 
-  let pageData     = null;
-  let insightsData = [];
-  let manifestData = null;
-  let activeTab    = 0;
+  let pageData        = null;
+  let insightsData    = [];
+  let manifestData    = null;
+  let globalCtxData   = null;
+  let activeTab       = 0;
 
   // Fetch everything in parallel
   Promise.all([
     fetch(DATA_URL).then(r => { if (!r.ok) throw new Error(`data.json not found for ${slug}`); return r.json(); }),
     fetch(INSIGHTS_URL).then(r => r.ok ? r.json() : []).catch(() => []),
     fetch(MANIFEST_URL).then(r => r.json()).catch(() => null),
+    fetch(GLOBAL_CTX_URL).then(r => r.ok ? r.json() : null).catch(() => null),
   ])
-  .then(([data, insights, manifest]) => {
-    pageData     = data;
-    insightsData = insights || [];
-    manifestData = manifest;
+  .then(([data, insights, manifest, globalCtx]) => {
+    pageData      = data;
+    insightsData  = insights || [];
+    manifestData  = manifest;
+    globalCtxData = globalCtx;
     init();
   })
   .catch(err => {
@@ -73,6 +77,11 @@
     // Table
     if (pageData.tableData) {
       renderTable(pageData.tableData);
+    }
+
+    // Global context (World Bank / IMF / ADB comparisons)
+    if (globalCtxData) {
+      renderGlobalContext(globalCtxData);
     }
 
     // Insights
@@ -233,8 +242,8 @@
             seriesB:   block.seriesB,
             labelA:    block.labelA || 'Series A',
             labelB:    block.labelB || 'Series B',
-            colorA:    block.colorA || 'var(--w2)',
-            colorB:    block.colorB || 'var(--accent-saffron)',
+            colorA:    block.colorA || 'var(--indigo)',
+            colorB:    block.colorB || 'var(--saffron)',
             unit:      block.unit,
           });
           break;
@@ -307,6 +316,42 @@
       div.innerHTML = `${badge}<p>${escHtml(block.text)}</p>`;
       container.appendChild(div);
     });
+  }
+
+  // ---------- Global Context ----------
+  function renderGlobalContext(ctx) {
+    const container = document.getElementById('global-context-container');
+    if (!container || !ctx?.charts?.length) return;
+
+    container.innerHTML = '';
+    const section = document.createElement('div');
+    section.className = 'global-context-section';
+
+    section.innerHTML = `
+      <h2>India in Global Context</h2>
+      <p class="gc-subtitle">How India compares with key Asian economies and global benchmarks.</p>
+      <div class="gc-cards-grid" id="gc-cards"></div>
+    `;
+    const grid = section.querySelector('#gc-cards');
+
+    ctx.charts.forEach(chart => {
+      if (!chart.countries?.length) return;
+      const card = document.createElement('div');
+      card.className = 'gc-card';
+      card.innerHTML = `<div class="gc-card-title">${escHtml(chart.title)}</div><div class="gc-chart-area"></div>`;
+      const area = card.querySelector('.gc-chart-area');
+      if (typeof GlobalContextRenderer !== 'undefined') {
+        GlobalContextRenderer.render({
+          container: area,
+          data: chart.countries,
+          unit: chart.unit,
+          source: chart.source,
+        });
+      }
+      grid.appendChild(card);
+    });
+
+    container.appendChild(section);
   }
 
   // ---------- Notes ----------

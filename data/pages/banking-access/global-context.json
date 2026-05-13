@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "note": "International comparison using World Bank, IMF, and ADB data. Most recent available year shown."
+  },
+  "charts": [
+    {
+      "title": "Financial account ownership",
+      "unit": "% of 15+",
+      "source": "World Bank Open Data",
+      "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 43.2839733431322,
+          "year": 2024
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 89.3830319754266,
+          "year": 2024
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 56.3278493718021,
+          "year": 2024
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 89.0248224502547,
+          "year": 2024
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 98.5235592091779,
+          "year": 2024
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 96.8949448884961,
+          "year": 2024
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 81.6921293527248,
+          "year": 2024
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 27.2960071761925,
+          "year": 2024
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 91.8249814693343,
+          "year": 2024
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 97.0230983290589,
+          "year": 2024
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 70.5507533567583,
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "title": "Internet users",
+      "unit": "%",
+      "source": "World Bank Open Data",
+      "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 53.42171316,
+          "year": 2024
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 91.6,
+          "year": 2025
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 72.78075544,
+          "year": 2024
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 70,
+          "year": 2025
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 85.54153081,
+          "year": 2024
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 97.89563777,
+          "year": 2024
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 54.59,
+          "year": 2024
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 57.253,
+          "year": 2024
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 90.86718789,
+          "year": 2024
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 94.69380188,
+          "year": 2024
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 84.15,
+          "year": 2024
+        }
+      ]
+    }
+  ]
+}

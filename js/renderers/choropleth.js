@@ -110,7 +110,7 @@ const ChoroplethRenderer = (function () {
         const geoName = (feature.properties.name || '').toLowerCase().trim();
         const entry   = geoNameToData[geoName];
         d3.select(this)
-          .attr('stroke', 'var(--accent-saffron)')
+          .attr('stroke', 'var(--saffron)')
           .attr('stroke-width', 2);
         if (tooltip) {
           if (ttState) ttState.textContent = feature.properties.name || geoName;

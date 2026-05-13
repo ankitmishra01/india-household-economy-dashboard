@@ -75,7 +75,7 @@
         <button class="map-btn hidden" id="back-btn" aria-label="Back to India view">&#8592; Back</button>
       </div>
       <!-- Choropleth tooltip (used by choropleth fallback) -->
-      <div class="map-tooltip" id="map-tooltip" role="tooltip" style="display:none">
+      <div class="map-tooltip" id="map-tooltip" role="tooltip">
         <div class="tt-state" id="tt-state"></div>
         <div class="tt-value" id="tt-value"></div>
         <div class="tt-rank" id="tt-rank"></div>
@@ -131,6 +131,9 @@
     </div>
   </div>
 
+  <!-- ── Global Context (World Bank / IMF / ADB) ── -->
+  <div id="global-context-container"></div>
+
   <!-- ── Notes ── -->
   <div class="notes-section" id="notes-section">
     <h3>Notes &amp; methodology</h3>
@@ -175,6 +178,7 @@
   <script src="/js/renderers/waffle.js"></script>
   <script src="/js/renderers/grouped-lollipop.js"></script>
   <script src="/js/table-renderer.js"></script>
+  <script src="/js/renderers/global-context.js"></script>
   <script src="/js/nav.js"></script>
   <script src="/js/page.js"></script>
   <script>

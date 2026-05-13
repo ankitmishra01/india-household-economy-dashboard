@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "note": "International comparison using World Bank, IMF, and ADB data. Most recent available year shown."
+  },
+  "charts": [
+    {
+      "title": "Stunting prevalence",
+      "unit": "% under 5",
+      "source": "World Bank Open Data",
+      "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 23.6,
+          "year": 2022
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 22,
+          "year": 2023
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 35.5,
+          "year": 2020
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 0.9,
+          "year": 2020
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 10.5,
+          "year": 2024
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 12.4,
+          "year": 2022
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 3.8,
+          "year": 2022
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 18.2,
+          "year": 2023
+        }
+      ]
+    },
+    {
+      "title": "Wasting prevalence",
+      "unit": "% under 5",
+      "source": "World Bank Open Data",
+      "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 10.7,
+          "year": 2022
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 8.4,
+          "year": 2023
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 18.7,
+          "year": 2020
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 0.2,
+          "year": 2020
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 9.3,
+          "year": 2024
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 7.2,
+          "year": 2022
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 0.1,
+          "year": 2022
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 4.4,
+          "year": 2023
+        }
+      ]
+    },
+    {
+      "title": "Under-5 mortality rate",
+      "unit": "per 1,000",
+      "source": "ADB Key Indicators for Asia and the Pacific 2024",
+      "countries": [
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 31,
+          "year": 2023
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 7.4,
+          "year": 2023
+        },
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 29.8,
+          "year": 2023
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 58.9,
+          "year": 2023
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 7.4,
+          "year": 2023
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 21.9,
+          "year": 2023
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 20.7,
+          "year": 2023
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 8.2,
+          "year": 2023
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 3,
+          "year": 2023
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 2.1,
+          "year": 2023
+        }
+      ]
+    }
+  ]
+}

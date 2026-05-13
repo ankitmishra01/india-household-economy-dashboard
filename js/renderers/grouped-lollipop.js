@@ -21,12 +21,12 @@ const GroupedLollipopRenderer = (function () {
     const {
       container, seriesA, seriesB,
       labelA = 'Series A', labelB = 'Series B',
-      colorA = 'var(--w2)', colorB = 'var(--accent-saffron)',
+      colorA = 'var(--indigo)', colorB = 'var(--saffron)',
       unit = '', sortBy = 'gap', animDelay = 15,
     } = opts;
 
     if (!seriesA || !seriesB || !seriesA.length) {
-      container.innerHTML = '<p class="text-muted" style="padding:16px">No data.</p>';
+      container.innerHTML = '<p style="color:var(--ink-3)" style="padding:16px">No data.</p>';
       return;
     }
 
@@ -57,10 +57,10 @@ const GroupedLollipopRenderer = (function () {
     const legend = document.createElement('div');
     legend.style.cssText = 'display:flex;gap:16px;margin-bottom:12px;padding-left:160px;';
     legend.innerHTML = `
-      <div style="display:flex;align-items:center;gap:6px;font-size:0.78rem;color:var(--text-secondary);">
+      <div style="display:flex;align-items:center;gap:6px;font-size:0.78rem;color:var(--ink-2);">
         <div style="width:10px;height:10px;border-radius:50%;background:${colorA};flex-shrink:0;"></div>${escHtml(labelA)}
       </div>
-      <div style="display:flex;align-items:center;gap:6px;font-size:0.78rem;color:var(--text-secondary);">
+      <div style="display:flex;align-items:center;gap:6px;font-size:0.78rem;color:var(--ink-2);">
         <div style="width:10px;height:10px;border-radius:50%;background:${colorB};flex-shrink:0;"></div>${escHtml(labelB)}
       </div>
     `;

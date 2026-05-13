@@ -14,7 +14,7 @@ const WaffleRenderer = (function () {
     const { container, segments, unit = '%', animDelay = 18 } = opts;
 
     if (!segments || !segments.length) {
-      container.innerHTML = '<p class="text-muted" style="padding:8px">No data.</p>';
+      container.innerHTML = '<p style="color:var(--ink-3)" style="padding:8px">No data.</p>';
       return;
     }
 
@@ -32,7 +32,7 @@ const WaffleRenderer = (function () {
     });
     // Fill any remainder with last segment's color
     while (cells.length < 100) {
-      cells.push({ color: cells[cells.length - 1]?.color || 'var(--border)', label: '' });
+      cells.push({ color: cells[cells.length - 1]?.color || 'var(--rule-2)', label: '' });
     }
 
     const wrap = document.createElement('div');

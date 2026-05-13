@@ -1,96 +1,136 @@
 /**
  * Horizontal lollipop chart renderer.
- * Renders into a container element. States sorted by value descending.
- * Animates stems left-to-right with staggered delay on load.
+ * Two-column grid, 4-column rows (rank | name | stem-dot | value).
+ * sage dot = above average, vermillion = below.
  */
 const LollipopRenderer = (function () {
   /**
    * @param {object} opts
    * @param {Element} opts.container
-   * @param {Array}   opts.data       - [{ name, value, code }]
-   * @param {number}  opts.average    - national average for reference line
-   * @param {string}  opts.unit
+   * @param {Array}   opts.data         - [{code, name, value}]
+   * @param {number}  [opts.average]    - national average
+   * @param {string}  [opts.unit]       - e.g. '₹' or '%'
    * @param {boolean} [opts.higherIsBetter=true]
-   * @param {boolean} [opts.showAvgLine=true]
-   * @param {number}  [opts.animDelay=20]  ms stagger per row
+   * @param {string}  [opts.avgLabel]   - label above avg line (default: unit + ' avg')
    */
   function render(opts) {
     const {
       container, data, average, unit,
       higherIsBetter = true,
-      showAvgLine = true,
-      animDelay   = 20,
+      avgLabel,
     } = opts;
 
     if (!data || !data.length) {
-      container.innerHTML = '<p class="text-muted" style="padding:16px">No data available.</p>';
+      container.innerHTML = '<p style="padding:16px;color:var(--ink-3)">No data available.</p>';
       return;
     }
 
-    // Sort descending by value (nulls last)
+    // Sort descending (nulls last)
     const sorted = [...data].sort((a, b) => {
       if (a.value == null) return 1;
       if (b.value == null) return -1;
       return b.value - a.value;
     });
+    const valid = sorted.filter(d => d.value != null);
+    const maxVal = Math.max(...valid.map(d => d.value), average || 0) * 1.05;
+    const avgPct = (average != null) ? (average / maxVal) * 100 : null;
+    const lineLabel = avgLabel || (average != null ? FMT.auto(average, unit) : null);
 
-    const values = sorted.map(d => d.value).filter(v => v != null);
-    const maxVal = Math.max(...values, average || 0) * 1.08;
+    // Split into two halves for two-column layout
+    const half  = Math.ceil(valid.length / 2);
+    const col1  = valid.slice(0, half);
+    const col2  = valid.slice(half);
 
     container.innerHTML = '';
-    container.style.position = 'relative';
 
-    // Average line overlay
-    if (showAvgLine && average != null) {
-      const avgPct = (average / maxVal) * 100;
-      const avgWrap = document.createElement('div');
-      avgWrap.className = 'avg-line-wrapper';
-      avgWrap.style.cssText = `left:140px; right:64px; position:absolute; top:0; bottom:0;`;
-      avgWrap.innerHTML = `
-        <div style="position:absolute; left:${avgPct}%; top:0; bottom:0; width:0;">
-          <div class="avg-line" style="height:100%;"></div>
-          <div class="avg-label-float">${FMT.auto(average, unit)}<br><span style="font-size:0.58rem;color:var(--text-muted);">National avg</span></div>
-        </div>
-      `;
-      container.appendChild(avgWrap);
-    }
+    const grid = document.createElement('div');
+    grid.className = 'lollipop-grid';
 
-    sorted.forEach((item, i) => {
-      if (item.value == null) return;
+    [col1, col2].forEach((col, ci) => {
+      const colWrap = document.createElement('div');
+      colWrap.style.position = 'relative';
 
-      const pct = (item.value / maxVal) * 100;
-      const isGood = higherIsBetter ? item.value >= (average || 0) : item.value <= (average || 0);
-      const dotClass = isGood ? 'good' : 'bad';
+      // Average line overlay spanning the stem column
+      // stem column starts at: 24px rank + 130px name + 10px gap + 10px gap = ~174px from left
+      if (avgPct != null) {
+        const overlay = document.createElement('div');
+        overlay.style.cssText = `
+          position:absolute; left:174px; right:70px; top:0; bottom:0;
+          pointer-events:none; z-index:2;
+        `;
+        const line = document.createElement('div');
+        line.className = 'avgline';
+        line.style.left = avgPct + '%';
+        if (lineLabel) {
+          // Use a child element instead of ::after for dynamic label
+          const lbl = document.createElement('span');
+          lbl.className = 'avgline-lbl';
+          lbl.textContent = lineLabel;
+          lbl.style.cssText = `
+            position:absolute; bottom:calc(100% + 2px); left:50%;
+            transform:translateX(-50%); font-family:var(--font-data);
+            font-size:9.5px; color:var(--ink-2); white-space:nowrap;
+            background:var(--paper); padding:0 4px;
+          `;
+          line.appendChild(lbl);
+        }
+        overlay.appendChild(line);
+        colWrap.appendChild(overlay);
+      }
 
-      const row = document.createElement('div');
-      row.className = 'lollipop-row';
-      row.dataset.code = item.code || '';
+      // Rows
+      col.forEach((item, i) => {
+        const rank   = ci === 0 ? i + 1 : i + half + 1;
+        const pct    = (item.value / maxVal) * 100;
+        const above  = average != null
+          ? (higherIsBetter ? item.value >= average : item.value <= average)
+          : true;
+        const rowCls = 'lollipop-row ' + (above ? 'above' : 'below');
 
-      row.innerHTML = `
-        <div class="lollipop-label" title="${escHtml(item.name)}">${escHtml(item.name)}</div>
-        <div class="lollipop-track">
-          <div class="lollipop-stem" style="width:${pct}%;"></div>
-          <div class="lollipop-dot ${dotClass}" style="left:${pct}%;"></div>
-        </div>
-        <div class="lollipop-value">${FMT.auto(item.value, unit)}</div>
-      `;
+        const row = document.createElement('div');
+        row.className = rowCls;
+        row.dataset.code = item.code || '';
 
-      container.appendChild(row);
+        // 4 cells: rank | name | stem-wrap | value
+        const rankEl = document.createElement('span');
+        rankEl.className = 'rank';
+        rankEl.textContent = String(rank).padStart(2, '0');
 
-      // Staggered animation
-      requestAnimationFrame(() => {
-        setTimeout(() => {
-          const stem = row.querySelector('.lollipop-stem');
-          const dot  = row.querySelector('.lollipop-dot');
-          if (stem) stem.classList.add('animate');
-          if (dot)  dot.classList.add('animate');
-        }, i * animDelay);
+        const nameEl = document.createElement('span');
+        nameEl.className = 'name';
+        nameEl.textContent = item.name;
+        nameEl.title = item.name;
+
+        const stemWrap = document.createElement('div');
+        stemWrap.className = 'stem-wrap';
+
+        const stem = document.createElement('div');
+        stem.className = 'stem';
+        stem.style.width = pct + '%';
+
+        const dot = document.createElement('div');
+        dot.className = 'dot';
+        dot.style.left = pct + '%';
+
+        stemWrap.appendChild(stem);
+        stemWrap.appendChild(dot);
+
+        const valEl = document.createElement('span');
+        valEl.className = 'vl';
+        valEl.textContent = FMT.auto(item.value, unit);
+
+        row.appendChild(rankEl);
+        row.appendChild(nameEl);
+        row.appendChild(stemWrap);
+        row.appendChild(valEl);
+
+        colWrap.appendChild(row);
       });
-    });
-  }
 
-  function escHtml(s) {
-    return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      grid.appendChild(colWrap);
+    });
+
+    container.appendChild(grid);
   }
 
   return { render };

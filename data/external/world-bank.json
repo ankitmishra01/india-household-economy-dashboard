@@ -1,0 +1,1192 @@
+{
+  "meta": {
+    "source": "World Bank Open Data",
+    "sourceUrl": "https://data.worldbank.org",
+    "fetchedAt": "2026-05-12T20:18:23.297Z",
+    "note": "Most recent available value within last 5 years. Values may differ from dashboard page data which uses India-specific sources."
+  },
+  "countries": {
+    "IND": "India",
+    "CHN": "China",
+    "BGD": "Bangladesh",
+    "PAK": "Pakistan",
+    "LKA": "Sri Lanka",
+    "NPL": "Nepal",
+    "IDN": "Indonesia",
+    "PHL": "Philippines",
+    "VNM": "Vietnam",
+    "THA": "Thailand",
+    "KOR": "Korea, Rep.",
+    "JPN": "Japan",
+    "USA": "United States"
+  },
+  "indicators": {
+    "NY.GDP.PCAP.PP.CD": {
+      "label": "GDP per capita, PPP",
+      "unit": "current international $",
+      "data": {
+        "BGD": {
+          "value": 9646.76984383255,
+          "year": 2024
+        },
+        "CHN": {
+          "value": 27104.8702677463,
+          "year": 2024
+        },
+        "IDN": {
+          "value": 16448.2755179559,
+          "year": 2024
+        },
+        "IND": {
+          "value": 11159.9856476091,
+          "year": 2024
+        },
+        "JPN": {
+          "value": 52039.1716551611,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 61051.3492502498,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 15632.5924849848,
+          "year": 2024
+        },
+        "NPL": {
+          "value": 5736.62134332704,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 6252.11543199559,
+          "year": 2024
+        },
+        "PHL": {
+          "value": 11794.1375488492,
+          "year": 2024
+        },
+        "THA": {
+          "value": 24712.0658575135,
+          "year": 2024
+        },
+        "USA": {
+          "value": 85809.9003846359,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 16385.5065565458,
+          "year": 2024
+        }
+      }
+    },
+    "NY.GDP.PCAP.KD.ZG": {
+      "label": "GDP per capita growth",
+      "unit": "% annual",
+      "data": {
+        "BGD": {
+          "value": 2.96499837954917,
+          "year": 2024
+        },
+        "CHN": {
+          "value": 5.10662482837367,
+          "year": 2024
+        },
+        "IDN": {
+          "value": 4.1790017564892,
+          "year": 2024
+        },
+        "IND": {
+          "value": 5.55042158511394,
+          "year": 2024
+        },
+        "JPN": {
+          "value": 0.541366477991744,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 1.92783227201599,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 5.58848090094126,
+          "year": 2024
+        },
+        "NPL": {
+          "value": 3.81766783822374,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 1.50503969652753,
+          "year": 2024
+        },
+        "PHL": {
+          "value": 4.82301240715314,
+          "year": 2024
+        },
+        "THA": {
+          "value": 2.59107416696065,
+          "year": 2024
+        },
+        "USA": {
+          "value": 1.79419235153047,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 6.4172854315141,
+          "year": 2024
+        }
+      }
+    },
+    "SI.POV.DDAY": {
+      "label": "Poverty headcount (< $2.15/day)",
+      "unit": "% of population",
+      "data": {
+        "BGD": {
+          "value": 5.9,
+          "year": 2022
+        },
+        "CHN": {
+          "value": 0,
+          "year": 2022
+        },
+        "IDN": {
+          "value": 4,
+          "year": 2025
+        },
+        "IND": {
+          "value": 5.3,
+          "year": 2022
+        },
+        "KOR": {
+          "value": 0.1,
+          "year": 2021
+        },
+        "NPL": {
+          "value": 2.4,
+          "year": 2022
+        },
+        "PAK": {
+          "value": 23,
+          "year": 2024
+        },
+        "PHL": {
+          "value": 5.3,
+          "year": 2023
+        },
+        "THA": {
+          "value": 0,
+          "year": 2024
+        },
+        "USA": {
+          "value": 1.1,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 1.6,
+          "year": 2022
+        }
+      }
+    },
+    "SI.POV.GINI": {
+      "label": "Gini Index",
+      "unit": "index (0–100)",
+      "data": {
+        "BGD": {
+          "value": 30.9,
+          "year": 2022
+        },
+        "CHN": {
+          "value": 36,
+          "year": 2022
+        },
+        "IDN": {
+          "value": 34.4,
+          "year": 2025
+        },
+        "IND": {
+          "value": 25.5,
+          "year": 2022
+        },
+        "KOR": {
+          "value": 32.9,
+          "year": 2021
+        },
+        "NPL": {
+          "value": 30,
+          "year": 2022
+        },
+        "PAK": {
+          "value": 33.5,
+          "year": 2024
+        },
+        "PHL": {
+          "value": 39.3,
+          "year": 2023
+        },
+        "THA": {
+          "value": 33.3,
+          "year": 2024
+        },
+        "USA": {
+          "value": 41.8,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 36.1,
+          "year": 2022
+        }
+      }
+    },
+    "SL.UEM.TOTL.ZS": {
+      "label": "Unemployment rate",
+      "unit": "% of labour force",
+      "data": {
+        "BGD": {
+          "value": 3.778,
+          "year": 2025
+        },
+        "CHN": {
+          "value": 4.615,
+          "year": 2025
+        },
+        "IDN": {
+          "value": 3.237,
+          "year": 2025
+        },
+        "IND": {
+          "value": 4.219,
+          "year": 2025
+        },
+        "JPN": {
+          "value": 2.451,
+          "year": 2025
+        },
+        "KOR": {
+          "value": 2.683,
+          "year": 2025
+        },
+        "LKA": {
+          "value": 4.005,
+          "year": 2025
+        },
+        "NPL": {
+          "value": 10.465,
+          "year": 2025
+        },
+        "PAK": {
+          "value": 5.42,
+          "year": 2025
+        },
+        "PHL": {
+          "value": 2.235,
+          "year": 2025
+        },
+        "THA": {
+          "value": 0.781,
+          "year": 2025
+        },
+        "USA": {
+          "value": 4.198,
+          "year": 2025
+        },
+        "VNM": {
+          "value": 1.523,
+          "year": 2025
+        }
+      }
+    },
+    "SL.TLF.CACT.ZS": {
+      "label": "Labour force participation rate",
+      "unit": "% of population 15+",
+      "data": {
+        "BGD": {
+          "value": 58.796,
+          "year": 2025
+        },
+        "CHN": {
+          "value": 64.551,
+          "year": 2025
+        },
+        "IDN": {
+          "value": 67.965,
+          "year": 2025
+        },
+        "IND": {
+          "value": 55.658,
+          "year": 2025
+        },
+        "JPN": {
+          "value": 63.448,
+          "year": 2025
+        },
+        "KOR": {
+          "value": 64.351,
+          "year": 2025
+        },
+        "LKA": {
+          "value": 48.517,
+          "year": 2025
+        },
+        "NPL": {
+          "value": 39.244,
+          "year": 2025
+        },
+        "PAK": {
+          "value": 52.335,
+          "year": 2025
+        },
+        "PHL": {
+          "value": 61.35,
+          "year": 2025
+        },
+        "THA": {
+          "value": 66.678,
+          "year": 2025
+        },
+        "USA": {
+          "value": 61.704,
+          "year": 2025
+        },
+        "VNM": {
+          "value": 72.778,
+          "year": 2025
+        }
+      }
+    },
+    "SE.ADT.LITR.ZS": {
+      "label": "Adult literacy rate",
+      "unit": "% of people 15+",
+      "data": {
+        "BGD": {
+          "value": 79,
+          "year": 2022
+        },
+        "CHN": {
+          "value": 96.7399978637695,
+          "year": 2020
+        },
+        "IDN": {
+          "value": 96,
+          "year": 2020
+        },
+        "IND": {
+          "value": 78.1625330351403,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 92.7399978637695,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 58.8600006103516,
+          "year": 2021
+        },
+        "PHL": {
+          "value": 98.4700012207031,
+          "year": 2020
+        },
+        "THA": {
+          "value": 91.0999984741211,
+          "year": 2022
+        },
+        "VNM": {
+          "value": 96.129997253418,
+          "year": 2022
+        }
+      }
+    },
+    "SH.STA.STNT.ZS": {
+      "label": "Stunting prevalence",
+      "unit": "% of children under 5",
+      "data": {
+        "BGD": {
+          "value": 23.6,
+          "year": 2022
+        },
+        "IDN": {
+          "value": 22,
+          "year": 2023
+        },
+        "IND": {
+          "value": 35.5,
+          "year": 2020
+        },
+        "KOR": {
+          "value": 0.9,
+          "year": 2020
+        },
+        "LKA": {
+          "value": 10.5,
+          "year": 2024
+        },
+        "NPL": {
+          "value": 24.8,
+          "year": 2022
+        },
+        "PHL": {
+          "value": 26.7,
+          "year": 2021
+        },
+        "THA": {
+          "value": 12.4,
+          "year": 2022
+        },
+        "USA": {
+          "value": 3.8,
+          "year": 2022
+        },
+        "VNM": {
+          "value": 18.2,
+          "year": 2023
+        }
+      }
+    },
+    "SH.STA.WAST.ZS": {
+      "label": "Wasting prevalence",
+      "unit": "% of children under 5",
+      "data": {
+        "BGD": {
+          "value": 10.7,
+          "year": 2022
+        },
+        "IDN": {
+          "value": 8.4,
+          "year": 2023
+        },
+        "IND": {
+          "value": 18.7,
+          "year": 2020
+        },
+        "KOR": {
+          "value": 0.2,
+          "year": 2020
+        },
+        "LKA": {
+          "value": 9.3,
+          "year": 2024
+        },
+        "NPL": {
+          "value": 7,
+          "year": 2022
+        },
+        "PHL": {
+          "value": 5.4,
+          "year": 2021
+        },
+        "THA": {
+          "value": 7.2,
+          "year": 2022
+        },
+        "USA": {
+          "value": 0.1,
+          "year": 2022
+        },
+        "VNM": {
+          "value": 4.4,
+          "year": 2023
+        }
+      }
+    },
+    "SP.DYN.IMRT.IN": {
+      "label": "Infant mortality rate",
+      "unit": "per 1,000 live births",
+      "data": {
+        "BGD": {
+          "value": 24.4,
+          "year": 2024
+        },
+        "CHN": {
+          "value": 4.1,
+          "year": 2024
+        },
+        "IDN": {
+          "value": 15.2,
+          "year": 2024
+        },
+        "IND": {
+          "value": 23.3,
+          "year": 2024
+        },
+        "JPN": {
+          "value": 1.8,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 2.3,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 5.2,
+          "year": 2024
+        },
+        "NPL": {
+          "value": 22.2,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 48.2,
+          "year": 2024
+        },
+        "PHL": {
+          "value": 21.7,
+          "year": 2024
+        },
+        "THA": {
+          "value": 7.7,
+          "year": 2024
+        },
+        "USA": {
+          "value": 5.5,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 12,
+          "year": 2024
+        }
+      }
+    },
+    "SP.DYN.LE00.IN": {
+      "label": "Life expectancy at birth",
+      "unit": "years",
+      "data": {
+        "BGD": {
+          "value": 74.93,
+          "year": 2024
+        },
+        "CHN": {
+          "value": 78.017,
+          "year": 2024
+        },
+        "IDN": {
+          "value": 71.288,
+          "year": 2024
+        },
+        "IND": {
+          "value": 72.235,
+          "year": 2024
+        },
+        "JPN": {
+          "value": 84.0363414634146,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 83.6292682926829,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 77.672,
+          "year": 2024
+        },
+        "NPL": {
+          "value": 70.636,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 67.799,
+          "year": 2024
+        },
+        "PHL": {
+          "value": 69.946,
+          "year": 2024
+        },
+        "THA": {
+          "value": 76.564,
+          "year": 2024
+        },
+        "USA": {
+          "value": 78.890243902439,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 74.736,
+          "year": 2024
+        }
+      }
+    },
+    "SH.XPD.CHEX.GD.ZS": {
+      "label": "Health expenditure",
+      "unit": "% of GDP",
+      "data": {
+        "BGD": {
+          "value": 2.17014575,
+          "year": 2023
+        },
+        "CHN": {
+          "value": 5.94388866,
+          "year": 2023
+        },
+        "IDN": {
+          "value": 2.70239949,
+          "year": 2023
+        },
+        "IND": {
+          "value": 3.33944035,
+          "year": 2023
+        },
+        "JPN": {
+          "value": 10.73979473,
+          "year": 2023
+        },
+        "KOR": {
+          "value": 8.67656994,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 3.68313766,
+          "year": 2023
+        },
+        "NPL": {
+          "value": 6.15843678,
+          "year": 2023
+        },
+        "PAK": {
+          "value": 2.51988316,
+          "year": 2023
+        },
+        "PHL": {
+          "value": 5.10122538,
+          "year": 2023
+        },
+        "THA": {
+          "value": 4.53787661,
+          "year": 2023
+        },
+        "USA": {
+          "value": 16.69414902,
+          "year": 2023
+        },
+        "VNM": {
+          "value": 4.56109476,
+          "year": 2023
+        }
+      }
+    },
+    "IT.NET.USER.ZS": {
+      "label": "Internet users",
+      "unit": "% of population",
+      "data": {
+        "BGD": {
+          "value": 53.42171316,
+          "year": 2024
+        },
+        "CHN": {
+          "value": 91.6,
+          "year": 2025
+        },
+        "IDN": {
+          "value": 72.78075544,
+          "year": 2024
+        },
+        "IND": {
+          "value": 70,
+          "year": 2025
+        },
+        "JPN": {
+          "value": 85.54153081,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 97.89563777,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 54.59,
+          "year": 2024
+        },
+        "NPL": {
+          "value": 46.32189941,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 57.253,
+          "year": 2024
+        },
+        "PHL": {
+          "value": 67.26300914,
+          "year": 2024
+        },
+        "THA": {
+          "value": 90.86718789,
+          "year": 2024
+        },
+        "USA": {
+          "value": 94.69380188,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 84.15,
+          "year": 2024
+        }
+      }
+    },
+    "FX.OWN.TOTL.ZS": {
+      "label": "Financial account ownership",
+      "unit": "% of 15+",
+      "data": {
+        "BGD": {
+          "value": 43.2839733431322,
+          "year": 2024
+        },
+        "CHN": {
+          "value": 89.3830319754266,
+          "year": 2024
+        },
+        "IDN": {
+          "value": 56.3278493718021,
+          "year": 2024
+        },
+        "IND": {
+          "value": 89.0248224502547,
+          "year": 2024
+        },
+        "JPN": {
+          "value": 98.5235592091779,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 96.8949448884961,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 81.6921293527248,
+          "year": 2024
+        },
+        "NPL": {
+          "value": 59.9911157064883,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 27.2960071761925,
+          "year": 2024
+        },
+        "PHL": {
+          "value": 50.1824221429254,
+          "year": 2024
+        },
+        "THA": {
+          "value": 91.8249814693343,
+          "year": 2024
+        },
+        "USA": {
+          "value": 97.0230983290589,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 70.5507533567583,
+          "year": 2024
+        }
+      }
+    },
+    "EN.ATM.CO2E.PC": {
+      "label": "CO₂ emissions",
+      "unit": "metric tons per capita",
+      "data": {}
+    },
+    "SP.POP.TOTL": {
+      "label": "Population",
+      "unit": "people",
+      "data": {
+        "BGD": {
+          "value": 173562364,
+          "year": 2024
+        },
+        "CHN": {
+          "value": 1408975000,
+          "year": 2024
+        },
+        "IDN": {
+          "value": 283487931,
+          "year": 2024
+        },
+        "IND": {
+          "value": 1450935791,
+          "year": 2024
+        },
+        "JPN": {
+          "value": 123975371,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 51751065,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 21916000,
+          "year": 2024
+        },
+        "NPL": {
+          "value": 29651054,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 251269164,
+          "year": 2024
+        },
+        "PHL": {
+          "value": 115843670,
+          "year": 2024
+        },
+        "THA": {
+          "value": 71668011,
+          "year": 2024
+        },
+        "USA": {
+          "value": 340110988,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 100987686,
+          "year": 2024
+        }
+      }
+    },
+    "SP.URB.TOTL.IN.ZS": {
+      "label": "Urban population share",
+      "unit": "% of total",
+      "data": {
+        "BGD": {
+          "value": 32.6783196323307,
+          "year": 2024
+        },
+        "CHN": {
+          "value": 65.8946980998325,
+          "year": 2024
+        },
+        "IDN": {
+          "value": 58.7509635387997,
+          "year": 2024
+        },
+        "IND": {
+          "value": 35.3788972368389,
+          "year": 2024
+        },
+        "JPN": {
+          "value": 92.1901718034531,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 81.1682528469686,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 20.2996997058686,
+          "year": 2024
+        },
+        "NPL": {
+          "value": 66.772343163029,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 39.1734368360905,
+          "year": 2024
+        },
+        "PHL": {
+          "value": 55.4520983215477,
+          "year": 2024
+        },
+        "THA": {
+          "value": 61.8689338391321,
+          "year": 2024
+        },
+        "USA": {
+          "value": 80.1247798047184,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 38.4900703430176,
+          "year": 2024
+        }
+      }
+    },
+    "SP.POP.GROW": {
+      "label": "Population growth",
+      "unit": "% annual",
+      "data": {
+        "BGD": {
+          "value": 1.21462115417186,
+          "year": 2024
+        },
+        "CHN": {
+          "value": -0.123063407363995,
+          "year": 2024
+        },
+        "IDN": {
+          "value": 0.813871513351669,
+          "year": 2024
+        },
+        "IND": {
+          "value": 0.890706546985984,
+          "year": 2024
+        },
+        "JPN": {
+          "value": -0.435651699326323,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 0.0743178674548815,
+          "year": 2024
+        },
+        "LKA": {
+          "value": -0.550589519145017,
+          "year": 2024
+        },
+        "NPL": {
+          "value": -0.146800968936231,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 1.50959876314033,
+          "year": 2024
+        },
+        "PHL": {
+          "value": 0.825602488528657,
+          "year": 2024
+        },
+        "THA": {
+          "value": -0.0480210554154485,
+          "year": 2024
+        },
+        "USA": {
+          "value": 0.976421684505429,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 0.631267006487247,
+          "year": 2024
+        }
+      }
+    },
+    "SG.GEN.PARL.ZS": {
+      "label": "Women in parliament",
+      "unit": "% of seats",
+      "data": {
+        "BGD": {
+          "value": 20.8571428571429,
+          "year": 2023
+        },
+        "CHN": {
+          "value": 26.5367819952973,
+          "year": 2025
+        },
+        "IDN": {
+          "value": 21.8965517241379,
+          "year": 2025
+        },
+        "IND": {
+          "value": 13.7867647058824,
+          "year": 2025
+        },
+        "JPN": {
+          "value": 15.6989247311828,
+          "year": 2025
+        },
+        "KOR": {
+          "value": 20.3333333333333,
+          "year": 2025
+        },
+        "LKA": {
+          "value": 9.77777777777778,
+          "year": 2025
+        },
+        "NPL": {
+          "value": 33.0882352941176,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 17.0418006430868,
+          "year": 2025
+        },
+        "PHL": {
+          "value": 28.343949044586,
+          "year": 2025
+        },
+        "THA": {
+          "value": 19.5959595959596,
+          "year": 2025
+        },
+        "USA": {
+          "value": 28.9351851851852,
+          "year": 2025
+        },
+        "VNM": {
+          "value": 31.3807531380753,
+          "year": 2025
+        }
+      }
+    },
+    "SP.DYN.TFRT.IN": {
+      "label": "Fertility rate",
+      "unit": "births per woman",
+      "data": {
+        "BGD": {
+          "value": 2.138,
+          "year": 2024
+        },
+        "CHN": {
+          "value": 1.013,
+          "year": 2024
+        },
+        "IDN": {
+          "value": 2.115,
+          "year": 2024
+        },
+        "IND": {
+          "value": 1.962,
+          "year": 2024
+        },
+        "JPN": {
+          "value": 1.15,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 0.748,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 1.952,
+          "year": 2024
+        },
+        "NPL": {
+          "value": 1.961,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 3.547,
+          "year": 2024
+        },
+        "PHL": {
+          "value": 1.894,
+          "year": 2024
+        },
+        "THA": {
+          "value": 1.204,
+          "year": 2024
+        },
+        "USA": {
+          "value": 1.6265,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 1.895,
+          "year": 2024
+        }
+      }
+    }
+  },
+  "indiaContext": {
+    "NY.GDP.PCAP.PP.CD": {
+      "label": "GDP per capita, PPP",
+      "unit": "current international $",
+      "value": 11159.9856476091,
+      "year": 2024
+    },
+    "NY.GDP.PCAP.KD.ZG": {
+      "label": "GDP per capita growth",
+      "unit": "% annual",
+      "value": 5.55042158511394,
+      "year": 2024
+    },
+    "SI.POV.DDAY": {
+      "label": "Poverty headcount (< $2.15/day)",
+      "unit": "% of population",
+      "value": 5.3,
+      "year": 2022
+    },
+    "SI.POV.GINI": {
+      "label": "Gini Index",
+      "unit": "index (0–100)",
+      "value": 25.5,
+      "year": 2022
+    },
+    "SL.UEM.TOTL.ZS": {
+      "label": "Unemployment rate",
+      "unit": "% of labour force",
+      "value": 4.219,
+      "year": 2025
+    },
+    "SL.TLF.CACT.ZS": {
+      "label": "Labour force participation rate",
+      "unit": "% of population 15+",
+      "value": 55.658,
+      "year": 2025
+    },
+    "SE.ADT.LITR.ZS": {
+      "label": "Adult literacy rate",
+      "unit": "% of people 15+",
+      "value": 78.1625330351403,
+      "year": 2024
+    },
+    "SH.STA.STNT.ZS": {
+      "label": "Stunting prevalence",
+      "unit": "% of children under 5",
+      "value": 35.5,
+      "year": 2020
+    },
+    "SH.STA.WAST.ZS": {
+      "label": "Wasting prevalence",
+      "unit": "% of children under 5",
+      "value": 18.7,
+      "year": 2020
+    },
+    "SP.DYN.IMRT.IN": {
+      "label": "Infant mortality rate",
+      "unit": "per 1,000 live births",
+      "value": 23.3,
+      "year": 2024
+    },
+    "SP.DYN.LE00.IN": {
+      "label": "Life expectancy at birth",
+      "unit": "years",
+      "value": 72.235,
+      "year": 2024
+    },
+    "SH.XPD.CHEX.GD.ZS": {
+      "label": "Health expenditure",
+      "unit": "% of GDP",
+      "value": 3.33944035,
+      "year": 2023
+    },
+    "IT.NET.USER.ZS": {
+      "label": "Internet users",
+      "unit": "% of population",
+      "value": 70,
+      "year": 2025
+    },
+    "FX.OWN.TOTL.ZS": {
+      "label": "Financial account ownership",
+      "unit": "% of 15+",
+      "value": 89.0248224502547,
+      "year": 2024
+    },
+    "SP.POP.TOTL": {
+      "label": "Population",
+      "unit": "people",
+      "value": 1450935791,
+      "year": 2024
+    },
+    "SP.URB.TOTL.IN.ZS": {
+      "label": "Urban population share",
+      "unit": "% of total",
+      "value": 35.3788972368389,
+      "year": 2024
+    },
+    "SP.POP.GROW": {
+      "label": "Population growth",
+      "unit": "% annual",
+      "value": 0.890706546985984,
+      "year": 2024
+    },
+    "SG.GEN.PARL.ZS": {
+      "label": "Women in parliament",
+      "unit": "% of seats",
+      "value": 13.7867647058824,
+      "year": 2025
+    },
+    "SP.DYN.TFRT.IN": {
+      "label": "Fertility rate",
+      "unit": "births per woman",
+      "value": 1.962,
+      "year": 2024
+    }
+  }
+}

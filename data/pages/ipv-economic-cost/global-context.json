@@ -1,0 +1,208 @@
+{
+  "meta": {
+    "note": "International comparison using World Bank, IMF, and ADB data. Most recent available year shown."
+  },
+  "charts": [
+    {
+      "title": "Women in parliament",
+      "unit": "% of seats",
+      "source": "World Bank Open Data",
+      "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 20.8571428571429,
+          "year": 2023
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 26.5367819952973,
+          "year": 2025
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 21.8965517241379,
+          "year": 2025
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 13.7867647058824,
+          "year": 2025
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 15.6989247311828,
+          "year": 2025
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 20.3333333333333,
+          "year": 2025
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 9.77777777777778,
+          "year": 2025
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 17.0418006430868,
+          "year": 2025
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 19.5959595959596,
+          "year": 2025
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 28.9351851851852,
+          "year": 2025
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 31.3807531380753,
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "title": "Gender Development Index",
+      "unit": "index (0–1)",
+      "source": "ADB Key Indicators for Asia and the Pacific 2024",
+      "countries": [
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 0.849,
+          "year": 2022
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 0.969,
+          "year": 2022
+        },
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 0.909,
+          "year": 2022
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 0.749,
+          "year": 2022
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 0.956,
+          "year": 2022
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 0.925,
+          "year": 2022
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 0.972,
+          "year": 2022
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 0.986,
+          "year": 2022
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 0.936,
+          "year": 2022
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 0.992,
+          "year": 2022
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 0.995,
+          "year": 2022
+        }
+      ]
+    },
+    {
+      "title": "Adult literacy rate",
+      "unit": "%",
+      "source": "World Bank Open Data",
+      "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 79,
+          "year": 2022
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 96.7399978637695,
+          "year": 2020
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 96,
+          "year": 2020
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 78.1625330351403,
+          "year": 2024
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 92.7399978637695,
+          "year": 2024
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 58.8600006103516,
+          "year": 2021
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 91.0999984741211,
+          "year": 2022
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 96.129997253418,
+          "year": 2022
+        }
+      ]
+    }
+  ]
+}

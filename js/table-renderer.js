@@ -92,7 +92,7 @@ const TableRenderer = (function () {
       const td = document.createElement('td');
       td.colSpan = _columns.length;
       td.textContent = 'No results.';
-      td.style.color = 'var(--text-muted)';
+      td.style.color = 'var(--ink-3)';
       td.style.textAlign = 'center';
       td.style.padding = '16px';
       tr.appendChild(td);

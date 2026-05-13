@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "note": "International comparison using World Bank, IMF, and ADB data. Most recent available year shown."
+  },
+  "charts": [
+    {
+      "title": "Population growth",
+      "unit": "% annual",
+      "source": "World Bank Open Data",
+      "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 1.21462115417186,
+          "year": 2024
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": -0.123063407363995,
+          "year": 2024
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 0.813871513351669,
+          "year": 2024
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 0.890706546985984,
+          "year": 2024
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": -0.435651699326323,
+          "year": 2024
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 0.0743178674548815,
+          "year": 2024
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": -0.550589519145017,
+          "year": 2024
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 1.50959876314033,
+          "year": 2024
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": -0.0480210554154485,
+          "year": 2024
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 0.976421684505429,
+          "year": 2024
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 0.631267006487247,
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "title": "Urban population share",
+      "unit": "%",
+      "source": "World Bank Open Data",
+      "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 32.6783196323307,
+          "year": 2024
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 65.8946980998325,
+          "year": 2024
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 58.7509635387997,
+          "year": 2024
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 35.3788972368389,
+          "year": 2024
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 92.1901718034531,
+          "year": 2024
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 81.1682528469686,
+          "year": 2024
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 20.2996997058686,
+          "year": 2024
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 39.1734368360905,
+          "year": 2024
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 61.8689338391321,
+          "year": 2024
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 80.1247798047184,
+          "year": 2024
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 38.4900703430176,
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "title": "Fertility rate",
+      "unit": "births/woman",
+      "source": "World Bank Open Data",
+      "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 2.138,
+          "year": 2024
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 1.013,
+          "year": 2024
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 2.115,
+          "year": 2024
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 1.962,
+          "year": 2024
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 1.15,
+          "year": 2024
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 0.748,
+          "year": 2024
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 1.952,
+          "year": 2024
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 3.547,
+          "year": 2024
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 1.204,
+          "year": 2024
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 1.6265,
+          "year": 2024
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 1.895,
+          "year": 2024
+        }
+      ]
+    }
+  ]
+}

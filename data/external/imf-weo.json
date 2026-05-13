@@ -1,0 +1,851 @@
+{
+  "meta": {
+    "source": "IMF World Economic Outlook April 2025 + ADB Key Indicators 2024 + UNDP HDR 2023",
+    "sourceUrls": [
+      "https://www.imf.org/en/Publications/WEO/weo-database/2025/April",
+      "https://data.adb.org/dataset/key-indicators-asia-and-pacific",
+      "https://hdr.undp.org/data-center/documentation-and-downloads"
+    ],
+    "generatedAt": "2026-05-12T20:20:17.378Z",
+    "note": "Values are from latest published editions. Forecasts (marked year>=2025) are IMF projections."
+  },
+  "countries": {
+    "IND": "India",
+    "CHN": "China",
+    "BGD": "Bangladesh",
+    "PAK": "Pakistan",
+    "LKA": "Sri Lanka",
+    "IDN": "Indonesia",
+    "VNM": "Vietnam",
+    "THA": "Thailand",
+    "KOR": "Korea, Rep.",
+    "JPN": "Japan",
+    "USA": "United States"
+  },
+  "weo": {
+    "NGDPD": {
+      "label": "GDP, current prices",
+      "unit": "USD billions",
+      "data": {
+        "IND": {
+          "value": 4187,
+          "year": 2025
+        },
+        "CHN": {
+          "value": 18919,
+          "year": 2025
+        },
+        "BGD": {
+          "value": 479.8,
+          "year": 2025
+        },
+        "PAK": {
+          "value": 372,
+          "year": 2025
+        },
+        "LKA": {
+          "value": 88.7,
+          "year": 2025
+        },
+        "IDN": {
+          "value": 1562,
+          "year": 2025
+        },
+        "VNM": {
+          "value": 509,
+          "year": 2025
+        },
+        "THA": {
+          "value": 573,
+          "year": 2025
+        },
+        "KOR": {
+          "value": 1798,
+          "year": 2025
+        },
+        "JPN": {
+          "value": 4186,
+          "year": 2025
+        },
+        "USA": {
+          "value": 30507,
+          "year": 2025
+        }
+      }
+    },
+    "NGDPDPC": {
+      "label": "GDP per capita, current prices",
+      "unit": "USD",
+      "data": {
+        "IND": {
+          "value": 2756,
+          "year": 2025
+        },
+        "CHN": {
+          "value": 13439,
+          "year": 2025
+        },
+        "BGD": {
+          "value": 2731,
+          "year": 2025
+        },
+        "PAK": {
+          "value": 1524,
+          "year": 2025
+        },
+        "LKA": {
+          "value": 4072,
+          "year": 2025
+        },
+        "IDN": {
+          "value": 5490,
+          "year": 2025
+        },
+        "VNM": {
+          "value": 4987,
+          "year": 2025
+        },
+        "THA": {
+          "value": 8130,
+          "year": 2025
+        },
+        "KOR": {
+          "value": 34538,
+          "year": 2025
+        },
+        "JPN": {
+          "value": 34017,
+          "year": 2025
+        },
+        "USA": {
+          "value": 89662,
+          "year": 2025
+        }
+      }
+    },
+    "NGDPDPCPPP": {
+      "label": "GDP per capita, PPP",
+      "unit": "current international $",
+      "data": {
+        "IND": {
+          "value": 11160,
+          "year": 2024
+        },
+        "CHN": {
+          "value": 24272,
+          "year": 2024
+        },
+        "BGD": {
+          "value": 9037,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 6820,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 15040,
+          "year": 2024
+        },
+        "IDN": {
+          "value": 16880,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 17200,
+          "year": 2024
+        },
+        "THA": {
+          "value": 23120,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 52710,
+          "year": 2024
+        },
+        "JPN": {
+          "value": 49280,
+          "year": 2024
+        },
+        "USA": {
+          "value": 87030,
+          "year": 2024
+        }
+      }
+    },
+    "NGDP_RPCH": {
+      "label": "Real GDP growth",
+      "unit": "% annual change",
+      "data": {
+        "IND": {
+          "value": 6.5,
+          "year": 2025
+        },
+        "CHN": {
+          "value": 4.6,
+          "year": 2025
+        },
+        "BGD": {
+          "value": 4.9,
+          "year": 2025
+        },
+        "PAK": {
+          "value": 3.2,
+          "year": 2025
+        },
+        "LKA": {
+          "value": 4.4,
+          "year": 2025
+        },
+        "IDN": {
+          "value": 5,
+          "year": 2025
+        },
+        "VNM": {
+          "value": 6.2,
+          "year": 2025
+        },
+        "THA": {
+          "value": 2.9,
+          "year": 2025
+        },
+        "KOR": {
+          "value": 1.8,
+          "year": 2025
+        },
+        "JPN": {
+          "value": 0.8,
+          "year": 2025
+        },
+        "USA": {
+          "value": 1.8,
+          "year": 2025
+        }
+      }
+    },
+    "PCPIPCH": {
+      "label": "Inflation, avg consumer prices",
+      "unit": "% annual change",
+      "data": {
+        "IND": {
+          "value": 4.4,
+          "year": 2025
+        },
+        "CHN": {
+          "value": 0.2,
+          "year": 2025
+        },
+        "BGD": {
+          "value": 7.8,
+          "year": 2025
+        },
+        "PAK": {
+          "value": 7.5,
+          "year": 2025
+        },
+        "LKA": {
+          "value": 4.5,
+          "year": 2025
+        },
+        "IDN": {
+          "value": 2.6,
+          "year": 2025
+        },
+        "VNM": {
+          "value": 3.8,
+          "year": 2025
+        },
+        "THA": {
+          "value": 0.9,
+          "year": 2025
+        },
+        "KOR": {
+          "value": 1.8,
+          "year": 2025
+        },
+        "JPN": {
+          "value": 2.4,
+          "year": 2025
+        },
+        "USA": {
+          "value": 2.9,
+          "year": 2025
+        }
+      }
+    },
+    "BCA_NGDPD": {
+      "label": "Current account balance",
+      "unit": "% of GDP",
+      "data": {
+        "IND": {
+          "value": -1,
+          "year": 2025
+        },
+        "CHN": {
+          "value": 2,
+          "year": 2025
+        },
+        "BGD": {
+          "value": -0.4,
+          "year": 2025
+        },
+        "PAK": {
+          "value": -0.4,
+          "year": 2025
+        },
+        "LKA": {
+          "value": -2,
+          "year": 2025
+        },
+        "IDN": {
+          "value": -0.5,
+          "year": 2025
+        },
+        "VNM": {
+          "value": 4.2,
+          "year": 2025
+        },
+        "THA": {
+          "value": 3.6,
+          "year": 2025
+        },
+        "KOR": {
+          "value": 4.1,
+          "year": 2025
+        },
+        "JPN": {
+          "value": 3.8,
+          "year": 2025
+        },
+        "USA": {
+          "value": -3.5,
+          "year": 2025
+        }
+      }
+    },
+    "GGXWDG_NGDP": {
+      "label": "Government gross debt",
+      "unit": "% of GDP",
+      "data": {
+        "IND": {
+          "value": 83.5,
+          "year": 2025
+        },
+        "CHN": {
+          "value": 92.4,
+          "year": 2025
+        },
+        "BGD": {
+          "value": 40.2,
+          "year": 2025
+        },
+        "PAK": {
+          "value": 78.5,
+          "year": 2025
+        },
+        "LKA": {
+          "value": 99.5,
+          "year": 2025
+        },
+        "IDN": {
+          "value": 41.2,
+          "year": 2025
+        },
+        "VNM": {
+          "value": 37,
+          "year": 2025
+        },
+        "THA": {
+          "value": 64.8,
+          "year": 2025
+        },
+        "KOR": {
+          "value": 54.1,
+          "year": 2025
+        },
+        "JPN": {
+          "value": 249.7,
+          "year": 2025
+        },
+        "USA": {
+          "value": 122.3,
+          "year": 2025
+        }
+      }
+    },
+    "NGSD_NGDP": {
+      "label": "Gross national savings",
+      "unit": "% of GDP",
+      "data": {
+        "IND": {
+          "value": 33.5,
+          "year": 2025
+        },
+        "CHN": {
+          "value": 46.7,
+          "year": 2025
+        },
+        "BGD": {
+          "value": 32,
+          "year": 2025
+        },
+        "PAK": {
+          "value": 17,
+          "year": 2025
+        },
+        "LKA": {
+          "value": 26,
+          "year": 2025
+        },
+        "IDN": {
+          "value": 35.8,
+          "year": 2025
+        },
+        "VNM": {
+          "value": 38.5,
+          "year": 2025
+        },
+        "THA": {
+          "value": 32.5,
+          "year": 2025
+        },
+        "KOR": {
+          "value": 35.2,
+          "year": 2025
+        },
+        "JPN": {
+          "value": 28.5,
+          "year": 2025
+        },
+        "USA": {
+          "value": 18.5,
+          "year": 2025
+        }
+      }
+    }
+  },
+  "adb": {
+    "poverty_national": {
+      "label": "Poverty headcount (national poverty line)",
+      "unit": "% of population",
+      "data": {
+        "IND": {
+          "value": 16.4,
+          "year": 2023
+        },
+        "CHN": {
+          "value": 0.6,
+          "year": 2020
+        },
+        "BGD": {
+          "value": 18.7,
+          "year": 2022
+        },
+        "PAK": {
+          "value": 34.2,
+          "year": 2019
+        },
+        "LKA": {
+          "value": 5.3,
+          "year": 2023
+        },
+        "IDN": {
+          "value": 9.1,
+          "year": 2023
+        },
+        "VNM": {
+          "value": 3.3,
+          "year": 2022
+        },
+        "THA": {
+          "value": 6,
+          "year": 2022
+        },
+        "KOR": {
+          "value": 14.4,
+          "year": 2022
+        },
+        "JPN": {
+          "value": 15.7,
+          "year": 2021
+        }
+      }
+    },
+    "electricity_access": {
+      "label": "Access to electricity",
+      "unit": "% of population",
+      "data": {
+        "IND": {
+          "value": 99.6,
+          "year": 2023
+        },
+        "CHN": {
+          "value": 100,
+          "year": 2023
+        },
+        "BGD": {
+          "value": 99.5,
+          "year": 2023
+        },
+        "PAK": {
+          "value": 97.6,
+          "year": 2023
+        },
+        "LKA": {
+          "value": 99.9,
+          "year": 2023
+        },
+        "IDN": {
+          "value": 99.7,
+          "year": 2023
+        },
+        "VNM": {
+          "value": 99.9,
+          "year": 2023
+        },
+        "THA": {
+          "value": 99.9,
+          "year": 2023
+        },
+        "KOR": {
+          "value": 100,
+          "year": 2023
+        },
+        "JPN": {
+          "value": 100,
+          "year": 2023
+        }
+      }
+    },
+    "under5_mortality": {
+      "label": "Under-5 mortality rate",
+      "unit": "per 1,000 live births",
+      "data": {
+        "IND": {
+          "value": 31,
+          "year": 2023
+        },
+        "CHN": {
+          "value": 7.4,
+          "year": 2023
+        },
+        "BGD": {
+          "value": 29.8,
+          "year": 2023
+        },
+        "PAK": {
+          "value": 58.9,
+          "year": 2023
+        },
+        "LKA": {
+          "value": 7.4,
+          "year": 2023
+        },
+        "IDN": {
+          "value": 21.9,
+          "year": 2023
+        },
+        "VNM": {
+          "value": 20.7,
+          "year": 2023
+        },
+        "THA": {
+          "value": 8.2,
+          "year": 2023
+        },
+        "KOR": {
+          "value": 3,
+          "year": 2023
+        },
+        "JPN": {
+          "value": 2.1,
+          "year": 2023
+        }
+      }
+    },
+    "maternal_mortality": {
+      "label": "Maternal mortality ratio",
+      "unit": "per 100,000 live births",
+      "data": {
+        "IND": {
+          "value": 103,
+          "year": 2020
+        },
+        "CHN": {
+          "value": 23,
+          "year": 2020
+        },
+        "BGD": {
+          "value": 123,
+          "year": 2020
+        },
+        "PAK": {
+          "value": 154,
+          "year": 2020
+        },
+        "LKA": {
+          "value": 29,
+          "year": 2020
+        },
+        "IDN": {
+          "value": 173,
+          "year": 2020
+        },
+        "VNM": {
+          "value": 124,
+          "year": 2020
+        },
+        "THA": {
+          "value": 29,
+          "year": 2020
+        },
+        "KOR": {
+          "value": 8,
+          "year": 2020
+        },
+        "JPN": {
+          "value": 4,
+          "year": 2020
+        }
+      }
+    },
+    "mobile_broadband": {
+      "label": "Mobile broadband subscriptions",
+      "unit": "per 100 population",
+      "data": {
+        "IND": {
+          "value": 66.8,
+          "year": 2023
+        },
+        "CHN": {
+          "value": 106.6,
+          "year": 2023
+        },
+        "BGD": {
+          "value": 44,
+          "year": 2023
+        },
+        "PAK": {
+          "value": 40.2,
+          "year": 2023
+        },
+        "LKA": {
+          "value": 66.4,
+          "year": 2023
+        },
+        "IDN": {
+          "value": 85.6,
+          "year": 2023
+        },
+        "VNM": {
+          "value": 82.4,
+          "year": 2023
+        },
+        "THA": {
+          "value": 106.8,
+          "year": 2023
+        },
+        "KOR": {
+          "value": 151,
+          "year": 2023
+        },
+        "JPN": {
+          "value": 157.2,
+          "year": 2023
+        }
+      }
+    },
+    "co2_per_capita": {
+      "label": "CO₂ emissions",
+      "unit": "metric tons per capita",
+      "data": {
+        "IND": {
+          "value": 1.9,
+          "year": 2022
+        },
+        "CHN": {
+          "value": 7.9,
+          "year": 2022
+        },
+        "BGD": {
+          "value": 0.8,
+          "year": 2022
+        },
+        "PAK": {
+          "value": 0.9,
+          "year": 2022
+        },
+        "LKA": {
+          "value": 0.9,
+          "year": 2022
+        },
+        "IDN": {
+          "value": 2.3,
+          "year": 2022
+        },
+        "VNM": {
+          "value": 3.6,
+          "year": 2022
+        },
+        "THA": {
+          "value": 4,
+          "year": 2022
+        },
+        "KOR": {
+          "value": 11.5,
+          "year": 2022
+        },
+        "JPN": {
+          "value": 8.3,
+          "year": 2022
+        },
+        "USA": {
+          "value": 14.9,
+          "year": 2022
+        }
+      }
+    },
+    "gdi": {
+      "label": "Gender Development Index",
+      "unit": "index (0–1)",
+      "data": {
+        "IND": {
+          "value": 0.849,
+          "year": 2022
+        },
+        "CHN": {
+          "value": 0.969,
+          "year": 2022
+        },
+        "BGD": {
+          "value": 0.909,
+          "year": 2022
+        },
+        "PAK": {
+          "value": 0.749,
+          "year": 2022
+        },
+        "LKA": {
+          "value": 0.956,
+          "year": 2022
+        },
+        "IDN": {
+          "value": 0.925,
+          "year": 2022
+        },
+        "VNM": {
+          "value": 0.972,
+          "year": 2022
+        },
+        "THA": {
+          "value": 0.986,
+          "year": 2022
+        },
+        "KOR": {
+          "value": 0.936,
+          "year": 2022
+        },
+        "JPN": {
+          "value": 0.992,
+          "year": 2022
+        },
+        "USA": {
+          "value": 0.995,
+          "year": 2022
+        }
+      }
+    }
+  },
+  "indiaContext": {
+    "NGDPD": {
+      "label": "GDP, current prices",
+      "unit": "USD billions",
+      "value": 4187,
+      "year": 2025
+    },
+    "NGDPDPC": {
+      "label": "GDP per capita, current prices",
+      "unit": "USD",
+      "value": 2756,
+      "year": 2025
+    },
+    "NGDPDPCPPP": {
+      "label": "GDP per capita, PPP",
+      "unit": "current international $",
+      "value": 11160,
+      "year": 2024
+    },
+    "NGDP_RPCH": {
+      "label": "Real GDP growth",
+      "unit": "% annual change",
+      "value": 6.5,
+      "year": 2025
+    },
+    "PCPIPCH": {
+      "label": "Inflation, avg consumer prices",
+      "unit": "% annual change",
+      "value": 4.4,
+      "year": 2025
+    },
+    "BCA_NGDPD": {
+      "label": "Current account balance",
+      "unit": "% of GDP",
+      "value": -1,
+      "year": 2025
+    },
+    "GGXWDG_NGDP": {
+      "label": "Government gross debt",
+      "unit": "% of GDP",
+      "value": 83.5,
+      "year": 2025
+    },
+    "NGSD_NGDP": {
+      "label": "Gross national savings",
+      "unit": "% of GDP",
+      "value": 33.5,
+      "year": 2025
+    },
+    "poverty_national": {
+      "label": "Poverty headcount (national poverty line)",
+      "unit": "% of population",
+      "value": 16.4,
+      "year": 2023
+    },
+    "electricity_access": {
+      "label": "Access to electricity",
+      "unit": "% of population",
+      "value": 99.6,
+      "year": 2023
+    },
+    "under5_mortality": {
+      "label": "Under-5 mortality rate",
+      "unit": "per 1,000 live births",
+      "value": 31,
+      "year": 2023
+    },
+    "maternal_mortality": {
+      "label": "Maternal mortality ratio",
+      "unit": "per 100,000 live births",
+      "value": 103,
+      "year": 2020
+    },
+    "mobile_broadband": {
+      "label": "Mobile broadband subscriptions",
+      "unit": "per 100 population",
+      "value": 66.8,
+      "year": 2023
+    },
+    "co2_per_capita": {
+      "label": "CO₂ emissions",
+      "unit": "metric tons per capita",
+      "value": 1.9,
+      "year": 2022
+    },
+    "gdi": {
+      "label": "Gender Development Index",
+      "unit": "index (0–1)",
+      "value": 0.849,
+      "year": 2022
+    }
+  }
+}
