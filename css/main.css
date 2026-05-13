@@ -273,7 +273,8 @@ nav.links .active,
   z-index: 200;
   box-shadow: 0 8px 32px -8px oklch(0 0 0 / 0.35);
 }
-.nav-item:hover .nav-dropdown { display: block; }
+.nav-item:hover .nav-dropdown,
+.nav-item.open .nav-dropdown { display: block; }
 .nav-dropdown a {
   display: block;
   padding: 9px 16px;
