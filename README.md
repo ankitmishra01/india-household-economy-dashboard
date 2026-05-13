@@ -1,169 +1,159 @@
-# India Household Economy & Living Standards Dashboard
+# India Household Economy Dashboard
 
-A public-facing, open-source data visualization dashboard making India's household economic data explorable — for journalists, policymakers, and researchers.
+**Live → [india-economy.vercel.app](https://india-economy.vercel.app)**
 
-**[Live demo →](https://india-household-economy.vercel.app)**
+A data pipeline and visualization layer built to liberate India's government survey data from PDFs and into interactive, shareable dashboards — covering 22 indicators, 37 states, and 5 national surveys.
+
+Built end-to-end with Claude Code and Cursor: extraction scripts, a JSON data store, automated insights, and a static front-end deployed on Vercel.
 
 ---
 
-## What This Is
+## The Problem It Solves
 
-India's government surveys produce rich state-level economic data — buried in PDFs and factsheets that most people never access. This dashboard extracts, standardizes, and visualizes 22 indicators across five themes:
+India's NSO, IIPS, and NITI Aayog publish some of the richest household economic data in the world. It lives in PDFs.
 
-| Theme | Indicators |
+This project writes the extraction layer — Node.js scripts that pull raw survey tables, normalize them to a consistent schema, and write a flat JSON data store. The browser reads that store directly. No backend. No database. Every state-level data point is one `fetch()` away.
+
+---
+
+## What Was Built
+
+| Layer | What it does |
 |---|---|
-| **Wealth & Living Standards** | Household consumption, wealth quintiles, MPI, food insecurity, housing utilities |
-| **Labor Force & Employment** | LFPR, unemployment, NEET youth, formal employment, gender wage gap, unpaid care |
-| **Health Economics** | Out-of-pocket expenditure, catastrophic health spending, health insurance coverage |
-| **Human Capital & Education** | Education expenditure, literacy, digital literacy, age dependency ratio |
-| **Financial Inclusion** | Banking access, mobile money, female asset ownership, economic cost of IPV |
-
-Each page has:
-- **Interactive choropleth map** — hover for state values, click to highlight in charts
-- **Ranked lollipop chart** — all states vs national average
-- **Sortable data table** — with CSV export
-- **AI-generated insight blocks** — automatically factchecked against source data
+| **Extraction scripts** | Parse HCES, PLFS, NFHS-5, ASER, RBI source files into `/data/pages/[slug]/data.json` |
+| **World Bank + WHO pipeline** | Fetches 30+ indicators via open APIs; builds comparison context for each page |
+| **AI insights pipeline** | Claude (`claude-sonnet-4-6`) generates insight blocks; each claim is factchecked against source data before publishing |
+| **Build pipeline** | Generates 22 static HTML pages from a single manifest + template |
+| **Static dashboard** | Choropleth maps, ranked charts, global comparison bars, India Snapshot verdict chips |
 
 ---
 
-## Data Sources
+## Stack
 
-| Survey | Period | Produced by |
-|---|---|---|
-| HCES 2022–23 (Household Consumption Expenditure Survey) | 2022–23 | NSO / MoSPI |
-| PLFS 2022–23 (Periodic Labour Force Survey) | 2022–23 Annual Round | NSO / MoSPI |
-| NFHS-5 (National Family Health Survey) | 2019–21 | IIPS / MoHFW |
-| NITI Aayog MPI | 2021 | NITI Aayog |
-| ASER 2022 | 2022 | Pratham |
-| NSS 75th Round | 2017–18 | NSO |
-| RBI Payment System Statistics | 2022–23 | Reserve Bank of India |
-
----
-
-## Running Locally
-
-### Prerequisites
-- Node.js 18+
-- `ANTHROPIC_API_KEY` in `.env` (for insights generation only)
-
-```sh
-git clone https://github.com/ankitmishra/india-household-economy-dashboard
-cd india-household-economy-dashboard
-npm install
+```
+Data pipeline    Node.js · World Bank API · WHO GHO API · Anthropic Claude API
+Front-end        Vanilla JS · D3.js · CSS custom properties
+Build & deploy   Vercel (static) · GitHub Actions (weekly data refresh)
+AI tooling       Claude Code · Cursor
 ```
 
-### Generate pages and serve
-
-```sh
-# Generate HTML for all pages from manifest
-npm run generate:pages
-
-# Start local dev server
-npm run dev
-# → http://localhost:3000
-```
-
-### Extract data (requires source files)
-
-Source files (government survey CSVs/XLSXs) go in `data/source/[survey-name]/`.
-They are `.vercelignore`d and not committed.
-
-```sh
-# Run all extract scripts (real data, requires source files)
-npm run extract:all
-
-# Or use 5-state mock data for development
-npm run extract:mock
-```
-
-### Generate AI insights
-
-```sh
-# Requires ANTHROPIC_API_KEY in .env
-npm run insights:all
-
-# Single page
-node scripts/insights/run-insights.js household-consumption
-```
+No framework. No ORM. No backend runtime. Every architectural decision was made to keep the blast radius small and the data portable.
 
 ---
 
 ## Architecture
 
 ```
-Browser runtime (static Vercel deployment)
+Browser (Vercel static deployment)
   pages/[slug]/index.html
     └── js/page.js
-          ├── fetch /data/pages-manifest.json  → nav.js
-          ├── fetch /data/pages/[slug]/data.json
-          ├── fetch /data/pages/[slug]/insights.json  (404 → [] gracefully)
-          └── fetch /data/geo/india-states.geojson  (choropleth)
+          ├── /data/pages-manifest.json     → nav + theme index
+          ├── /data/pages/[slug]/data.json  → charts, map, table
+          ├── /data/pages/[slug]/insights.json
+          └── /data/pages/[slug]/global-context.json  → OECD + peer comparison
 
-Build pipeline (Vercel: node scripts/build/generate-pages.js)
-  data/pages-manifest.json  →  pages/[slug]/index.html  (22 files)
-
-Extraction pipeline (local only — source files not committed)
+Extraction pipeline  (runs locally, source files not committed)
   data/source/[survey]/*.csv|xlsx
-    →  scripts/extract/[slug].js
-    →  data/pages/[slug]/data.json  (committed)
+    → scripts/extract/[slug].js
+    → data/pages/[slug]/data.json
 
-Insights pipeline (local only — requires Anthropic API key)
+External data pipeline  (runs weekly via GitHub Actions)
+  World Bank Open Data API  →  data/external/world-bank.json
+  WHO Global Health Observatory API  →  data/external/who-gho.json
+    → scripts/build-global-context.js
+    → data/pages/[slug]/global-context.json  (22 files)
+
+AI insights pipeline  (runs locally, requires ANTHROPIC_API_KEY)
   data/pages/[slug]/data.json
-    →  scripts/insights/run-insights.js
-    →  data/pages/[slug]/insights.json      (committed)
-    →  data/pages/[slug]/factcheck-report.json  (committed)
+    → scripts/insights/run-insights.js  (Claude claude-sonnet-4-6)
+    → data/pages/[slug]/insights.json
+    → data/pages/[slug]/factcheck-report.json
+
+Build pipeline  (Vercel build step)
+  data/pages-manifest.json
+    → scripts/build/generate-pages.js
+    → pages/[slug]/index.html  (22 files, OG meta injected)
 ```
 
-**Key decisions:**
-- **No framework** — vanilla HTML/CSS/JS + D3.js v7.9.0 from jsDelivr CDN
-- **Vercel build = page generation only** — extraction is local, source files never deploy
-- **All browser paths absolute** (`/data/`, `/js/`) — pages are served from `pages/[slug]/`
-- **GeoJSON by state name** — datameet GeoJSON uses full names, not ISO codes; join via normalized name → code lookup
-- **AI insights are factchecked** — every numerical claim verified against data.json before publication
+---
+
+## Data Sources
+
+| Survey | Period | Producer |
+|---|---|---|
+| HCES 2022–23 | 2022–23 | NSO / MoSPI |
+| PLFS 2022–23 | 2022–23 | NSO / MoSPI |
+| NFHS-5 | 2019–21 | IIPS / MoHFW |
+| NITI Aayog MPI | 2021 | NITI Aayog |
+| ASER | 2022 | Pratham |
+| NSS 75th Round | 2017–18 | NSO |
+| RBI Payment Statistics | 2022–23 | Reserve Bank of India |
+| World Bank Open Data | Rolling | World Bank |
+| WHO Global Health Observatory | Rolling | WHO |
 
 ---
 
-## AI Insights Pipeline
+## Running Locally
 
-Insights are generated by Claude (Anthropic `claude-sonnet-4-6`) using only the page's `data.json` as context. Each claimed value is verified against the source data:
+```sh
+git clone https://github.com/ankitmishra01/india-household-economy-dashboard
+cd india-household-economy-dashboard
+npm install
+npm run dev          # → http://localhost:3000
+```
 
-| Verdict | Threshold | Published? |
+### Re-run the data pipelines
+
+```sh
+# Refresh World Bank + WHO data (no API key needed)
+node scripts/fetch/fetch-world-bank.js
+node scripts/fetch/fetch-who.js
+node scripts/build-global-context.js
+
+# Regenerate page HTML
+npm run generate:pages
+
+# Generate AI insights (requires ANTHROPIC_API_KEY in .env)
+node scripts/insights/run-insights.js [slug]
+```
+
+Source files (survey CSVs/XLSXs) live in `data/source/` — not committed. Run `npm run extract:mock` to get 5-state stub data for development.
+
+---
+
+## AI Insights: How the Factcheck Works
+
+Every insight generated by Claude is verified before it's published. The pipeline extracts all numerical claims from the model's output and cross-references each one against the page's `data.json`:
+
+| Verdict | Tolerance | Published |
 |---|---|---|
-| `supported` | Exact match (within 0.1%) | Yes |
-| `mostly_supported` | Within 2% | Yes |
-| `partly_supported` | Within 10% | No |
+| `supported` | Exact match (≤0.1% off) | Yes |
+| `mostly_supported` | ≤2% off | Yes |
+| `partly_supported` | ≤10% off | No |
 | `unsupported` | >10% off or not found | No |
 
-Full factcheck reports live in `data/pages/[slug]/factcheck-report.json`.
+Full reports: `data/pages/[slug]/factcheck-report.json`
 
 ---
 
-## Editorial Notes
+## What This Demonstrates (B2 Skills)
 
-- **IPV page**: IPV prevalence figures are observed survey data (NFHS-5). The economic cost estimates are modelled using WHO methodology — not official statistics. Clearly labelled throughout.
-- **Ladakh**: Pre-2019 surveys (NFHS-5) don't have Ladakh as a separate entry. It shows as no data.
-- **Grey states**: Missing data, not an error.
-- **Cross-survey comparisons**: NFHS-5 data is 2019–21; HCES/PLFS is 2022–23. Treat cross-indicator comparisons with appropriate caution.
+- **API integrations**: World Bank and WHO data fetched, normalized, and merged into a consistent schema across 14 comparison countries
+- **Cross-platform data flows**: Survey source files → extraction scripts → JSON store → static dashboard → weekly GitHub Actions refresh
+- **Internal dashboards**: 22 live pages, each driven by its own data.json — adding a new indicator means writing one script and one manifest entry
+- **AI-assisted development**: Built entirely with Claude Code and Cursor; AI insights pipeline uses Claude for generation and a custom factcheck loop for verification
+- **Scripted everything**: No manual steps in the data pipeline — from raw source file to deployed dashboard is a sequence of Node.js scripts
 
 ---
 
-## Contributing
+## Notes
 
-1. Fork the repo
-2. Add or improve an extract script in `scripts/extract/`
-3. Run `node scripts/extract/[slug].js --mock` to validate the output schema
-4. Open a pull request
-
-For data corrections or source questions, open an issue.
+- **Ladakh**: Pre-2019 surveys don't separate Ladakh from J&K. Shows as no data.
+- **IPV economic cost**: Modelled estimate using WHO methodology — not official statistics. Clearly labelled in-dashboard.
+- **Cross-survey comparisons**: NFHS-5 is 2019–21; HCES/PLFS is 2022–23. Different reference years.
 
 ---
 
 ## Licence
 
-MIT — see [LICENSE](./LICENSE).
-
-Data is from public Indian government surveys. Reuse is subject to the terms of each survey's licence (generally open for non-commercial research and journalism).
-
----
-
-*Built with Node.js, D3.js, vanilla JS, and Anthropic Claude.*
+MIT. Data from public Indian government surveys — open for non-commercial research and journalism.
