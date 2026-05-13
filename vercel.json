@@ -3,6 +3,11 @@
   "buildCommand": "node scripts/build/generate-pages.js",
   "outputDirectory": ".",
   "routes": [
+    {
+      "src": "/og-image.png",
+      "dest": "/og-image.svg",
+      "headers": { "Content-Type": "image/svg+xml" }
+    },
     { "src": "/pages/(.*)", "dest": "/pages/$1" },
     { "src": "/(.*)", "dest": "/$1" }
   ]

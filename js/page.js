@@ -226,6 +226,16 @@
       if (block.modelled) {
         header.querySelector('div').insertAdjacentHTML('beforeend', '<div style="margin-top:6px;"><span class="modelled-badge">Modelled estimate</span></div>');
       }
+      /* Download button */
+      const dlBtn = document.createElement('button');
+      dlBtn.className = 'chart-download-btn';
+      dlBtn.title = 'Download CSV';
+      dlBtn.innerHTML = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v7M3.5 5.5L6 8l2.5-2.5M2 10h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg> CSV';
+      dlBtn.addEventListener('click', () => downloadChartCSV(block));
+      header.style.display = 'flex';
+      header.style.alignItems = 'flex-start';
+      header.style.justifyContent = 'space-between';
+      header.appendChild(dlBtn);
       card.appendChild(header);
 
       const chartEl = document.createElement('div');
@@ -402,6 +412,37 @@
     }
 
     container.appendChild(section);
+  }
+
+  // ---------- CSV Download ----------
+  function downloadChartCSV(block) {
+    let rows = [];
+    const title = block.title || block.id || 'chart';
+    const unit = block.unit || '';
+
+    if (block.type === 'lollipop' && block.data) {
+      rows.push(['State', 'Value', 'Unit']);
+      block.data.forEach(d => rows.push([d.state || d.label || '', d.value ?? '', unit]));
+    } else if (block.type === 'grouped-lollipop') {
+      const labA = block.labelA || 'Series A';
+      const labB = block.labelB || 'Series B';
+      rows.push(['State', labA, labB, 'Unit']);
+      const states = [...new Set([...(block.seriesA || []).map(d => d.state), ...(block.seriesB || []).map(d => d.state)])];
+      const mapA = Object.fromEntries((block.seriesA || []).map(d => [d.state, d.value]));
+      const mapB = Object.fromEntries((block.seriesB || []).map(d => [d.state, d.value]));
+      states.forEach(s => rows.push([s, mapA[s] ?? '', mapB[s] ?? '', unit]));
+    } else if (block.type === 'waffle') {
+      rows.push(['Segment', 'Value', 'Unit']);
+      (block.segments || block.data || []).forEach(s => rows.push([s.label || '', s.value ?? '', unit]));
+    } else {
+      return;
+    }
+
+    const csv = rows.map(r => r.map(v => `"${String(v).replace(/"/g, '""')}"`).join(',')).join('\n');
+    const a = document.createElement('a');
+    a.href = 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv);
+    a.download = `india-economy_${title.toLowerCase().replace(/\s+/g, '-')}.csv`;
+    a.click();
   }
 
   // ---------- Notes ----------

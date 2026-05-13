@@ -49,6 +49,9 @@ for (const page of manifest.pages) {
 console.log(`\nGenerated ${generated} pages${errors ? `, ${errors} errors` : ''}.`);
 if (errors > 0) process.exit(1);
 
+// Inject OG meta into all pages
+require('./add-og-meta.js');
+
 function escapeHtml(str = '') {
   return str
     .replace(/&/g, '&amp;')

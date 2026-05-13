@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — India Household Economy Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/css/main.css">
+  <style>
+    .not-found {
+      min-height: calc(100vh - var(--header-height));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 24px;
+      gap: 16px;
+    }
+    .nf-code {
+      font-size: 80px;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--saffron);
+      opacity: 0.3;
+      font-variant-numeric: tabular-nums;
+    }
+    .nf-title {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .nf-sub {
+      font-size: 14px;
+      color: var(--ink-3);
+      max-width: 34ch;
+    }
+    .nf-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body data-page="404">
+
+  <header class="site-header" id="site-header">
+    <!-- Rebuilt by nav.js -->
+  </header>
+
+  <main class="not-found">
+    <div class="nf-code">404</div>
+    <div class="nf-title">Page not found</div>
+    <p class="nf-sub">The indicator or page you're looking for doesn't exist or has moved.</p>
+    <div class="nf-actions">
+      <a href="/" class="btn-primary">← Back to home</a>
+    </div>
+  </main>
+
+  <script src="/js/nav.js"></script>
+</body>
+</html>

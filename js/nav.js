@@ -6,8 +6,9 @@
 (function () {
   const currentTheme = document.body.getAttribute('data-theme') || '';
 
-  /* Apply saved palette/display preferences */
-  const savedPalette = localStorage.getItem('dashboard:palette') || 'midnight-mango';
+  /* Apply saved palette/display preferences — fall back to OS dark/light preference */
+  const osPref = window.matchMedia('(prefers-color-scheme: light)').matches ? 'paper-white' : 'midnight-mango';
+  const savedPalette = localStorage.getItem('dashboard:palette') || osPref;
   const savedDisplay = localStorage.getItem('dashboard:display') || 'bricolage';
   document.body.dataset.palette = savedPalette;
   document.body.dataset.display = savedDisplay;
@@ -101,9 +102,25 @@
       githubPill.target = '_blank';
       githubPill.rel = 'noopener';
 
+      /* Search button (desktop + mobile) */
+      const searchBtn = document.createElement('button');
+      searchBtn.className = 'nav-search-btn';
+      searchBtn.setAttribute('aria-label', 'Search indicators');
+      searchBtn.title = 'Search (⌘K)';
+      searchBtn.innerHTML = '<svg width="15" height="15" viewBox="0 0 15 15" fill="none"><circle cx="6.5" cy="6.5" r="4.5" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 10.5L13.5 13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>';
+      searchBtn.addEventListener('click', openSearch);
+      actions.appendChild(searchBtn);
+
       actions.appendChild(aboutPill);
       actions.appendChild(githubPill);
+
+      /* Mobile hamburger */
+      const hamburger = document.createElement('button');
+      hamburger.className = 'nav-hamburger';
+      hamburger.setAttribute('aria-label', 'Open menu');
+      hamburger.innerHTML = '<span></span><span></span><span></span>';
       inner.appendChild(actions);
+      inner.appendChild(hamburger);
 
       header.appendChild(inner);
 
@@ -112,8 +129,173 @@
       tricolor.className = 'tricolor';
       tricolor.setAttribute('aria-hidden', 'true');
       header.appendChild(tricolor);
+
+      /* Mobile drawer */
+      const drawer = document.createElement('div');
+      drawer.className = 'nav-drawer';
+      drawer.setAttribute('aria-hidden', 'true');
+      const drawerInner = document.createElement('div');
+      drawerInner.className = 'nav-drawer-inner';
+
+      manifest.themes.forEach(theme => {
+        const themeHead = document.createElement('div');
+        themeHead.className = 'drawer-theme-head';
+        themeHead.textContent = theme.label;
+        drawerInner.appendChild(themeHead);
+        theme.slugs.forEach(slug => {
+          const page = pageMap[slug];
+          if (!page) return;
+          const a = document.createElement('a');
+          a.href = `/pages/${slug}/`;
+          a.className = 'drawer-link';
+          a.textContent = page.title;
+          a.addEventListener('click', closeDrawer);
+          drawerInner.appendChild(a);
+        });
+      });
+
+      const drawerAbout = document.createElement('a');
+      drawerAbout.href = '/about.html';
+      drawerAbout.className = 'drawer-link drawer-about';
+      drawerAbout.textContent = 'About';
+      drawerInner.appendChild(drawerAbout);
+
+      drawer.appendChild(drawerInner);
+      document.body.appendChild(drawer);
+
+      let drawerOpen = false;
+      hamburger.addEventListener('click', () => {
+        drawerOpen = !drawerOpen;
+        drawer.classList.toggle('open', drawerOpen);
+        drawer.setAttribute('aria-hidden', String(!drawerOpen));
+        hamburger.classList.toggle('open', drawerOpen);
+        document.body.style.overflow = drawerOpen ? 'hidden' : '';
+      });
+
+      function closeDrawer() {
+        drawerOpen = false;
+        drawer.classList.remove('open');
+        drawer.setAttribute('aria-hidden', 'true');
+        hamburger.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+      /* ── Search modal ── */
+      buildSearchModal(manifest);
     })
     .catch(() => { /* nav fails silently */ });
+
+  /* Global Cmd+K shortcut */
+  document.addEventListener('keydown', function (e) {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); openSearch(); }
+  });
+
+  function openSearch() {
+    const modal = document.getElementById('search-modal');
+    if (!modal) return;
+    modal.classList.add('open');
+    modal.querySelector('.search-input')?.focus();
+  }
+
+  function buildSearchModal(manifest) {
+    const modal = document.createElement('div');
+    modal.id = 'search-modal';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-label', 'Search indicators');
+
+    const backdrop = document.createElement('div');
+    backdrop.className = 'search-backdrop';
+    backdrop.addEventListener('click', closeSearch);
+
+    const box = document.createElement('div');
+    box.className = 'search-box';
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.className = 'search-input';
+    input.placeholder = 'Search indicators…';
+    input.setAttribute('autocomplete', 'off');
+    input.setAttribute('spellcheck', 'false');
+
+    const results = document.createElement('div');
+    results.className = 'search-results';
+
+    const themeMap = {};
+    manifest.themes.forEach(t => t.slugs.forEach(s => { themeMap[s] = t.label; }));
+
+    const allPages = manifest.pages.map(p => ({
+      slug: p.slug,
+      title: p.title,
+      subtitle: p.subtitle || '',
+      theme: themeMap[p.slug] || '',
+      source: p.source || '',
+    }));
+
+    function renderResults(query) {
+      const q = query.toLowerCase().trim();
+      const hits = q
+        ? allPages.filter(p =>
+            p.title.toLowerCase().includes(q) ||
+            p.subtitle.toLowerCase().includes(q) ||
+            p.theme.toLowerCase().includes(q)
+          )
+        : allPages;
+      results.innerHTML = '';
+      if (!hits.length) {
+        results.innerHTML = '<div class="search-empty">No results</div>';
+        return;
+      }
+      hits.slice(0, 8).forEach(p => {
+        const row = document.createElement('a');
+        row.href = `/pages/${p.slug}/`;
+        row.className = 'search-result-row';
+        row.innerHTML = `
+          <div class="sr-title">${escHtml(p.title)}</div>
+          <div class="sr-meta">${escHtml(p.theme)}${p.source ? ' · ' + escHtml(p.source) : ''}</div>`;
+        row.addEventListener('click', closeSearch);
+        results.appendChild(row);
+      });
+    }
+
+    renderResults('');
+    input.addEventListener('input', () => renderResults(input.value));
+
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeSearch();
+      if (e.key === 'ArrowDown') {
+        const first = results.querySelector('a');
+        if (first) { e.preventDefault(); first.focus(); }
+      }
+    });
+
+    results.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { closeSearch(); input.focus(); }
+      if (e.key === 'ArrowDown') {
+        const next = document.activeElement?.nextElementSibling;
+        if (next) { e.preventDefault(); next.focus(); }
+      }
+      if (e.key === 'ArrowUp') {
+        const prev = document.activeElement?.previousElementSibling;
+        if (prev) { e.preventDefault(); prev.focus(); }
+        else { e.preventDefault(); input.focus(); }
+      }
+    });
+
+    box.appendChild(input);
+    box.appendChild(results);
+    modal.appendChild(backdrop);
+    modal.appendChild(box);
+    document.body.appendChild(modal);
+  }
+
+  function closeSearch() {
+    const modal = document.getElementById('search-modal');
+    if (!modal) return;
+    modal.classList.remove('open');
+    modal.querySelector('.search-input').value = '';
+  }
 
   /* Palette toggle in footer — injected after DOM load */
   document.addEventListener('DOMContentLoaded', function () {
