@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-05-13T02:33:45.232Z"
+    "dataUpdatedAt": "2026-05-13T02:55:41.841Z"
   },
   "charts": [
     {
@@ -75,7 +75,14 @@
           "value": 1.8,
           "year": 2024
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 2,
+        "total": 11,
+        "peerMedian": 11.6,
+        "gap": 20.2,
+        "verdict": "above"
+      }
     },
     {
       "title": "Under-5 mortality rate",
@@ -148,7 +155,14 @@
           "value": 155.03,
           "year": 2023
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 4,
+        "total": 11,
+        "peerMedian": 26.39,
+        "gap": 54.09,
+        "verdict": "above"
+      }
     },
     {
       "title": "Wasting prevalence",
@@ -203,7 +217,14 @@
           "value": 4.4,
           "year": 2023
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 1,
+        "total": 8,
+        "peerMedian": 7.2,
+        "gap": 11.5,
+        "verdict": "above"
+      }
     }
   ]
 }

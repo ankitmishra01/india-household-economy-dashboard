@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-05-13T02:33:45.232Z"
+    "dataUpdatedAt": "2026-05-13T02:55:41.841Z"
   },
   "charts": [
     {
@@ -52,6 +52,12 @@
           "year": 2024
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 0.644919078002539,
+          "year": 2024
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 1.50959876314033,
@@ -75,7 +81,14 @@
           "value": 0.631267006487247,
           "year": 2024
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 4,
+        "total": 12,
+        "peerMedian": 0.35,
+        "gap": 0.54,
+        "verdict": "above"
+      }
     },
     {
       "title": "Urban population share",
@@ -125,6 +138,12 @@
           "year": 2024
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 81.1859846310034,
+          "year": 2024
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 39.1734368360905,
@@ -148,7 +167,14 @@
           "value": 38.4900703430176,
           "year": 2024
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 10,
+        "total": 12,
+        "peerMedian": 60.31,
+        "gap": -24.93,
+        "verdict": "below"
+      }
     },
     {
       "title": "Fertility rate",
@@ -198,6 +224,12 @@
           "year": 2024
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 1.47748831578197,
+          "year": 2024
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 3.547,
@@ -221,7 +253,14 @@
           "value": 1.895,
           "year": 2024
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 4,
+        "total": 12,
+        "peerMedian": 1.76,
+        "gap": 0.2,
+        "verdict": "above"
+      }
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-05-13T02:33:45.232Z"
+    "dataUpdatedAt": "2026-05-13T02:55:41.841Z"
   },
   "charts": [
     {
@@ -52,6 +52,12 @@
           "year": 2024
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 99.1631015655778,
+          "year": 2024
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 90.6932992273275,
@@ -75,7 +81,14 @@
           "value": 98.761246653694,
           "year": 2024
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 9,
+        "total": 12,
+        "peerMedian": 98.77,
+        "gap": -3.05,
+        "verdict": "below"
+      }
     },
     {
       "title": "Basic sanitation access",
@@ -125,6 +138,12 @@
           "year": 2024
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 98.6633368941469,
+          "year": 2024
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 71.8828600416756,
@@ -148,7 +167,14 @@
           "value": 95.447026934425,
           "year": 2024
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 10,
+        "total": 12,
+        "peerMedian": 96.36,
+        "gap": -12.98,
+        "verdict": "below"
+      }
     },
     {
       "title": "Access to electricity",
@@ -215,7 +241,14 @@
           "value": 100,
           "year": 2023
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 8,
+        "total": 10,
+        "peerMedian": 99.9,
+        "gap": -0.3,
+        "verdict": "below"
+      }
     },
     {
       "title": "Urban population share",
@@ -265,6 +298,12 @@
           "year": 2024
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 81.1859846310034,
+          "year": 2024
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 39.1734368360905,
@@ -288,7 +327,14 @@
           "value": 38.4900703430176,
           "year": 2024
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 10,
+        "total": 12,
+        "peerMedian": 60.31,
+        "gap": -24.93,
+        "verdict": "below"
+      }
     }
   ]
 }

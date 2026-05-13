@@ -272,7 +272,7 @@
             <h3>${escHtml(beforeItalic)}<em>${escHtml(italic)}</em></h3>
             <p>${escHtml(blurb)}</p>
             <div class="indicator-chips">
-              ${pages.map(p => `<span class="ind-chip">${escHtml(p.title)}</span>`).join('')}
+              ${pages.map(p => `<a class="ind-chip" href="/pages/${p.slug}/">${escHtml(p.title)}</a>`).join('')}
             </div>
             <svg class="corner" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
               <circle cx="18" cy="18" r="14" stroke="currentColor" stroke-opacity="0.15"/>

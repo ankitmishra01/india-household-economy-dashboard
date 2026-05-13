@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-05-13T02:33:45.232Z"
+    "dataUpdatedAt": "2026-05-13T02:55:41.841Z"
   },
   "charts": [
     {
@@ -75,7 +75,14 @@
           "value": 0.995,
           "year": 2022
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 10,
+        "total": 11,
+        "peerMedian": 0.96,
+        "gap": -0.11,
+        "verdict": "below"
+      }
     },
     {
       "title": "Female labour force participation",
@@ -125,6 +132,12 @@
           "year": 2025
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 53.2816268236792,
+          "year": 2025
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 24.046,
@@ -148,7 +161,14 @@
           "value": 68.551,
           "year": 2025
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 10,
+        "total": 12,
+        "peerMedian": 56.12,
+        "gap": -23.7,
+        "verdict": "below"
+      }
     },
     {
       "title": "Fertility rate",
@@ -198,6 +218,12 @@
           "year": 2024
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 1.47748831578197,
+          "year": 2024
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 3.547,
@@ -221,7 +247,14 @@
           "value": 1.895,
           "year": 2024
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 4,
+        "total": 12,
+        "peerMedian": 1.76,
+        "gap": 0.2,
+        "verdict": "above"
+      }
     }
   ]
 }

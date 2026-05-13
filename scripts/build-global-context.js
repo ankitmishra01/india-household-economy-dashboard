@@ -18,8 +18,33 @@ const META_PATH = path.join(ROOT, 'data', 'external', 'refresh-metadata.json');
 const COUNTRY_NAMES = {
   IND: 'India', CHN: 'China', BGD: 'Bangladesh', PAK: 'Pakistan',
   LKA: 'Sri Lanka', IDN: 'Indonesia', VNM: 'Vietnam', THA: 'Thailand',
-  KOR: 'Korea', JPN: 'Japan', USA: 'United States',
+  KOR: 'Korea', JPN: 'Japan', USA: 'United States', OED: 'OECD Average',
 };
+
+function median(arr) {
+  if (!arr.length) return null;
+  const s = [...arr].sort((a, b) => a - b);
+  const m = Math.floor(s.length / 2);
+  return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+}
+
+function indiaPosition(countries) {
+  const withValue = countries.filter(c => c.value != null);
+  const sorted = [...withValue].sort((a, b) => b.value - a.value);
+  const rank = sorted.findIndex(c => c.code === 'IND') + 1;
+  if (rank === 0) return null;
+  const peerVals = withValue.filter(c => c.code !== 'IND' && c.code !== 'OED').map(c => c.value);
+  const peerMedian = median(peerVals);
+  const indiaVal = withValue.find(c => c.code === 'IND')?.value;
+  const gap = (indiaVal != null && peerMedian != null) ? indiaVal - peerMedian : null;
+  return {
+    rank,
+    total: sorted.length,
+    peerMedian: peerMedian != null ? parseFloat(peerMedian.toFixed(2)) : null,
+    gap:  gap != null ? parseFloat(gap.toFixed(2)) : null,
+    verdict: gap == null ? null : gap >= 0 ? 'above' : 'below',
+  };
+}
 
 // Map slug → array of { src, code, title, unit }
 // src: 'wb' = World Bank, 'weo' = IMF WEO, 'adb' = ADB, 'who' = WHO GHO
@@ -170,7 +195,8 @@ function buildPageContext(slug, wb, imf, who, dataUpdatedAt) {
               : m.src === 'adb' ? 'ADB Key Indicators for Asia and the Pacific 2024'
               :                    'WHO Global Health Observatory';
 
-    charts.push({ title: m.title, unit: m.unit, source: src, countries });
+    const indiaStats = indiaPosition(countries);
+    charts.push({ title: m.title, unit: m.unit, source: src, countries, indiaStats });
   }
 
   if (!charts.length) return null;

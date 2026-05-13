@@ -1594,6 +1594,114 @@ footer.foot,
   font-weight: 400;
 }
 
+/* ── ind-chip as link ── */
+a.ind-chip {
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 0.12s, color 0.12s;
+}
+a.ind-chip:hover {
+  border-color: var(--saffron);
+  color: var(--saffron);
+  background: color-mix(in oklch, var(--saffron) 8%, transparent);
+}
+
+/* ── About page back link ── */
+.about-back {
+  display: inline-block;
+  font-size: 0.8rem;
+  color: var(--saffron);
+  text-decoration: none;
+  margin-bottom: 28px;
+  opacity: 0.8;
+  letter-spacing: 0.01em;
+}
+.about-back:hover { opacity: 1; }
+
+/* ── GlobalContextRenderer enhancements ── */
+.gc-bar-area { position: relative; }
+.gc-rank {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: var(--saffron);
+  background: color-mix(in oklch, var(--saffron) 12%, transparent);
+  border-radius: 3px;
+  padding: 1px 4px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+.gc-oecd .gc-name { font-style: italic; color: var(--ink-3); }
+.gc-oecd .gc-val  { color: var(--ink-3); }
+.gc-oecd-sep {
+  border-top: 1px dashed var(--rule);
+  margin: 4px 0;
+}
+.gc-median-line {
+  position: absolute;
+  top: -2px; bottom: -2px;
+  width: 1.5px;
+  background: var(--ink-2);
+  opacity: 0.4;
+  pointer-events: none;
+  border-radius: 1px;
+  z-index: 2;
+}
+
+/* ── India Snapshot verdict chips ── */
+.india-snapshot {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: color-mix(in oklch, var(--paper-2) 60%, transparent);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+}
+.is-header {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 12px;
+}
+.is-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.is-chip {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  gap: 8px 10px;
+  align-items: center;
+  font-size: 0.73rem;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border-left: 3px solid transparent;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-left-width: 3px;
+  min-width: 240px;
+  flex: 1;
+}
+.is-chip.above { border-left-color: var(--sage); }
+.is-chip.below { border-left-color: var(--vermillion); }
+.is-label { color: var(--ink-2); font-weight: 500; }
+.is-india {
+  font-family: var(--font-data);
+  font-weight: 700;
+  color: var(--saffron);
+}
+.is-oecd {
+  font-size: 0.68rem;
+  color: var(--ink-3);
+  font-style: italic;
+}
+.is-rank {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--ink-3);
+  background: color-mix(in oklch, var(--ink) 6%, transparent);
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+
 /* ================================================================
    RESPONSIVE
    ================================================================ */

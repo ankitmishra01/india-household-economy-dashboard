@@ -70,7 +70,7 @@ const INDICATORS = {
   'SP.DYN.LE00.FE.IN':  { label: 'Life expectancy, female', unit: 'years' },
 };
 
-// Asian peers for comparison context
+// Asian peers for comparison context + OECD aggregate benchmark
 const COMPARISON_COUNTRIES = {
   IND: 'India',
   CHN: 'China',
@@ -85,6 +85,7 @@ const COMPARISON_COUNTRIES = {
   KOR: 'Korea, Rep.',
   JPN: 'Japan',
   USA: 'United States',
+  OED: 'OECD Average',
 };
 
 function fetchJson(url) {

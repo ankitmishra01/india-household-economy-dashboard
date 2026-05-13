@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-05-13T02:33:45.232Z"
+    "dataUpdatedAt": "2026-05-13T02:55:41.841Z"
   },
   "charts": [
     {
@@ -40,6 +40,12 @@
           "year": 2024
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 97.2099990844727,
+          "year": 2020
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 58.8600006103516,
@@ -57,7 +63,14 @@
           "value": 96.129997253418,
           "year": 2022
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 8,
+        "total": 9,
+        "peerMedian": 92.74,
+        "gap": -14.58,
+        "verdict": "below"
+      }
     },
     {
       "title": "Primary enrollment rate",
@@ -83,6 +96,12 @@
           "year": 2018
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 95.5958,
+          "year": 2018
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 67.5748,
@@ -94,7 +113,8 @@
           "value": 94.62633,
           "year": 2017
         }
-      ]
+      ],
+      "indiaStats": null
     },
     {
       "title": "Secondary enrollment",
@@ -126,6 +146,12 @@
           "year": 2018
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 89.36801,
+          "year": 2018
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 37.40039,
@@ -143,7 +169,8 @@
           "value": 92.45022,
           "year": 2017
         }
-      ]
+      ],
+      "indiaStats": null
     },
     {
       "title": "GDP per capita (nominal)",
@@ -216,7 +243,14 @@
           "value": 89662,
           "year": 2025
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 9,
+        "total": 11,
+        "peerMedian": 6810,
+        "gap": -4054,
+        "verdict": "below"
+      }
     }
   ]
 }

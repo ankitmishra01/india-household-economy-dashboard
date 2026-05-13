@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-05-13T02:33:45.232Z"
+    "dataUpdatedAt": "2026-05-13T02:55:41.841Z"
   },
   "charts": [
     {
@@ -52,6 +52,12 @@
           "year": 2023
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 12.7237948307767,
+          "year": 2023
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 2.51988316,
@@ -75,7 +81,14 @@
           "value": 4.56109476,
           "year": 2023
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 9,
+        "total": 12,
+        "peerMedian": 4.55,
+        "gap": -1.21,
+        "verdict": "below"
+      }
     },
     {
       "title": "UHC Service Coverage Index",
@@ -148,7 +161,14 @@
           "value": 86,
           "year": 2023
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 8,
+        "total": 11,
+        "peerMedian": 77,
+        "gap": -8,
+        "verdict": "below"
+      }
     },
     {
       "title": "Maternal mortality ratio",
@@ -221,7 +241,14 @@
           "value": 78,
           "year": 2024
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 7,
+        "total": 11,
+        "peerMedian": 97,
+        "gap": -3,
+        "verdict": "below"
+      }
     },
     {
       "title": "Infant mortality rate",
@@ -271,6 +298,12 @@
           "year": 2024
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 5.84271995128145,
+          "year": 2024
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 48.2,
@@ -294,7 +327,14 @@
           "value": 12,
           "year": 2024
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 3,
+        "total": 12,
+        "peerMedian": 6.6,
+        "gap": 16.7,
+        "verdict": "above"
+      }
     }
   ]
 }

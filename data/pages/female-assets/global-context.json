@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-05-13T02:33:45.232Z"
+    "dataUpdatedAt": "2026-05-13T02:55:41.841Z"
   },
   "charts": [
     {
@@ -52,6 +52,12 @@
           "year": 2025
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 33.4075949367089,
+          "year": 2025
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 17.0418006430868,
@@ -75,7 +81,14 @@
           "value": 31.3807531380753,
           "year": 2025
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 11,
+        "total": 12,
+        "peerMedian": 20.6,
+        "gap": -6.81,
+        "verdict": "below"
+      }
     },
     {
       "title": "Gender Development Index",
@@ -148,7 +161,14 @@
           "value": 0.995,
           "year": 2022
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 10,
+        "total": 11,
+        "peerMedian": 0.96,
+        "gap": -0.11,
+        "verdict": "below"
+      }
     }
   ]
 }

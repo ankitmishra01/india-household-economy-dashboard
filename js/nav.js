@@ -92,7 +92,7 @@
       aboutPill.textContent = 'About';
 
       const githubPill = document.createElement('a');
-      githubPill.href = 'https://github.com/india-household-economy-dashboard';
+      githubPill.href = 'https://github.com/ankitmishra01/india-household-economy-dashboard';
       githubPill.className = 'pill solid';
       githubPill.textContent = '↗ GitHub';
       githubPill.target = '_blank';

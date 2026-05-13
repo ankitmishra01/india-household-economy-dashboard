@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-05-13T02:33:45.232Z"
+    "dataUpdatedAt": "2026-05-13T02:55:41.841Z"
   },
   "charts": [
     {
@@ -52,6 +52,12 @@
           "year": 2023
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 12.7237948307767,
+          "year": 2023
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 2.51988316,
@@ -75,7 +81,14 @@
           "value": 4.56109476,
           "year": 2023
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 9,
+        "total": 12,
+        "peerMedian": 4.55,
+        "gap": -1.21,
+        "verdict": "below"
+      }
     },
     {
       "title": "Gini Index",
@@ -136,7 +149,14 @@
           "value": 36.1,
           "year": 2022
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 9,
+        "total": 9,
+        "peerMedian": 33.95,
+        "gap": -8.45,
+        "verdict": "below"
+      }
     },
     {
       "title": "UHC Service Coverage",
@@ -209,7 +229,14 @@
           "value": 86,
           "year": 2023
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 8,
+        "total": 11,
+        "peerMedian": 77,
+        "gap": -8,
+        "verdict": "below"
+      }
     }
   ]
 }

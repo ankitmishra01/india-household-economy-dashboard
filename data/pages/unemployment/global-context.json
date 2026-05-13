@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-05-13T02:33:45.232Z"
+    "dataUpdatedAt": "2026-05-13T02:55:41.841Z"
   },
   "charts": [
     {
@@ -52,6 +52,12 @@
           "year": 2025
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 4.92579055790538,
+          "year": 2025
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 5.42,
@@ -75,7 +81,14 @@
           "value": 1.523,
           "year": 2025
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 4,
+        "total": 12,
+        "peerMedian": 3.51,
+        "gap": 0.71,
+        "verdict": "above"
+      }
     },
     {
       "title": "Female unemployment rate",
@@ -125,6 +138,12 @@
           "year": 2025
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 5.16439855453518,
+          "year": 2025
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 6.939,
@@ -148,7 +167,14 @@
           "value": 1.362,
           "year": 2025
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 5,
+        "total": 12,
+        "peerMedian": 3.34,
+        "gap": 0.8,
+        "verdict": "above"
+      }
     },
     {
       "title": "Labour force participation",
@@ -198,6 +224,12 @@
           "year": 2025
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 60.5969657104113,
+          "year": 2025
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 52.335,
@@ -221,7 +253,14 @@
           "value": 72.778,
           "year": 2025
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 10,
+        "total": 12,
+        "peerMedian": 63.9,
+        "gap": -8.24,
+        "verdict": "below"
+      }
     },
     {
       "title": "Real GDP growth",
@@ -294,7 +333,14 @@
           "value": 1.8,
           "year": 2025
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 1,
+        "total": 11,
+        "peerMedian": 3.8,
+        "gap": 2.7,
+        "verdict": "above"
+      }
     }
   ]
 }

@@ -93,6 +93,14 @@
     const container = document.getElementById('map-container');
     if (!container) return;
 
+    // Support flat format { HP:{name,value,rank}, ... } as well as structured { states:{...}, ... }
+    const isFlat = !mapData.states && Object.values(mapData).some(v => v && typeof v.value === 'number');
+    if (isFlat) {
+      const vals = Object.values(mapData).filter(v => v?.value != null).map(v => v.value);
+      const avg  = vals.length ? parseFloat((vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(1)) : null;
+      mapData = { indicator: mapData.indicator || '', unit: mapData.unit || '%', nationalAverage: avg, states: mapData };
+    }
+
     const panelAvg  = document.getElementById('panel-avg-value');
     const panelList = document.getElementById('panel-state-list');
     const indicator = document.getElementById('panel-indicator-label');
@@ -189,6 +197,16 @@
   }
 
   // ---------- Charts ----------
+  function normalizeColor(c) {
+    if (!c) return c;
+    const MAP = {
+      'var(--w2)': 'var(--indigo)', 'var(--w5)': 'var(--sage)',
+      'var(--accent-saffron)': 'var(--saffron)', 'var(--chart-stem)': 'var(--indigo)',
+      'var(--text-muted)': 'var(--ink-3)', 'var(--border)': 'var(--rule)',
+    };
+    return MAP[c] || c;
+  }
+
   function renderCharts(blocks) {
     const container = document.getElementById('charts-container');
     if (!container) return;
@@ -228,13 +246,13 @@
             higherIsBetter:   block.higherIsBetter !== false,
           });
           break;
-        case 'waffle':
-          WaffleRenderer.render({
-            container: chartEl,
-            segments:  block.segments || block.data,
-            unit:      block.unit,
-          });
+        case 'waffle': {
+          const segs = (block.segments || block.data || []).map(s => ({
+            ...s, color: normalizeColor(s.color),
+          }));
+          WaffleRenderer.render({ container: chartEl, segments: segs, unit: block.unit });
           break;
+        }
         case 'grouped-lollipop':
           GroupedLollipopRenderer.render({
             container: chartEl,
@@ -242,8 +260,8 @@
             seriesB:   block.seriesB,
             labelA:    block.labelA || 'Series A',
             labelB:    block.labelB || 'Series B',
-            colorA:    block.colorA || 'var(--indigo)',
-            colorB:    block.colorB || 'var(--saffron)',
+            colorA:    normalizeColor(block.colorA) || 'var(--indigo)',
+            colorB:    normalizeColor(block.colorB) || 'var(--saffron)',
             unit:      block.unit,
           });
           break;
@@ -349,10 +367,39 @@
           data: chart.countries,
           unit: chart.unit,
           source: chart.source,
+          indiaStats: chart.indiaStats,
         });
       }
       grid.appendChild(card);
     });
+
+    // India Snapshot — verdict chips
+    const snapCharts = ctx.charts.filter(c => c.indiaStats?.verdict);
+    if (snapCharts.length) {
+      const snap = document.createElement('div');
+      snap.className = 'india-snapshot';
+      snap.innerHTML = '<div class="is-header">India at a glance</div><div class="is-chips" id="is-chips"></div>';
+      const chips = snap.querySelector('#is-chips');
+      snapCharts.forEach(chart => {
+        const s = chart.indiaStats;
+        const indiaRow = chart.countries.find(c => c.code === 'IND');
+        const oecdRow  = chart.countries.find(c => c.code === 'OED');
+        if (!indiaRow) return;
+        const chip = document.createElement('div');
+        chip.className = `is-chip ${s.verdict}`;
+        const oecdSpan = oecdRow
+          ? `<span class="is-oecd">OECD ${FMT.auto(oecdRow.value, chart.unit)}</span>`
+          : '';
+        chip.innerHTML = `
+          <span class="is-label">${escHtml(chart.title)}</span>
+          <span class="is-india">${FMT.auto(indiaRow.value, chart.unit)}</span>
+          ${oecdSpan}
+          <span class="is-rank">#${s.rank}/${s.total}</span>
+        `;
+        chips.appendChild(chip);
+      });
+      section.appendChild(snap);
+    }
 
     container.appendChild(section);
   }

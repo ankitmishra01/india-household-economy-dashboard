@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-05-13T02:33:45.232Z"
+    "dataUpdatedAt": "2026-05-13T02:55:41.841Z"
   },
   "charts": [
     {
@@ -52,6 +52,12 @@
           "year": 2024
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 61972.8881275386,
+          "year": 2024
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 6252.11543199559,
@@ -75,7 +81,14 @@
           "value": 16385.5065565458,
           "year": 2024
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 10,
+        "total": 12,
+        "peerMedian": 20580.17,
+        "gap": -9420.19,
+        "verdict": "below"
+      }
     },
     {
       "title": "GDP per capita (nominal)",
@@ -148,7 +161,14 @@
           "value": 89662,
           "year": 2025
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 9,
+        "total": 11,
+        "peerMedian": 6810,
+        "gap": -4054,
+        "verdict": "below"
+      }
     },
     {
       "title": "Inflation rate",
@@ -221,7 +241,14 @@
           "value": 2.9,
           "year": 2025
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 4,
+        "total": 11,
+        "peerMedian": 2.75,
+        "gap": 1.65,
+        "verdict": "above"
+      }
     },
     {
       "title": "Gross national savings",
@@ -294,7 +321,14 @@
           "value": 18.5,
           "year": 2025
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 5,
+        "total": 11,
+        "peerMedian": 32.25,
+        "gap": 1.25,
+        "verdict": "above"
+      }
     }
   ]
 }

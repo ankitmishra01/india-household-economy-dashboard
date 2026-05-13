@@ -59,7 +59,7 @@ function buildDataJson(raw) {
       ].filter(Boolean),
       methodology: 'PLFS covers households in both rural and urban areas. LFPR = (Workers + Unemployed seeking work) / Population aged 15+.',
     },
-    mapData: statesF,
+    mapData: { indicator: 'Female LFPR (%)', unit: '%', nationalAverage: raw.national.female, states: statesF },
     tabs: [
       { label: 'Female LFPR', mapData: { indicator: 'Female LFPR (%)', unit: '%', nationalAverage: raw.national.female, states: statesF },
         chartBlocks: [{ id: 'lollipop-female', title: 'Female LFPR by State', type: 'lollipop', unit: '%', average: raw.national.female, higherIsBetter: true, data: sortedF.map(([c,s])=>({code:c,name:s.name,value:s.female})) }] },

@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-05-13T02:33:45.232Z"
+    "dataUpdatedAt": "2026-05-13T02:55:41.841Z"
   },
   "charts": [
     {
@@ -52,6 +52,12 @@
           "year": 2024
         },
         {
+          "code": "OED",
+          "name": "OECD Average",
+          "value": 97.19,
+          "year": 2021
+        },
+        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 27.2960071761925,
@@ -75,7 +81,14 @@
           "value": 70.5507533567583,
           "year": 2024
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 7,
+        "total": 12,
+        "peerMedian": 85.54,
+        "gap": 3.49,
+        "verdict": "above"
+      }
     },
     {
       "title": "Mobile broadband subs.",
@@ -142,7 +155,14 @@
           "value": 157.2,
           "year": 2023
         }
-      ]
+      ],
+      "indiaStats": {
+        "rank": 7,
+        "total": 10,
+        "peerMedian": 85.6,
+        "gap": -18.8,
+        "verdict": "below"
+      }
     }
   ]
 }
