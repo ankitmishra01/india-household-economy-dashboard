@@ -54,11 +54,13 @@
       manifest.pages.forEach(p => { pageMap[p.slug] = p; });
 
       manifest.themes.forEach(theme => {
-        const btn = document.createElement('button');
-        btn.className = (theme.id === currentTheme ? 'active' : '');
+        const firstSlug = theme.slugs[0];
+
+        // Theme label is a direct link to the first page — always navigates on click
+        const btn = document.createElement('a');
+        btn.href = firstSlug ? `/pages/${firstSlug}/` : '#';
+        btn.className = 'nav-theme-link' + (theme.id === currentTheme ? ' active' : '');
         btn.textContent = theme.label;
-        btn.setAttribute('aria-haspopup', 'true');
-        btn.setAttribute('aria-expanded', 'false');
 
         const dropdown = document.createElement('div');
         dropdown.className = 'nav-dropdown';
@@ -79,38 +81,6 @@
         item.appendChild(btn);
         item.appendChild(dropdown);
         nav.appendChild(item);
-
-        btn.addEventListener('click', function (e) {
-          e.stopPropagation();
-          const isOpen = item.classList.contains('open');
-          // Close all other open dropdowns
-          nav.querySelectorAll('.nav-item.open').forEach(el => {
-            el.classList.remove('open');
-            el.querySelector('button')?.setAttribute('aria-expanded', 'false');
-          });
-          if (!isOpen) {
-            item.classList.add('open');
-            btn.setAttribute('aria-expanded', 'true');
-          }
-        });
-      });
-
-      // Close dropdowns when clicking outside
-      document.addEventListener('click', function () {
-        nav.querySelectorAll('.nav-item.open').forEach(el => {
-          el.classList.remove('open');
-          el.querySelector('button')?.setAttribute('aria-expanded', 'false');
-        });
-      });
-
-      // Close on Escape
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') {
-          nav.querySelectorAll('.nav-item.open').forEach(el => {
-            el.classList.remove('open');
-            el.querySelector('button')?.setAttribute('aria-expanded', 'false');
-          });
-        }
       });
 
       inner.appendChild(nav);

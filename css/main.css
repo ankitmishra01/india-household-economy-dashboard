@@ -244,7 +244,7 @@ nav.links,
   justify-content: center;
 }
 nav.links a, nav.links button,
-.nav-item, .nav-btn {
+.nav-item, .nav-btn, .nav-theme-link {
   font-size: 13.5px;
   padding: 7px 12px;
   border-radius: 6px;
@@ -252,10 +252,12 @@ nav.links a, nav.links button,
   font-weight: 500;
   transition: background 0.15s, color 0.15s;
   white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
 }
 nav.links a:hover, nav.links button:hover,
-.nav-btn:hover { background: var(--paper-2); color: var(--ink); text-decoration: none; }
-nav.links .active,
+.nav-btn:hover, .nav-theme-link:hover { background: var(--paper-2); color: var(--ink); text-decoration: none; }
+nav.links .active, .nav-theme-link.active,
 .nav-item.active .nav-btn { color: var(--saffron); background: color-mix(in oklch, var(--saffron) 10%, transparent); }
 
 /* Dropdown (existing nav structure) */
@@ -273,8 +275,7 @@ nav.links .active,
   z-index: 200;
   box-shadow: 0 8px 32px -8px oklch(0 0 0 / 0.35);
 }
-.nav-item:hover .nav-dropdown,
-.nav-item.open .nav-dropdown { display: block; }
+.nav-item:hover .nav-dropdown { display: block; }
 .nav-dropdown a {
   display: block;
   padding: 9px 16px;
