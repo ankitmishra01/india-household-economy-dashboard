@@ -1,6 +1,7 @@
 {
   "meta": {
-    "note": "International comparison using World Bank, IMF, and ADB data. Most recent available year shown."
+    "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
+    "dataUpdatedAt": "2026-05-13T02:33:45.232Z"
   },
   "charts": [
     {
@@ -72,6 +73,79 @@
           "code": "VNM",
           "name": "Vietnam",
           "value": 72.778,
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "title": "Self-employed workers",
+      "unit": "% of employment",
+      "source": "World Bank Open Data",
+      "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 61.0415601988916,
+          "year": 2025
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 37.6680211606478,
+          "year": 2025
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 53.3370094781928,
+          "year": 2025
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 74.903099358,
+          "year": 2025
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 9.05081758353661,
+          "year": 2025
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 22.6695991993473,
+          "year": 2025
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 42.0703000220276,
+          "year": 2025
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 57.0024730729602,
+          "year": 2025
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 50.6978613523784,
+          "year": 2025
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 6.07375577308702,
+          "year": 2025
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 53.346789010947,
           "year": 2025
         }
       ]

@@ -1583,6 +1583,16 @@ footer.foot,
   color: var(--ink-2);
   margin-bottom: 12px;
 }
+.gc-updated {
+  font-size: 0.68rem;
+  color: var(--ink-3);
+  background: color-mix(in oklch, var(--ink) 6%, transparent);
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin-left: 8px;
+  vertical-align: middle;
+  font-weight: 400;
+}
 
 /* ================================================================
    RESPONSIVE

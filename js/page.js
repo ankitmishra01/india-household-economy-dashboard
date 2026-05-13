@@ -106,31 +106,31 @@
       renderStatePanel(panelList, mapData);
     }
 
-    // Use tile cartogram when TilemapRenderer is available
-    if (typeof TilemapRenderer !== 'undefined') {
-      container.innerHTML = '';
-      TilemapRenderer.render({
+    // Geographic choropleth is the primary map; tile cartogram is fallback only
+    ChoroplethRenderer.loadGeo().then(() => {
+      ChoroplethRenderer.render({
         container,
         stateData: mapData.states || {},
         unit: mapData.unit,
         indicator: mapData.indicator,
-        avg: mapData.nationalAverage,
         onStateClick: (code) => { highlightPanelState(code); },
       });
-    } else {
-      // Fallback: choropleth
-      ChoroplethRenderer.loadGeo().then(() => {
-        ChoroplethRenderer.render({
+    }).catch(err => {
+      // Fallback to tile cartogram if GeoJSON fails to load
+      if (typeof TilemapRenderer !== 'undefined') {
+        container.innerHTML = '';
+        TilemapRenderer.render({
           container,
           stateData: mapData.states || {},
           unit: mapData.unit,
           indicator: mapData.indicator,
+          avg: mapData.nationalAverage,
           onStateClick: (code) => { highlightPanelState(code); },
         });
-      }).catch(err => {
-        container.innerHTML = `<div style="padding:24px;color:var(--ink-3)">Map unavailable: ${err.message}</div>`;
-      });
-    }
+      } else {
+        container.innerHTML = `<div style="padding:24px;color:var(--ink-3)">Map unavailable: ${escHtml(err.message)}</div>`;
+      }
+    });
   }
 
   function renderStatePanel(container, mapData) {
@@ -170,11 +170,11 @@
 
       row.addEventListener('mouseenter', () => {
         highlightPanelState(code);
-        if (typeof TilemapRenderer !== 'undefined') TilemapRenderer.highlight(code);
+        ChoroplethRenderer.highlight(code);
       });
       row.addEventListener('mouseleave', () => {
         document.querySelectorAll('.panel-state-row').forEach(r => r.classList.remove('highlighted'));
-        if (typeof TilemapRenderer !== 'undefined') TilemapRenderer.clearHighlight();
+        ChoroplethRenderer.clearHighlight();
       });
       container.appendChild(row);
     });
@@ -327,8 +327,11 @@
     const section = document.createElement('div');
     section.className = 'global-context-section';
 
+    const updated = ctx.meta?.dataUpdatedAt
+      ? `<span class="gc-updated">Updated ${new Date(ctx.meta.dataUpdatedAt).toLocaleDateString('en-IN', { year: 'numeric', month: 'short' })}</span>`
+      : '';
     section.innerHTML = `
-      <h2>India in Global Context</h2>
+      <h2>India in Global Context${updated}</h2>
       <p class="gc-subtitle">How India compares with key Asian economies and global benchmarks.</p>
       <div class="gc-cards-grid" id="gc-cards"></div>
     `;

@@ -1,8 +1,155 @@
 {
   "meta": {
-    "note": "International comparison using World Bank, IMF, and ADB data. Most recent available year shown."
+    "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
+    "dataUpdatedAt": "2026-05-13T02:33:45.232Z"
   },
   "charts": [
+    {
+      "title": "Basic drinking water access",
+      "unit": "% of population",
+      "source": "World Bank Open Data",
+      "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 98.7825421934741,
+          "year": 2024
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 96.1224151867516,
+          "year": 2024
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 89.008759557411,
+          "year": 2024
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 95.7247373523918,
+          "year": 2024
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 99.1831679675454,
+          "year": 2024
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 100,
+          "year": 2024
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 90.2138440260395,
+          "year": 2024
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 90.6932992273275,
+          "year": 2024
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 100,
+          "year": 2024
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 99.9804443465812,
+          "year": 2024
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 98.761246653694,
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "title": "Basic sanitation access",
+      "unit": "% of population",
+      "source": "World Bank Open Data",
+      "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 67.6171751221237,
+          "year": 2024
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 97.2718787578263,
+          "year": 2024
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 88.2031685658499,
+          "year": 2024
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 83.380872478201,
+          "year": 2024
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 99.9433104207437,
+          "year": 2024
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 99.7293536055989,
+          "year": 2024
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 95.3530207374149,
+          "year": 2024
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 71.8828600416756,
+          "year": 2024
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 99.3504878190651,
+          "year": 2024
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 99.6182734760609,
+          "year": 2024
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 95.447026934425,
+          "year": 2024
+        }
+      ]
+    },
     {
       "title": "Access to electricity",
       "unit": "% of population",

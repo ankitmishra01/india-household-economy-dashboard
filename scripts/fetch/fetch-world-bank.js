@@ -34,7 +34,8 @@ const fs   = require('fs');
 const path = require('path');
 const https = require('https');
 
-const OUT_PATH = path.join(__dirname, '..', '..', 'data', 'external', 'world-bank.json');
+const OUT_PATH  = path.join(__dirname, '..', '..', 'data', 'external', 'world-bank.json');
+const META_PATH = path.join(__dirname, '..', '..', 'data', 'external', 'refresh-metadata.json');
 
 const INDICATORS = {
   'NY.GDP.PCAP.PP.CD':  { label: 'GDP per capita, PPP', unit: 'current international $' },
@@ -51,12 +52,22 @@ const INDICATORS = {
   'SH.XPD.CHEX.GD.ZS':  { label: 'Health expenditure', unit: '% of GDP' },
   'IT.NET.USER.ZS':     { label: 'Internet users', unit: '% of population' },
   'FX.OWN.TOTL.ZS':     { label: 'Financial account ownership', unit: '% of 15+' },
-  'EN.ATM.CO2E.PC':     { label: 'CO₂ emissions', unit: 'metric tons per capita' },
+  'EN.ATM.CO2E.KT':     { label: 'CO₂ emissions', unit: 'kilotonnes' },
   'SP.POP.TOTL':        { label: 'Population', unit: 'people' },
   'SP.URB.TOTL.IN.ZS':  { label: 'Urban population share', unit: '% of total' },
   'SP.POP.GROW':        { label: 'Population growth', unit: '% annual' },
   'SG.GEN.PARL.ZS':     { label: 'Women in parliament', unit: '% of seats' },
   'SP.DYN.TFRT.IN':     { label: 'Fertility rate', unit: 'births per woman' },
+  'SL.EMP.SELF.ZS':     { label: 'Self-employed workers', unit: '% of total employment' },
+  'SL.UEM.TOTL.FE.ZS':  { label: 'Female unemployment rate', unit: '% of female labour force' },
+  'SL.TLF.CACT.FE.ZS':  { label: 'Female labour force participation', unit: '% of female pop. 15+' },
+  'SE.PRM.NENR':        { label: 'Net enrollment rate, primary', unit: '%' },
+  'SE.SEC.NENR':        { label: 'Net enrollment rate, secondary', unit: '%' },
+  'SH.H2O.BASW.ZS':     { label: 'Basic drinking water access', unit: '% of population' },
+  'SH.STA.BASS.ZS':     { label: 'Basic sanitation access', unit: '% of population' },
+  'SH.IMM.MEAS':        { label: 'Immunization, measles', unit: '% children 12–23 months' },
+  'EG.FEC.RNEW.ZS':     { label: 'Renewable energy consumption', unit: '% of total final energy' },
+  'SP.DYN.LE00.FE.IN':  { label: 'Life expectancy, female', unit: 'years' },
 };
 
 // Asian peers for comparison context
@@ -175,6 +186,14 @@ async function main() {
   fs.writeFileSync(OUT_PATH, JSON.stringify(result, null, 2), 'utf8');
   console.log(`\n✓ World Bank data saved to ${path.relative(process.cwd(), OUT_PATH)}`);
   console.log(`  India context: ${Object.keys(result.indiaContext).length} indicators`);
+
+  // Update shared refresh metadata
+  const existing = fs.existsSync(META_PATH) ? JSON.parse(fs.readFileSync(META_PATH, 'utf8')) : {};
+  existing['world-bank'] = {
+    fetchedAt: result.meta.fetchedAt,
+    indicatorCount: Object.keys(result.indicators).length,
+  };
+  fs.writeFileSync(META_PATH, JSON.stringify(existing, null, 2), 'utf8');
 }
 
 main().catch(err => {

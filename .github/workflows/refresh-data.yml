@@ -1,0 +1,38 @@
+name: Refresh International Data
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'   # Every Monday 08:00 UTC
+  workflow_dispatch:        # Manual trigger from Actions UI
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch World Bank data
+        run: node scripts/fetch/fetch-world-bank.js
+
+      - name: Fetch WHO Global Health Observatory data
+        run: node scripts/fetch/fetch-who.js
+
+      - name: Rebuild global context comparison charts
+        run: node scripts/build-global-context.js
+
+      - name: Commit and push if data changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/external/ data/pages/*/global-context.json
+          git diff --staged --quiet && echo "No changes to commit" && exit 0
+          git commit -m "chore: refresh international data [$(date -u +%Y-%m-%d)]"
+          git push

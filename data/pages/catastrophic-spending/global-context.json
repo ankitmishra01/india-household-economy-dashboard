@@ -1,6 +1,7 @@
 {
   "meta": {
-    "note": "International comparison using World Bank, IMF, and ADB data. Most recent available year shown."
+    "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
+    "dataUpdatedAt": "2026-05-13T02:33:45.232Z"
   },
   "charts": [
     {
@@ -134,6 +135,79 @@
           "name": "Vietnam",
           "value": 36.1,
           "year": 2022
+        }
+      ]
+    },
+    {
+      "title": "UHC Service Coverage",
+      "unit": "index (0–100)",
+      "source": "WHO Global Health Observatory",
+      "countries": [
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 72,
+          "year": 2023
+        },
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 54,
+          "year": 2023
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 69,
+          "year": 2023
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 85,
+          "year": 2023
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 56,
+          "year": 2023
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 71,
+          "year": 2023
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 67,
+          "year": 2023
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 88,
+          "year": 2023
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 88,
+          "year": 2023
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 82,
+          "year": 2023
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 86,
+          "year": 2023
         }
       ]
     }

@@ -1,6 +1,7 @@
 {
   "meta": {
-    "note": "International comparison using World Bank, IMF, and ADB data. Most recent available year shown."
+    "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
+    "dataUpdatedAt": "2026-05-13T02:33:45.232Z"
   },
   "charts": [
     {
@@ -72,6 +73,79 @@
           "code": "VNM",
           "name": "Vietnam",
           "value": 72.778,
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "title": "Female labour force participation",
+      "unit": "% of female pop. 15+",
+      "source": "World Bank Open Data",
+      "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 38.649,
+          "year": 2025
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 59.148,
+          "year": 2025
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 53.72,
+          "year": 2025
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 32.425,
+          "year": 2025
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 55.905,
+          "year": 2025
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 56.782,
+          "year": 2025
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 30.992,
+          "year": 2025
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 24.046,
+          "year": 2025
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 58.963,
+          "year": 2025
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 56.343,
+          "year": 2025
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 68.551,
           "year": 2025
         }
       ]

@@ -1,0 +1,424 @@
+{
+  "meta": {
+    "source": "WHO Global Health Observatory",
+    "sourceUrl": "https://www.who.int/data/gho",
+    "fetchedAt": "2026-05-13T02:33:07.477Z",
+    "note": "Most recent available year per country. Sex-disaggregated indicators filtered to both-sexes (BTSX)."
+  },
+  "countries": {
+    "IND": "India",
+    "CHN": "China",
+    "BGD": "Bangladesh",
+    "PAK": "Pakistan",
+    "LKA": "Sri Lanka",
+    "IDN": "Indonesia",
+    "VNM": "Vietnam",
+    "THA": "Thailand",
+    "KOR": "Korea",
+    "JPN": "Japan",
+    "USA": "United States"
+  },
+  "indicators": {
+    "WHOSIS_000001": {
+      "label": "Life expectancy at birth",
+      "unit": "years",
+      "dim1": "SEX_BTSX",
+      "data": {
+        "VNM": {
+          "value": 73.8,
+          "year": 2021
+        },
+        "BGD": {
+          "value": 73.1,
+          "year": 2021
+        },
+        "LKA": {
+          "value": 77.23,
+          "year": 2021
+        },
+        "USA": {
+          "value": 76.37,
+          "year": 2021
+        },
+        "PAK": {
+          "value": 65.99,
+          "year": 2021
+        },
+        "JPN": {
+          "value": 84.46,
+          "year": 2021
+        },
+        "CHN": {
+          "value": 77.62,
+          "year": 2021
+        },
+        "KOR": {
+          "value": 83.8,
+          "year": 2021
+        },
+        "IDN": {
+          "value": 68.26,
+          "year": 2021
+        },
+        "IND": {
+          "value": 67.31,
+          "year": 2021
+        },
+        "THA": {
+          "value": 75.29,
+          "year": 2021
+        }
+      }
+    },
+    "WHS4_100": {
+      "label": "Maternal mortality ratio",
+      "unit": "per 100,000 live births",
+      "dim1": null,
+      "data": {
+        "IND": {
+          "value": 94,
+          "year": 2024
+        },
+        "CHN": {
+          "value": 97,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 87,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 97,
+          "year": 2024
+        },
+        "THA": {
+          "value": 92,
+          "year": 2024
+        },
+        "JPN": {
+          "value": 99,
+          "year": 2024
+        },
+        "BGD": {
+          "value": 97,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 97,
+          "year": 2024
+        },
+        "USA": {
+          "value": 94,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 97,
+          "year": 2024
+        },
+        "IDN": {
+          "value": 78,
+          "year": 2024
+        }
+      }
+    },
+    "MDG_0000000026": {
+      "label": "Under-5 mortality rate",
+      "unit": "per 1,000 live births",
+      "dim1": null,
+      "data": {
+        "CHN": {
+          "value": 16.25,
+          "year": 2023
+        },
+        "VNM": {
+          "value": 47.61,
+          "year": 2023
+        },
+        "USA": {
+          "value": 16.63,
+          "year": 2023
+        },
+        "KOR": {
+          "value": 3.79,
+          "year": 2023
+        },
+        "BGD": {
+          "value": 115.11,
+          "year": 2023
+        },
+        "THA": {
+          "value": 34.45,
+          "year": 2023
+        },
+        "LKA": {
+          "value": 18.32,
+          "year": 2023
+        },
+        "IND": {
+          "value": 80.48,
+          "year": 2023
+        },
+        "IDN": {
+          "value": 140.5,
+          "year": 2023
+        },
+        "JPN": {
+          "value": 3.08,
+          "year": 2023
+        },
+        "PAK": {
+          "value": 155.03,
+          "year": 2023
+        }
+      }
+    },
+    "UHC_INDEX_REPORTED": {
+      "label": "UHC Service Coverage Index",
+      "unit": "index (0–100)",
+      "dim1": null,
+      "data": {
+        "LKA": {
+          "value": 72,
+          "year": 2023
+        },
+        "BGD": {
+          "value": 54,
+          "year": 2023
+        },
+        "IND": {
+          "value": 69,
+          "year": 2023
+        },
+        "CHN": {
+          "value": 85,
+          "year": 2023
+        },
+        "PAK": {
+          "value": 56,
+          "year": 2023
+        },
+        "VNM": {
+          "value": 71,
+          "year": 2023
+        },
+        "IDN": {
+          "value": 67,
+          "year": 2023
+        },
+        "KOR": {
+          "value": 88,
+          "year": 2023
+        },
+        "USA": {
+          "value": 88,
+          "year": 2023
+        },
+        "THA": {
+          "value": 82,
+          "year": 2023
+        },
+        "JPN": {
+          "value": 86,
+          "year": 2023
+        }
+      }
+    },
+    "NUTSTUNTINGPREV": {
+      "label": "Stunting prevalence",
+      "unit": "% of children under 5",
+      "dim1": null,
+      "data": {
+        "VNM": {
+          "value": 17.9,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 10.1,
+          "year": 2024
+        },
+        "IDN": {
+          "value": 21.2,
+          "year": 2024
+        },
+        "BGD": {
+          "value": 24.4,
+          "year": 2024
+        },
+        "THA": {
+          "value": 13.1,
+          "year": 2024
+        },
+        "IND": {
+          "value": 31.8,
+          "year": 2024
+        },
+        "JPN": {
+          "value": 4.5,
+          "year": 2024
+        },
+        "CHN": {
+          "value": 4.5,
+          "year": 2024
+        },
+        "USA": {
+          "value": 4.7,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 32.6,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 1.8,
+          "year": 2024
+        }
+      }
+    },
+    "WHS8_110": {
+      "label": "DTP3 immunization coverage",
+      "unit": "% of children",
+      "dim1": null,
+      "data": {
+        "BGD": {
+          "value": 96,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 97,
+          "year": 2024
+        },
+        "CHN": {
+          "value": 95,
+          "year": 2024
+        },
+        "IND": {
+          "value": 97,
+          "year": 2024
+        },
+        "JPN": {
+          "value": 95,
+          "year": 2024
+        },
+        "IDN": {
+          "value": 85,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 86,
+          "year": 2024
+        },
+        "THA": {
+          "value": 93,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 99,
+          "year": 2024
+        },
+        "USA": {
+          "value": 92,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 98,
+          "year": 2024
+        }
+      }
+    },
+    "NCD_BMI_30C": {
+      "label": "Obesity prevalence (adults)",
+      "unit": "% of adults",
+      "dim1": "SEX_BTSX",
+      "data": {
+        "BGD": {
+          "value": 5.29,
+          "year": 2022
+        },
+        "CHN": {
+          "value": 8.21,
+          "year": 2022
+        },
+        "LKA": {
+          "value": 10.61,
+          "year": 2022
+        },
+        "IND": {
+          "value": 7.21,
+          "year": 2022
+        },
+        "IDN": {
+          "value": 11.5,
+          "year": 2022
+        },
+        "VNM": {
+          "value": 2.08,
+          "year": 2022
+        },
+        "PAK": {
+          "value": 21.85,
+          "year": 2022
+        },
+        "THA": {
+          "value": 14.51,
+          "year": 2022
+        },
+        "USA": {
+          "value": 42.87,
+          "year": 2022
+        },
+        "KOR": {
+          "value": 6.73,
+          "year": 2022
+        },
+        "JPN": {
+          "value": 4.94,
+          "year": 2022
+        }
+      }
+    }
+  },
+  "indiaContext": {
+    "WHOSIS_000001": {
+      "label": "Life expectancy at birth",
+      "unit": "years",
+      "value": 67.31,
+      "year": 2021
+    },
+    "WHS4_100": {
+      "label": "Maternal mortality ratio",
+      "unit": "per 100,000 live births",
+      "value": 94,
+      "year": 2024
+    },
+    "MDG_0000000026": {
+      "label": "Under-5 mortality rate",
+      "unit": "per 1,000 live births",
+      "value": 80.48,
+      "year": 2023
+    },
+    "UHC_INDEX_REPORTED": {
+      "label": "UHC Service Coverage Index",
+      "unit": "index (0–100)",
+      "value": 69,
+      "year": 2023
+    },
+    "NUTSTUNTINGPREV": {
+      "label": "Stunting prevalence",
+      "unit": "% of children under 5",
+      "value": 31.8,
+      "year": 2024
+    },
+    "WHS8_110": {
+      "label": "DTP3 immunization coverage",
+      "unit": "% of children",
+      "value": 97,
+      "year": 2024
+    },
+    "NCD_BMI_30C": {
+      "label": "Obesity prevalence (adults)",
+      "unit": "% of adults",
+      "value": 7.21,
+      "year": 2022
+    }
+  }
+}

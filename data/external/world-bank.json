@@ -2,7 +2,7 @@
   "meta": {
     "source": "World Bank Open Data",
     "sourceUrl": "https://data.worldbank.org",
-    "fetchedAt": "2026-05-12T20:18:23.297Z",
+    "fetchedAt": "2026-05-13T02:33:45.232Z",
     "note": "Most recent available value within last 5 years. Values may differ from dashboard page data which uses India-specific sources."
   },
   "countries": {
@@ -777,9 +777,9 @@
         }
       }
     },
-    "EN.ATM.CO2E.PC": {
+    "EN.ATM.CO2E.KT": {
       "label": "CO₂ emissions",
-      "unit": "metric tons per capita",
+      "unit": "kilotonnes",
       "data": {}
     },
     "SP.POP.TOTL": {
@@ -1071,6 +1071,546 @@
           "year": 2024
         }
       }
+    },
+    "SL.EMP.SELF.ZS": {
+      "label": "Self-employed workers",
+      "unit": "% of total employment",
+      "data": {
+        "BGD": {
+          "value": 61.0415601988916,
+          "year": 2025
+        },
+        "CHN": {
+          "value": 37.6680211606478,
+          "year": 2025
+        },
+        "IDN": {
+          "value": 53.3370094781928,
+          "year": 2025
+        },
+        "IND": {
+          "value": 74.903099358,
+          "year": 2025
+        },
+        "JPN": {
+          "value": 9.05081758353661,
+          "year": 2025
+        },
+        "KOR": {
+          "value": 22.6695991993473,
+          "year": 2025
+        },
+        "LKA": {
+          "value": 42.0703000220276,
+          "year": 2025
+        },
+        "NPL": {
+          "value": 78.5827665110785,
+          "year": 2025
+        },
+        "PAK": {
+          "value": 57.0024730729602,
+          "year": 2025
+        },
+        "PHL": {
+          "value": 36.1484483518678,
+          "year": 2025
+        },
+        "THA": {
+          "value": 50.6978613523784,
+          "year": 2025
+        },
+        "USA": {
+          "value": 6.07375577308702,
+          "year": 2025
+        },
+        "VNM": {
+          "value": 53.346789010947,
+          "year": 2025
+        }
+      }
+    },
+    "SL.UEM.TOTL.FE.ZS": {
+      "label": "Female unemployment rate",
+      "unit": "% of female labour force",
+      "data": {
+        "BGD": {
+          "value": 3.673,
+          "year": 2025
+        },
+        "CHN": {
+          "value": 4.005,
+          "year": 2025
+        },
+        "IDN": {
+          "value": 3.014,
+          "year": 2025
+        },
+        "IND": {
+          "value": 4.141,
+          "year": 2025
+        },
+        "JPN": {
+          "value": 2.297,
+          "year": 2025
+        },
+        "KOR": {
+          "value": 2.692,
+          "year": 2025
+        },
+        "LKA": {
+          "value": 6.476,
+          "year": 2025
+        },
+        "NPL": {
+          "value": 11.819,
+          "year": 2025
+        },
+        "PAK": {
+          "value": 6.939,
+          "year": 2025
+        },
+        "PHL": {
+          "value": 2.475,
+          "year": 2025
+        },
+        "THA": {
+          "value": 0.814,
+          "year": 2025
+        },
+        "USA": {
+          "value": 4.179,
+          "year": 2025
+        },
+        "VNM": {
+          "value": 1.362,
+          "year": 2025
+        }
+      }
+    },
+    "SL.TLF.CACT.FE.ZS": {
+      "label": "Female labour force participation",
+      "unit": "% of female pop. 15+",
+      "data": {
+        "BGD": {
+          "value": 38.649,
+          "year": 2025
+        },
+        "CHN": {
+          "value": 59.148,
+          "year": 2025
+        },
+        "IDN": {
+          "value": 53.72,
+          "year": 2025
+        },
+        "IND": {
+          "value": 32.425,
+          "year": 2025
+        },
+        "JPN": {
+          "value": 55.905,
+          "year": 2025
+        },
+        "KOR": {
+          "value": 56.782,
+          "year": 2025
+        },
+        "LKA": {
+          "value": 30.992,
+          "year": 2025
+        },
+        "NPL": {
+          "value": 27.473,
+          "year": 2025
+        },
+        "PAK": {
+          "value": 24.046,
+          "year": 2025
+        },
+        "PHL": {
+          "value": 50.489,
+          "year": 2025
+        },
+        "THA": {
+          "value": 58.963,
+          "year": 2025
+        },
+        "USA": {
+          "value": 56.343,
+          "year": 2025
+        },
+        "VNM": {
+          "value": 68.551,
+          "year": 2025
+        }
+      }
+    },
+    "SE.PRM.NENR": {
+      "label": "Net enrollment rate, primary",
+      "unit": "%",
+      "data": {
+        "IDN": {
+          "value": 93.4963,
+          "year": 2018
+        },
+        "KOR": {
+          "value": 97.25516,
+          "year": 2017
+        },
+        "LKA": {
+          "value": 99.10711,
+          "year": 2018
+        },
+        "NPL": {
+          "value": 96.2984,
+          "year": 2019
+        },
+        "PAK": {
+          "value": 67.5748,
+          "year": 2018
+        },
+        "PHL": {
+          "value": 93.7756,
+          "year": 2017
+        },
+        "USA": {
+          "value": 94.62633,
+          "year": 2017
+        }
+      }
+    },
+    "SE.SEC.NENR": {
+      "label": "Net enrollment rate, secondary",
+      "unit": "%",
+      "data": {
+        "BGD": {
+          "value": 66.54968,
+          "year": 2018
+        },
+        "IDN": {
+          "value": 78.73112,
+          "year": 2018
+        },
+        "KOR": {
+          "value": 98.00711,
+          "year": 2017
+        },
+        "LKA": {
+          "value": 91.03783,
+          "year": 2018
+        },
+        "NPL": {
+          "value": 61.87253,
+          "year": 2019
+        },
+        "PAK": {
+          "value": 37.40039,
+          "year": 2018
+        },
+        "PHL": {
+          "value": 65.55881,
+          "year": 2015
+        },
+        "THA": {
+          "value": 77.27069,
+          "year": 2015
+        },
+        "USA": {
+          "value": 92.45022,
+          "year": 2017
+        }
+      }
+    },
+    "SH.H2O.BASW.ZS": {
+      "label": "Basic drinking water access",
+      "unit": "% of population",
+      "data": {
+        "BGD": {
+          "value": 98.7825421934741,
+          "year": 2024
+        },
+        "CHN": {
+          "value": 96.1224151867516,
+          "year": 2024
+        },
+        "IDN": {
+          "value": 89.008759557411,
+          "year": 2024
+        },
+        "IND": {
+          "value": 95.7247373523918,
+          "year": 2024
+        },
+        "JPN": {
+          "value": 99.1831679675454,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 100,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 90.2138440260395,
+          "year": 2024
+        },
+        "NPL": {
+          "value": 93.6401246842117,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 90.6932992273275,
+          "year": 2024
+        },
+        "PHL": {
+          "value": 95.8592214925506,
+          "year": 2024
+        },
+        "THA": {
+          "value": 100,
+          "year": 2024
+        },
+        "USA": {
+          "value": 99.9804443465812,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 98.761246653694,
+          "year": 2024
+        }
+      }
+    },
+    "SH.STA.BASS.ZS": {
+      "label": "Basic sanitation access",
+      "unit": "% of population",
+      "data": {
+        "BGD": {
+          "value": 67.6171751221237,
+          "year": 2024
+        },
+        "CHN": {
+          "value": 97.2718787578263,
+          "year": 2024
+        },
+        "IDN": {
+          "value": 88.2031685658499,
+          "year": 2024
+        },
+        "IND": {
+          "value": 83.380872478201,
+          "year": 2024
+        },
+        "JPN": {
+          "value": 99.9433104207437,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 99.7293536055989,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 95.3530207374149,
+          "year": 2024
+        },
+        "NPL": {
+          "value": 86.0259805937649,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 71.8828600416756,
+          "year": 2024
+        },
+        "PHL": {
+          "value": 87.1527398416478,
+          "year": 2024
+        },
+        "THA": {
+          "value": 99.3504878190651,
+          "year": 2024
+        },
+        "USA": {
+          "value": 99.6182734760609,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 95.447026934425,
+          "year": 2024
+        }
+      }
+    },
+    "SH.IMM.MEAS": {
+      "label": "Immunization, measles",
+      "unit": "% children 12–23 months",
+      "data": {
+        "BGD": {
+          "value": 96,
+          "year": 2024
+        },
+        "CHN": {
+          "value": 95,
+          "year": 2024
+        },
+        "IDN": {
+          "value": 85,
+          "year": 2024
+        },
+        "IND": {
+          "value": 97,
+          "year": 2024
+        },
+        "JPN": {
+          "value": 95,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 97,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 99,
+          "year": 2024
+        },
+        "NPL": {
+          "value": 97,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 86,
+          "year": 2024
+        },
+        "PHL": {
+          "value": 80,
+          "year": 2024
+        },
+        "THA": {
+          "value": 93,
+          "year": 2024
+        },
+        "USA": {
+          "value": 92,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 98,
+          "year": 2024
+        }
+      }
+    },
+    "EG.FEC.RNEW.ZS": {
+      "label": "Renewable energy consumption",
+      "unit": "% of total final energy",
+      "data": {
+        "BGD": {
+          "value": 25,
+          "year": 2021
+        },
+        "CHN": {
+          "value": 15.2,
+          "year": 2021
+        },
+        "IDN": {
+          "value": 20.2,
+          "year": 2021
+        },
+        "IND": {
+          "value": 34.9,
+          "year": 2021
+        },
+        "JPN": {
+          "value": 8.8,
+          "year": 2021
+        },
+        "KOR": {
+          "value": 3.6,
+          "year": 2021
+        },
+        "LKA": {
+          "value": 48.8,
+          "year": 2021
+        },
+        "NPL": {
+          "value": 73.7,
+          "year": 2021
+        },
+        "PAK": {
+          "value": 41.6,
+          "year": 2021
+        },
+        "PHL": {
+          "value": 28,
+          "year": 2021
+        },
+        "THA": {
+          "value": 19,
+          "year": 2021
+        },
+        "USA": {
+          "value": 10.9,
+          "year": 2021
+        },
+        "VNM": {
+          "value": 24.2,
+          "year": 2021
+        }
+      }
+    },
+    "SP.DYN.LE00.FE.IN": {
+      "label": "Life expectancy, female",
+      "unit": "years",
+      "data": {
+        "BGD": {
+          "value": 76.667,
+          "year": 2024
+        },
+        "CHN": {
+          "value": 80.966,
+          "year": 2024
+        },
+        "IDN": {
+          "value": 73.434,
+          "year": 2024
+        },
+        "IND": {
+          "value": 73.856,
+          "year": 2024
+        },
+        "JPN": {
+          "value": 87.13,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 86.6,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 80.746,
+          "year": 2024
+        },
+        "NPL": {
+          "value": 72.138,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 70.322,
+          "year": 2024
+        },
+        "PHL": {
+          "value": 72.962,
+          "year": 2024
+        },
+        "THA": {
+          "value": 80.978,
+          "year": 2024
+        },
+        "USA": {
+          "value": 81.4,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 79.382,
+          "year": 2024
+        }
+      }
     }
   },
   "indiaContext": {
@@ -1186,6 +1726,54 @@
       "label": "Fertility rate",
       "unit": "births per woman",
       "value": 1.962,
+      "year": 2024
+    },
+    "SL.EMP.SELF.ZS": {
+      "label": "Self-employed workers",
+      "unit": "% of total employment",
+      "value": 74.903099358,
+      "year": 2025
+    },
+    "SL.UEM.TOTL.FE.ZS": {
+      "label": "Female unemployment rate",
+      "unit": "% of female labour force",
+      "value": 4.141,
+      "year": 2025
+    },
+    "SL.TLF.CACT.FE.ZS": {
+      "label": "Female labour force participation",
+      "unit": "% of female pop. 15+",
+      "value": 32.425,
+      "year": 2025
+    },
+    "SH.H2O.BASW.ZS": {
+      "label": "Basic drinking water access",
+      "unit": "% of population",
+      "value": 95.7247373523918,
+      "year": 2024
+    },
+    "SH.STA.BASS.ZS": {
+      "label": "Basic sanitation access",
+      "unit": "% of population",
+      "value": 83.380872478201,
+      "year": 2024
+    },
+    "SH.IMM.MEAS": {
+      "label": "Immunization, measles",
+      "unit": "% children 12–23 months",
+      "value": 97,
+      "year": 2024
+    },
+    "EG.FEC.RNEW.ZS": {
+      "label": "Renewable energy consumption",
+      "unit": "% of total final energy",
+      "value": 34.9,
+      "year": 2021
+    },
+    "SP.DYN.LE00.FE.IN": {
+      "label": "Life expectancy, female",
+      "unit": "years",
+      "value": 73.856,
       "year": 2024
     }
   }

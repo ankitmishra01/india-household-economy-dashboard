@@ -1,6 +1,7 @@
 {
   "meta": {
-    "note": "International comparison using World Bank, IMF, and ADB data. Most recent available year shown."
+    "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
+    "dataUpdatedAt": "2026-05-13T02:33:45.232Z"
   },
   "charts": [
     {
@@ -189,6 +190,79 @@
           "name": "Vietnam",
           "value": 36.1,
           "year": 2022
+        }
+      ]
+    },
+    {
+      "title": "Life expectancy at birth",
+      "unit": "years",
+      "source": "WHO Global Health Observatory",
+      "countries": [
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 73.8,
+          "year": 2021
+        },
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 73.1,
+          "year": 2021
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 77.23,
+          "year": 2021
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 76.37,
+          "year": 2021
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 65.99,
+          "year": 2021
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 84.46,
+          "year": 2021
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 77.62,
+          "year": 2021
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 83.8,
+          "year": 2021
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 68.26,
+          "year": 2021
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 67.31,
+          "year": 2021
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 75.29,
+          "year": 2021
         }
       ]
     }

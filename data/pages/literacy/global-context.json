@@ -1,6 +1,7 @@
 {
   "meta": {
-    "note": "International comparison using World Bank, IMF, and ADB data. Most recent available year shown."
+    "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
+    "dataUpdatedAt": "2026-05-13T02:33:45.232Z"
   },
   "charts": [
     {
@@ -55,6 +56,92 @@
           "name": "Vietnam",
           "value": 96.129997253418,
           "year": 2022
+        }
+      ]
+    },
+    {
+      "title": "Primary enrollment rate",
+      "unit": "%",
+      "source": "World Bank Open Data",
+      "countries": [
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 93.4963,
+          "year": 2018
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 97.25516,
+          "year": 2017
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 99.10711,
+          "year": 2018
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 67.5748,
+          "year": 2018
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 94.62633,
+          "year": 2017
+        }
+      ]
+    },
+    {
+      "title": "Secondary enrollment",
+      "unit": "%",
+      "source": "World Bank Open Data",
+      "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 66.54968,
+          "year": 2018
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 78.73112,
+          "year": 2018
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 98.00711,
+          "year": 2017
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 91.03783,
+          "year": 2018
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 37.40039,
+          "year": 2018
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 77.27069,
+          "year": 2015
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 92.45022,
+          "year": 2017
         }
       ]
     },

@@ -6,11 +6,16 @@
  *
  * Usage:
  *   ChoroplethRenderer.render({ container, stateData, unit, indicator, onStateClick })
+ *   ChoroplethRenderer.highlight(stateCode)
+ *   ChoroplethRenderer.clearHighlight()
  */
 const ChoroplethRenderer = (function () {
 
-  let _geojson = null;
-  let _loadPromise = null;
+  let _geojson       = null;
+  let _loadPromise   = null;
+  let _g             = null;   // current D3 <g> selection
+  let _geoNameToData = null;   // current geo-name → {code, value, rank} map
+  let _unit          = '';
 
   function loadGeo() {
     if (_geojson) return Promise.resolve(_geojson);
@@ -33,6 +38,7 @@ const ChoroplethRenderer = (function () {
    */
   function render(opts) {
     const { container, stateData, unit, indicator, onStateClick, higherIsBetter = true } = opts;
+    _unit = unit || '';
 
     // Remove skeleton
     const skeleton = container.querySelector('#map-skeleton');
@@ -40,6 +46,8 @@ const ChoroplethRenderer = (function () {
 
     // Clear any existing SVG
     d3.select(container).selectAll('svg').remove();
+    _g = null;
+    _geoNameToData = null;
 
     const width  = container.clientWidth  || 600;
     const height = container.clientHeight || 500;
@@ -53,6 +61,7 @@ const ChoroplethRenderer = (function () {
         if (entry) geoNameToData[geoName] = { code, ...entry };
       }
     }
+    _geoNameToData = geoNameToData;
 
     // Compute domain
     const values = Object.values(stateData)
@@ -66,14 +75,14 @@ const ChoroplethRenderer = (function () {
       ]));
 
     // Update legend
-    const legendMin  = document.getElementById('legend-min');
-    const legendMid  = document.getElementById('legend-mid');
-    const legendMax  = document.getElementById('legend-max');
+    const legendMin   = document.getElementById('legend-min');
+    const legendMid   = document.getElementById('legend-mid');
+    const legendMax   = document.getElementById('legend-max');
     const legendTitle = document.getElementById('legend-title');
     if (legendTitle) legendTitle.textContent = indicator || unit;
-    if (legendMin)   legendMin.textContent  = FMT.auto(vMin, unit);
-    if (legendMid)   legendMid.textContent  = FMT.auto((vMin + vMax) / 2, unit);
-    if (legendMax)   legendMax.textContent  = FMT.auto(vMax, unit);
+    if (legendMin)   legendMin.textContent   = FMT.auto(vMin, unit);
+    if (legendMid)   legendMid.textContent   = FMT.auto((vMin + vMax) / 2, unit);
+    if (legendMax)   legendMax.textContent   = FMT.auto(vMax, unit);
 
     const svg = d3.select(container)
       .append('svg')
@@ -83,14 +92,15 @@ const ChoroplethRenderer = (function () {
       .attr('preserveAspectRatio', 'xMidYMid meet');
 
     const g = svg.append('g');
+    _g = g;
 
     const projection = d3.geoMercator().fitSize([width, height], _geojson);
     const pathGen    = d3.geoPath().projection(projection);
 
-    const tooltip    = document.getElementById('map-tooltip');
-    const ttState    = document.getElementById('tt-state');
-    const ttValue    = document.getElementById('tt-value');
-    const ttRank     = document.getElementById('tt-rank');
+    const tooltip = document.getElementById('map-tooltip');
+    const ttState = document.getElementById('tt-state');
+    const ttValue = document.getElementById('tt-value');
+    const ttRank  = document.getElementById('tt-rank');
 
     g.selectAll('path')
       .data(_geojson.features)
@@ -111,11 +121,13 @@ const ChoroplethRenderer = (function () {
         const entry   = geoNameToData[geoName];
         d3.select(this)
           .attr('stroke', 'var(--saffron)')
-          .attr('stroke-width', 2);
+          .attr('stroke-width', 2)
+          .raise();
         if (tooltip) {
           if (ttState) ttState.textContent = feature.properties.name || geoName;
           if (ttValue) ttValue.textContent = entry ? FMT.auto(entry.value, unit) : 'No data';
           if (ttRank && entry && entry.rank) ttRank.textContent = `Rank: #${entry.rank} of ${values.length}`;
+          else if (ttRank) ttRank.textContent = '';
           tooltip.classList.add('visible');
         }
       })
@@ -124,7 +136,6 @@ const ChoroplethRenderer = (function () {
         const rect = container.getBoundingClientRect();
         let x = event.clientX - rect.left + 12;
         let y = event.clientY - rect.top  + 12;
-        // Prevent tooltip overflowing right edge
         if (x + 160 > width) x = event.clientX - rect.left - 160;
         tooltip.style.left = x + 'px';
         tooltip.style.top  = y + 'px';
@@ -143,19 +154,20 @@ const ChoroplethRenderer = (function () {
         }
       });
 
-    // Highlight the hovered state in data panel
+    // Sync hover → data panel
     g.selectAll('path').on('mouseenter.panel', function (event, feature) {
       const geoName = (feature.properties.name || '').toLowerCase().trim();
       const entry   = geoNameToData[geoName];
       if (entry && entry.code) {
-        const rows = document.querySelectorAll('.panel-state-row');
-        rows.forEach(r => r.classList.toggle('highlighted', r.dataset.code === entry.code));
+        document.querySelectorAll('.panel-state-row').forEach(r =>
+          r.classList.toggle('highlighted', r.dataset.code === entry.code)
+        );
       }
     }).on('mouseleave.panel', function () {
       document.querySelectorAll('.panel-state-row').forEach(r => r.classList.remove('highlighted'));
     });
 
-    // Zoom support
+    // Zoom
     const zoom = d3.zoom()
       .scaleExtent([1, 8])
       .on('zoom', (event) => { g.attr('transform', event.transform); });
@@ -164,5 +176,28 @@ const ChoroplethRenderer = (function () {
     return { svg, colorScale, projection, pathGen };
   }
 
-  return { render, loadGeo };
+  /** Highlight a state by 2-letter code (called from panel hover). */
+  function highlight(code) {
+    if (!_g || !_geoNameToData) return;
+    _g.selectAll('path').each(function (feature) {
+      const geoName = (feature.properties.name || '').toLowerCase().trim();
+      const entry   = _geoNameToData[geoName];
+      if (entry && entry.code === code) {
+        d3.select(this)
+          .attr('stroke', 'var(--saffron)')
+          .attr('stroke-width', 2)
+          .raise();
+      }
+    });
+  }
+
+  /** Remove any programmatic highlight. */
+  function clearHighlight() {
+    if (!_g) return;
+    _g.selectAll('path')
+      .attr('stroke', '#0A0F14')
+      .attr('stroke-width', 0.5);
+  }
+
+  return { render, loadGeo, highlight, clearHighlight };
 })();

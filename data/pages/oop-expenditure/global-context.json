@@ -1,6 +1,7 @@
 {
   "meta": {
-    "note": "International comparison using World Bank, IMF, and ADB data. Most recent available year shown."
+    "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
+    "dataUpdatedAt": "2026-05-13T02:33:45.232Z"
   },
   "charts": [
     {
@@ -77,69 +78,148 @@
       ]
     },
     {
-      "title": "Maternal mortality ratio",
-      "unit": "per 100,000",
-      "source": "ADB Key Indicators for Asia and the Pacific 2024",
+      "title": "UHC Service Coverage Index",
+      "unit": "index (0–100)",
+      "source": "WHO Global Health Observatory",
       "countries": [
         {
-          "code": "IND",
-          "name": "India",
-          "value": 103,
-          "year": 2020
-        },
-        {
-          "code": "CHN",
-          "name": "China",
-          "value": 23,
-          "year": 2020
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 72,
+          "year": 2023
         },
         {
           "code": "BGD",
           "name": "Bangladesh",
-          "value": 123,
-          "year": 2020
+          "value": 54,
+          "year": 2023
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 69,
+          "year": 2023
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 85,
+          "year": 2023
         },
         {
           "code": "PAK",
           "name": "Pakistan",
-          "value": 154,
-          "year": 2020
-        },
-        {
-          "code": "LKA",
-          "name": "Sri Lanka",
-          "value": 29,
-          "year": 2020
-        },
-        {
-          "code": "IDN",
-          "name": "Indonesia",
-          "value": 173,
-          "year": 2020
+          "value": 56,
+          "year": 2023
         },
         {
           "code": "VNM",
           "name": "Vietnam",
-          "value": 124,
-          "year": 2020
+          "value": 71,
+          "year": 2023
         },
         {
-          "code": "THA",
-          "name": "Thailand",
-          "value": 29,
-          "year": 2020
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 67,
+          "year": 2023
         },
         {
           "code": "KOR",
           "name": "Korea",
-          "value": 8,
-          "year": 2020
+          "value": 88,
+          "year": 2023
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 88,
+          "year": 2023
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 82,
+          "year": 2023
         },
         {
           "code": "JPN",
           "name": "Japan",
-          "value": 4,
-          "year": 2020
+          "value": 86,
+          "year": 2023
+        }
+      ]
+    },
+    {
+      "title": "Maternal mortality ratio",
+      "unit": "per 100,000",
+      "source": "WHO Global Health Observatory",
+      "countries": [
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 94,
+          "year": 2024
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 97,
+          "year": 2024
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 87,
+          "year": 2024
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 97,
+          "year": 2024
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 92,
+          "year": 2024
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 99,
+          "year": 2024
+        },
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 97,
+          "year": 2024
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 97,
+          "year": 2024
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 94,
+          "year": 2024
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 97,
+          "year": 2024
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 78,
+          "year": 2024
         }
       ]
     }
