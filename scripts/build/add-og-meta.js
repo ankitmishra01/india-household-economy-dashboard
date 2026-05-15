@@ -9,7 +9,7 @@ const path = require('path');
 
 const ROOT     = path.join(__dirname, '..', '..');
 const MANIFEST = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'pages-manifest.json'), 'utf8'));
-const BASE_URL = 'https://india-economy.vercel.app';
+const BASE_URL = 'https://india-household-economy-dashboard.vercel.app';
 
 // Shared OG image (static branded card — one file, works for all pages)
 const OG_IMAGE = `${BASE_URL}/og-image.png`;

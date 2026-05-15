@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Household Consumption Expenditure — India Household Economy Dashboard</title>
-  <meta name="description" content="Monthly per capita consumption expenditure by state, HCES 2022–23">
+  <meta name="description" content="Monthly per capita consumption by state, 2022–23">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/css/main.css">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Household Consumption Expenditure — India Household Economy">
   <meta property="og:description" content="Monthly per capita consumption by state, 2022–23">
-  <meta property="og:url" content="https://india-economy.vercel.app/pages/household-consumption/">
-  <meta property="og:image" content="https://india-economy.vercel.app/og-image.png">
+  <meta property="og:url" content="https://india-household-economy-dashboard.vercel.app/pages/household-consumption/">
+  <meta property="og:image" content="https://india-household-economy-dashboard.vercel.app/og-image.png">
   <meta property="og:site_name" content="India Household Economy Dashboard">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Household Consumption Expenditure — India Household Economy">
   <meta name="twitter:description" content="Monthly per capita consumption by state, 2022–23">
-  <meta name="twitter:image" content="https://india-economy.vercel.app/og-image.png">
+  <meta name="twitter:image" content="https://india-household-economy-dashboard.vercel.app/og-image.png">
 </head>
 <body data-page="household-consumption" data-theme="wealth">
 
@@ -31,26 +31,18 @@
       <div class="breadcrumb">
         <a href="/">← All themes</a>
         <span style="opacity:0.4">·</span>
-        <span>Wealth &amp; Living</span>
+        <span>{{PAGE_THEME_LABEL}}</span>
       </div>
-      <h1 id="page-title">Household consumption <em>expenditure</em></h1>
-      <p class="subtitle" id="page-subtitle">Monthly per-capita consumption (MPCE) by state — the most direct measure of how much an Indian household actually spends each month.</p>
+      <h1 id="page-title">Household Consumption Expenditure</h1>
+      <p class="subtitle" id="page-subtitle">Monthly per capita consumption by state, 2022–23</p>
       <div class="ih-meta">
         <div class="item">
           <div class="lbl">Source</div>
-          <div class="val" id="source-badge">HCES 2022–23, NSO / MoSPI</div>
-        </div>
-        <div class="item">
-          <div class="lbl">Survey period</div>
-          <div class="val">Aug 2022 — Jul 2023</div>
-        </div>
-        <div class="item">
-          <div class="lbl">Unit</div>
-          <div class="val">₹ per person · per month</div>
+          <div class="val" id="source-badge">Loading…</div>
         </div>
         <div class="item">
           <div class="lbl">National avg</div>
-          <div class="val" id="ih-national-avg">—</div>
+          <div class="val" id="panel-avg-display">—</div>
         </div>
         <div class="item">
           <div class="lbl">Coverage</div>
@@ -78,7 +70,7 @@
       <div class="map-card-head">
         <div>
           <div class="title">India, <em>by state</em></div>
-          <div class="sub">Monthly per capita expenditure · darker = higher spend</div>
+          <div class="sub">Monthly per capita consumption by state, 2022–23</div>
         </div>
         <div class="legend">
           <span>low</span>
@@ -91,6 +83,21 @@
       </div>
       <div class="map-controls">
         <button class="map-btn hidden" id="back-btn" aria-label="Back to India view">&#8592; Back</button>
+      </div>
+      <!-- Choropleth tooltip (used by choropleth fallback) -->
+      <div class="map-tooltip" id="map-tooltip" role="tooltip">
+        <div class="tt-state" id="tt-state"></div>
+        <div class="tt-value" id="tt-value"></div>
+        <div class="tt-rank" id="tt-rank"></div>
+      </div>
+      <div class="map-legend hidden" id="map-legend">
+        <div class="legend-title" id="legend-title"></div>
+        <div class="legend-bar-choropleth"></div>
+        <div class="legend-labels">
+          <span id="legend-min"></span>
+          <span id="legend-mid"></span>
+          <span id="legend-max"></span>
+        </div>
       </div>
     </div>
 
@@ -109,11 +116,9 @@
 
   </div>
 
-  <!-- ── Insight callouts (populated by page.js) ── -->
-  <div class="insights-grid" id="insights-section">
-    <div id="insights-container">
-      <!-- Populated by page.js when insights exist -->
-    </div>
+  <!-- ── Insight callouts ── -->
+  <div id="insights-section">
+    <div id="insights-container"></div>
   </div>
 
   <!-- ── Chart section ── -->
@@ -159,7 +164,7 @@
       <div class="foot-col">
         <h5>Project</h5>
         <a href="/about.html">About this dashboard</a>
-        <a href="https://github.com/india-household-economy-dashboard" target="_blank" rel="noopener">GitHub (MIT)</a>
+        <a href="https://github.com/ankitmishra01/india-household-economy-dashboard" target="_blank" rel="noopener">GitHub (MIT)</a>
       </div>
       <div class="foot-col">
         <h5>Data</h5>
@@ -187,15 +192,14 @@
   <script src="/js/nav.js"></script>
   <script src="/js/page.js"></script>
   <script>
-    // Wire national avg to ih-meta once page.js sets it
-    const _origFetch = window.fetch;
+    // Mirror national avg to ih-meta once page.js sets it
     document.addEventListener('DOMContentLoaded', function () {
-      const observer = new MutationObserver(() => {
-        const v = document.getElementById('panel-avg-value')?.textContent;
-        const el = document.getElementById('ih-national-avg');
+      var observer = new MutationObserver(function () {
+        var v  = document.getElementById('panel-avg-value')?.textContent;
+        var el = document.getElementById('panel-avg-display');
         if (el && v && v !== '—') { el.textContent = v; observer.disconnect(); }
       });
-      const target = document.getElementById('panel-avg-value');
+      var target = document.getElementById('panel-avg-value');
       if (target) observer.observe(target, { childList: true, characterData: true, subtree: true });
     });
   </script>
