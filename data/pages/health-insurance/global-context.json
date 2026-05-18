@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-05-13T02:55:41.841Z"
+    "dataUpdatedAt": "2026-05-18T11:46:38.782Z"
   },
   "charts": [
     {
@@ -96,18 +96,6 @@
       "source": "WHO Global Health Observatory",
       "countries": [
         {
-          "code": "LKA",
-          "name": "Sri Lanka",
-          "value": 72,
-          "year": 2023
-        },
-        {
-          "code": "BGD",
-          "name": "Bangladesh",
-          "value": 54,
-          "year": 2023
-        },
-        {
           "code": "IND",
           "name": "India",
           "value": 69,
@@ -160,6 +148,18 @@
           "name": "Japan",
           "value": 86,
           "year": 2023
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 72,
+          "year": 2023
+        },
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 54,
+          "year": 2023
         }
       ],
       "indiaStats": {
@@ -175,18 +175,6 @@
       "unit": "per 100,000",
       "source": "WHO Global Health Observatory",
       "countries": [
-        {
-          "code": "IND",
-          "name": "India",
-          "value": 94,
-          "year": 2024
-        },
-        {
-          "code": "CHN",
-          "name": "China",
-          "value": 97,
-          "year": 2024
-        },
         {
           "code": "PAK",
           "name": "Pakistan",
@@ -212,9 +200,9 @@
           "year": 2024
         },
         {
-          "code": "BGD",
-          "name": "Bangladesh",
-          "value": 97,
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 78,
           "year": 2024
         },
         {
@@ -224,21 +212,33 @@
           "year": 2024
         },
         {
-          "code": "USA",
-          "name": "United States",
-          "value": 94,
-          "year": 2024
-        },
-        {
           "code": "KOR",
           "name": "Korea",
           "value": 97,
           "year": 2024
         },
         {
-          "code": "IDN",
-          "name": "Indonesia",
-          "value": 78,
+          "code": "IND",
+          "name": "India",
+          "value": 94,
+          "year": 2024
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 97,
+          "year": 2024
+        },
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 97,
+          "year": 2024
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 94,
           "year": 2024
         }
       ],

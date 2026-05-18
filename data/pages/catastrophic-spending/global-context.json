@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-05-13T02:55:41.841Z"
+    "dataUpdatedAt": "2026-05-18T11:46:38.782Z"
   },
   "charts": [
     {
@@ -164,18 +164,6 @@
       "source": "WHO Global Health Observatory",
       "countries": [
         {
-          "code": "LKA",
-          "name": "Sri Lanka",
-          "value": 72,
-          "year": 2023
-        },
-        {
-          "code": "BGD",
-          "name": "Bangladesh",
-          "value": 54,
-          "year": 2023
-        },
-        {
           "code": "IND",
           "name": "India",
           "value": 69,
@@ -227,6 +215,18 @@
           "code": "JPN",
           "name": "Japan",
           "value": 86,
+          "year": 2023
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 72,
+          "year": 2023
+        },
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 54,
           "year": 2023
         }
       ],

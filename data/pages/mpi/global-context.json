@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-05-13T02:55:41.841Z"
+    "dataUpdatedAt": "2026-05-18T11:46:38.782Z"
   },
   "charts": [
     {
@@ -220,27 +220,15 @@
       "source": "WHO Global Health Observatory",
       "countries": [
         {
-          "code": "VNM",
-          "name": "Vietnam",
-          "value": 73.8,
-          "year": 2021
-        },
-        {
           "code": "BGD",
           "name": "Bangladesh",
           "value": 73.1,
           "year": 2021
         },
         {
-          "code": "LKA",
-          "name": "Sri Lanka",
-          "value": 77.23,
-          "year": 2021
-        },
-        {
-          "code": "USA",
-          "name": "United States",
-          "value": 76.37,
+          "code": "IND",
+          "name": "India",
+          "value": 67.31,
           "year": 2021
         },
         {
@@ -253,6 +241,12 @@
           "code": "JPN",
           "name": "Japan",
           "value": 84.46,
+          "year": 2021
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 76.37,
           "year": 2021
         },
         {
@@ -274,15 +268,21 @@
           "year": 2021
         },
         {
-          "code": "IND",
-          "name": "India",
-          "value": 67.31,
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 77.23,
           "year": 2021
         },
         {
           "code": "THA",
           "name": "Thailand",
           "value": 75.29,
+          "year": 2021
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 73.8,
           "year": 2021
         }
       ],
