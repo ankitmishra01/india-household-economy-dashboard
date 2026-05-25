@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-05-18T11:46:38.782Z"
+    "dataUpdatedAt": "2026-05-25T11:54:42.179Z"
   },
   "charts": [
     {
@@ -220,15 +220,9 @@
       "source": "WHO Global Health Observatory",
       "countries": [
         {
-          "code": "BGD",
-          "name": "Bangladesh",
-          "value": 73.1,
-          "year": 2021
-        },
-        {
-          "code": "IND",
-          "name": "India",
-          "value": 67.31,
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 77.23,
           "year": 2021
         },
         {
@@ -256,21 +250,27 @@
           "year": 2021
         },
         {
-          "code": "KOR",
-          "name": "Korea",
-          "value": 83.8,
-          "year": 2021
-        },
-        {
           "code": "IDN",
           "name": "Indonesia",
           "value": 68.26,
           "year": 2021
         },
         {
-          "code": "LKA",
-          "name": "Sri Lanka",
-          "value": 77.23,
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 73.1,
+          "year": 2021
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 83.8,
+          "year": 2021
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 67.31,
           "year": 2021
         },
         {

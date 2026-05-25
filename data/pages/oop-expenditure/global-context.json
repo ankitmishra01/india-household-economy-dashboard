@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-05-18T11:46:38.782Z"
+    "dataUpdatedAt": "2026-05-25T11:54:42.179Z"
   },
   "charts": [
     {
@@ -176,9 +176,21 @@
       "source": "WHO Global Health Observatory",
       "countries": [
         {
-          "code": "PAK",
-          "name": "Pakistan",
-          "value": 87,
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 78,
+          "year": 2024
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 94,
+          "year": 2024
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 97,
           "year": 2024
         },
         {
@@ -200,9 +212,9 @@
           "year": 2024
         },
         {
-          "code": "IDN",
-          "name": "Indonesia",
-          "value": 78,
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 97,
           "year": 2024
         },
         {
@@ -218,21 +230,9 @@
           "year": 2024
         },
         {
-          "code": "IND",
-          "name": "India",
-          "value": 94,
-          "year": 2024
-        },
-        {
-          "code": "CHN",
-          "name": "China",
-          "value": 97,
-          "year": 2024
-        },
-        {
-          "code": "BGD",
-          "name": "Bangladesh",
-          "value": 97,
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 87,
           "year": 2024
         },
         {
