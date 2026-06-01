@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-05-25T11:54:42.179Z"
+    "dataUpdatedAt": "2026-06-01T13:38:54.182Z"
   },
   "charts": [
     {
@@ -10,9 +10,15 @@
       "source": "WHO Global Health Observatory",
       "countries": [
         {
-          "code": "VNM",
-          "name": "Vietnam",
-          "value": 17.9,
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 21.2,
+          "year": 2024
+        },
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 25.1,
           "year": 2024
         },
         {
@@ -22,21 +28,21 @@
           "year": 2024
         },
         {
-          "code": "IDN",
-          "name": "Indonesia",
-          "value": 21.2,
-          "year": 2024
-        },
-        {
           "code": "THA",
           "name": "Thailand",
           "value": 13.1,
           "year": 2024
         },
         {
-          "code": "BGD",
-          "name": "Bangladesh",
-          "value": 25.7,
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 20.3,
+          "year": 2024
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 5.2,
           "year": 2024
         },
         {
@@ -64,15 +70,9 @@
           "year": 2024
         },
         {
-          "code": "JPN",
-          "name": "Japan",
-          "value": 4.5,
-          "year": 2024
-        },
-        {
           "code": "IND",
           "name": "India",
-          "value": 32.9,
+          "value": 34,
           "year": 2024
         }
       ],
@@ -80,7 +80,7 @@
         "rank": 2,
         "total": 11,
         "peerMedian": 11.8,
-        "gap": 21.1,
+        "gap": 22.2,
         "verdict": "above"
       }
     },
@@ -89,12 +89,6 @@
       "unit": "per 1,000",
       "source": "WHO Global Health Observatory",
       "countries": [
-        {
-          "code": "VNM",
-          "name": "Vietnam",
-          "value": 47.61,
-          "year": 2023
-        },
         {
           "code": "USA",
           "name": "United States",
@@ -105,6 +99,12 @@
           "code": "KOR",
           "name": "Korea",
           "value": 3.79,
+          "year": 2023
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 47.61,
           "year": 2023
         },
         {

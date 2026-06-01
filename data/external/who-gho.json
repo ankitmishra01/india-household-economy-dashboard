@@ -2,7 +2,7 @@
   "meta": {
     "source": "WHO Global Health Observatory",
     "sourceUrl": "https://www.who.int/data/gho",
-    "fetchedAt": "2026-05-25T11:54:42.179Z",
+    "fetchedAt": "2026-06-01T13:38:54.182Z",
     "note": "Most recent available year per country. Sex-disaggregated indicators filtered to both-sexes (BTSX)."
   },
   "countries": {
@@ -24,8 +24,12 @@
       "unit": "years",
       "dim1": "SEX_BTSX",
       "data": {
-        "LKA": {
-          "value": 77.23,
+        "IDN": {
+          "value": 68.26,
+          "year": 2021
+        },
+        "CHN": {
+          "value": 77.62,
           "year": 2021
         },
         "PAK": {
@@ -36,24 +40,20 @@
           "value": 84.46,
           "year": 2021
         },
+        "KOR": {
+          "value": 83.8,
+          "year": 2021
+        },
+        "LKA": {
+          "value": 77.23,
+          "year": 2021
+        },
         "USA": {
           "value": 76.37,
           "year": 2021
         },
-        "CHN": {
-          "value": 77.62,
-          "year": 2021
-        },
-        "IDN": {
-          "value": 68.26,
-          "year": 2021
-        },
         "BGD": {
           "value": 73.1,
-          "year": 2021
-        },
-        "KOR": {
-          "value": 83.8,
           "year": 2021
         },
         "IND": {
@@ -75,16 +75,16 @@
       "unit": "per 100,000 live births",
       "dim1": null,
       "data": {
-        "IDN": {
-          "value": 78,
-          "year": 2024
-        },
         "IND": {
           "value": 94,
           "year": 2024
         },
         "CHN": {
           "value": 97,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 87,
           "year": 2024
         },
         "VNM": {
@@ -99,24 +99,24 @@
           "value": 99,
           "year": 2024
         },
-        "BGD": {
-          "value": 97,
-          "year": 2024
-        },
         "LKA": {
           "value": 97,
           "year": 2024
         },
-        "KOR": {
-          "value": 97,
+        "IDN": {
+          "value": 78,
           "year": 2024
         },
-        "PAK": {
-          "value": 87,
+        "BGD": {
+          "value": 97,
           "year": 2024
         },
         "USA": {
           "value": 94,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 97,
           "year": 2024
         }
       }
@@ -126,16 +126,16 @@
       "unit": "per 1,000 live births",
       "dim1": null,
       "data": {
-        "VNM": {
-          "value": 47.61,
-          "year": 2023
-        },
         "USA": {
           "value": 16.63,
           "year": 2023
         },
         "KOR": {
           "value": 3.79,
+          "year": 2023
+        },
+        "VNM": {
+          "value": 47.61,
           "year": 2023
         },
         "BGD": {
@@ -177,6 +177,14 @@
       "unit": "index (0–100)",
       "dim1": null,
       "data": {
+        "VNM": {
+          "value": 71,
+          "year": 2023
+        },
+        "IDN": {
+          "value": 67,
+          "year": 2023
+        },
         "IND": {
           "value": 69,
           "year": 2023
@@ -187,14 +195,6 @@
         },
         "PAK": {
           "value": 56,
-          "year": 2023
-        },
-        "VNM": {
-          "value": 71,
-          "year": 2023
-        },
-        "IDN": {
-          "value": 67,
           "year": 2023
         },
         "KOR": {
@@ -228,24 +228,28 @@
       "unit": "% of children under 5",
       "dim1": null,
       "data": {
-        "VNM": {
-          "value": 17.9,
+        "IDN": {
+          "value": 21.2,
+          "year": 2024
+        },
+        "BGD": {
+          "value": 25.1,
           "year": 2024
         },
         "USA": {
           "value": 3.7,
           "year": 2024
         },
-        "IDN": {
-          "value": 21.2,
-          "year": 2024
-        },
         "THA": {
           "value": 13.1,
           "year": 2024
         },
-        "BGD": {
-          "value": 25.7,
+        "VNM": {
+          "value": 20.3,
+          "year": 2024
+        },
+        "JPN": {
+          "value": 5.2,
           "year": 2024
         },
         "CHN": {
@@ -264,12 +268,8 @@
           "value": 34.5,
           "year": 2024
         },
-        "JPN": {
-          "value": 4.5,
-          "year": 2024
-        },
         "IND": {
-          "value": 32.9,
+          "value": 34,
           "year": 2024
         }
       }
@@ -279,16 +279,28 @@
       "unit": "% of children",
       "dim1": null,
       "data": {
-        "CHN": {
-          "value": 95,
+        "VNM": {
+          "value": 98,
+          "year": 2024
+        },
+        "IDN": {
+          "value": 85,
+          "year": 2024
+        },
+        "THA": {
+          "value": 93,
           "year": 2024
         },
         "JPN": {
           "value": 95,
           "year": 2024
         },
-        "IDN": {
-          "value": 85,
+        "KOR": {
+          "value": 97,
+          "year": 2024
+        },
+        "IND": {
+          "value": 97,
           "year": 2024
         },
         "BGD": {
@@ -303,24 +315,12 @@
           "value": 86,
           "year": 2024
         },
-        "THA": {
-          "value": 93,
-          "year": 2024
-        },
-        "VNM": {
-          "value": 98,
-          "year": 2024
-        },
         "LKA": {
           "value": 99,
           "year": 2024
         },
-        "IND": {
-          "value": 97,
-          "year": 2024
-        },
-        "KOR": {
-          "value": 97,
+        "CHN": {
+          "value": 95,
           "year": 2024
         }
       }
@@ -330,49 +330,49 @@
       "unit": "% of adults",
       "dim1": "SEX_BTSX",
       "data": {
-        "PAK": {
-          "value": 21.85,
-          "year": 2022
-        },
-        "KOR": {
-          "value": 6.73,
-          "year": 2022
-        },
-        "LKA": {
-          "value": 10.61,
-          "year": 2022
+        "IDN": {
+          "value": 12.03,
+          "year": 2024
         },
         "THA": {
-          "value": 14.51,
-          "year": 2022
-        },
-        "IDN": {
-          "value": 11.5,
-          "year": 2022
-        },
-        "BGD": {
-          "value": 5.29,
-          "year": 2022
-        },
-        "CHN": {
-          "value": 8.21,
-          "year": 2022
-        },
-        "JPN": {
-          "value": 4.94,
-          "year": 2022
+          "value": 15.51,
+          "year": 2024
         },
         "IND": {
-          "value": 7.21,
-          "year": 2022
+          "value": 7.98,
+          "year": 2024
         },
         "USA": {
-          "value": 42.87,
-          "year": 2022
+          "value": 41.83,
+          "year": 2024
+        },
+        "JPN": {
+          "value": 5.19,
+          "year": 2024
         },
         "VNM": {
-          "value": 2.08,
-          "year": 2022
+          "value": 2.49,
+          "year": 2024
+        },
+        "KOR": {
+          "value": 7.5,
+          "year": 2024
+        },
+        "BGD": {
+          "value": 5.73,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 11.19,
+          "year": 2024
+        },
+        "CHN": {
+          "value": 9.07,
+          "year": 2024
+        },
+        "PAK": {
+          "value": 23.53,
+          "year": 2024
         }
       }
     }
@@ -405,7 +405,7 @@
     "NUTSTUNTINGPREV": {
       "label": "Stunting prevalence",
       "unit": "% of children under 5",
-      "value": 32.9,
+      "value": 34,
       "year": 2024
     },
     "WHS8_110": {
@@ -417,8 +417,8 @@
     "NCD_BMI_30C": {
       "label": "Obesity prevalence (adults)",
       "unit": "% of adults",
-      "value": 7.21,
-      "year": 2022
+      "value": 7.98,
+      "year": 2024
     }
   }
 }
