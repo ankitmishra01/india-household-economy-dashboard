@@ -1,6 +1,6 @@
 # India Household Economy Dashboard
 
-**Live → [india-economy.vercel.app](https://india-economy.vercel.app)**
+**Live → [india-household-economy-dashboard.vercel.app](https://india-household-economy-dashboard.vercel.app)**
 
 A data pipeline and visualization layer built to liberate India's government survey data from PDFs and into interactive, shareable dashboards — covering 22 indicators, 37 states, and 5 national surveys.
 
