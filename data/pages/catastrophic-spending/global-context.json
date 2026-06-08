@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-06-01T13:38:54.182Z"
+    "dataUpdatedAt": "2026-06-08T12:43:41.267Z"
   },
   "charts": [
     {
@@ -164,18 +164,6 @@
       "source": "WHO Global Health Observatory",
       "countries": [
         {
-          "code": "VNM",
-          "name": "Vietnam",
-          "value": 71,
-          "year": 2023
-        },
-        {
-          "code": "IDN",
-          "name": "Indonesia",
-          "value": 67,
-          "year": 2023
-        },
-        {
           "code": "IND",
           "name": "India",
           "value": 69,
@@ -191,6 +179,18 @@
           "code": "PAK",
           "name": "Pakistan",
           "value": 56,
+          "year": 2023
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 71,
+          "year": 2023
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 67,
           "year": 2023
         },
         {
