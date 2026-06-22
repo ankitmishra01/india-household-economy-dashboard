@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-06-08T12:43:41.267Z"
+    "dataUpdatedAt": "2026-06-22T13:42:52.081Z"
   },
   "charts": [
     {
@@ -96,6 +96,30 @@
       "source": "WHO Global Health Observatory",
       "countries": [
         {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 82,
+          "year": 2023
+        },
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 54,
+          "year": 2023
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 72,
+          "year": 2023
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 86,
+          "year": 2023
+        },
+        {
           "code": "IND",
           "name": "India",
           "value": 69,
@@ -136,30 +160,6 @@
           "name": "United States",
           "value": 88,
           "year": 2023
-        },
-        {
-          "code": "THA",
-          "name": "Thailand",
-          "value": 82,
-          "year": 2023
-        },
-        {
-          "code": "JPN",
-          "name": "Japan",
-          "value": 86,
-          "year": 2023
-        },
-        {
-          "code": "LKA",
-          "name": "Sri Lanka",
-          "value": 72,
-          "year": 2023
-        },
-        {
-          "code": "BGD",
-          "name": "Bangladesh",
-          "value": 54,
-          "year": 2023
         }
       ],
       "indiaStats": {
@@ -176,20 +176,14 @@
       "source": "WHO Global Health Observatory",
       "countries": [
         {
-          "code": "JPN",
-          "name": "Japan",
-          "value": 99,
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 97,
           "year": 2024
         },
         {
-          "code": "IDN",
-          "name": "Indonesia",
-          "value": 78,
-          "year": 2024
-        },
-        {
-          "code": "IND",
-          "name": "India",
+          "code": "USA",
+          "name": "United States",
           "value": 94,
           "year": 2024
         },
@@ -197,6 +191,24 @@
           "code": "CHN",
           "name": "China",
           "value": 97,
+          "year": 2024
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 97,
+          "year": 2024
+        },
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 97,
+          "year": 2024
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 94,
           "year": 2024
         },
         {
@@ -218,32 +230,20 @@
           "year": 2024
         },
         {
-          "code": "BGD",
-          "name": "Bangladesh",
-          "value": 97,
+          "code": "JPN",
+          "name": "Japan",
+          "value": 99,
           "year": 2024
         },
         {
-          "code": "LKA",
-          "name": "Sri Lanka",
-          "value": 97,
-          "year": 2024
-        },
-        {
-          "code": "USA",
-          "name": "United States",
-          "value": 94,
-          "year": 2024
-        },
-        {
-          "code": "KOR",
-          "name": "Korea",
-          "value": 97,
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 78,
           "year": 2024
         }
       ],
       "indiaStats": {
-        "rank": 7,
+        "rank": 8,
         "total": 11,
         "peerMedian": 97,
         "gap": -3,
