@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-06-22T13:42:52.081Z"
+    "dataUpdatedAt": "2026-06-29T12:36:43.301Z"
   },
   "charts": [
     {
@@ -96,27 +96,27 @@
       "source": "WHO Global Health Observatory",
       "countries": [
         {
-          "code": "THA",
-          "name": "Thailand",
-          "value": 82,
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 71,
           "year": 2023
         },
         {
-          "code": "BGD",
-          "name": "Bangladesh",
-          "value": 54,
+          "code": "KOR",
+          "name": "Korea",
+          "value": 88,
           "year": 2023
         },
         {
-          "code": "LKA",
-          "name": "Sri Lanka",
-          "value": 72,
+          "code": "USA",
+          "name": "United States",
+          "value": 88,
           "year": 2023
         },
         {
-          "code": "JPN",
-          "name": "Japan",
-          "value": 86,
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 67,
           "year": 2023
         },
         {
@@ -138,27 +138,27 @@
           "year": 2023
         },
         {
-          "code": "VNM",
-          "name": "Vietnam",
-          "value": 71,
+          "code": "THA",
+          "name": "Thailand",
+          "value": 82,
           "year": 2023
         },
         {
-          "code": "IDN",
-          "name": "Indonesia",
-          "value": 67,
+          "code": "JPN",
+          "name": "Japan",
+          "value": 86,
           "year": 2023
         },
         {
-          "code": "KOR",
-          "name": "Korea",
-          "value": 88,
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 72,
           "year": 2023
         },
         {
-          "code": "USA",
-          "name": "United States",
-          "value": 88,
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 54,
           "year": 2023
         }
       ],
@@ -175,6 +175,24 @@
       "unit": "per 100,000",
       "source": "WHO Global Health Observatory",
       "countries": [
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 94,
+          "year": 2024
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 97,
+          "year": 2024
+        },
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 97,
+          "year": 2024
+        },
         {
           "code": "LKA",
           "name": "Sri Lanka",
@@ -194,33 +212,9 @@
           "year": 2024
         },
         {
-          "code": "KOR",
-          "name": "Korea",
-          "value": 97,
-          "year": 2024
-        },
-        {
-          "code": "BGD",
-          "name": "Bangladesh",
-          "value": 97,
-          "year": 2024
-        },
-        {
-          "code": "IND",
-          "name": "India",
-          "value": 94,
-          "year": 2024
-        },
-        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 87,
-          "year": 2024
-        },
-        {
-          "code": "VNM",
-          "name": "Vietnam",
-          "value": 97,
           "year": 2024
         },
         {
@@ -240,10 +234,16 @@
           "name": "Indonesia",
           "value": 78,
           "year": 2024
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 97,
+          "year": 2024
         }
       ],
       "indiaStats": {
-        "rank": 8,
+        "rank": 7,
         "total": 11,
         "peerMedian": 97,
         "gap": -3,

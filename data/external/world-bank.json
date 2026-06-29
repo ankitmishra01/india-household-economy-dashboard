@@ -2,7 +2,7 @@
   "meta": {
     "source": "World Bank Open Data",
     "sourceUrl": "https://data.worldbank.org",
-    "fetchedAt": "2026-06-22T13:36:21.720Z",
+    "fetchedAt": "2026-06-29T12:36:20.158Z",
     "note": "Most recent available value within last 5 years. Values may differ from dashboard page data which uses India-specific sources."
   },
   "countries": {
