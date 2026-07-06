@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-06-29T12:36:43.301Z"
+    "dataUpdatedAt": "2026-07-06T12:06:49.197Z"
   },
   "charts": [
     {
@@ -134,7 +134,7 @@
         {
           "code": "OED",
           "name": "OECD Average",
-          "value": 53.2816268236792,
+          "value": 53.2803059924301,
           "year": 2025
         },
         {
@@ -220,7 +220,7 @@
         {
           "code": "OED",
           "name": "OECD Average",
-          "value": 1.47748831578197,
+          "value": 1.47751261883453,
           "year": 2024
         },
         {

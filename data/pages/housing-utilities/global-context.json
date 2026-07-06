@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-06-29T12:36:43.301Z"
+    "dataUpdatedAt": "2026-07-06T12:06:49.197Z"
   },
   "charts": [
     {
@@ -54,7 +54,7 @@
         {
           "code": "OED",
           "name": "OECD Average",
-          "value": 99.1631015655778,
+          "value": 99.1631049072945,
           "year": 2024
         },
         {
@@ -140,7 +140,7 @@
         {
           "code": "OED",
           "name": "OECD Average",
-          "value": 98.6633368941469,
+          "value": 98.6633073178484,
           "year": 2024
         },
         {
@@ -258,81 +258,81 @@
         {
           "code": "BGD",
           "name": "Bangladesh",
-          "value": 32.6783196323307,
-          "year": 2024
+          "value": 33.2395847043975,
+          "year": 2025
         },
         {
           "code": "CHN",
           "name": "China",
-          "value": 65.8946980998325,
-          "year": 2024
+          "value": 66.3429910348272,
+          "year": 2025
         },
         {
           "code": "IDN",
           "name": "Indonesia",
-          "value": 58.7509635387997,
-          "year": 2024
+          "value": 59.3929063969984,
+          "year": 2025
         },
         {
           "code": "IND",
           "name": "India",
-          "value": 35.3788972368389,
-          "year": 2024
+          "value": 35.689155772396,
+          "year": 2025
         },
         {
           "code": "JPN",
           "name": "Japan",
-          "value": 92.1901718034531,
-          "year": 2024
+          "value": 92.3001449420786,
+          "year": 2025
         },
         {
           "code": "KOR",
           "name": "Korea",
-          "value": 81.1682528469686,
-          "year": 2024
+          "value": 81.1740263306674,
+          "year": 2025
         },
         {
           "code": "LKA",
           "name": "Sri Lanka",
-          "value": 20.2996997058686,
-          "year": 2024
+          "value": 20.4501355167937,
+          "year": 2025
         },
         {
           "code": "OED",
           "name": "OECD Average",
-          "value": 81.1859846310034,
-          "year": 2024
+          "value": 81.3158337292265,
+          "year": 2025
         },
         {
           "code": "PAK",
           "name": "Pakistan",
-          "value": 39.1734368360905,
-          "year": 2024
+          "value": 39.5256010979606,
+          "year": 2025
         },
         {
           "code": "THA",
           "name": "Thailand",
-          "value": 61.8689338391321,
-          "year": 2024
+          "value": 62.7993377136296,
+          "year": 2025
         },
         {
           "code": "USA",
           "name": "United States",
-          "value": 80.1247798047184,
-          "year": 2024
+          "value": 80.1921733027869,
+          "year": 2025
         },
         {
           "code": "VNM",
           "name": "Vietnam",
-          "value": 38.4900703430176,
-          "year": 2024
+          "value": 38.8299160351294,
+          "year": 2025
         }
       ],
       "indiaStats": {
         "rank": 10,
         "total": 12,
-        "peerMedian": 60.31,
-        "gap": -24.93,
+        "peerMedian": 61.1,
+        "gap": -25.41,
         "verdict": "below"
       }
     }
