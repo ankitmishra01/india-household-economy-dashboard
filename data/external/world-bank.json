@@ -2,7 +2,7 @@
   "meta": {
     "source": "World Bank Open Data",
     "sourceUrl": "https://data.worldbank.org",
-    "fetchedAt": "2026-07-06T12:05:54.051Z",
+    "fetchedAt": "2026-07-20T10:53:12.824Z",
     "note": "Most recent available value within last 5 years. Values may differ from dashboard page data which uses India-specific sources."
   },
   "countries": {
@@ -27,60 +27,60 @@
       "unit": "current international $",
       "data": {
         "BGD": {
-          "value": 9646.76984383255,
-          "year": 2024
+          "value": 10153.7083791829,
+          "year": 2025
         },
         "CHN": {
-          "value": 27104.8702677463,
-          "year": 2024
+          "value": 29333.3311051433,
+          "year": 2025
         },
         "IDN": {
-          "value": 16448.2755179559,
-          "year": 2024
+          "value": 17659.7921291587,
+          "year": 2025
         },
         "IND": {
-          "value": 11159.9856476091,
-          "year": 2024
+          "value": 11747.9160436011,
+          "year": 2025
         },
         "JPN": {
-          "value": 52039.1716551611,
-          "year": 2024
+          "value": 55421.8797530311,
+          "year": 2025
         },
         "KOR": {
-          "value": 61051.3492502498,
-          "year": 2024
+          "value": 63124.9152183625,
+          "year": 2025
         },
         "LKA": {
-          "value": 15632.5924849848,
-          "year": 2024
+          "value": 17065.0298635432,
+          "year": 2025
         },
         "NPL": {
-          "value": 5736.62134332704,
-          "year": 2024
+          "value": 6175.15897150244,
+          "year": 2025
         },
         "OED": {
-          "value": 61972.8881275386,
-          "year": 2024
+          "value": 64192.5290195702,
+          "year": 2025
         },
         "PAK": {
-          "value": 6252.11543199559,
-          "year": 2024
+          "value": 6573.41613369925,
+          "year": 2025
         },
         "PHL": {
-          "value": 11794.1375488492,
-          "year": 2024
+          "value": 12576.9867435109,
+          "year": 2025
         },
         "THA": {
-          "value": 24712.0658575135,
-          "year": 2024
+          "value": 26250.0723587304,
+          "year": 2025
         },
         "USA": {
-          "value": 85809.9003846359,
-          "year": 2024
+          "value": 90026.5163005744,
+          "year": 2025
         },
         "VNM": {
-          "value": 16385.5065565458,
-          "year": 2024
+          "value": 18088.491587163,
+          "year": 2025
         }
       }
     },
@@ -1714,8 +1714,8 @@
     "NY.GDP.PCAP.PP.CD": {
       "label": "GDP per capita, PPP",
       "unit": "current international $",
-      "value": 11159.9856476091,
-      "year": 2024
+      "value": 11747.9160436011,
+      "year": 2025
     },
     "NY.GDP.PCAP.KD.ZG": {
       "label": "GDP per capita growth",
