@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-07-20T10:53:32.082Z"
+    "dataUpdatedAt": "2026-07-27T11:24:35.655Z"
   },
   "charts": [
     {
@@ -88,6 +88,166 @@
         "peerMedian": 4.55,
         "gap": -1.21,
         "verdict": "below"
+      }
+    },
+    {
+      "title": "UHC Service Coverage Index",
+      "unit": "index (0–100)",
+      "source": "WHO Global Health Observatory",
+      "countries": [
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 85,
+          "year": 2023
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 86,
+          "year": 2023
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 72,
+          "year": 2023
+        },
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 54,
+          "year": 2023
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 69,
+          "year": 2023
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 56,
+          "year": 2023
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 71,
+          "year": 2023
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 67,
+          "year": 2023
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 88,
+          "year": 2023
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 88,
+          "year": 2023
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 82,
+          "year": 2023
+        }
+      ],
+      "indiaStats": {
+        "rank": 8,
+        "total": 11,
+        "peerMedian": 77,
+        "gap": -8,
+        "verdict": "below"
+      }
+    },
+    {
+      "title": "Maternal mortality ratio",
+      "unit": "per 100,000",
+      "source": "WHO Global Health Observatory",
+      "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 92,
+          "year": 2025
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 97,
+          "year": 2025
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 82,
+          "year": 2025
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 95,
+          "year": 2025
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 91,
+          "year": 2025
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 97,
+          "year": 2025
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 96,
+          "year": 2025
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 86,
+          "year": 2025
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 92,
+          "year": 2025
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 94,
+          "year": 2025
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 97,
+          "year": 2025
+        }
+      ],
+      "indiaStats": {
+        "rank": 5,
+        "total": 11,
+        "peerMedian": 93,
+        "gap": 2,
+        "verdict": "above"
       }
     }
   ]
