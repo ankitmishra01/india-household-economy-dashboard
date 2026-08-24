@@ -2,7 +2,7 @@
   "meta": {
     "source": "World Bank Open Data",
     "sourceUrl": "https://data.worldbank.org",
-    "fetchedAt": "2026-07-27T11:24:11.424Z",
+    "fetchedAt": "2026-08-24T08:49:16.209Z",
     "note": "Most recent available value within last 5 years. Values may differ from dashboard page data which uses India-specific sources."
   },
   "countries": {
@@ -465,7 +465,48 @@
     "SH.STA.WAST.ZS": {
       "label": "Wasting prevalence",
       "unit": "% of children under 5",
-      "data": {}
+      "data": {
+        "BGD": {
+          "value": 10.7,
+          "year": 2022
+        },
+        "IDN": {
+          "value": 8.4,
+          "year": 2023
+        },
+        "IND": {
+          "value": 18.7,
+          "year": 2020
+        },
+        "KOR": {
+          "value": 0.2,
+          "year": 2020
+        },
+        "LKA": {
+          "value": 9.3,
+          "year": 2024
+        },
+        "NPL": {
+          "value": 7,
+          "year": 2022
+        },
+        "PHL": {
+          "value": 5.4,
+          "year": 2021
+        },
+        "THA": {
+          "value": 7.2,
+          "year": 2022
+        },
+        "USA": {
+          "value": 0.1,
+          "year": 2022
+        },
+        "VNM": {
+          "value": 4.4,
+          "year": 2023
+        }
+      }
     },
     "SP.DYN.IMRT.IN": {
       "label": "Infant mortality rate",
@@ -1716,6 +1757,12 @@
       "label": "Stunting prevalence",
       "unit": "% of children under 5",
       "value": 35.5,
+      "year": 2020
+    },
+    "SH.STA.WAST.ZS": {
+      "label": "Wasting prevalence",
+      "unit": "% of children under 5",
+      "value": 18.7,
       "year": 2020
     },
     "SP.DYN.IMRT.IN": {

@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-07-27T11:24:35.655Z"
+    "dataUpdatedAt": "2026-08-24T09:01:19.432Z"
   },
   "charts": [
     {
@@ -170,30 +170,6 @@
           "year": 2023
         },
         {
-          "code": "JPN",
-          "name": "Japan",
-          "value": 86,
-          "year": 2023
-        },
-        {
-          "code": "LKA",
-          "name": "Sri Lanka",
-          "value": 72,
-          "year": 2023
-        },
-        {
-          "code": "BGD",
-          "name": "Bangladesh",
-          "value": 54,
-          "year": 2023
-        },
-        {
-          "code": "IND",
-          "name": "India",
-          "value": 69,
-          "year": 2023
-        },
-        {
           "code": "PAK",
           "name": "Pakistan",
           "value": 56,
@@ -206,15 +182,39 @@
           "year": 2023
         },
         {
-          "code": "IDN",
-          "name": "Indonesia",
-          "value": 67,
-          "year": 2023
-        },
-        {
           "code": "KOR",
           "name": "Korea",
           "value": 88,
+          "year": 2023
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 82,
+          "year": 2023
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 86,
+          "year": 2023
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 72,
+          "year": 2023
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 69,
+          "year": 2023
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 67,
           "year": 2023
         },
         {
@@ -224,9 +224,9 @@
           "year": 2023
         },
         {
-          "code": "THA",
-          "name": "Thailand",
-          "value": 82,
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 54,
           "year": 2023
         }
       ],

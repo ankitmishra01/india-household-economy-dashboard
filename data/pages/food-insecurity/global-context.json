@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-07-27T11:24:35.655Z"
+    "dataUpdatedAt": "2026-08-24T09:01:19.432Z"
   },
   "charts": [
     {
@@ -10,27 +10,21 @@
       "source": "WHO Global Health Observatory",
       "countries": [
         {
-          "code": "VNM",
-          "name": "Vietnam",
-          "value": 17.9,
-          "year": 2024
-        },
-        {
-          "code": "USA",
-          "name": "United States",
-          "value": 3.7,
-          "year": 2024
-        },
-        {
           "code": "BGD",
           "name": "Bangladesh",
-          "value": 25.7,
+          "value": 24.4,
           "year": 2024
         },
         {
-          "code": "KOR",
-          "name": "Korea",
-          "value": 2,
+          "code": "CHN",
+          "name": "China",
+          "value": 4.2,
+          "year": 2024
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 21.2,
           "year": 2024
         },
         {
@@ -40,47 +34,53 @@
           "year": 2024
         },
         {
-          "code": "THA",
-          "name": "Thailand",
-          "value": 13.1,
-          "year": 2024
-        },
-        {
           "code": "JPN",
           "name": "Japan",
           "value": 4.5,
           "year": 2024
         },
         {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 1.6,
+          "year": 2024
+        },
+        {
           "code": "LKA",
           "name": "Sri Lanka",
-          "value": 10.5,
+          "value": 9.7,
           "year": 2024
         },
         {
           "code": "PAK",
           "name": "Pakistan",
-          "value": 33.6,
+          "value": 32.6,
           "year": 2024
         },
         {
-          "code": "IDN",
-          "name": "Indonesia",
-          "value": 22.6,
+          "code": "THA",
+          "name": "Thailand",
+          "value": 11.5,
           "year": 2024
         },
         {
-          "code": "CHN",
-          "name": "China",
-          "value": 4.5,
+          "code": "USA",
+          "name": "United States",
+          "value": 3.7,
+          "year": 2024
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 17.9,
           "year": 2024
         }
       ],
       "indiaStats": {
         "rank": 2,
         "total": 11,
-        "peerMedian": 11.8,
-        "gap": 20,
+        "peerMedian": 10.6,
+        "gap": 21.2,
         "verdict": "above"
       }
     },
@@ -89,6 +89,30 @@
       "unit": "per 1,000",
       "source": "WHO Global Health Observatory",
       "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 115.11,
+          "year": 2023
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 3.08,
+          "year": 2023
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 155.03,
+          "year": 2023
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 47.61,
+          "year": 2023
+        },
         {
           "code": "KOR",
           "name": "Korea",
@@ -102,15 +126,9 @@
           "year": 2023
         },
         {
-          "code": "JPN",
-          "name": "Japan",
-          "value": 3.08,
-          "year": 2023
-        },
-        {
-          "code": "VNM",
-          "name": "Vietnam",
-          "value": 47.61,
+          "code": "IND",
+          "name": "India",
+          "value": 80.48,
           "year": 2023
         },
         {
@@ -126,12 +144,6 @@
           "year": 2023
         },
         {
-          "code": "IND",
-          "name": "India",
-          "value": 80.48,
-          "year": 2023
-        },
-        {
           "code": "IDN",
           "name": "Indonesia",
           "value": 140.5,
@@ -142,18 +154,6 @@
           "name": "China",
           "value": 16.25,
           "year": 2023
-        },
-        {
-          "code": "BGD",
-          "name": "Bangladesh",
-          "value": 115.11,
-          "year": 2023
-        },
-        {
-          "code": "PAK",
-          "name": "Pakistan",
-          "value": 155.03,
-          "year": 2023
         }
       ],
       "indiaStats": {
@@ -161,6 +161,68 @@
         "total": 11,
         "peerMedian": 26.39,
         "gap": 54.09,
+        "verdict": "above"
+      }
+    },
+    {
+      "title": "Wasting prevalence",
+      "unit": "% under 5",
+      "source": "World Bank Open Data",
+      "countries": [
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 10.7,
+          "year": 2022
+        },
+        {
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 8.4,
+          "year": 2023
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 18.7,
+          "year": 2020
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 0.2,
+          "year": 2020
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 9.3,
+          "year": 2024
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 7.2,
+          "year": 2022
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 0.1,
+          "year": 2022
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 4.4,
+          "year": 2023
+        }
+      ],
+      "indiaStats": {
+        "rank": 1,
+        "total": 8,
+        "peerMedian": 7.2,
+        "gap": 11.5,
         "verdict": "above"
       }
     }
