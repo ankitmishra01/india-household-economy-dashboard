@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-08-31T15:55:20.320Z"
+    "dataUpdatedAt": "2026-09-07T14:02:49.606Z"
   },
   "charts": [
     {
@@ -90,9 +90,21 @@
       "source": "WHO Global Health Observatory",
       "countries": [
         {
-          "code": "VNM",
-          "name": "Vietnam",
-          "value": 47.61,
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 115.11,
+          "year": 2023
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 16.25,
+          "year": 2023
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 16.63,
           "year": 2023
         },
         {
@@ -102,21 +114,15 @@
           "year": 2023
         },
         {
-          "code": "BGD",
-          "name": "Bangladesh",
-          "value": 115.11,
-          "year": 2023
-        },
-        {
-          "code": "THA",
-          "name": "Thailand",
-          "value": 34.45,
-          "year": 2023
-        },
-        {
           "code": "LKA",
           "name": "Sri Lanka",
           "value": 18.32,
+          "year": 2023
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 80.48,
           "year": 2023
         },
         {
@@ -138,21 +144,15 @@
           "year": 2023
         },
         {
-          "code": "USA",
-          "name": "United States",
-          "value": 16.63,
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 47.61,
           "year": 2023
         },
         {
-          "code": "IND",
-          "name": "India",
-          "value": 80.48,
-          "year": 2023
-        },
-        {
-          "code": "CHN",
-          "name": "China",
-          "value": 16.25,
+          "code": "THA",
+          "name": "Thailand",
+          "value": 34.45,
           "year": 2023
         }
       ],

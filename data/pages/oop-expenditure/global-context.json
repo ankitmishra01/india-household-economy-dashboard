@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-08-31T15:55:20.320Z"
+    "dataUpdatedAt": "2026-09-07T14:02:49.606Z"
   },
   "charts": [
     {
@@ -96,27 +96,15 @@
       "source": "WHO Global Health Observatory",
       "countries": [
         {
-          "code": "PAK",
-          "name": "Pakistan",
-          "value": 56,
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 67,
           "year": 2023
         },
         {
-          "code": "VNM",
-          "name": "Vietnam",
-          "value": 71,
-          "year": 2023
-        },
-        {
-          "code": "USA",
-          "name": "United States",
+          "code": "KOR",
+          "name": "Korea",
           "value": 88,
-          "year": 2023
-        },
-        {
-          "code": "JPN",
-          "name": "Japan",
-          "value": 86,
           "year": 2023
         },
         {
@@ -138,14 +126,20 @@
           "year": 2023
         },
         {
-          "code": "IDN",
-          "name": "Indonesia",
-          "value": 67,
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 56,
           "year": 2023
         },
         {
-          "code": "KOR",
-          "name": "Korea",
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 71,
+          "year": 2023
+        },
+        {
+          "code": "USA",
+          "name": "United States",
           "value": 88,
           "year": 2023
         },
@@ -153,6 +147,12 @@
           "code": "THA",
           "name": "Thailand",
           "value": 82,
+          "year": 2023
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 86,
           "year": 2023
         },
         {
