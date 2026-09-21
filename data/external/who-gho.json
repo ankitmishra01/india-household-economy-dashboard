@@ -2,7 +2,7 @@
   "meta": {
     "source": "WHO Global Health Observatory",
     "sourceUrl": "https://www.who.int/data/gho",
-    "fetchedAt": "2026-09-14T14:49:24.459Z",
+    "fetchedAt": "2026-09-21T14:57:25.772Z",
     "note": "Most recent available year per country. Sex-disaggregated indicators filtered to both-sexes (BTSX)."
   },
   "countries": {
@@ -24,48 +24,48 @@
       "unit": "years",
       "dim1": "SEX_BTSX",
       "data": {
-        "CHN": {
-          "value": 77.62,
-          "year": 2021
-        },
         "PAK": {
           "value": 65.99,
-          "year": 2021
-        },
-        "IND": {
-          "value": 67.31,
-          "year": 2021
-        },
-        "BGD": {
-          "value": 73.1,
-          "year": 2021
-        },
-        "THA": {
-          "value": 75.29,
-          "year": 2021
-        },
-        "IDN": {
-          "value": 68.26,
           "year": 2021
         },
         "JPN": {
           "value": 84.46,
           "year": 2021
         },
+        "KOR": {
+          "value": 83.8,
+          "year": 2021
+        },
+        "IDN": {
+          "value": 68.26,
+          "year": 2021
+        },
         "VNM": {
           "value": 73.8,
           "year": 2021
         },
-        "KOR": {
-          "value": 83.8,
+        "BGD": {
+          "value": 73.1,
+          "year": 2021
+        },
+        "CHN": {
+          "value": 77.62,
+          "year": 2021
+        },
+        "LKA": {
+          "value": 77.23,
           "year": 2021
         },
         "USA": {
           "value": 76.37,
           "year": 2021
         },
-        "LKA": {
-          "value": 77.23,
+        "IND": {
+          "value": 67.31,
+          "year": 2021
+        },
+        "THA": {
+          "value": 75.29,
           "year": 2021
         }
       }
@@ -130,22 +130,6 @@
           "value": 47.61,
           "year": 2023
         },
-        "JPN": {
-          "value": 3.08,
-          "year": 2023
-        },
-        "PAK": {
-          "value": 155.03,
-          "year": 2023
-        },
-        "KOR": {
-          "value": 3.79,
-          "year": 2023
-        },
-        "USA": {
-          "value": 16.63,
-          "year": 2023
-        },
         "BGD": {
           "value": 115.11,
           "year": 2023
@@ -154,20 +138,36 @@
           "value": 34.45,
           "year": 2023
         },
-        "LKA": {
-          "value": 18.32,
-          "year": 2023
-        },
         "IDN": {
           "value": 140.5,
           "year": 2023
         },
-        "CHN": {
-          "value": 16.25,
+        "USA": {
+          "value": 16.63,
+          "year": 2023
+        },
+        "KOR": {
+          "value": 3.79,
+          "year": 2023
+        },
+        "LKA": {
+          "value": 18.32,
           "year": 2023
         },
         "IND": {
           "value": 80.48,
+          "year": 2023
+        },
+        "JPN": {
+          "value": 3.08,
+          "year": 2023
+        },
+        "PAK": {
+          "value": 155.03,
+          "year": 2023
+        },
+        "CHN": {
+          "value": 16.25,
           "year": 2023
         }
       }
@@ -193,6 +193,14 @@
           "value": 71,
           "year": 2023
         },
+        "IDN": {
+          "value": 67,
+          "year": 2023
+        },
+        "KOR": {
+          "value": 88,
+          "year": 2023
+        },
         "USA": {
           "value": 88,
           "year": 2023
@@ -207,14 +215,6 @@
         },
         "IND": {
           "value": 69,
-          "year": 2023
-        },
-        "IDN": {
-          "value": 67,
-          "year": 2023
-        },
-        "KOR": {
-          "value": 88,
           "year": 2023
         },
         "LKA": {
@@ -330,20 +330,12 @@
       "unit": "% of adults",
       "dim1": "SEX_BTSX",
       "data": {
-        "LKA": {
-          "value": 11.19,
+        "THA": {
+          "value": 15.51,
           "year": 2024
         },
         "PAK": {
           "value": 23.53,
-          "year": 2024
-        },
-        "BGD": {
-          "value": 5.73,
-          "year": 2024
-        },
-        "THA": {
-          "value": 15.51,
           "year": 2024
         },
         "CHN": {
@@ -366,12 +358,20 @@
           "value": 7.98,
           "year": 2024
         },
+        "BGD": {
+          "value": 5.73,
+          "year": 2024
+        },
         "JPN": {
           "value": 5.19,
           "year": 2024
         },
         "KOR": {
           "value": 7.5,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 11.19,
           "year": 2024
         }
       }

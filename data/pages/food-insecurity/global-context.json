@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-09-14T14:49:24.459Z"
+    "dataUpdatedAt": "2026-09-21T14:57:25.772Z"
   },
   "charts": [
     {
@@ -96,30 +96,6 @@
           "year": 2023
         },
         {
-          "code": "JPN",
-          "name": "Japan",
-          "value": 3.08,
-          "year": 2023
-        },
-        {
-          "code": "PAK",
-          "name": "Pakistan",
-          "value": 155.03,
-          "year": 2023
-        },
-        {
-          "code": "KOR",
-          "name": "Korea",
-          "value": 3.79,
-          "year": 2023
-        },
-        {
-          "code": "USA",
-          "name": "United States",
-          "value": 16.63,
-          "year": 2023
-        },
-        {
           "code": "BGD",
           "name": "Bangladesh",
           "value": 115.11,
@@ -132,27 +108,51 @@
           "year": 2023
         },
         {
-          "code": "LKA",
-          "name": "Sri Lanka",
-          "value": 18.32,
-          "year": 2023
-        },
-        {
           "code": "IDN",
           "name": "Indonesia",
           "value": 140.5,
           "year": 2023
         },
         {
-          "code": "CHN",
-          "name": "China",
-          "value": 16.25,
+          "code": "USA",
+          "name": "United States",
+          "value": 16.63,
+          "year": 2023
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 3.79,
+          "year": 2023
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 18.32,
           "year": 2023
         },
         {
           "code": "IND",
           "name": "India",
           "value": 80.48,
+          "year": 2023
+        },
+        {
+          "code": "JPN",
+          "name": "Japan",
+          "value": 3.08,
+          "year": 2023
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 155.03,
+          "year": 2023
+        },
+        {
+          "code": "CHN",
+          "name": "China",
+          "value": 16.25,
           "year": 2023
         }
       ],
