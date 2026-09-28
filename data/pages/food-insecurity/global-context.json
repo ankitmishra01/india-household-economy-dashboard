@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-09-21T14:57:25.772Z"
+    "dataUpdatedAt": "2026-09-28T16:32:38.601Z"
   },
   "charts": [
     {
@@ -90,51 +90,15 @@
       "source": "WHO Global Health Observatory",
       "countries": [
         {
-          "code": "VNM",
-          "name": "Vietnam",
-          "value": 47.61,
-          "year": 2023
-        },
-        {
-          "code": "BGD",
-          "name": "Bangladesh",
-          "value": 115.11,
-          "year": 2023
-        },
-        {
-          "code": "THA",
-          "name": "Thailand",
-          "value": 34.45,
+          "code": "IND",
+          "name": "India",
+          "value": 80.48,
           "year": 2023
         },
         {
           "code": "IDN",
           "name": "Indonesia",
           "value": 140.5,
-          "year": 2023
-        },
-        {
-          "code": "USA",
-          "name": "United States",
-          "value": 16.63,
-          "year": 2023
-        },
-        {
-          "code": "KOR",
-          "name": "Korea",
-          "value": 3.79,
-          "year": 2023
-        },
-        {
-          "code": "LKA",
-          "name": "Sri Lanka",
-          "value": 18.32,
-          "year": 2023
-        },
-        {
-          "code": "IND",
-          "name": "India",
-          "value": 80.48,
           "year": 2023
         },
         {
@@ -147,6 +111,42 @@
           "code": "PAK",
           "name": "Pakistan",
           "value": 155.03,
+          "year": 2023
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 47.61,
+          "year": 2023
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 3.79,
+          "year": 2023
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 34.45,
+          "year": 2023
+        },
+        {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 18.32,
+          "year": 2023
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 16.63,
+          "year": 2023
+        },
+        {
+          "code": "BGD",
+          "name": "Bangladesh",
+          "value": 115.11,
           "year": 2023
         },
         {

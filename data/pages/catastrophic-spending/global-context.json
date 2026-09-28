@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-09-21T14:57:25.772Z"
+    "dataUpdatedAt": "2026-09-28T16:32:38.601Z"
   },
   "charts": [
     {
@@ -164,9 +164,9 @@
       "source": "WHO Global Health Observatory",
       "countries": [
         {
-          "code": "PAK",
-          "name": "Pakistan",
-          "value": 56,
+          "code": "IDN",
+          "name": "Indonesia",
+          "value": 67,
           "year": 2023
         },
         {
@@ -176,32 +176,26 @@
           "year": 2023
         },
         {
+          "code": "LKA",
+          "name": "Sri Lanka",
+          "value": 72,
+          "year": 2023
+        },
+        {
           "code": "CHN",
           "name": "China",
           "value": 85,
           "year": 2023
         },
         {
-          "code": "VNM",
-          "name": "Vietnam",
-          "value": 71,
-          "year": 2023
-        },
-        {
-          "code": "IDN",
-          "name": "Indonesia",
-          "value": 67,
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 56,
           "year": 2023
         },
         {
           "code": "KOR",
           "name": "Korea",
-          "value": 88,
-          "year": 2023
-        },
-        {
-          "code": "USA",
-          "name": "United States",
           "value": 88,
           "year": 2023
         },
@@ -224,9 +218,15 @@
           "year": 2023
         },
         {
-          "code": "LKA",
-          "name": "Sri Lanka",
-          "value": 72,
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 71,
+          "year": 2023
+        },
+        {
+          "code": "USA",
+          "name": "United States",
+          "value": 88,
           "year": 2023
         }
       ],
