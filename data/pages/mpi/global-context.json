@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-10-05T16:54:38.016Z"
+    "dataUpdatedAt": "2026-10-12T17:35:59.039Z"
   },
   "charts": [
     {
@@ -24,14 +24,14 @@
         {
           "code": "IDN",
           "name": "Indonesia",
-          "value": 4,
+          "value": 3.7,
           "year": 2025
         },
         {
           "code": "IND",
           "name": "India",
-          "value": 5.3,
-          "year": 2022
+          "value": 2.6,
+          "year": 2023
         },
         {
           "code": "KOR",
@@ -65,10 +65,10 @@
         }
       ],
       "indiaStats": {
-        "rank": 3,
+        "rank": 4,
         "total": 9,
         "peerMedian": 1.35,
-        "gap": 3.95,
+        "gap": 1.25,
         "verdict": "above"
       }
     },
@@ -172,8 +172,8 @@
         {
           "code": "IND",
           "name": "India",
-          "value": 25.5,
-          "year": 2022
+          "value": 23,
+          "year": 2023
         },
         {
           "code": "KOR",
@@ -210,7 +210,7 @@
         "rank": 9,
         "total": 9,
         "peerMedian": 33.95,
-        "gap": -8.45,
+        "gap": -10.95,
         "verdict": "below"
       }
     },
@@ -274,15 +274,15 @@
           "year": 2023
         },
         {
-          "code": "VNM",
-          "name": "Vietnam",
-          "value": 74.3,
-          "year": 2023
-        },
-        {
           "code": "USA",
           "name": "United States",
           "value": 78.5,
+          "year": 2023
+        },
+        {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 74.3,
           "year": 2023
         }
       ],

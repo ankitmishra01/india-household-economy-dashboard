@@ -2,7 +2,7 @@
   "meta": {
     "source": "World Bank Open Data",
     "sourceUrl": "https://data.worldbank.org",
-    "fetchedAt": "2026-10-05T16:52:52.890Z",
+    "fetchedAt": "2026-10-12T17:28:33.422Z",
     "note": "Most recent available value within last 5 years. Values may differ from dashboard page data which uses India-specific sources."
   },
   "countries": {
@@ -159,12 +159,12 @@
           "year": 2022
         },
         "IDN": {
-          "value": 4,
+          "value": 3.7,
           "year": 2025
         },
         "IND": {
-          "value": 5.3,
-          "year": 2022
+          "value": 2.6,
+          "year": 2023
         },
         "KOR": {
           "value": 0.1,
@@ -213,8 +213,8 @@
           "year": 2025
         },
         "IND": {
-          "value": 25.5,
-          "year": 2022
+          "value": 23,
+          "year": 2023
         },
         "KOR": {
           "value": 32.9,
@@ -1726,14 +1726,14 @@
     "SI.POV.DDAY": {
       "label": "Poverty headcount (< $2.15/day)",
       "unit": "% of population",
-      "value": 5.3,
-      "year": 2022
+      "value": 2.6,
+      "year": 2023
     },
     "SI.POV.GINI": {
       "label": "Gini Index",
       "unit": "index (0–100)",
-      "value": 25.5,
-      "year": 2022
+      "value": 23,
+      "year": 2023
     },
     "SL.UEM.TOTL.ZS": {
       "label": "Unemployment rate",

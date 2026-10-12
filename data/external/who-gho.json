@@ -2,7 +2,7 @@
   "meta": {
     "source": "WHO Global Health Observatory",
     "sourceUrl": "https://www.who.int/data/gho",
-    "fetchedAt": "2026-10-05T16:54:38.016Z",
+    "fetchedAt": "2026-10-12T17:35:59.039Z",
     "note": "Most recent available year per country. Sex-disaggregated indicators filtered to both-sexes (BTSX)."
   },
   "countries": {
@@ -60,12 +60,12 @@
           "value": 78.1,
           "year": 2023
         },
-        "VNM": {
-          "value": 74.3,
-          "year": 2023
-        },
         "USA": {
           "value": 78.5,
+          "year": 2023
+        },
+        "VNM": {
+          "value": 74.3,
           "year": 2023
         }
       }
@@ -126,16 +126,12 @@
       "unit": "per 1,000 live births",
       "dim1": null,
       "data": {
+        "CHN": {
+          "value": 16.25,
+          "year": 2023
+        },
         "VNM": {
           "value": 47.61,
-          "year": 2023
-        },
-        "JPN": {
-          "value": 3.08,
-          "year": 2023
-        },
-        "PAK": {
-          "value": 155.03,
           "year": 2023
         },
         "USA": {
@@ -154,20 +150,24 @@
           "value": 18.32,
           "year": 2023
         },
-        "IND": {
-          "value": 80.48,
+        "IDN": {
+          "value": 140.5,
           "year": 2023
         },
-        "CHN": {
-          "value": 16.25,
+        "JPN": {
+          "value": 3.08,
+          "year": 2023
+        },
+        "PAK": {
+          "value": 155.03,
           "year": 2023
         },
         "BGD": {
           "value": 115.11,
           "year": 2023
         },
-        "IDN": {
-          "value": 140.5,
+        "IND": {
+          "value": 80.48,
           "year": 2023
         }
       }
@@ -177,12 +177,8 @@
       "unit": "index (0–100)",
       "dim1": null,
       "data": {
-        "IND": {
-          "value": 69,
-          "year": 2023
-        },
-        "PAK": {
-          "value": 56,
+        "CHN": {
+          "value": 85,
           "year": 2023
         },
         "IDN": {
@@ -193,8 +189,20 @@
           "value": 88,
           "year": 2023
         },
-        "CHN": {
-          "value": 85,
+        "JPN": {
+          "value": 86,
+          "year": 2023
+        },
+        "LKA": {
+          "value": 72,
+          "year": 2023
+        },
+        "IND": {
+          "value": 69,
+          "year": 2023
+        },
+        "PAK": {
+          "value": 56,
           "year": 2023
         },
         "VNM": {
@@ -205,20 +213,12 @@
           "value": 88,
           "year": 2023
         },
-        "LKA": {
-          "value": 72,
-          "year": 2023
-        },
-        "BGD": {
-          "value": 54,
-          "year": 2023
-        },
         "THA": {
           "value": 82,
           "year": 2023
         },
-        "JPN": {
-          "value": 86,
+        "BGD": {
+          "value": 54,
           "year": 2023
         }
       }
@@ -330,48 +330,48 @@
       "unit": "% of adults",
       "dim1": "SEX_BTSX",
       "data": {
-        "KOR": {
-          "value": 7.5,
-          "year": 2024
-        },
         "IDN": {
           "value": 12.03,
           "year": 2024
         },
-        "BGD": {
-          "value": 5.73,
+        "CHN": {
+          "value": 9.07,
           "year": 2024
         },
         "IND": {
           "value": 7.98,
           "year": 2024
         },
-        "LKA": {
-          "value": 11.19,
+        "PAK": {
+          "value": 23.53,
           "year": 2024
         },
         "JPN": {
           "value": 5.19,
           "year": 2024
         },
-        "USA": {
-          "value": 41.83,
-          "year": 2024
-        },
-        "PAK": {
-          "value": 23.53,
-          "year": 2024
-        },
-        "VNM": {
-          "value": 2.49,
-          "year": 2024
-        },
         "THA": {
           "value": 15.51,
           "year": 2024
         },
-        "CHN": {
-          "value": 9.07,
+        "KOR": {
+          "value": 7.5,
+          "year": 2024
+        },
+        "USA": {
+          "value": 41.83,
+          "year": 2024
+        },
+        "LKA": {
+          "value": 11.19,
+          "year": 2024
+        },
+        "BGD": {
+          "value": 5.73,
+          "year": 2024
+        },
+        "VNM": {
+          "value": 2.49,
           "year": 2024
         }
       }
