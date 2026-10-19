@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-10-12T17:35:59.039Z"
+    "dataUpdatedAt": "2026-10-19T15:29:50.409Z"
   },
   "charts": [
     {
@@ -96,9 +96,39 @@
       "source": "WHO Global Health Observatory",
       "countries": [
         {
+          "code": "VNM",
+          "name": "Vietnam",
+          "value": 71,
+          "year": 2023
+        },
+        {
+          "code": "KOR",
+          "name": "Korea",
+          "value": 88,
+          "year": 2023
+        },
+        {
+          "code": "THA",
+          "name": "Thailand",
+          "value": 82,
+          "year": 2023
+        },
+        {
+          "code": "IND",
+          "name": "India",
+          "value": 69,
+          "year": 2023
+        },
+        {
           "code": "CHN",
           "name": "China",
           "value": 85,
+          "year": 2023
+        },
+        {
+          "code": "PAK",
+          "name": "Pakistan",
+          "value": 56,
           "year": 2023
         },
         {
@@ -108,8 +138,8 @@
           "year": 2023
         },
         {
-          "code": "KOR",
-          "name": "Korea",
+          "code": "USA",
+          "name": "United States",
           "value": 88,
           "year": 2023
         },
@@ -123,36 +153,6 @@
           "code": "LKA",
           "name": "Sri Lanka",
           "value": 72,
-          "year": 2023
-        },
-        {
-          "code": "IND",
-          "name": "India",
-          "value": 69,
-          "year": 2023
-        },
-        {
-          "code": "PAK",
-          "name": "Pakistan",
-          "value": 56,
-          "year": 2023
-        },
-        {
-          "code": "VNM",
-          "name": "Vietnam",
-          "value": 71,
-          "year": 2023
-        },
-        {
-          "code": "USA",
-          "name": "United States",
-          "value": 88,
-          "year": 2023
-        },
-        {
-          "code": "THA",
-          "name": "Thailand",
-          "value": 82,
           "year": 2023
         },
         {
