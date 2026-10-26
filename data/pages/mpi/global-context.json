@@ -1,7 +1,7 @@
 {
   "meta": {
     "note": "International comparison using World Bank, IMF, ADB, and WHO data. Most recent available year shown.",
-    "dataUpdatedAt": "2026-10-19T15:29:50.409Z"
+    "dataUpdatedAt": "2026-10-26T14:55:27.587Z"
   },
   "charts": [
     {
@@ -211,86 +211,6 @@
         "total": 9,
         "peerMedian": 33.95,
         "gap": -10.95,
-        "verdict": "below"
-      }
-    },
-    {
-      "title": "Life expectancy at birth",
-      "unit": "years",
-      "source": "WHO Global Health Observatory",
-      "countries": [
-        {
-          "code": "BGD",
-          "name": "Bangladesh",
-          "value": 72.7,
-          "year": 2023
-        },
-        {
-          "code": "CHN",
-          "name": "China",
-          "value": 77.9,
-          "year": 2023
-        },
-        {
-          "code": "IDN",
-          "name": "Indonesia",
-          "value": 72.7,
-          "year": 2023
-        },
-        {
-          "code": "IND",
-          "name": "India",
-          "value": 71,
-          "year": 2023
-        },
-        {
-          "code": "JPN",
-          "name": "Japan",
-          "value": 83.9,
-          "year": 2023
-        },
-        {
-          "code": "KOR",
-          "name": "Korea",
-          "value": 83.6,
-          "year": 2023
-        },
-        {
-          "code": "LKA",
-          "name": "Sri Lanka",
-          "value": 76.2,
-          "year": 2023
-        },
-        {
-          "code": "PAK",
-          "name": "Pakistan",
-          "value": 68.2,
-          "year": 2023
-        },
-        {
-          "code": "THA",
-          "name": "Thailand",
-          "value": 78.1,
-          "year": 2023
-        },
-        {
-          "code": "USA",
-          "name": "United States",
-          "value": 78.5,
-          "year": 2023
-        },
-        {
-          "code": "VNM",
-          "name": "Vietnam",
-          "value": 74.3,
-          "year": 2023
-        }
-      ],
-      "indiaStats": {
-        "rank": 10,
-        "total": 11,
-        "peerMedian": 77.05,
-        "gap": -6.05,
         "verdict": "below"
       }
     }
