@@ -2,7 +2,7 @@
   "meta": {
     "source": "WHO Global Health Observatory",
     "sourceUrl": "https://www.who.int/data/gho",
-    "fetchedAt": "2026-10-26T14:55:27.587Z",
+    "fetchedAt": "2026-11-02T17:55:56.030Z",
     "note": "Most recent available year per country. Sex-disaggregated indicators filtered to both-sexes (BTSX)."
   },
   "countries": {
